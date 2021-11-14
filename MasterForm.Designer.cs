@@ -1746,6 +1746,7 @@ namespace MDBEditor
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDBEditor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.SizeChanged += new System.EventHandler(this.MasterForm_SizeChanged);
             this.tabControl1.ResumeLayout(false);
             this.TP_General.ResumeLayout(false);
             this.FLP_File.ResumeLayout(false);

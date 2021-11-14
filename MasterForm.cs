@@ -17,6 +17,7 @@ namespace MDBEditor
         {
             InitializeComponent();
             FormManager.Get_Colors_Into_The_Control(FLP_Colors,FLP_Text_Colors);
+            Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
         }
 
         public void Select_Color_From_Button(object sender, EventArgs e)
@@ -36,6 +37,11 @@ namespace MDBEditor
         private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e)
         {
             Status_Bar.Visible = CB_Status_Bar.Checked == true ? true : false;
-        }        
+        }
+
+        private void MasterForm_SizeChanged(object sender, EventArgs e)
+        {
+            Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
+        }
     }
 }

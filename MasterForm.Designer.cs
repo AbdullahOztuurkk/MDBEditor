@@ -107,6 +107,7 @@ namespace MDBEditor
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.Btn_Cut_To_Clipboard = new System.Windows.Forms.Button();
+            this.Btn_Copy_To_Clipboard = new System.Windows.Forms.Button();
             this.Btn_Paste_From_Clipboard = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.FLP_Text_Colors = new System.Windows.Forms.FlowLayoutPanel();
@@ -130,9 +131,10 @@ namespace MDBEditor
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PB_Drawing_Board = new System.Windows.Forms.PictureBox();
+            this.PB_Drawing_Board = new MDBEditor.Controls.ResizablePictureBox();
             this.Status_Bar = new System.Windows.Forms.StatusStrip();
             this.Lbl_Mouse_Coordinates = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Lbl_Page_Size = new System.Windows.Forms.ToolStripStatusLabel();
             this.Color_Picker = new System.Windows.Forms.ColorDialog();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -143,8 +145,6 @@ namespace MDBEditor
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Selector = new System.Windows.Forms.FontDialog();
-            this.Btn_Copy_To_Clipboard = new System.Windows.Forms.Button();
-            this.Lbl_Page_Size = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -1247,6 +1247,23 @@ namespace MDBEditor
             this.Btn_Cut_To_Clipboard.Text = "Kes";
             this.General_ToolTip.SetToolTip(this.Btn_Cut_To_Clipboard, "Resmi Kırp");
             // 
+            // Btn_Copy_To_Clipboard
+            // 
+            this.Btn_Copy_To_Clipboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Copy_To_Clipboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Btn_Copy_To_Clipboard.FlatAppearance.BorderSize = 0;
+            this.Btn_Copy_To_Clipboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Copy_To_Clipboard.Image = global::MDBEditor.Properties.Resources.copy_to_clipboard;
+            this.Btn_Copy_To_Clipboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_Copy_To_Clipboard.Location = new System.Drawing.Point(4, 41);
+            this.Btn_Copy_To_Clipboard.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Btn_Copy_To_Clipboard.Name = "Btn_Copy_To_Clipboard";
+            this.Btn_Copy_To_Clipboard.Size = new System.Drawing.Size(86, 37);
+            this.Btn_Copy_To_Clipboard.TabIndex = 3;
+            this.Btn_Copy_To_Clipboard.Text = "Kopyala";
+            this.Btn_Copy_To_Clipboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.General_ToolTip.SetToolTip(this.Btn_Copy_To_Clipboard, "Resmi Kırp");
+            // 
             // Btn_Paste_From_Clipboard
             // 
             this.Btn_Paste_From_Clipboard.BackgroundImage = global::MDBEditor.Properties.Resources.paste_file;
@@ -1563,17 +1580,14 @@ namespace MDBEditor
             // 
             // PB_Drawing_Board
             // 
-            this.PB_Drawing_Board.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.PB_Drawing_Board.BackColor = System.Drawing.Color.White;
             this.PB_Drawing_Board.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PB_Drawing_Board.Location = new System.Drawing.Point(6, 6);
-            this.PB_Drawing_Board.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.PB_Drawing_Board.Location = new System.Drawing.Point(8, 9);
             this.PB_Drawing_Board.Name = "PB_Drawing_Board";
-            this.PB_Drawing_Board.Size = new System.Drawing.Size(1085, 573);
+            this.PB_Drawing_Board.Size = new System.Drawing.Size(1081, 556);
             this.PB_Drawing_Board.TabIndex = 0;
             this.PB_Drawing_Board.TabStop = false;
+            this.PB_Drawing_Board.SizeChanged += new System.EventHandler(this.PB_Drawing_Board_SizeChanged);
             this.PB_Drawing_Board.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_Drawing_Board_MouseMove);
             // 
             // Status_Bar
@@ -1597,6 +1611,13 @@ namespace MDBEditor
             this.Lbl_Mouse_Coordinates.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.Lbl_Mouse_Coordinates.Size = new System.Drawing.Size(66, 16);
             this.Lbl_Mouse_Coordinates.Spring = true;
+            // 
+            // Lbl_Page_Size
+            // 
+            this.Lbl_Page_Size.Image = global::MDBEditor.Properties.Resources.resize_status;
+            this.Lbl_Page_Size.Name = "Lbl_Page_Size";
+            this.Lbl_Page_Size.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.Lbl_Page_Size.Size = new System.Drawing.Size(66, 16);
             // 
             // groupBox3
             // 
@@ -1708,30 +1729,6 @@ namespace MDBEditor
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // Btn_Copy_To_Clipboard
-            // 
-            this.Btn_Copy_To_Clipboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Copy_To_Clipboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Btn_Copy_To_Clipboard.FlatAppearance.BorderSize = 0;
-            this.Btn_Copy_To_Clipboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Copy_To_Clipboard.Image = global::MDBEditor.Properties.Resources.copy_to_clipboard;
-            this.Btn_Copy_To_Clipboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Copy_To_Clipboard.Location = new System.Drawing.Point(4, 41);
-            this.Btn_Copy_To_Clipboard.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Btn_Copy_To_Clipboard.Name = "Btn_Copy_To_Clipboard";
-            this.Btn_Copy_To_Clipboard.Size = new System.Drawing.Size(86, 37);
-            this.Btn_Copy_To_Clipboard.TabIndex = 3;
-            this.Btn_Copy_To_Clipboard.Text = "Kopyala";
-            this.Btn_Copy_To_Clipboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.General_ToolTip.SetToolTip(this.Btn_Copy_To_Clipboard, "Resmi Kırp");
-            // 
-            // Lbl_Page_Size
-            // 
-            this.Lbl_Page_Size.Image = global::MDBEditor.Properties.Resources.resize_status;
-            this.Lbl_Page_Size.Name = "Lbl_Page_Size";
-            this.Lbl_Page_Size.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.Lbl_Page_Size.Size = new System.Drawing.Size(66, 16);
-            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1745,8 +1742,6 @@ namespace MDBEditor
             this.Name = "MasterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDBEditor";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.SizeChanged += new System.EventHandler(this.MasterForm_SizeChanged);
             this.tabControl1.ResumeLayout(false);
             this.TP_General.ResumeLayout(false);
             this.FLP_File.ResumeLayout(false);
@@ -1818,7 +1813,6 @@ namespace MDBEditor
         private System.Windows.Forms.Button Btn_Resize_Image;
         private System.Windows.Forms.Button Btn_Rotate_Image;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox PB_Drawing_Board;
         private System.Windows.Forms.GroupBox GB_Tools;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button Btn_Pen;
@@ -1918,6 +1912,7 @@ namespace MDBEditor
         private System.Windows.Forms.FontDialog Font_Selector;
         private System.Windows.Forms.Button Btn_Copy_To_Clipboard;
         private System.Windows.Forms.ToolStripStatusLabel Lbl_Page_Size;
+        private Controls.ResizablePictureBox PB_Drawing_Board;
     }
 }
 

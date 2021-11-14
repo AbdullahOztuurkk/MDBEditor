@@ -39,7 +39,7 @@ namespace MDBEditor
             Status_Bar.Visible = CB_Status_Bar.Checked == true ? true : false;
         }
 
-        private void MasterForm_SizeChanged(object sender, EventArgs e)
+        private void PB_Drawing_Board_SizeChanged(object sender, EventArgs e)
         {
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
         }

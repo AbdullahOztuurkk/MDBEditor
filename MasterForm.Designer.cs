@@ -130,7 +130,7 @@ namespace MDBEditor
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Panel_Drawing_Board = new System.Windows.Forms.Panel();
             this.PB_Drawing_Board = new MDBEditor.Controls.ResizablePictureBox();
             this.Status_Bar = new System.Windows.Forms.StatusStrip();
             this.Lbl_Mouse_Coordinates = new System.Windows.Forms.ToolStripStatusLabel();
@@ -178,7 +178,7 @@ namespace MDBEditor
             this.groupBox7.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.Panel_Drawing_Board.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Drawing_Board)).BeginInit();
             this.Status_Bar.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1566,17 +1566,21 @@ namespace MDBEditor
             this.General_ToolTip.SetToolTip(this.button14, "Resmi Kırp");
             this.button14.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // Panel_Drawing_Board
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.PB_Drawing_Board);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 171);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(6);
-            this.panel1.Size = new System.Drawing.Size(1097, 589);
-            this.panel1.TabIndex = 2;
+            this.Panel_Drawing_Board.AutoSize = true;
+            this.Panel_Drawing_Board.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
+            this.Panel_Drawing_Board.Controls.Add(this.PB_Drawing_Board);
+            this.Panel_Drawing_Board.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Drawing_Board.Location = new System.Drawing.Point(0, 171);
+            this.Panel_Drawing_Board.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Panel_Drawing_Board.Name = "Panel_Drawing_Board";
+            this.Panel_Drawing_Board.Padding = new System.Windows.Forms.Padding(6);
+            this.Panel_Drawing_Board.Size = new System.Drawing.Size(1097, 589);
+            this.Panel_Drawing_Board.TabIndex = 2;
+            this.Panel_Drawing_Board.AutoScroll = true;
+            this.Panel_Drawing_Board.AutoScrollMargin = new System.Drawing.Size(10, 10);
+            this.Panel_Drawing_Board.AutoScrollMinSize = new System.Drawing.Size(20, 20);
             // 
             // PB_Drawing_Board
             // 
@@ -1736,7 +1740,7 @@ namespace MDBEditor
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1097, 760);
             this.Controls.Add(this.Status_Bar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Panel_Drawing_Board);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MasterForm";
@@ -1781,7 +1785,7 @@ namespace MDBEditor
             this.tableLayoutPanel9.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.Panel_Drawing_Board.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Drawing_Board)).EndInit();
             this.Status_Bar.ResumeLayout(false);
             this.Status_Bar.PerformLayout();
@@ -1812,7 +1816,7 @@ namespace MDBEditor
         private System.Windows.Forms.Button Btn_Crop_Image;
         private System.Windows.Forms.Button Btn_Resize_Image;
         private System.Windows.Forms.Button Btn_Rotate_Image;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Panel_Drawing_Board;
         private System.Windows.Forms.GroupBox GB_Tools;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button Btn_Pen;

@@ -144,6 +144,7 @@ namespace MDBEditor
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Selector = new System.Windows.Forms.FontDialog();
             this.Btn_Copy_To_Clipboard = new System.Windows.Forms.Button();
+            this.Lbl_Page_Size = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -1573,12 +1574,13 @@ namespace MDBEditor
             this.PB_Drawing_Board.Size = new System.Drawing.Size(1085, 573);
             this.PB_Drawing_Board.TabIndex = 0;
             this.PB_Drawing_Board.TabStop = false;
-            this.PB_Drawing_Board.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Lbl_Mouse_Coordinates_MouseMove);
+            this.PB_Drawing_Board.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_Drawing_Board_MouseMove);
             // 
             // Status_Bar
             // 
             this.Status_Bar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Lbl_Mouse_Coordinates});
+            this.Lbl_Mouse_Coordinates,
+            this.Lbl_Page_Size});
             this.Status_Bar.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.Status_Bar.Location = new System.Drawing.Point(0, 739);
             this.Status_Bar.Name = "Status_Bar";
@@ -1722,6 +1724,13 @@ namespace MDBEditor
             this.Btn_Copy_To_Clipboard.Text = "Kopyala";
             this.Btn_Copy_To_Clipboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.General_ToolTip.SetToolTip(this.Btn_Copy_To_Clipboard, "Resmi Kırp");
+            // 
+            // Lbl_Page_Size
+            // 
+            this.Lbl_Page_Size.Image = global::MDBEditor.Properties.Resources.resize_status;
+            this.Lbl_Page_Size.Name = "Lbl_Page_Size";
+            this.Lbl_Page_Size.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.Lbl_Page_Size.Size = new System.Drawing.Size(66, 16);
             // 
             // MasterForm
             // 
@@ -1907,6 +1916,7 @@ namespace MDBEditor
         private System.Windows.Forms.Button Btn_Cut_To_Clipboard;
         private System.Windows.Forms.FontDialog Font_Selector;
         private System.Windows.Forms.Button Btn_Copy_To_Clipboard;
+        private System.Windows.Forms.ToolStripStatusLabel Lbl_Page_Size;
     }
 }
 

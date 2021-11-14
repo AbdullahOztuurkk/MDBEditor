@@ -28,8 +28,7 @@ namespace MDBEditor
                 //TODO: select color for primary and secondary color
             }
         }
-
-        private void Lbl_Mouse_Coordinates_MouseMove(object sender, MouseEventArgs e)
+        private void PB_Drawing_Board_MouseMove(object sender, MouseEventArgs e)
         {
             Lbl_Mouse_Coordinates.Text = e.X + "," + e.Y + " px";
         }
@@ -37,6 +36,6 @@ namespace MDBEditor
         private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e)
         {
             Status_Bar.Visible = CB_Status_Bar.Checked == true ? true : false;
-        }
+        }        
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MDBEditor.Managers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace MDBEditor
         public MasterForm()
         {
             InitializeComponent();
-            Font_Selector.ShowDialog();
+            FormManager.Get_Colors_Into_The_Control(FLP_Colors,FLP_Text_Colors);
         }
 
         public void Select_Color_From_Button(object sender, EventArgs e)

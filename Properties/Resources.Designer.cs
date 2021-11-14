@@ -113,6 +113,16 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cut_to_clipboard {
+            get {
+                object obj = ResourceManager.GetObject("cut_to_clipboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diamond_outline {
             get {
                 object obj = ResourceManager.GetObject("diamond_outline", resourceCulture);
@@ -246,16 +256,6 @@ namespace MDBEditor.Properties {
         internal static System.Drawing.Bitmap paste_from_file {
             get {
                 object obj = ResourceManager.GetObject("paste_from_file", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap paste_to_clipboard {
-            get {
-                object obj = ResourceManager.GetObject("paste_to_clipboard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

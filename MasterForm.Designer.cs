@@ -144,7 +144,7 @@ namespace MDBEditor
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Font_Selector = new System.Windows.Forms.FontDialog();
+            this.Font_Dialog = new System.Windows.Forms.FontDialog();
             this.tabControl1.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -1568,8 +1568,10 @@ namespace MDBEditor
             // 
             // Panel_Drawing_Board
             // 
+            this.Panel_Drawing_Board.AutoScroll = true;
+            this.Panel_Drawing_Board.AutoScrollMargin = new System.Drawing.Size(10, 10);
+            this.Panel_Drawing_Board.AutoScrollMinSize = new System.Drawing.Size(20, 20);
             this.Panel_Drawing_Board.AutoSize = true;
-            this.Panel_Drawing_Board.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
             this.Panel_Drawing_Board.Controls.Add(this.PB_Drawing_Board);
             this.Panel_Drawing_Board.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_Drawing_Board.Location = new System.Drawing.Point(0, 171);
@@ -1578,9 +1580,6 @@ namespace MDBEditor
             this.Panel_Drawing_Board.Padding = new System.Windows.Forms.Padding(6);
             this.Panel_Drawing_Board.Size = new System.Drawing.Size(1097, 589);
             this.Panel_Drawing_Board.TabIndex = 2;
-            this.Panel_Drawing_Board.AutoScroll = true;
-            this.Panel_Drawing_Board.AutoScrollMargin = new System.Drawing.Size(10, 10);
-            this.Panel_Drawing_Board.AutoScrollMinSize = new System.Drawing.Size(20, 20);
             // 
             // PB_Drawing_Board
             // 
@@ -1913,7 +1912,7 @@ namespace MDBEditor
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button Btn_Cut_To_Clipboard;
-        private System.Windows.Forms.FontDialog Font_Selector;
+        private System.Windows.Forms.FontDialog Font_Dialog;
         private System.Windows.Forms.Button Btn_Copy_To_Clipboard;
         private System.Windows.Forms.ToolStripStatusLabel Lbl_Page_Size;
         private Controls.ResizablePictureBox PB_Drawing_Board;

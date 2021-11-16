@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MDBEditor.Managers
+namespace MDBEditor.Helpers
 {
-    public static class FormManager
+    public static class FormHelper
     {
         /// <summary>
         /// Get all system colors as pictureboxes to control.

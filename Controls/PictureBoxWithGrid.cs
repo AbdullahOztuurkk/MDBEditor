@@ -19,6 +19,7 @@ namespace MDBEditor.Controls
             this.BackColor = Color.Transparent;
             this.Enabled = false;
             this.Dock = DockStyle.Fill;
+            this.Visible = false;
         }
         /// <summary>
         /// Draw grid lines on picture box

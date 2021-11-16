@@ -1169,6 +1169,7 @@ namespace MDBEditor
             this.CB_Guidelines.TabIndex = 1;
             this.CB_Guidelines.Text = "Kılavuz Çizgileri";
             this.CB_Guidelines.UseVisualStyleBackColor = true;
+            this.CB_Guidelines.CheckedChanged += new System.EventHandler(this.CB_Guidelines_CheckedChanged);
             // 
             // CB_Status_Bar
             // 

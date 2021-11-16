@@ -1,4 +1,5 @@
-﻿using MDBEditor.Helpers;
+﻿using MDBEditor.Controls;
+using MDBEditor.Helpers;
 using System;
 using System.Windows.Forms;
 
@@ -6,11 +7,17 @@ namespace MDBEditor
 {
     public partial class MasterForm : Form
     {
+        PictureBoxWithGrid BoxWithGrid;
+
         public MasterForm()
         {
             InitializeComponent();
             FormHelper.Get_Colors_Into_The_Control(FLP_Colors,FLP_Text_Colors);
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
+            
+            //Add grid control to drawing board
+            BoxWithGrid = new PictureBoxWithGrid(PB_Drawing_Board.Size);
+            PB_Drawing_Board.Controls.Add(BoxWithGrid);
         }
 
         public void Select_Color_From_Button(object sender, EventArgs e)
@@ -45,6 +52,14 @@ namespace MDBEditor
         private void PB_Drawing_Board_SizeChanged(object sender, EventArgs e)
         {
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
+        }
+
+        /// <summary>
+        /// Set toggleable gridlines on drawing board
+        /// </summary>
+        private void CB_Guidelines_CheckedChanged(object sender, EventArgs e)
+        {
+            BoxWithGrid.Visible = !BoxWithGrid.Visible;
         }
     }
 }

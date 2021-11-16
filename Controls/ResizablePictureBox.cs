@@ -8,18 +8,29 @@ using System.Windows.Forms;
 
 namespace MDBEditor.Controls
 {
+    /// <summary>
+    /// Drawing board control
+    /// </summary>
     public class ResizablePictureBox:PictureBox
     {
         public ResizablePictureBox()
         {
             this.ResizeRedraw = true;
         }
+
+        /// <summary>
+        /// Resize form operation  
+        /// </summary>
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             var rc = new Rectangle(this.ClientSize.Width - grab, this.ClientSize.Height - grab, grab, grab);
             ControlPaint.DrawSizeGrip(e.Graphics, this.BackColor, rc);
         }
+
+        /// <summary>
+        /// Draw triangle at bottom right of control 
+        /// </summary>
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);

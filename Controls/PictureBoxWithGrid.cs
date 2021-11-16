@@ -20,13 +20,15 @@ namespace MDBEditor.Controls
             this.Enabled = false;
             this.Dock = DockStyle.Fill;
         }
-
+        /// <summary>
+        /// Draw grid lines on picture box
+        /// </summary>
         protected override void OnPaint(PaintEventArgs pe)
         {
             Graphics g = pe.Graphics;
             short numOfCells = NUM_OF_CELLS;
             short cellSize = CELL_OF_SIZE;
-            Pen p = new Pen(Color.Black);
+            Pen p = new Pen(Color.LightGray);
 
             for (int y = 0; y < numOfCells; ++y)
             {

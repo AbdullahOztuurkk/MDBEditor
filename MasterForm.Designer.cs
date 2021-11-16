@@ -1585,9 +1585,9 @@ namespace MDBEditor
             // 
             this.PB_Drawing_Board.BackColor = System.Drawing.Color.White;
             this.PB_Drawing_Board.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PB_Drawing_Board.Location = new System.Drawing.Point(8, 9);
+            this.PB_Drawing_Board.Location = new System.Drawing.Point(12, 9);
             this.PB_Drawing_Board.Name = "PB_Drawing_Board";
-            this.PB_Drawing_Board.Size = new System.Drawing.Size(1081, 556);
+            this.PB_Drawing_Board.Size = new System.Drawing.Size(1073, 556);
             this.PB_Drawing_Board.TabIndex = 0;
             this.PB_Drawing_Board.TabStop = false;
             this.PB_Drawing_Board.SizeChanged += new System.EventHandler(this.PB_Drawing_Board_SizeChanged);

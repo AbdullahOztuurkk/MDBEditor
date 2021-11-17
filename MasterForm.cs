@@ -7,7 +7,7 @@ namespace MDBEditor
 {
     public partial class MasterForm : Form
     {
-        PictureBoxWithGrid BoxWithGrid;
+        private readonly PictureBoxWithGrid BoxWithGrid;
 
         public MasterForm()
         {

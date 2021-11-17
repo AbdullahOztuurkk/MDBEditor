@@ -61,5 +61,11 @@ namespace MDBEditor
         {
             BoxWithGrid.Visible = !BoxWithGrid.Visible;
         }
+
+        private void PB_Font_Dialog_Click(object sender, EventArgs e)
+        {
+            //TODO: Detect selected text and apply font to text
+            Font_Dialog.ShowDialog();
+        }
     }
 }

@@ -109,6 +109,8 @@ namespace MDBEditor
             this.Btn_Cut_To_Clipboard = new System.Windows.Forms.Button();
             this.Btn_Copy_To_Clipboard = new System.Windows.Forms.Button();
             this.Btn_Paste_From_Clipboard = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.PB_Font_Dialog = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.FLP_Text_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
@@ -177,6 +179,7 @@ namespace MDBEditor
             this.flowLayoutPanel2.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.Panel_Drawing_Board.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Drawing_Board)).BeginInit();
@@ -1197,6 +1200,7 @@ namespace MDBEditor
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.groupBox7);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox9);
             this.flowLayoutPanel2.Controls.Add(this.groupBox8);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
@@ -1279,6 +1283,33 @@ namespace MDBEditor
             this.General_ToolTip.SetToolTip(this.Btn_Paste_From_Clipboard, "Yapıştır");
             this.Btn_Paste_From_Clipboard.UseVisualStyleBackColor = true;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.PB_Font_Dialog);
+            this.groupBox9.Location = new System.Drawing.Point(165, 3);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox9.Size = new System.Drawing.Size(74, 113);
+            this.groupBox9.TabIndex = 4;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Yazı Tipi";
+            // 
+            // button20
+            // 
+            this.PB_Font_Dialog.BackgroundImage = global::MDBEditor.Properties.Resources.font;
+            this.PB_Font_Dialog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Font_Dialog.FlatAppearance.BorderSize = 0;
+            this.PB_Font_Dialog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PB_Font_Dialog.Location = new System.Drawing.Point(18, 43);
+            this.PB_Font_Dialog.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.PB_Font_Dialog.Name = "PB_Font_Dialog";
+            this.PB_Font_Dialog.Size = new System.Drawing.Size(37, 37);
+            this.PB_Font_Dialog.TabIndex = 0;
+            this.General_ToolTip.SetToolTip(this.PB_Font_Dialog, "Yazı Tipini Ayarla");
+            this.PB_Font_Dialog.UseVisualStyleBackColor = true;
+            this.PB_Font_Dialog.Click += new System.EventHandler(this.PB_Font_Dialog_Click);
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.FLP_Text_Colors);
@@ -1286,7 +1317,7 @@ namespace MDBEditor
             this.groupBox8.Controls.Add(this.label12);
             this.groupBox8.Controls.Add(this.button17);
             this.groupBox8.Controls.Add(this.button19);
-            this.groupBox8.Location = new System.Drawing.Point(165, 3);
+            this.groupBox8.Location = new System.Drawing.Point(247, 3);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1783,6 +1814,7 @@ namespace MDBEditor
             this.flowLayoutPanel2.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.Panel_Drawing_Board.ResumeLayout(false);
@@ -1917,6 +1949,8 @@ namespace MDBEditor
         private System.Windows.Forms.Button Btn_Copy_To_Clipboard;
         private System.Windows.Forms.ToolStripStatusLabel Lbl_Page_Size;
         private Controls.ResizablePictureBox PB_Drawing_Board;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button PB_Font_Dialog;
     }
 }
 

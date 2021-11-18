@@ -36,7 +36,7 @@ namespace MDBEditor
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
+            this.Btn_Open_File = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.GB_Save_File = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -147,6 +147,7 @@ namespace MDBEditor
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
+            this.Open_File_Dialog = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -238,7 +239,7 @@ namespace MDBEditor
             // 
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.button23);
+            this.groupBox1.Controls.Add(this.Btn_Open_File);
             this.groupBox1.Controls.Add(this.button24);
             this.groupBox1.Location = new System.Drawing.Point(4, 3);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -269,19 +270,20 @@ namespace MDBEditor
             this.label6.TabIndex = 2;
             this.label6.Text = "Aç";
             // 
-            // button23
+            // Btn_Open_File
             // 
-            this.button23.BackgroundImage = global::MDBEditor.Properties.Resources.open_file;
-            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button23.FlatAppearance.BorderSize = 0;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Location = new System.Drawing.Point(51, 42);
-            this.button23.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(37, 37);
-            this.button23.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.button23, "Varolan bir dosyayı açın");
-            this.button23.UseVisualStyleBackColor = true;
+            this.Btn_Open_File.BackgroundImage = global::MDBEditor.Properties.Resources.open_file;
+            this.Btn_Open_File.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Open_File.FlatAppearance.BorderSize = 0;
+            this.Btn_Open_File.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Open_File.Location = new System.Drawing.Point(51, 42);
+            this.Btn_Open_File.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Btn_Open_File.Name = "Btn_Open_File";
+            this.Btn_Open_File.Size = new System.Drawing.Size(37, 37);
+            this.Btn_Open_File.TabIndex = 1;
+            this.General_ToolTip.SetToolTip(this.Btn_Open_File, "Varolan bir dosyayı açın");
+            this.Btn_Open_File.UseVisualStyleBackColor = true;
+            this.Btn_Open_File.Click += new System.EventHandler(this.Btn_Open_File_Click);
             // 
             // button24
             // 
@@ -1295,7 +1297,7 @@ namespace MDBEditor
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Yazı Tipi";
             // 
-            // button20
+            // PB_Font_Dialog
             // 
             this.PB_Font_Dialog.BackgroundImage = global::MDBEditor.Properties.Resources.font;
             this.PB_Font_Dialog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1764,6 +1766,14 @@ namespace MDBEditor
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
+            // Open_File_Dialog
+            // 
+            this.Open_File_Dialog.DefaultExt = "png";
+            this.Open_File_Dialog.Filter = "PNG Dosyası |*.png| JPG Dosyası|*.jpg| BMP Dosyası|*.bmp";
+            this.Open_File_Dialog.InitialDirectory = " Desktop";
+            this.Open_File_Dialog.RestoreDirectory = true;
+            this.Open_File_Dialog.Title = "Resim seçiniz";
+            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1891,7 +1901,7 @@ namespace MDBEditor
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button Btn_Open_File;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.GroupBox GB_Save_File;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
@@ -1951,6 +1961,7 @@ namespace MDBEditor
         private Controls.ResizablePictureBox PB_Drawing_Board;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button PB_Font_Dialog;
+        private System.Windows.Forms.OpenFileDialog Open_File_Dialog;
     }
 }
 

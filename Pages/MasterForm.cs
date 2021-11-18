@@ -1,6 +1,8 @@
-﻿using MDBEditor.Controls;
+﻿using MDBEditor.Constants;
+using MDBEditor.Controls;
 using MDBEditor.Helpers;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace MDBEditor
@@ -66,6 +68,27 @@ namespace MDBEditor
         {
             //TODO: Detect selected text and apply font to text
             Font_Dialog.ShowDialog();
+        }
+
+        private void Btn_Open_File_Click(object sender, EventArgs e)
+        {
+            Open_File_Dialog.RestoreDirectory = true;
+            if(DialogResult.OK == Open_File_Dialog.ShowDialog())
+            {
+                if(FormHelper.IsNullOrEmpty(PB_Drawing_Board))
+                    PB_Drawing_Board.Image = new Bitmap(Open_File_Dialog.FileName);
+                else
+                {
+                    if(DialogResult.Yes == 
+                        MessageBox.Show("Kaydedilmemiş değişiklikler var. " +
+                        "Yine de bu dosyayı açmak istiyor musunuz?",
+                        "Unsaved changes",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                    {
+                        PB_Drawing_Board.Image = new Bitmap(Open_File_Dialog.FileName);
+                    }
+                }
+            }
         }
     }
 }

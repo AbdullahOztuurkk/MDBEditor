@@ -33,5 +33,15 @@ namespace MDBEditor.Helpers
                 }
             }
         }
+
+        /// <summary>
+        /// Availability of given picturebox before open new file
+        /// </summary>
+        /// <param name="pb">Any picturebox</param>
+        /// <returns>Availability of given picturebox</returns>
+        public static bool IsNullOrEmpty(this PictureBox pb)
+        {
+            return pb == null || pb.Image == null;
+        }
     }
 }

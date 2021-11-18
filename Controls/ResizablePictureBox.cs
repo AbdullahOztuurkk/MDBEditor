@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MDBEditor.Constants;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -17,6 +18,8 @@ namespace MDBEditor.Controls
         {
             this.ResizeRedraw = true;
         }
+
+        private int grab = AppSettings.CORNER;
 
         /// <summary>
         /// Resize form operation  
@@ -41,6 +44,5 @@ namespace MDBEditor.Controls
                     m.Result = new IntPtr(17);  // HT_BOTTOMRIGHT
             }
         }
-        private const int grab = 16;
     }
 }

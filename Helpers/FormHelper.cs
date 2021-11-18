@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MDBEditor.Constants;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace MDBEditor.Helpers
                     Color color = Color.FromKnownColor(knowColor);
                     PictureBox pb = new PictureBox()
                     {
-                        Size = new Size(20, 20),
+                        Size = new Size(AppSettings.BOX_SIZE, AppSettings.BOX_SIZE),
                         BackColor = color,
                         BorderStyle = BorderStyle.FixedSingle,
                     };

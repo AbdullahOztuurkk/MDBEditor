@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MDBEditor.Constants;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -9,10 +10,7 @@ using System.Windows.Forms;
 namespace MDBEditor.Controls
 {
     public class PictureBoxWithGrid : PictureBox
-    {
-        short CELL_OF_SIZE = 12;
-        short NUM_OF_CELLS = 500;
-        
+    {   
         public PictureBoxWithGrid(Size size)
         {
             this.Size = size;
@@ -27,9 +25,9 @@ namespace MDBEditor.Controls
         protected override void OnPaint(PaintEventArgs pe)
         {
             Graphics g = pe.Graphics;
-            short numOfCells = NUM_OF_CELLS;
-            short cellSize = CELL_OF_SIZE;
-            Pen p = new Pen(Color.LightGray);
+            short numOfCells    = AppSettings.CELL_OF_SIZE;
+            short cellSize      = AppSettings.NUM_OF_CELLS;
+            Pen p = new Pen(AppSettings.PEN_FORECOLOR);
 
             for (int y = 0; y < numOfCells; ++y)
             {

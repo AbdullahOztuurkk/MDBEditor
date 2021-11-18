@@ -124,14 +124,14 @@ namespace MDBEditor
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.Panel_Drawing_Board = new System.Windows.Forms.Panel();
             this.PB_Drawing_Board = new MDBEditor.Controls.ResizablePictureBox();
             this.Status_Bar = new System.Windows.Forms.StatusStrip();
@@ -220,7 +220,7 @@ namespace MDBEditor
             this.TP_General.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TP_General.Size = new System.Drawing.Size(1089, 123);
             this.TP_General.TabIndex = 2;
-            this.TP_General.Text = "Dosya";
+            this.TP_General.Text = "File";
             // 
             // FLP_File
             // 
@@ -248,7 +248,7 @@ namespace MDBEditor
             this.groupBox1.Size = new System.Drawing.Size(98, 113);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dosya";
+            this.groupBox1.Text = "File";
             // 
             // label7
             // 
@@ -256,9 +256,9 @@ namespace MDBEditor
             this.label7.Location = new System.Drawing.Point(12, 82);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 15);
+            this.label7.Size = new System.Drawing.Size(31, 15);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Yeni";
+            this.label7.Text = "New";
             // 
             // label6
             // 
@@ -266,9 +266,9 @@ namespace MDBEditor
             this.label6.Location = new System.Drawing.Point(58, 82);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 15);
+            this.label6.Size = new System.Drawing.Size(36, 15);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Aç";
+            this.label6.Text = "Open";
             // 
             // Btn_Open_File
             // 
@@ -309,7 +309,7 @@ namespace MDBEditor
             this.GB_Save_File.Size = new System.Drawing.Size(338, 113);
             this.GB_Save_File.TabIndex = 4;
             this.GB_Save_File.TabStop = false;
-            this.GB_Save_File.Text = "Kaydet";
+            this.GB_Save_File.Text = "Save";
             // 
             // tableLayoutPanel5
             // 
@@ -406,17 +406,17 @@ namespace MDBEditor
             this.groupBox2.Size = new System.Drawing.Size(75, 113);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Yazdır";
+            this.groupBox2.Text = "Print";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 82);
+            this.label10.Location = new System.Drawing.Point(0, 82);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 15);
+            this.label10.Size = new System.Drawing.Size(75, 15);
             this.label10.TabIndex = 3;
-            this.label10.Text = "Yazdır";
+            this.label10.Text = "Print File";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button29
             // 
@@ -445,7 +445,7 @@ namespace MDBEditor
             this.GB_Settings.Size = new System.Drawing.Size(148, 113);
             this.GB_Settings.TabIndex = 4;
             this.GB_Settings.TabStop = false;
-            this.GB_Settings.Text = "Özellikler";
+            this.GB_Settings.Text = "Features";
             // 
             // label8
             // 
@@ -453,9 +453,9 @@ namespace MDBEditor
             this.label8.Location = new System.Drawing.Point(12, 82);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 15);
+            this.label8.Size = new System.Drawing.Size(51, 15);
             this.label8.TabIndex = 3;
-            this.label8.Text = "Özellikler";
+            this.label8.Text = "Features";
             // 
             // label9
             // 
@@ -463,9 +463,9 @@ namespace MDBEditor
             this.label9.Location = new System.Drawing.Point(76, 82);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 15);
+            this.label9.Size = new System.Drawing.Size(40, 15);
             this.label9.TabIndex = 2;
-            this.label9.Text = "Hakkında";
+            this.label9.Text = "About";
             // 
             // button25
             // 
@@ -505,7 +505,7 @@ namespace MDBEditor
             this.TP_Prologue.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TP_Prologue.Size = new System.Drawing.Size(1089, 123);
             this.TP_Prologue.TabIndex = 0;
-            this.TP_Prologue.Text = "Giriş";
+            this.TP_Prologue.Text = "Prologue";
             // 
             // FLP_Prologue
             // 
@@ -532,7 +532,7 @@ namespace MDBEditor
             this.GB_Paste_Box.Size = new System.Drawing.Size(106, 113);
             this.GB_Paste_Box.TabIndex = 0;
             this.GB_Paste_Box.TabStop = false;
-            this.GB_Paste_Box.Text = "Yapıştır";
+            this.GB_Paste_Box.Text = "Paste";
             // 
             // Btn_Paste_From_File
             // 
@@ -545,7 +545,7 @@ namespace MDBEditor
             this.Btn_Paste_From_File.Name = "Btn_Paste_From_File";
             this.Btn_Paste_From_File.Size = new System.Drawing.Size(37, 37);
             this.Btn_Paste_From_File.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.Btn_Paste_From_File, "Dosyadan yapıştır");
+            this.General_ToolTip.SetToolTip(this.Btn_Paste_From_File, "Paste from file");
             this.Btn_Paste_From_File.UseVisualStyleBackColor = true;
             // 
             // Btn_Paste_Area
@@ -559,7 +559,7 @@ namespace MDBEditor
             this.Btn_Paste_Area.Name = "Btn_Paste_Area";
             this.Btn_Paste_Area.Size = new System.Drawing.Size(37, 37);
             this.Btn_Paste_Area.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Paste_Area, "Yapıştır");
+            this.General_ToolTip.SetToolTip(this.Btn_Paste_Area, "Paste");
             this.Btn_Paste_Area.UseVisualStyleBackColor = true;
             // 
             // GB_Image_Area
@@ -573,7 +573,7 @@ namespace MDBEditor
             this.GB_Image_Area.Size = new System.Drawing.Size(188, 113);
             this.GB_Image_Area.TabIndex = 2;
             this.GB_Image_Area.TabStop = false;
-            this.GB_Image_Area.Text = "Resim";
+            this.GB_Image_Area.Text = "Image";
             // 
             // tableLayoutPanel1
             // 
@@ -605,7 +605,7 @@ namespace MDBEditor
             this.Btn_Crop_Image.Name = "Btn_Crop_Image";
             this.Btn_Crop_Image.Size = new System.Drawing.Size(122, 25);
             this.Btn_Crop_Image.TabIndex = 2;
-            this.Btn_Crop_Image.Text = "Kırp";
+            this.Btn_Crop_Image.Text = "Crop";
             this.Btn_Crop_Image.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Crop_Image, "Resmi Kırp");
             this.Btn_Crop_Image.UseVisualStyleBackColor = true;
@@ -623,7 +623,7 @@ namespace MDBEditor
             this.Btn_Resize_Image.Name = "Btn_Resize_Image";
             this.Btn_Resize_Image.Size = new System.Drawing.Size(122, 26);
             this.Btn_Resize_Image.TabIndex = 3;
-            this.Btn_Resize_Image.Text = "Boyutlandır";
+            this.Btn_Resize_Image.Text = "Resize";
             this.General_ToolTip.SetToolTip(this.Btn_Resize_Image, "Dosyayı yeniden boyutlandırın");
             this.Btn_Resize_Image.UseVisualStyleBackColor = true;
             // 
@@ -640,7 +640,7 @@ namespace MDBEditor
             this.Btn_Rotate_Image.Name = "Btn_Rotate_Image";
             this.Btn_Rotate_Image.Size = new System.Drawing.Size(122, 27);
             this.Btn_Rotate_Image.TabIndex = 4;
-            this.Btn_Rotate_Image.Text = "Döndür";
+            this.Btn_Rotate_Image.Text = "Rotate";
             this.General_ToolTip.SetToolTip(this.Btn_Rotate_Image, "Resmi saat yönünde döndürün");
             this.Btn_Rotate_Image.UseVisualStyleBackColor = true;
             // 
@@ -668,7 +668,7 @@ namespace MDBEditor
             this.GB_Tools.Size = new System.Drawing.Size(167, 113);
             this.GB_Tools.TabIndex = 3;
             this.GB_Tools.TabStop = false;
-            this.GB_Tools.Text = "Araçlar";
+            this.GB_Tools.Text = "Tools";
             // 
             // tableLayoutPanel2
             // 
@@ -778,7 +778,7 @@ namespace MDBEditor
             this.Btn_Add_Text.Size = new System.Drawing.Size(38, 34);
             this.Btn_Add_Text.TabIndex = 5;
             this.Btn_Add_Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Add_Text, "Resmi Kırp");
+            this.General_ToolTip.SetToolTip(this.Btn_Add_Text, "Crop the image");
             this.Btn_Add_Text.UseVisualStyleBackColor = true;
             // 
             // GB_Shapes
@@ -791,7 +791,7 @@ namespace MDBEditor
             this.GB_Shapes.Size = new System.Drawing.Size(167, 113);
             this.GB_Shapes.TabIndex = 4;
             this.GB_Shapes.TabStop = false;
-            this.GB_Shapes.Text = "Şekiller";
+            this.GB_Shapes.Text = "Shapes";
             // 
             // tableLayoutPanel3
             // 
@@ -846,7 +846,6 @@ namespace MDBEditor
             this.Btn_Square.Size = new System.Drawing.Size(18, 18);
             this.Btn_Square.TabIndex = 2;
             this.Btn_Square.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Square, "Resmi Kırp");
             this.Btn_Square.UseVisualStyleBackColor = true;
             // 
             // Btn_Triangle
@@ -861,7 +860,6 @@ namespace MDBEditor
             this.Btn_Triangle.Size = new System.Drawing.Size(18, 18);
             this.Btn_Triangle.TabIndex = 4;
             this.Btn_Triangle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Triangle, "Resmi Kırp");
             this.Btn_Triangle.UseVisualStyleBackColor = true;
             // 
             // Btn_Star
@@ -876,7 +874,6 @@ namespace MDBEditor
             this.Btn_Star.Size = new System.Drawing.Size(18, 18);
             this.Btn_Star.TabIndex = 5;
             this.Btn_Star.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Star, "Resmi Kırp");
             this.Btn_Star.UseVisualStyleBackColor = true;
             // 
             // Btn_Diamond
@@ -890,7 +887,6 @@ namespace MDBEditor
             this.Btn_Diamond.Name = "Btn_Diamond";
             this.Btn_Diamond.Size = new System.Drawing.Size(22, 23);
             this.Btn_Diamond.TabIndex = 3;
-            this.General_ToolTip.SetToolTip(this.Btn_Diamond, "Dosyayı yeniden boyutlandırın");
             this.Btn_Diamond.UseVisualStyleBackColor = true;
             // 
             // Btn_Line
@@ -905,7 +901,6 @@ namespace MDBEditor
             this.Btn_Line.Size = new System.Drawing.Size(19, 18);
             this.Btn_Line.TabIndex = 7;
             this.Btn_Line.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Line, "Resmi Kırp");
             this.Btn_Line.UseVisualStyleBackColor = true;
             // 
             // Btn_Right_Arrow
@@ -920,7 +915,6 @@ namespace MDBEditor
             this.Btn_Right_Arrow.Size = new System.Drawing.Size(18, 18);
             this.Btn_Right_Arrow.TabIndex = 8;
             this.Btn_Right_Arrow.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Right_Arrow, "Resmi Kırp");
             this.Btn_Right_Arrow.UseVisualStyleBackColor = true;
             // 
             // button18
@@ -934,7 +928,6 @@ namespace MDBEditor
             this.button18.Size = new System.Drawing.Size(18, 18);
             this.button18.TabIndex = 9;
             this.button18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button18, "Resmi Kırp");
             this.button18.UseVisualStyleBackColor = true;
             // 
             // GB_Colors
@@ -951,15 +944,15 @@ namespace MDBEditor
             this.GB_Colors.Size = new System.Drawing.Size(392, 113);
             this.GB_Colors.TabIndex = 2;
             this.GB_Colors.TabStop = false;
-            this.GB_Colors.Text = "Renkler";
+            this.GB_Colors.Text = "Colors";
             // 
             // FLP_Colors
             // 
             this.FLP_Colors.AutoScroll = true;
-            this.FLP_Colors.Location = new System.Drawing.Point(104, 14);
+            this.FLP_Colors.Location = new System.Drawing.Point(118, 14);
             this.FLP_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FLP_Colors.Name = "FLP_Colors";
-            this.FLP_Colors.Size = new System.Drawing.Size(281, 92);
+            this.FLP_Colors.Size = new System.Drawing.Size(267, 92);
             this.FLP_Colors.TabIndex = 4;
             // 
             // label2
@@ -968,9 +961,9 @@ namespace MDBEditor
             this.label2.Location = new System.Drawing.Point(48, 75);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 15);
+            this.label2.Size = new System.Drawing.Size(62, 15);
             this.label2.TabIndex = 3;
-            this.label2.Text = "2.Renk";
+            this.label2.Text = "Secondary";
             // 
             // label1
             // 
@@ -978,9 +971,9 @@ namespace MDBEditor
             this.label1.Location = new System.Drawing.Point(4, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
+            this.label1.Size = new System.Drawing.Size(48, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "1.Renk";
+            this.label1.Text = "Primary";
             // 
             // Btn_Secondary_Color
             // 
@@ -988,12 +981,11 @@ namespace MDBEditor
             this.Btn_Secondary_Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Secondary_Color.FlatAppearance.BorderSize = 0;
             this.Btn_Secondary_Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Secondary_Color.Location = new System.Drawing.Point(51, 35);
+            this.Btn_Secondary_Color.Location = new System.Drawing.Point(61, 34);
             this.Btn_Secondary_Color.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Secondary_Color.Name = "Btn_Secondary_Color";
             this.Btn_Secondary_Color.Size = new System.Drawing.Size(37, 37);
             this.Btn_Secondary_Color.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.Btn_Secondary_Color, "Dosyadan yapıştır");
             this.Btn_Secondary_Color.UseVisualStyleBackColor = false;
             this.Btn_Secondary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
@@ -1003,7 +995,7 @@ namespace MDBEditor
             this.Btn_Primary_Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Primary_Color.FlatAppearance.BorderSize = 0;
             this.Btn_Primary_Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Primary_Color.Location = new System.Drawing.Point(7, 35);
+            this.Btn_Primary_Color.Location = new System.Drawing.Point(8, 35);
             this.Btn_Primary_Color.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Primary_Color.Name = "Btn_Primary_Color";
             this.Btn_Primary_Color.Size = new System.Drawing.Size(37, 37);
@@ -1024,7 +1016,7 @@ namespace MDBEditor
             this.TP_View.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TP_View.Size = new System.Drawing.Size(1089, 123);
             this.TP_View.TabIndex = 1;
-            this.TP_View.Text = "Görünüm";
+            this.TP_View.Text = "View";
             // 
             // FLP_View
             // 
@@ -1052,7 +1044,7 @@ namespace MDBEditor
             this.GB_Zoom.Size = new System.Drawing.Size(187, 113);
             this.GB_Zoom.TabIndex = 0;
             this.GB_Zoom.TabStop = false;
-            this.GB_Zoom.Text = "Yakınlaştır";
+            this.GB_Zoom.Text = "Zoom In";
             // 
             // label5
             // 
@@ -1060,9 +1052,9 @@ namespace MDBEditor
             this.label5.Location = new System.Drawing.Point(140, 73);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 15);
+            this.label5.Size = new System.Drawing.Size(84, 15);
             this.label5.TabIndex = 5;
-            this.label5.Text = "%100";
+            this.label5.Text = "Zoom to 100%";
             // 
             // Btn_Zoom_Normal
             // 
@@ -1084,9 +1076,9 @@ namespace MDBEditor
             this.label4.Location = new System.Drawing.Point(71, 73);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.Size = new System.Drawing.Size(64, 15);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Uzaklaştır";
+            this.label4.Text = "Zoom-Out";
             // 
             // label3
             // 
@@ -1094,9 +1086,9 @@ namespace MDBEditor
             this.label3.Location = new System.Drawing.Point(0, 73);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
+            this.label3.Size = new System.Drawing.Size(54, 15);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Yakınlaştır";
+            this.label3.Text = "Zoom-In";
             // 
             // Btn_Zoom_Out
             // 
@@ -1136,7 +1128,7 @@ namespace MDBEditor
             this.GB_Show_Or_Hide.Size = new System.Drawing.Size(145, 113);
             this.GB_Show_Or_Hide.TabIndex = 2;
             this.GB_Show_Or_Hide.TabStop = false;
-            this.GB_Show_Or_Hide.Text = "Göster veya gizle";
+            this.GB_Show_Or_Hide.Text = "Show or Hide";
             // 
             // tableLayoutPanel4
             // 
@@ -1162,7 +1154,7 @@ namespace MDBEditor
             this.CB_Ruler.Name = "CB_Ruler";
             this.CB_Ruler.Size = new System.Drawing.Size(122, 21);
             this.CB_Ruler.TabIndex = 0;
-            this.CB_Ruler.Text = "Cetveller";
+            this.CB_Ruler.Text = "Ruler";
             this.CB_Ruler.UseVisualStyleBackColor = true;
             // 
             // CB_Guidelines
@@ -1172,7 +1164,7 @@ namespace MDBEditor
             this.CB_Guidelines.Name = "CB_Guidelines";
             this.CB_Guidelines.Size = new System.Drawing.Size(122, 21);
             this.CB_Guidelines.TabIndex = 1;
-            this.CB_Guidelines.Text = "Kılavuz Çizgileri";
+            this.CB_Guidelines.Text = "Grid Lines";
             this.CB_Guidelines.UseVisualStyleBackColor = true;
             this.CB_Guidelines.CheckedChanged += new System.EventHandler(this.CB_Guidelines_CheckedChanged);
             // 
@@ -1185,7 +1177,7 @@ namespace MDBEditor
             this.CB_Status_Bar.Name = "CB_Status_Bar";
             this.CB_Status_Bar.Size = new System.Drawing.Size(122, 21);
             this.CB_Status_Bar.TabIndex = 2;
-            this.CB_Status_Bar.Text = "Durum Çubuğu";
+            this.CB_Status_Bar.Text = "Status Bar";
             this.CB_Status_Bar.UseVisualStyleBackColor = true;
             this.CB_Status_Bar.CheckedChanged += new System.EventHandler(this.CB_Status_Bar_CheckedChanged);
             // 
@@ -1197,7 +1189,7 @@ namespace MDBEditor
             this.TP_Text.Name = "TP_Text";
             this.TP_Text.Size = new System.Drawing.Size(1089, 123);
             this.TP_Text.TabIndex = 3;
-            this.TP_Text.Text = "Metin";
+            this.TP_Text.Text = "Text";
             // 
             // flowLayoutPanel2
             // 
@@ -1221,7 +1213,7 @@ namespace MDBEditor
             this.groupBox7.Size = new System.Drawing.Size(153, 113);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Yapıştır";
+            this.groupBox7.Text = "Paste";
             // 
             // tableLayoutPanel9
             // 
@@ -1251,7 +1243,7 @@ namespace MDBEditor
             this.Btn_Cut_To_Clipboard.Name = "Btn_Cut_To_Clipboard";
             this.Btn_Cut_To_Clipboard.Size = new System.Drawing.Size(86, 32);
             this.Btn_Cut_To_Clipboard.TabIndex = 2;
-            this.Btn_Cut_To_Clipboard.Text = "Kes";
+            this.Btn_Cut_To_Clipboard.Text = "Cut";
             this.General_ToolTip.SetToolTip(this.Btn_Cut_To_Clipboard, "Resmi Kırp");
             // 
             // Btn_Copy_To_Clipboard
@@ -1267,8 +1259,7 @@ namespace MDBEditor
             this.Btn_Copy_To_Clipboard.Name = "Btn_Copy_To_Clipboard";
             this.Btn_Copy_To_Clipboard.Size = new System.Drawing.Size(86, 37);
             this.Btn_Copy_To_Clipboard.TabIndex = 3;
-            this.Btn_Copy_To_Clipboard.Text = "Kopyala";
-            this.Btn_Copy_To_Clipboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Btn_Copy_To_Clipboard.Text = "Copy";
             this.General_ToolTip.SetToolTip(this.Btn_Copy_To_Clipboard, "Resmi Kırp");
             // 
             // Btn_Paste_From_Clipboard
@@ -1295,7 +1286,7 @@ namespace MDBEditor
             this.groupBox9.Size = new System.Drawing.Size(74, 113);
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Yazı Tipi";
+            this.groupBox9.Text = "Text Type";
             // 
             // PB_Font_Dialog
             // 
@@ -1326,15 +1317,15 @@ namespace MDBEditor
             this.groupBox8.Size = new System.Drawing.Size(392, 113);
             this.groupBox8.TabIndex = 4;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Renkler";
+            this.groupBox8.Text = "Colors";
             // 
             // FLP_Text_Colors
             // 
             this.FLP_Text_Colors.AutoScroll = true;
-            this.FLP_Text_Colors.Location = new System.Drawing.Point(104, 14);
+            this.FLP_Text_Colors.Location = new System.Drawing.Point(119, 14);
             this.FLP_Text_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FLP_Text_Colors.Name = "FLP_Text_Colors";
-            this.FLP_Text_Colors.Size = new System.Drawing.Size(281, 92);
+            this.FLP_Text_Colors.Size = new System.Drawing.Size(266, 92);
             this.FLP_Text_Colors.TabIndex = 4;
             // 
             // label11
@@ -1343,9 +1334,9 @@ namespace MDBEditor
             this.label11.Location = new System.Drawing.Point(49, 75);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 15);
+            this.label11.Size = new System.Drawing.Size(62, 15);
             this.label11.TabIndex = 3;
-            this.label11.Text = "2.Renk";
+            this.label11.Text = "Secondary";
             // 
             // label12
             // 
@@ -1353,9 +1344,9 @@ namespace MDBEditor
             this.label12.Location = new System.Drawing.Point(5, 75);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 15);
+            this.label12.Size = new System.Drawing.Size(48, 15);
             this.label12.TabIndex = 2;
-            this.label12.Text = "1.Renk";
+            this.label12.Text = "Primary";
             // 
             // button17
             // 
@@ -1363,7 +1354,7 @@ namespace MDBEditor
             this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button17.FlatAppearance.BorderSize = 0;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Location = new System.Drawing.Point(51, 35);
+            this.button17.Location = new System.Drawing.Point(61, 35);
             this.button17.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(37, 37);
@@ -1377,7 +1368,7 @@ namespace MDBEditor
             this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button19.FlatAppearance.BorderSize = 0;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Location = new System.Drawing.Point(7, 35);
+            this.button19.Location = new System.Drawing.Point(8, 35);
             this.button19.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(37, 37);
@@ -1427,7 +1418,7 @@ namespace MDBEditor
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 24);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Kırp";
+            this.button3.Text = "Crop";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.button3, "Resmi Kırp");
             this.button3.UseVisualStyleBackColor = true;
@@ -1444,7 +1435,7 @@ namespace MDBEditor
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(122, 24);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Boyutlandır";
+            this.button4.Text = "Resize";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.button4, "Dosyayı yeniden boyutlandırın");
             this.button4.UseVisualStyleBackColor = true;
@@ -1461,7 +1452,7 @@ namespace MDBEditor
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(122, 24);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Döndür";
+            this.button5.Text = "Rotate";
             this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.General_ToolTip.SetToolTip(this.button5, "Resmi saat yönünde döndürün");
@@ -1478,53 +1469,8 @@ namespace MDBEditor
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(37, 37);
             this.button6.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.button6, "Bir alan seçin");
+            this.General_ToolTip.SetToolTip(this.button6, "Select area");
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::MDBEditor.Properties.Resources.eraser;
-            this.button7.Location = new System.Drawing.Point(6, 52);
-            this.button7.Margin = new System.Windows.Forms.Padding(6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(38, 34);
-            this.button7.TabIndex = 7;
-            this.button7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button7, "Resmi Kırp");
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Image = global::MDBEditor.Properties.Resources.color_picker;
-            this.button8.Location = new System.Drawing.Point(56, 52);
-            this.button8.Margin = new System.Windows.Forms.Padding(6);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(38, 34);
-            this.button8.TabIndex = 6;
-            this.button8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button8, "Resmi Kırp");
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Image = global::MDBEditor.Properties.Resources.pen;
-            this.button9.Location = new System.Drawing.Point(6, 6);
-            this.button9.Margin = new System.Windows.Forms.Padding(6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(38, 34);
-            this.button9.TabIndex = 2;
-            this.button9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button9, "Resmi Kırp");
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
@@ -1537,23 +1483,8 @@ namespace MDBEditor
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(43, 37);
             this.button10.TabIndex = 3;
-            this.General_ToolTip.SetToolTip(this.button10, "Dosyayı yeniden boyutlandırın");
+            this.General_ToolTip.SetToolTip(this.button10, "Resize image");
             this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Image = global::MDBEditor.Properties.Resources.paint_image;
-            this.button11.Location = new System.Drawing.Point(56, 6);
-            this.button11.Margin = new System.Windows.Forms.Padding(6);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(38, 34);
-            this.button11.TabIndex = 4;
-            this.button11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button11, "Resmi Kırp");
-            this.button11.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
@@ -1599,6 +1530,62 @@ namespace MDBEditor
             this.button14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.button14, "Resmi Kırp");
             this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::MDBEditor.Properties.Resources.eraser;
+            this.button7.Location = new System.Drawing.Point(6, 52);
+            this.button7.Margin = new System.Windows.Forms.Padding(6);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(38, 34);
+            this.button7.TabIndex = 7;
+            this.button7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Image = global::MDBEditor.Properties.Resources.color_picker;
+            this.button8.Location = new System.Drawing.Point(56, 52);
+            this.button8.Margin = new System.Windows.Forms.Padding(6);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(38, 34);
+            this.button8.TabIndex = 6;
+            this.button8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Image = global::MDBEditor.Properties.Resources.pen;
+            this.button9.Location = new System.Drawing.Point(6, 6);
+            this.button9.Margin = new System.Windows.Forms.Padding(6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(38, 34);
+            this.button9.TabIndex = 2;
+            this.button9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Image = global::MDBEditor.Properties.Resources.paint_image;
+            this.button11.Location = new System.Drawing.Point(56, 6);
+            this.button11.Margin = new System.Windows.Forms.Padding(6);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(38, 34);
+            this.button11.TabIndex = 4;
+            this.button11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button11.UseVisualStyleBackColor = true;
             // 
             // Panel_Drawing_Board
             // 
@@ -1667,7 +1654,7 @@ namespace MDBEditor
             this.groupBox3.Size = new System.Drawing.Size(106, 113);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Yapıştır";
+            this.groupBox3.Text = "Paste";
             // 
             // groupBox4
             // 
@@ -1680,7 +1667,7 @@ namespace MDBEditor
             this.groupBox4.Size = new System.Drawing.Size(188, 113);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Resim";
+            this.groupBox4.Text = "Image";
             // 
             // tableLayoutPanel6
             // 
@@ -1709,7 +1696,7 @@ namespace MDBEditor
             this.groupBox5.Size = new System.Drawing.Size(167, 113);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Araçlar";
+            this.groupBox5.Text = "Tools";
             // 
             // tableLayoutPanel7
             // 
@@ -1800,7 +1787,6 @@ namespace MDBEditor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.GB_Settings.ResumeLayout(false);
             this.GB_Settings.PerformLayout();
             this.TP_Prologue.ResumeLayout(false);

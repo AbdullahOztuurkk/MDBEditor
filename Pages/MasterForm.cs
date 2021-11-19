@@ -80,13 +80,13 @@ namespace MDBEditor
                 else
                 {
                     if(DialogResult.Yes == 
-                        MessageBox.Show("Kaydedilmemiş değişiklikler var. " +
-                        "Yine de bu dosyayı açmak istiyor musunuz?",
+                        MessageBox.Show("There are unsaved changes. Do you still want to open this file?",
                         "Unsaved changes",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                     {
                         PB_Drawing_Board.Image = new Bitmap(Open_File_Dialog.FileName);
                     }
+                    //TODO: Check if page saved according to picturebox availability
                 }
             }
         }

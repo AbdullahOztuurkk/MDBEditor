@@ -3,6 +3,7 @@ using MDBEditor.Controls;
 using MDBEditor.Helpers;
 using System;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace MDBEditor
@@ -72,11 +73,13 @@ namespace MDBEditor
 
         private void Btn_Open_File_Click(object sender, EventArgs e)
         {
-            Open_File_Dialog.RestoreDirectory = true;
             if(DialogResult.OK == Open_File_Dialog.ShowDialog())
             {
-                if(FormHelper.IsNullOrEmpty(PB_Drawing_Board))
+                if (FormHelper.IsNullOrEmpty(PB_Drawing_Board))
+                {
                     PB_Drawing_Board.Image = new Bitmap(Open_File_Dialog.FileName);
+                    this.Text = "MDBEditor - " + Open_File_Dialog.SafeFileName.Substring(0,Open_File_Dialog.SafeFileName.LastIndexOf('.'));
+                }
                 else
                 {
                     if(DialogResult.Yes == 
@@ -85,6 +88,7 @@ namespace MDBEditor
                         MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                     {
                         PB_Drawing_Board.Image = new Bitmap(Open_File_Dialog.FileName);
+                        this.Text = "MDBEditor - " + Open_File_Dialog.SafeFileName.Substring(0, Open_File_Dialog.SafeFileName.LastIndexOf('.'));
                     }
                     //TODO: Check if page saved according to picturebox availability
                 }

@@ -1,4 +1,5 @@
 ﻿using MDBEditor.Constants;
+using MDBEditor.Constants.Enums;
 using MDBEditor.Controls;
 using MDBEditor.Helpers;
 using System;
@@ -21,6 +22,13 @@ namespace MDBEditor
             //Add grid control to drawing board
             BoxWithGrid = new PictureBoxWithGrid(PB_Drawing_Board.Size);
             PB_Drawing_Board.Controls.Add(BoxWithGrid);
+
+            //Set location of drawing board before checked ruler checkbox
+            PB_Drawing_Board.Location = new Point(12, 9);
+
+            //Add rulers to pictureboxes
+            PB_Ruler_Left.Controls.Add(new RulerPictureBox(BoxAlignment.Vertical));
+            PB_Ruler_Top.Controls.Add(new RulerPictureBox());
         }
 
         public void Select_Color_From_Button(object sender, EventArgs e)
@@ -55,6 +63,8 @@ namespace MDBEditor
         private void PB_Drawing_Board_SizeChanged(object sender, EventArgs e)
         {
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
+            PB_Ruler_Left.Height = PB_Drawing_Board.Height;
+            PB_Ruler_Top.Width = PB_Drawing_Board.Width;
         }
 
         /// <summary>
@@ -92,6 +102,26 @@ namespace MDBEditor
                     }
                     //TODO: Check if page saved according to picturebox availability
                 }
+            }
+        }
+
+        /// <summary>
+        /// Set visible of Ruler in drawing board
+        /// </summary>
+        private void CB_Ruler_CheckedChanged(object sender, EventArgs e)
+        {
+            //Drawing board location is 12,9 -> new location is 32,28
+            if(CB_Ruler.CheckState == CheckState.Checked)
+            {
+                PB_Ruler_Left.Visible = true;
+                PB_Ruler_Top.Visible = true;
+                PB_Drawing_Board.Location = new Point(32, 28);
+            }
+            else
+            {
+                PB_Ruler_Left.Visible = false;
+                PB_Ruler_Top.Visible = false;
+                PB_Drawing_Board.Location = new Point(12, 9);
             }
         }
     }

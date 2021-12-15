@@ -133,6 +133,8 @@ namespace MDBEditor
             this.button9 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.Panel_Drawing_Board = new System.Windows.Forms.Panel();
+            this.PB_Ruler_Top = new System.Windows.Forms.PictureBox();
+            this.PB_Ruler_Left = new System.Windows.Forms.PictureBox();
             this.PB_Drawing_Board = new MDBEditor.Controls.ResizablePictureBox();
             this.Status_Bar = new System.Windows.Forms.StatusStrip();
             this.Lbl_Mouse_Coordinates = new System.Windows.Forms.ToolStripStatusLabel();
@@ -183,6 +185,8 @@ namespace MDBEditor
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.Panel_Drawing_Board.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Ruler_Top)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Ruler_Left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Drawing_Board)).BeginInit();
             this.Status_Bar.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1156,6 +1160,7 @@ namespace MDBEditor
             this.CB_Ruler.TabIndex = 0;
             this.CB_Ruler.Text = "Ruler";
             this.CB_Ruler.UseVisualStyleBackColor = true;
+            this.CB_Ruler.CheckedChanged += new System.EventHandler(this.CB_Ruler_CheckedChanged);
             // 
             // CB_Guidelines
             // 
@@ -1593,6 +1598,8 @@ namespace MDBEditor
             this.Panel_Drawing_Board.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.Panel_Drawing_Board.AutoScrollMinSize = new System.Drawing.Size(20, 20);
             this.Panel_Drawing_Board.AutoSize = true;
+            this.Panel_Drawing_Board.Controls.Add(this.PB_Ruler_Top);
+            this.Panel_Drawing_Board.Controls.Add(this.PB_Ruler_Left);
             this.Panel_Drawing_Board.Controls.Add(this.PB_Drawing_Board);
             this.Panel_Drawing_Board.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_Drawing_Board.Location = new System.Drawing.Point(0, 171);
@@ -1602,13 +1609,33 @@ namespace MDBEditor
             this.Panel_Drawing_Board.Size = new System.Drawing.Size(1097, 589);
             this.Panel_Drawing_Board.TabIndex = 2;
             // 
+            // PB_Ruler_Top
+            // 
+            this.PB_Ruler_Top.BackColor = System.Drawing.SystemColors.Control;
+            this.PB_Ruler_Top.Location = new System.Drawing.Point(32, -1);
+            this.PB_Ruler_Top.Name = "PB_Ruler_Top";
+            this.PB_Ruler_Top.Size = new System.Drawing.Size(1053, 26);
+            this.PB_Ruler_Top.TabIndex = 2;
+            this.PB_Ruler_Top.TabStop = false;
+            this.PB_Ruler_Top.Visible = false;
+            // 
+            // PB_Ruler_Left
+            // 
+            this.PB_Ruler_Left.BackColor = System.Drawing.SystemColors.Control;
+            this.PB_Ruler_Left.Location = new System.Drawing.Point(0, 28);
+            this.PB_Ruler_Left.Name = "PB_Ruler_Left";
+            this.PB_Ruler_Left.Size = new System.Drawing.Size(26, 537);
+            this.PB_Ruler_Left.TabIndex = 1;
+            this.PB_Ruler_Left.TabStop = false;
+            this.PB_Ruler_Left.Visible = false;
+            // 
             // PB_Drawing_Board
             // 
             this.PB_Drawing_Board.BackColor = System.Drawing.Color.White;
             this.PB_Drawing_Board.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PB_Drawing_Board.Location = new System.Drawing.Point(12, 9);
+            this.PB_Drawing_Board.Location = new System.Drawing.Point(32, 28);
             this.PB_Drawing_Board.Name = "PB_Drawing_Board";
-            this.PB_Drawing_Board.Size = new System.Drawing.Size(1073, 556);
+            this.PB_Drawing_Board.Size = new System.Drawing.Size(1053, 537);
             this.PB_Drawing_Board.TabIndex = 0;
             this.PB_Drawing_Board.TabStop = false;
             this.PB_Drawing_Board.SizeChanged += new System.EventHandler(this.PB_Drawing_Board_SizeChanged);
@@ -1814,6 +1841,8 @@ namespace MDBEditor
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.Panel_Drawing_Board.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Ruler_Top)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Ruler_Left)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Drawing_Board)).EndInit();
             this.Status_Bar.ResumeLayout(false);
             this.Status_Bar.PerformLayout();
@@ -1948,6 +1977,8 @@ namespace MDBEditor
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button PB_Font_Dialog;
         private System.Windows.Forms.OpenFileDialog Open_File_Dialog;
+        private System.Windows.Forms.PictureBox PB_Ruler_Top;
+        private System.Windows.Forms.PictureBox PB_Ruler_Left;
     }
 }
 

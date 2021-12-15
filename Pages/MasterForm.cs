@@ -65,6 +65,7 @@ namespace MDBEditor
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
             PB_Ruler_Left.Height = PB_Drawing_Board.Height;
             PB_Ruler_Top.Width = PB_Drawing_Board.Width;
+            BoxWithGrid.Size = PB_Drawing_Board.Size;
         }
 
         /// <summary>

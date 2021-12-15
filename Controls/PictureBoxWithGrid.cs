@@ -10,7 +10,8 @@ using System.Windows.Forms;
 namespace MDBEditor.Controls
 {
     public class PictureBoxWithGrid : PictureBox
-    {   
+    {
+        int numOfCells, cellSize;
         public PictureBoxWithGrid(Size size)
         {
             this.Size = size;
@@ -18,6 +19,8 @@ namespace MDBEditor.Controls
             this.Enabled = false;
             this.Dock = DockStyle.Fill;
             this.Visible = false;
+            numOfCells = AppSettings.NUM_OF_CELLS;
+            cellSize = AppSettings.CELL_OF_SIZE;
         }
         /// <summary>
         /// Draw grid lines on picture box
@@ -25,8 +28,6 @@ namespace MDBEditor.Controls
         protected override void OnPaint(PaintEventArgs pe)
         {
             Graphics g = pe.Graphics;
-            short numOfCells    = AppSettings.CELL_OF_SIZE;
-            short cellSize      = AppSettings.NUM_OF_CELLS;
             Pen p = new Pen(AppSettings.PEN_FORECOLOR);
 
             for (int y = 0; y < numOfCells; ++y)

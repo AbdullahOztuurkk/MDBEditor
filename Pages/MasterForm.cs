@@ -88,7 +88,7 @@ namespace MDBEditor
             if(DialogResult.OK == Open_File_Dialog.ShowDialog())
             {
                 string original_file_name = Open_File_Dialog.SafeFileName.Substring(0, Open_File_Dialog.SafeFileName.LastIndexOf('.'));
-                if (FormHelper.IsNullOrEmpty(PB_Drawing_Board))
+                if (PB_Drawing_Board.IsNullOrEmpty())
                 {
                     PB_Drawing_Board.Image = new Bitmap(Open_File_Dialog.FileName);
                     this.Text = "MDBEditor - " + original_file_name;

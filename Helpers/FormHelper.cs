@@ -14,8 +14,8 @@ namespace MDBEditor.Helpers
         /// <summary>
         /// Get all system colors as pictureboxes to control.
         /// </summary>
-        /// <param name="control">Any control like FlowLayoutPanel</param>
-        public static void Get_Colors_Into_The_Control(Control control)
+        /// <param name="control">Any FlowLayoutPanel</param>
+        public static void Get_Colors_Into_The_Control(this FlowLayoutPanel control)
         {
             KnownColor[] colors = (KnownColor[])Enum.GetValues(typeof(KnownColor));
             foreach (KnownColor knowColor in colors)

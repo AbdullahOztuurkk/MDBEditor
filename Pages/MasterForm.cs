@@ -16,7 +16,8 @@ namespace MDBEditor
         public MasterForm()
         {
             InitializeComponent();
-            FormHelper.Get_Colors_Into_The_Control(FLP_Colors,FLP_Text_Colors);
+            FormHelper.Get_Colors_Into_The_Control(FLP_Colors);
+            FormHelper.Get_Colors_Into_The_Control(FLP_Text_Colors);
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
             
             //Add grid control to drawing board

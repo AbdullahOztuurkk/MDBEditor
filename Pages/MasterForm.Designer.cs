@@ -1691,7 +1691,9 @@ namespace MDBEditor
             this.PB_Drawing_Board.TabIndex = 0;
             this.PB_Drawing_Board.TabStop = false;
             this.PB_Drawing_Board.SizeChanged += new System.EventHandler(this.PB_Drawing_Board_SizeChanged);
+            this.PB_Drawing_Board.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Drawing_Board_MouseDown);
             this.PB_Drawing_Board.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_Drawing_Board_MouseMove);
+            this.PB_Drawing_Board.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Drawing_Board_MouseUp);
             // 
             // Status_Bar
             // 

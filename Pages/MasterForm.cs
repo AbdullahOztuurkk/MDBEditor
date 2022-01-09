@@ -2,6 +2,7 @@
 using MDBEditor.Constants.Enums;
 using MDBEditor.Controls;
 using MDBEditor.Helpers;
+using MDBEditor.Tools.Concrete;
 using System;
 using System.Drawing;
 using System.Reflection;
@@ -12,7 +13,9 @@ namespace MDBEditor
     public partial class MasterForm : Form
     {
         private readonly PictureBoxWithGrid BoxWithGrid;
-
+        private PenTool penTool;
+        bool IsMouseDown = false;
+        private Point lastPoint;
         public MasterForm()
         {
             InitializeComponent();
@@ -30,6 +33,7 @@ namespace MDBEditor
             //Add rulers to pictureboxes
             PB_Ruler_Left.Controls.Add(new RulerPictureBox(BoxAlignment.Vertical));
             PB_Ruler_Top.Controls.Add(new RulerPictureBox());
+            penTool = new PenTool(PB_Drawing_Board.CreateGraphics());
         }
 
         public void Select_Color_From_Button(object sender, EventArgs e)
@@ -48,6 +52,18 @@ namespace MDBEditor
         private void PB_Drawing_Board_MouseMove(object sender, MouseEventArgs e)
         {
             Lbl_Mouse_Coordinates.Text = e.X + "," + e.Y + " px";
+            if (IsMouseDown == true)
+            {
+                if(lastPoint != null)
+                {
+                    penTool.Loc = e.Location;
+                    penTool.BackColor = Color.Red;
+                    penTool.Size = 3;
+                    penTool.LastPoint = lastPoint;
+                    penTool.Handle();
+                    lastPoint = e.Location;
+                }
+            }
         }
 
         /// <summary>
@@ -67,6 +83,7 @@ namespace MDBEditor
             PB_Ruler_Left.Height = PB_Drawing_Board.Height;
             PB_Ruler_Top.Width = PB_Drawing_Board.Width;
             BoxWithGrid.Size = PB_Drawing_Board.Size;
+            //TODO: Use the undo-redo stack to avoid the hassle of clearing the drawing board when resized.
         }
 
         /// <summary>
@@ -126,6 +143,18 @@ namespace MDBEditor
                 PB_Ruler_Top.Visible = false;
                 PB_Drawing_Board.Location = new Point(12, 9);
             }
+        }
+
+        private void PB_Drawing_Board_MouseDown(object sender, MouseEventArgs e)
+        {
+            IsMouseDown = true;
+            lastPoint = e.Location;
+        }
+
+        private void PB_Drawing_Board_MouseUp(object sender, MouseEventArgs e)
+        {
+            lastPoint = e.Location;
+            IsMouseDown = false;
         }
     }
 }

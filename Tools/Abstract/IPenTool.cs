@@ -10,9 +10,10 @@ using PenTool = MDBEditor.Tools.Concrete.PenTool;
 
 namespace MDBEditor.Tools.Abstract
 {
-    public interface IPenTool:IToolRepository<PenTool>,ITool
+    public interface IPenTool : IToolRepository<PenTool>, ITool
     {
         public Point Loc { get; set; }
+        public Point LastPoint { get; set; }
         public Color BackColor { get; set; }
         public int Size { get; set; }
 

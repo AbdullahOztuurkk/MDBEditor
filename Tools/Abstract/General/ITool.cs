@@ -8,6 +8,6 @@ namespace MDBEditor.Tools.Abstract.General
 {
     public interface ITool
     {
-
+        public void Handle();
     }
 }

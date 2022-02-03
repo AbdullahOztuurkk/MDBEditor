@@ -120,8 +120,8 @@ namespace MDBEditor
             this.FLP_Text_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.Btn_Text_Secondary_Color = new System.Windows.Forms.Button();
+            this.Btn_Text_Primary_Color = new System.Windows.Forms.Button();
             this.General_ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -1413,8 +1413,8 @@ namespace MDBEditor
             this.GB_Text_Colors.Controls.Add(this.FLP_Text_Colors);
             this.GB_Text_Colors.Controls.Add(this.label11);
             this.GB_Text_Colors.Controls.Add(this.label12);
-            this.GB_Text_Colors.Controls.Add(this.button17);
-            this.GB_Text_Colors.Controls.Add(this.button19);
+            this.GB_Text_Colors.Controls.Add(this.Btn_Text_Secondary_Color);
+            this.GB_Text_Colors.Controls.Add(this.Btn_Text_Primary_Color);
             this.GB_Text_Colors.Location = new System.Drawing.Point(366, 3);
             this.GB_Text_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Text_Colors.Name = "GB_Text_Colors";
@@ -1453,35 +1453,37 @@ namespace MDBEditor
             this.label12.TabIndex = 2;
             this.label12.Text = "Primary";
             // 
-            // button17
+            // Btn_Text_Secondary_Color
             // 
-            this.button17.BackColor = System.Drawing.Color.White;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Location = new System.Drawing.Point(61, 35);
-            this.button17.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(37, 37);
-            this.button17.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.button17, "Dosyadan yapıştır");
-            this.button17.UseVisualStyleBackColor = false;
+            this.Btn_Text_Secondary_Color.BackColor = System.Drawing.Color.White;
+            this.Btn_Text_Secondary_Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Text_Secondary_Color.FlatAppearance.BorderSize = 0;
+            this.Btn_Text_Secondary_Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Text_Secondary_Color.Location = new System.Drawing.Point(61, 35);
+            this.Btn_Text_Secondary_Color.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Btn_Text_Secondary_Color.Name = "Btn_Text_Secondary_Color";
+            this.Btn_Text_Secondary_Color.Size = new System.Drawing.Size(37, 37);
+            this.Btn_Text_Secondary_Color.TabIndex = 1;
+            this.General_ToolTip.SetToolTip(this.Btn_Text_Secondary_Color, "Dosyadan yapıştır");
+            this.Btn_Text_Secondary_Color.UseVisualStyleBackColor = false;
+            this.Btn_Text_Secondary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
-            // button19
+            // Btn_Text_Primary_Color
             // 
-            this.button19.BackColor = System.Drawing.Color.Black;
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Location = new System.Drawing.Point(8, 35);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(37, 37);
-            this.button19.TabIndex = 0;
-            this.button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button19.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.General_ToolTip.SetToolTip(this.button19, "Yapıştır");
-            this.button19.UseVisualStyleBackColor = false;
+            this.Btn_Text_Primary_Color.BackColor = System.Drawing.Color.Black;
+            this.Btn_Text_Primary_Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Text_Primary_Color.FlatAppearance.BorderSize = 0;
+            this.Btn_Text_Primary_Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Text_Primary_Color.Location = new System.Drawing.Point(8, 35);
+            this.Btn_Text_Primary_Color.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Btn_Text_Primary_Color.Name = "Btn_Text_Primary_Color";
+            this.Btn_Text_Primary_Color.Size = new System.Drawing.Size(37, 37);
+            this.Btn_Text_Primary_Color.TabIndex = 0;
+            this.Btn_Text_Primary_Color.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_Text_Primary_Color.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.General_ToolTip.SetToolTip(this.Btn_Text_Primary_Color, "Yapıştır");
+            this.Btn_Text_Primary_Color.UseVisualStyleBackColor = false;
+            this.Btn_Text_Primary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
             // button1
             // 
@@ -1882,6 +1884,10 @@ namespace MDBEditor
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
+            // Font_Dialog
+            // 
+            this.Font_Dialog.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            // 
             // Open_File_Dialog
             // 
             this.Open_File_Dialog.DefaultExt = "png";
@@ -2070,8 +2076,8 @@ namespace MDBEditor
         private System.Windows.Forms.FlowLayoutPanel FLP_Text_Colors;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button Btn_Text_Secondary_Color;
+        private System.Windows.Forms.Button Btn_Text_Primary_Color;
         private System.Windows.Forms.TableLayoutPanel TLP_Text_Operations;
         private System.Windows.Forms.Button Btn_Cut_To_Clipboard;
         private System.Windows.Forms.FontDialog Font_Dialog;

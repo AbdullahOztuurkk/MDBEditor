@@ -64,8 +64,12 @@ namespace MDBEditor
                 selectedButton.BackColor = Color_Picker.Color;
                 switch (selectedButton.Name)
                 {
-                    case nameof(Btn_Primary_Color): primaryColor = Color_Picker.Color; break;
-                    case nameof(Btn_Secondary_Color): secondaryColor = Color_Picker.Color; break;
+                    case nameof(Btn_Primary_Color):
+                    case nameof(Btn_Text_Primary_Color):
+                        primaryColor = Color_Picker.Color; break;
+                    case nameof(Btn_Secondary_Color):
+                    case nameof(Btn_Text_Secondary_Color):
+                        secondaryColor = Color_Picker.Color; break;
                 }
             }
         }
@@ -201,6 +205,15 @@ namespace MDBEditor
                 colorPickerTool.Handle();
                 primaryColor = colorPickerTool.DetectedColor;
                 Btn_Primary_Color.BackColor = primaryColor;
+            }
+            if(currentTool == DrawingTool.Text)
+            {
+                textTool.Loc = e.Location;
+                textTool.ForeColor = primaryColor;
+                textTool.SideColor = secondaryColor;
+                textTool.Text = Txt_Text.Text;
+                textTool.Font = Font_Dialog.Font;
+                textTool.Handle();
             }
         }
 

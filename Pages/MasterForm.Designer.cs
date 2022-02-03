@@ -762,6 +762,7 @@ namespace MDBEditor
             this.Btn_Erase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Erase, "Resmi Kırp");
             this.Btn_Erase.UseVisualStyleBackColor = true;
+            this.Btn_Erase.Click += new System.EventHandler(this.Select_Tool);
             // 
             // Btn_Color_Picker
             // 
@@ -777,6 +778,7 @@ namespace MDBEditor
             this.Btn_Color_Picker.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Color_Picker, "Resmi Kırp");
             this.Btn_Color_Picker.UseVisualStyleBackColor = true;
+            this.Btn_Color_Picker.Click += new System.EventHandler(this.Select_Tool);
             // 
             // Btn_Pen
             // 
@@ -792,6 +794,7 @@ namespace MDBEditor
             this.Btn_Pen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Pen, "Resmi Kırp");
             this.Btn_Pen.UseVisualStyleBackColor = true;
+            this.Btn_Pen.Click += new System.EventHandler(this.Select_Tool);
             // 
             // Btn_Zoom
             // 
@@ -806,10 +809,13 @@ namespace MDBEditor
             this.Btn_Zoom.TabIndex = 3;
             this.General_ToolTip.SetToolTip(this.Btn_Zoom, "Dosyayı yeniden boyutlandırın");
             this.Btn_Zoom.UseVisualStyleBackColor = true;
+            this.Btn_Zoom.Click += new System.EventHandler(this.Select_Tool);
             // 
             // Btn_Paint_All
             // 
+            this.Btn_Paint_All.BackColor = System.Drawing.SystemColors.Control;
             this.Btn_Paint_All.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Btn_Paint_All.Enabled = false;
             this.Btn_Paint_All.FlatAppearance.BorderSize = 0;
             this.Btn_Paint_All.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Paint_All.Image = global::MDBEditor.Properties.Resources.paint_image;
@@ -820,7 +826,8 @@ namespace MDBEditor
             this.Btn_Paint_All.TabIndex = 4;
             this.Btn_Paint_All.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Paint_All, "Resmi Kırp");
-            this.Btn_Paint_All.UseVisualStyleBackColor = true;
+            this.Btn_Paint_All.UseVisualStyleBackColor = false;
+            this.Btn_Paint_All.Click += new System.EventHandler(this.Select_Tool);
             // 
             // Btn_Add_Text
             // 
@@ -836,6 +843,7 @@ namespace MDBEditor
             this.Btn_Add_Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Add_Text, "Crop the image");
             this.Btn_Add_Text.UseVisualStyleBackColor = true;
+            this.Btn_Add_Text.Click += new System.EventHandler(this.Select_Tool);
             // 
             // GB_Shapes
             // 
@@ -1033,7 +1041,6 @@ namespace MDBEditor
             // 
             // Btn_Secondary_Color
             // 
-            this.Btn_Secondary_Color.BackColor = System.Drawing.Color.White;
             this.Btn_Secondary_Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Secondary_Color.FlatAppearance.BorderSize = 0;
             this.Btn_Secondary_Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1047,7 +1054,6 @@ namespace MDBEditor
             // 
             // Btn_Primary_Color
             // 
-            this.Btn_Primary_Color.BackColor = System.Drawing.Color.Black;
             this.Btn_Primary_Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Primary_Color.FlatAppearance.BorderSize = 0;
             this.Btn_Primary_Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1691,7 +1697,9 @@ namespace MDBEditor
             this.PB_Drawing_Board.TabIndex = 0;
             this.PB_Drawing_Board.TabStop = false;
             this.PB_Drawing_Board.SizeChanged += new System.EventHandler(this.PB_Drawing_Board_SizeChanged);
+            this.PB_Drawing_Board.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB_Drawing_Board_MouseDown);
             this.PB_Drawing_Board.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB_Drawing_Board_MouseMove);
+            this.PB_Drawing_Board.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB_Drawing_Board_MouseUp);
             // 
             // Status_Bar
             // 

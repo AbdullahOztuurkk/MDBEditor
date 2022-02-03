@@ -30,7 +30,7 @@ namespace MDBEditor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.TC_Menu = new System.Windows.Forms.TabControl();
             this.TP_General = new System.Windows.Forms.TabPage();
             this.FLP_File = new System.Windows.Forms.FlowLayoutPanel();
             this.GB_File_Options = new System.Windows.Forms.GroupBox();
@@ -112,6 +112,9 @@ namespace MDBEditor
             this.Btn_Copy_To_Clipboard = new System.Windows.Forms.Button();
             this.Btn_Paste_From_Clipboard = new System.Windows.Forms.Button();
             this.GB_Text_Type = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Txt_Text = new System.Windows.Forms.TextBox();
             this.PB_Font_Dialog = new System.Windows.Forms.Button();
             this.GB_Text_Colors = new System.Windows.Forms.GroupBox();
             this.FLP_Text_Colors = new System.Windows.Forms.FlowLayoutPanel();
@@ -152,7 +155,7 @@ namespace MDBEditor
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
             this.Open_File_Dialog = new System.Windows.Forms.OpenFileDialog();
-            this.tabControl1.SuspendLayout();
+            this.TC_Menu.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
             this.GB_File_Options.SuspendLayout();
@@ -187,6 +190,7 @@ namespace MDBEditor
             this.GB_Paste_Text.SuspendLayout();
             this.TLP_Text_Operations.SuspendLayout();
             this.GB_Text_Type.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.GB_Text_Colors.SuspendLayout();
             this.Panel_Drawing_Board.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Ruler_Top)).BeginInit();
@@ -202,21 +206,21 @@ namespace MDBEditor
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // TC_Menu
             // 
-            this.tabControl1.Controls.Add(this.TP_General);
-            this.tabControl1.Controls.Add(this.TP_Prologue);
-            this.tabControl1.Controls.Add(this.TP_View);
-            this.tabControl1.Controls.Add(this.TP_Text);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControl1.ItemSize = new System.Drawing.Size(120, 40);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1097, 171);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 1;
+            this.TC_Menu.Controls.Add(this.TP_General);
+            this.TC_Menu.Controls.Add(this.TP_Prologue);
+            this.TC_Menu.Controls.Add(this.TP_View);
+            this.TC_Menu.Controls.Add(this.TP_Text);
+            this.TC_Menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TC_Menu.ItemSize = new System.Drawing.Size(120, 40);
+            this.TC_Menu.Location = new System.Drawing.Point(0, 0);
+            this.TC_Menu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.TC_Menu.Name = "TC_Menu";
+            this.TC_Menu.SelectedIndex = 0;
+            this.TC_Menu.Size = new System.Drawing.Size(1097, 171);
+            this.TC_Menu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.TC_Menu.TabIndex = 1;
             // 
             // TP_General
             // 
@@ -1341,15 +1345,53 @@ namespace MDBEditor
             // 
             // GB_Text_Type
             // 
+            this.GB_Text_Type.Controls.Add(this.tableLayoutPanel1);
             this.GB_Text_Type.Controls.Add(this.PB_Font_Dialog);
             this.GB_Text_Type.Location = new System.Drawing.Point(165, 3);
             this.GB_Text_Type.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Text_Type.Name = "GB_Text_Type";
             this.GB_Text_Type.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GB_Text_Type.Size = new System.Drawing.Size(74, 113);
+            this.GB_Text_Type.Size = new System.Drawing.Size(193, 113);
             this.GB_Text_Type.TabIndex = 4;
             this.GB_Text_Type.TabStop = false;
             this.GB_Text_Type.Text = "Text Type";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Txt_Text, 0, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(62, 14);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(124, 89);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Location = new System.Drawing.Point(3, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(118, 31);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Your Text";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Txt_Text
+            // 
+            this.Txt_Text.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Txt_Text.Location = new System.Drawing.Point(3, 50);
+            this.Txt_Text.Name = "Txt_Text";
+            this.Txt_Text.PlaceholderText = "Lorem Ipsum";
+            this.Txt_Text.Size = new System.Drawing.Size(118, 23);
+            this.Txt_Text.TabIndex = 1;
             // 
             // PB_Font_Dialog
             // 
@@ -1373,7 +1415,7 @@ namespace MDBEditor
             this.GB_Text_Colors.Controls.Add(this.label12);
             this.GB_Text_Colors.Controls.Add(this.button17);
             this.GB_Text_Colors.Controls.Add(this.button19);
-            this.GB_Text_Colors.Location = new System.Drawing.Point(247, 3);
+            this.GB_Text_Colors.Location = new System.Drawing.Point(366, 3);
             this.GB_Text_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Text_Colors.Name = "GB_Text_Colors";
             this.GB_Text_Colors.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1856,12 +1898,12 @@ namespace MDBEditor
             this.ClientSize = new System.Drawing.Size(1097, 760);
             this.Controls.Add(this.Status_Bar);
             this.Controls.Add(this.Panel_Drawing_Board);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.TC_Menu);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MasterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDBEditor";
-            this.tabControl1.ResumeLayout(false);
+            this.TC_Menu.ResumeLayout(false);
             this.TP_General.ResumeLayout(false);
             this.FLP_File.ResumeLayout(false);
             this.GB_File_Options.ResumeLayout(false);
@@ -1898,6 +1940,8 @@ namespace MDBEditor
             this.GB_Paste_Text.ResumeLayout(false);
             this.TLP_Text_Operations.ResumeLayout(false);
             this.GB_Text_Type.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.GB_Text_Colors.ResumeLayout(false);
             this.GB_Text_Colors.PerformLayout();
             this.Panel_Drawing_Board.ResumeLayout(false);
@@ -1919,7 +1963,7 @@ namespace MDBEditor
         }
 
         #endregion
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl TC_Menu;
         private System.Windows.Forms.TabPage TP_Prologue;
         private System.Windows.Forms.TabPage TP_View;
         private System.Windows.Forms.FlowLayoutPanel FLP_Prologue;
@@ -2041,6 +2085,9 @@ namespace MDBEditor
         private System.Windows.Forms.PictureBox PB_Ruler_Left;
         private System.Windows.Forms.TableLayoutPanel TLP_Features;
         private System.Windows.Forms.TableLayoutPanel TLP_File;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox Txt_Text;
     }
 }
 

@@ -35,6 +35,7 @@ namespace MDBEditor
             FLP_Colors.Get_Colors();
             FLP_Text_Colors.Get_Colors();
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
+            TC_Menu.TabPages.Remove(TP_Text);
 
             //Add grid control to drawing board
             BoxWithGrid = new PictureBoxWithGrid(PB_Drawing_Board.Size);
@@ -244,6 +245,17 @@ namespace MDBEditor
                     break;
             }
             btn.BackColor = SystemColors.ControlLight;
+
+            //Toggle Text Tab
+            if (currentTool == DrawingTool.Text)
+            {
+                TC_Menu.TabPages.Add(TP_Text);
+                TC_Menu.SelectedTab = TP_Text;
+            }
+            else
+            {
+                TC_Menu.TabPages.Remove(TP_Text);
+            }
         }
 
     }

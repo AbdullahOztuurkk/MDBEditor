@@ -14,6 +14,8 @@ namespace MDBEditor.Constants
     {
         //Color settings in Menu
         public static readonly short BOX_SIZE = 20;
+        public static readonly Color DEFAULT_TOOL_COLOR = SystemColors.Control;
+        public static readonly Color CURRENT_TOOL_COLOR = SystemColors.ControlLight;
 
         //Grid settings
         public static readonly short CELL_OF_SIZE = 12;

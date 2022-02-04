@@ -27,8 +27,16 @@ namespace MDBEditor.Helpers
                     BackColor = color,
                     BorderStyle = BorderStyle.FixedSingle,
                 };
+                pb.MouseClick += new MouseEventHandler(Set_Color);
                 control.Controls.Add(pb);
             }
+        }
+
+        private static void Set_Color(object sender, MouseEventArgs e)
+        {
+            PictureBox pictureBox = sender as PictureBox;
+            MasterForm.secondaryColor = MasterForm.primaryColor;
+            MasterForm.primaryColor = pictureBox.BackColor;
         }
 
         /// <summary>

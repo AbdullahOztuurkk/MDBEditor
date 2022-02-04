@@ -155,6 +155,7 @@ namespace MDBEditor
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
             this.Open_File_Dialog = new System.Windows.Forms.OpenFileDialog();
+            this.Continuous_Checker = new System.Windows.Forms.Timer(this.components);
             this.TC_Menu.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -1068,7 +1069,6 @@ namespace MDBEditor
             this.Btn_Primary_Color.TabIndex = 0;
             this.Btn_Primary_Color.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Primary_Color.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.General_ToolTip.SetToolTip(this.Btn_Primary_Color, "Yapıştır");
             this.Btn_Primary_Color.UseVisualStyleBackColor = false;
             this.Btn_Primary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
@@ -1896,6 +1896,12 @@ namespace MDBEditor
             this.Open_File_Dialog.RestoreDirectory = true;
             this.Open_File_Dialog.Title = "Resim seçiniz";
             // 
+            // Continuous_Checker
+            // 
+            this.Continuous_Checker.Enabled = true;
+            this.Continuous_Checker.Interval = 250;
+            this.Continuous_Checker.Tick += new System.EventHandler(this.Continuous_Checker_Tick);
+            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2005,8 +2011,6 @@ namespace MDBEditor
         private System.Windows.Forms.GroupBox GB_Colors;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Btn_Secondary_Color;
-        private System.Windows.Forms.Button Btn_Primary_Color;
         private System.Windows.Forms.FlowLayoutPanel FLP_Colors;
         private System.Windows.Forms.FlowLayoutPanel FLP_View;
         private System.Windows.Forms.GroupBox GB_Zoom;
@@ -2076,8 +2080,6 @@ namespace MDBEditor
         private System.Windows.Forms.FlowLayoutPanel FLP_Text_Colors;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button Btn_Text_Secondary_Color;
-        private System.Windows.Forms.Button Btn_Text_Primary_Color;
         private System.Windows.Forms.TableLayoutPanel TLP_Text_Operations;
         private System.Windows.Forms.Button Btn_Cut_To_Clipboard;
         private System.Windows.Forms.FontDialog Font_Dialog;
@@ -2094,6 +2096,11 @@ namespace MDBEditor
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox Txt_Text;
+        private System.Windows.Forms.Button Btn_Secondary_Color;
+        private System.Windows.Forms.Button Btn_Primary_Color;
+        private System.Windows.Forms.Button Btn_Text_Secondary_Color;
+        private System.Windows.Forms.Button Btn_Text_Primary_Color;
+        private System.Windows.Forms.Timer Continuous_Checker;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using MDBEditor.Constants.Enums;
+﻿using MDBEditor.Constants;
+using MDBEditor.Constants.Enums;
 using MDBEditor.Controls;
 using MDBEditor.Helpers;
 using MDBEditor.Tools.Concrete;
@@ -18,8 +19,8 @@ namespace MDBEditor
         private Point lastPoint;
 
         //Colors
-        private Color primaryColor = Color.Black;
-        private Color secondaryColor = Color.White;
+        public static Color primaryColor = Color.Black;
+        public static Color secondaryColor = Color.White;
 
         //Tools
         public DrawingTool currentTool;
@@ -75,48 +76,6 @@ namespace MDBEditor
         }
 
         /// <summary>
-        /// Get mouse positions for status bar
-        /// </summary>
-        private void PB_Drawing_Board_MouseMove(object sender, MouseEventArgs e)
-        {
-            Lbl_Mouse_Coordinates.Text = e.X + "," + e.Y + " px";
-            if (IsMouseDown == true)
-            {
-                switch (currentTool)
-                {
-                    case DrawingTool.Pen:
-                        if (lastPoint != null)
-                        {
-                            penTool.Loc = e.Location;
-                            penTool.BackColor = primaryColor;
-                            penTool.Size = 3;
-                            penTool.LastPoint = lastPoint;
-                            penTool.Handle();
-                            lastPoint = e.Location;
-                        }
-                        break;
-                    case DrawingTool.Eraser:
-                        if (lastPoint != null)
-                        {
-                            eraserTool.Loc = e.Location;
-                            eraserTool.Size = 10;
-                            eraserTool.LastPoint = lastPoint;
-                            eraserTool.Handle();
-                            lastPoint = e.Location;
-                        }
-                        break;
-                    case DrawingTool.Filler:
-                        fillerTool.BackColor = Color.Blue;
-                        fillerTool.Loc = e.Location;
-                        fillerTool.Handle();
-                        //TODO:Needs Flood Fill Algorithm
-                        break;
-                }
-
-            }
-        }
-
-        /// <summary>
         /// Set toggleable status bar 
         /// </summary>
         private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e)
@@ -146,7 +105,6 @@ namespace MDBEditor
 
         private void PB_Font_Dialog_Click(object sender, EventArgs e)
         {
-            //TODO: Detect selected text and apply font to text
             Font_Dialog.ShowDialog();
         }
 
@@ -195,6 +153,50 @@ namespace MDBEditor
             }
         }
 
+        #region Mouse Events
+
+        /// <summary>
+        /// Get mouse positions for status bar
+        /// </summary>
+        private void PB_Drawing_Board_MouseMove(object sender, MouseEventArgs e)
+        {
+            Lbl_Mouse_Coordinates.Text = e.X + "," + e.Y + " px";
+            if (IsMouseDown == true)
+            {
+                switch (currentTool)
+                {
+                    case DrawingTool.Pen:
+                        if (lastPoint != null)
+                        {
+                            penTool.Loc = e.Location;
+                            penTool.BackColor = primaryColor;
+                            penTool.Size = 3;
+                            penTool.LastPoint = lastPoint;
+                            penTool.Handle();
+                            lastPoint = e.Location;
+                        }
+                        break;
+                    case DrawingTool.Eraser:
+                        if (lastPoint != null)
+                        {
+                            eraserTool.Loc = e.Location;
+                            eraserTool.Size = 10;
+                            eraserTool.LastPoint = lastPoint;
+                            eraserTool.Handle();
+                            lastPoint = e.Location;
+                        }
+                        break;
+                    case DrawingTool.Filler:
+                        fillerTool.BackColor = Color.Blue;
+                        fillerTool.Loc = e.Location;
+                        fillerTool.Handle();
+                        //TODO:Needs Flood Fill Algorithm
+                        break;
+                }
+
+            }
+        }
+
         private void PB_Drawing_Board_MouseDown(object sender, MouseEventArgs e)
         {
             IsMouseDown = true;
@@ -223,6 +225,8 @@ namespace MDBEditor
             IsMouseDown = false;
         }
 
+        #endregion
+
         /// <summary>
         /// Get tool name with sender func
         /// </summary>
@@ -234,7 +238,7 @@ namespace MDBEditor
             {
                 Btn_Pen,Btn_Erase,Btn_Zoom,Btn_Color_Picker,Btn_Add_Text,Btn_Paint_All
             };
-            buttonArr.ForEach(p => p.BackColor = SystemColors.Control);
+            buttonArr.ForEach(p => p.BackColor = AppSettings.DEFAULT_TOOL_COLOR);
             Button btn = sender as Button;
             switch (btn.Name)
             {
@@ -257,7 +261,7 @@ namespace MDBEditor
                     currentTool = DrawingTool.Filler;
                     break;
             }
-            btn.BackColor = SystemColors.ControlLight;
+            btn.BackColor = AppSettings.CURRENT_TOOL_COLOR;
 
             //Toggle Text Tab
             if (currentTool == DrawingTool.Text)
@@ -271,5 +275,17 @@ namespace MDBEditor
             }
         }
 
+        /// <summary>
+        /// Detect changed variables and run some processes
+        /// </summary>
+        private void Continuous_Checker_Tick(object sender, EventArgs e)
+        {
+            #region Color Buttons
+            Btn_Text_Primary_Color.BackColor = primaryColor;
+            Btn_Primary_Color.BackColor = primaryColor;
+            Btn_Text_Secondary_Color.BackColor = secondaryColor;
+            Btn_Secondary_Color.BackColor = secondaryColor;
+            #endregion
+        }
     }
 }

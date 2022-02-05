@@ -140,7 +140,7 @@ namespace MDBEditor
             this.Panel_Drawing_Board = new System.Windows.Forms.Panel();
             this.PB_Ruler_Top = new System.Windows.Forms.PictureBox();
             this.PB_Ruler_Left = new System.Windows.Forms.PictureBox();
-            this.PB_Drawing_Board = new MDBEditor.Controls.ResizablePictureBox();
+            this.PB_Drawing_Board = new System.Windows.Forms.PictureBox();
             this.Status_Bar = new System.Windows.Forms.StatusStrip();
             this.Lbl_Mouse_Coordinates = new System.Windows.Forms.ToolStripStatusLabel();
             this.Lbl_Page_Size = new System.Windows.Forms.ToolStripStatusLabel();
@@ -1721,7 +1721,7 @@ namespace MDBEditor
             this.PB_Ruler_Top.BackColor = System.Drawing.SystemColors.Control;
             this.PB_Ruler_Top.Location = new System.Drawing.Point(32, -1);
             this.PB_Ruler_Top.Name = "PB_Ruler_Top";
-            this.PB_Ruler_Top.Size = new System.Drawing.Size(1053, 26);
+            this.PB_Ruler_Top.Size = new System.Drawing.Size(1057, 26);
             this.PB_Ruler_Top.TabIndex = 2;
             this.PB_Ruler_Top.TabStop = false;
             this.PB_Ruler_Top.Visible = false;
@@ -1742,7 +1742,7 @@ namespace MDBEditor
             this.PB_Drawing_Board.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PB_Drawing_Board.Location = new System.Drawing.Point(32, 28);
             this.PB_Drawing_Board.Name = "PB_Drawing_Board";
-            this.PB_Drawing_Board.Size = new System.Drawing.Size(1053, 537);
+            this.PB_Drawing_Board.Size = new System.Drawing.Size(1057, 523);
             this.PB_Drawing_Board.TabIndex = 0;
             this.PB_Drawing_Board.TabStop = false;
             this.PB_Drawing_Board.SizeChanged += new System.EventHandler(this.PB_Drawing_Board_SizeChanged);
@@ -2090,7 +2090,7 @@ namespace MDBEditor
         private System.Windows.Forms.FontDialog Font_Dialog;
         private System.Windows.Forms.Button Btn_Copy_To_Clipboard;
         private System.Windows.Forms.ToolStripStatusLabel Lbl_Page_Size;
-        private Controls.ResizablePictureBox PB_Drawing_Board;
+        private System.Windows.Forms.PictureBox PB_Drawing_Board;
         private System.Windows.Forms.GroupBox GB_Text_Type;
         private System.Windows.Forms.Button PB_Font_Dialog;
         private System.Windows.Forms.OpenFileDialog Open_File_Dialog;

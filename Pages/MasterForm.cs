@@ -50,6 +50,7 @@ namespace MDBEditor
             //Add rulers to pictureboxes
             PB_Ruler_Left.Controls.Add(new RulerPictureBox(BoxAlignment.Vertical));
             PB_Ruler_Top.Controls.Add(new RulerPictureBox());
+            this.Size = AppSettings.RULER_CLOSED_COORDINATE;
 
             //Tools
             penTool = new PenTool(Graphics.FromImage(PB_Drawing_Board.Image));
@@ -94,7 +95,6 @@ namespace MDBEditor
             PB_Ruler_Left.Height = PB_Drawing_Board.Height;
             PB_Ruler_Top.Width = PB_Drawing_Board.Width;
             BoxWithGrid.Size = PB_Drawing_Board.Size;
-            //TODO: Use the undo-redo stack to avoid the hassle of clearing the drawing board when resized.
         }
 
         /// <summary>
@@ -130,7 +130,6 @@ namespace MDBEditor
                         PB_Drawing_Board.Image = new Bitmap(Open_File_Dialog.FileName);
                         this.Text = "MDBEditor - " + original_file_name;
                     }
-                    //TODO: Check if page saved according to picturebox availability
                 }
             }
         }
@@ -145,13 +144,15 @@ namespace MDBEditor
             {
                 PB_Ruler_Left.Visible = true;
                 PB_Ruler_Top.Visible = true;
-                PB_Drawing_Board.Location = new Point(32, 28);
+                PB_Drawing_Board.Location = AppSettings.NEW_DRAWING_BOARD_COORDINATE;
+                this.Size = AppSettings.RULER_OPENED_COORDINATE;
             }
             else
             {
                 PB_Ruler_Left.Visible = false;
                 PB_Ruler_Top.Visible = false;
-                PB_Drawing_Board.Location = new Point(12, 9);
+                PB_Drawing_Board.Location = AppSettings.OLD_DRAWING_BOARD_COORDINATE;
+                this.Size = AppSettings.RULER_CLOSED_COORDINATE;
             }
         }
 
@@ -218,6 +219,7 @@ namespace MDBEditor
                 textTool.Text = Txt_Text.Text;
                 textTool.Font = Font_Dialog.Font;
                 textTool.Handle();
+                PB_Drawing_Board.Refresh();
             }
         }
 

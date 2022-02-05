@@ -24,5 +24,12 @@ namespace MDBEditor.Constants
 
         //Drawing board settings
         public static readonly int CORNER = 16;
+
+        //Resize Coordinates
+        public static readonly Point OLD_DRAWING_BOARD_COORDINATE = new Point(12, 9);
+        public static readonly Point NEW_DRAWING_BOARD_COORDINATE = new Point(32, 28);
+        public static readonly Size RULER_CLOSED_COORDINATE = new Size(1098, 772);
+        public static readonly Size RULER_OPENED_COORDINATE = new Size(1116, 791);
+
     }
 }

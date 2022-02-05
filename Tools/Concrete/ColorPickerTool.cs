@@ -10,10 +10,9 @@ namespace MDBEditor.Tools.Concrete
     {
         public ColorPickerTool(PictureBox pictureBox)
         {
-            //Graphics = pictureBox.CreateGraphics();
             PictureBox = pictureBox;
         }
-        //public readonly Graphics Graphics;
+
         public readonly PictureBox PictureBox;
 
         public Point Loc { get; set; }

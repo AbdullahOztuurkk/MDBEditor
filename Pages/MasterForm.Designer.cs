@@ -41,11 +41,11 @@ namespace MDBEditor
             this.label6 = new System.Windows.Forms.Label();
             this.GB_Save_File = new System.Windows.Forms.GroupBox();
             this.FLP_Save_Image = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.PB_Save_As_Image = new System.Windows.Forms.PictureBox();
+            this.PB_Save_As_PNG = new System.Windows.Forms.PictureBox();
+            this.PB_Save_As_JPG = new System.Windows.Forms.PictureBox();
+            this.PB_Save_As_GIF = new System.Windows.Forms.PictureBox();
+            this.PB_Save_As_BMP = new System.Windows.Forms.PictureBox();
             this.GB_Print = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button29 = new System.Windows.Forms.Button();
@@ -163,11 +163,11 @@ namespace MDBEditor
             this.TLP_File.SuspendLayout();
             this.GB_Save_File.SuspendLayout();
             this.FLP_Save_Image.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_Image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_PNG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_JPG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_GIF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_BMP)).BeginInit();
             this.GB_Print.SuspendLayout();
             this.GB_Settings.SuspendLayout();
             this.TLP_Features.SuspendLayout();
@@ -359,11 +359,11 @@ namespace MDBEditor
             this.FLP_Save_Image.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.FLP_Save_Image.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.FLP_Save_Image.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
-            this.FLP_Save_Image.Controls.Add(this.pictureBox1, 0, 1);
-            this.FLP_Save_Image.Controls.Add(this.pictureBox2, 2, 1);
-            this.FLP_Save_Image.Controls.Add(this.pictureBox3, 4, 1);
-            this.FLP_Save_Image.Controls.Add(this.pictureBox4, 6, 1);
-            this.FLP_Save_Image.Controls.Add(this.pictureBox5, 8, 1);
+            this.FLP_Save_Image.Controls.Add(this.PB_Save_As_Image, 0, 1);
+            this.FLP_Save_Image.Controls.Add(this.PB_Save_As_PNG, 2, 1);
+            this.FLP_Save_Image.Controls.Add(this.PB_Save_As_JPG, 4, 1);
+            this.FLP_Save_Image.Controls.Add(this.PB_Save_As_GIF, 6, 1);
+            this.FLP_Save_Image.Controls.Add(this.PB_Save_As_BMP, 8, 1);
             this.FLP_Save_Image.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FLP_Save_Image.Location = new System.Drawing.Point(4, 19);
             this.FLP_Save_Image.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -375,61 +375,66 @@ namespace MDBEditor
             this.FLP_Save_Image.Size = new System.Drawing.Size(330, 91);
             this.FLP_Save_Image.TabIndex = 0;
             // 
-            // pictureBox1
+            // PB_Save_As_Image
             // 
-            this.pictureBox1.BackgroundImage = global::MDBEditor.Properties.Resources.save_as_file;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PB_Save_As_Image.BackgroundImage = global::MDBEditor.Properties.Resources.save_as_file;
+            this.PB_Save_As_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PB_Save_As_Image.Location = new System.Drawing.Point(4, 25);
+            this.PB_Save_As_Image.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.PB_Save_As_Image.Name = "PB_Save_As_Image";
+            this.PB_Save_As_Image.Size = new System.Drawing.Size(38, 37);
+            this.PB_Save_As_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Save_As_Image.TabIndex = 0;
+            this.PB_Save_As_Image.TabStop = false;
+            this.PB_Save_As_Image.Click += new System.EventHandler(this.Save_Image);
             // 
-            // pictureBox2
+            // PB_Save_As_PNG
             // 
-            this.pictureBox2.Image = global::MDBEditor.Properties.Resources.save_as_png;
-            this.pictureBox2.Location = new System.Drawing.Point(74, 25);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.PB_Save_As_PNG.Image = global::MDBEditor.Properties.Resources.save_as_png;
+            this.PB_Save_As_PNG.Location = new System.Drawing.Point(74, 25);
+            this.PB_Save_As_PNG.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.PB_Save_As_PNG.Name = "PB_Save_As_PNG";
+            this.PB_Save_As_PNG.Size = new System.Drawing.Size(38, 37);
+            this.PB_Save_As_PNG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Save_As_PNG.TabIndex = 1;
+            this.PB_Save_As_PNG.TabStop = false;
+            this.PB_Save_As_PNG.Click += new System.EventHandler(this.Save_Image);
             // 
-            // pictureBox3
+            // PB_Save_As_JPG
             // 
-            this.pictureBox3.Image = global::MDBEditor.Properties.Resources.save_as_jpg;
-            this.pictureBox3.Location = new System.Drawing.Point(144, 25);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.PB_Save_As_JPG.Image = global::MDBEditor.Properties.Resources.save_as_jpg;
+            this.PB_Save_As_JPG.Location = new System.Drawing.Point(144, 25);
+            this.PB_Save_As_JPG.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.PB_Save_As_JPG.Name = "PB_Save_As_JPG";
+            this.PB_Save_As_JPG.Size = new System.Drawing.Size(38, 37);
+            this.PB_Save_As_JPG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Save_As_JPG.TabIndex = 2;
+            this.PB_Save_As_JPG.TabStop = false;
+            this.PB_Save_As_JPG.Click += new System.EventHandler(this.Save_Image);
             // 
-            // pictureBox4
+            // PB_Save_As_GIF
             // 
-            this.pictureBox4.Image = global::MDBEditor.Properties.Resources.save_as_gif;
-            this.pictureBox4.Location = new System.Drawing.Point(214, 25);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 37);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.PB_Save_As_GIF.Image = global::MDBEditor.Properties.Resources.save_as_gif;
+            this.PB_Save_As_GIF.Location = new System.Drawing.Point(214, 25);
+            this.PB_Save_As_GIF.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.PB_Save_As_GIF.Name = "PB_Save_As_GIF";
+            this.PB_Save_As_GIF.Size = new System.Drawing.Size(39, 37);
+            this.PB_Save_As_GIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Save_As_GIF.TabIndex = 3;
+            this.PB_Save_As_GIF.TabStop = false;
+            this.PB_Save_As_GIF.Click += new System.EventHandler(this.Save_Image);
             // 
-            // pictureBox5
+            // PB_Save_As_BMP
             // 
-            this.pictureBox5.Image = global::MDBEditor.Properties.Resources.save_as_bmp;
-            this.pictureBox5.Location = new System.Drawing.Point(284, 25);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 37);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
+            this.PB_Save_As_BMP.Image = global::MDBEditor.Properties.Resources.save_as_bmp;
+            this.PB_Save_As_BMP.Location = new System.Drawing.Point(284, 25);
+            this.PB_Save_As_BMP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.PB_Save_As_BMP.Name = "PB_Save_As_BMP";
+            this.PB_Save_As_BMP.Size = new System.Drawing.Size(40, 37);
+            this.PB_Save_As_BMP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Save_As_BMP.TabIndex = 4;
+            this.PB_Save_As_BMP.TabStop = false;
+            this.PB_Save_As_BMP.Click += new System.EventHandler(this.Save_Image);
             // 
             // GB_Print
             // 
@@ -1922,11 +1927,11 @@ namespace MDBEditor
             this.TLP_File.ResumeLayout(false);
             this.GB_Save_File.ResumeLayout(false);
             this.FLP_Save_Image.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_Image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_PNG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_JPG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_GIF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Save_As_BMP)).EndInit();
             this.GB_Print.ResumeLayout(false);
             this.GB_Settings.ResumeLayout(false);
             this.TLP_Features.ResumeLayout(false);
@@ -2034,11 +2039,11 @@ namespace MDBEditor
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.GroupBox GB_Save_File;
         private System.Windows.Forms.TableLayoutPanel FLP_Save_Image;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox PB_Save_As_Image;
+        private System.Windows.Forms.PictureBox PB_Save_As_PNG;
+        private System.Windows.Forms.PictureBox PB_Save_As_JPG;
+        private System.Windows.Forms.PictureBox PB_Save_As_GIF;
+        private System.Windows.Forms.PictureBox PB_Save_As_BMP;
         private System.Windows.Forms.GroupBox GB_Print;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button29;

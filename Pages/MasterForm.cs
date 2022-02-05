@@ -6,6 +6,7 @@ using MDBEditor.Tools.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace MDBEditor
@@ -33,6 +34,7 @@ namespace MDBEditor
         public MasterForm()
         {
             InitializeComponent();
+            PB_Drawing_Board.Image = new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height);
             FLP_Colors.Get_Colors();
             FLP_Text_Colors.Get_Colors();
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
@@ -50,11 +52,11 @@ namespace MDBEditor
             PB_Ruler_Top.Controls.Add(new RulerPictureBox());
 
             //Tools
-            penTool = new PenTool(PB_Drawing_Board.CreateGraphics());
-            eraserTool = new EraserTool(PB_Drawing_Board.CreateGraphics());
+            penTool = new PenTool(Graphics.FromImage(PB_Drawing_Board.Image));
+            eraserTool = new EraserTool(Graphics.FromImage(PB_Drawing_Board.Image));
             fillerTool = new FillerTool(new Bitmap(PB_Drawing_Board.Width,PB_Drawing_Board.Height));
             colorPickerTool = new ColorPickerTool(PB_Drawing_Board);
-            textTool = new TextTool(PB_Drawing_Board.CreateGraphics());
+            textTool = new TextTool(Graphics.FromImage(PB_Drawing_Board.Image));
         }
 
         public void Select_Color_From_Button(object sender, EventArgs e)
@@ -193,7 +195,7 @@ namespace MDBEditor
                         //TODO:Needs Flood Fill Algorithm
                         break;
                 }
-
+                PB_Drawing_Board.Refresh();
             }
         }
 
@@ -272,6 +274,23 @@ namespace MDBEditor
             else
             {
                 TC_Menu.TabPages.Remove(TP_Text);
+            }
+        }
+
+        private void Save_Image(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = sender as PictureBox;
+            switch (pictureBox.Name)
+            {
+                case nameof(PB_Save_As_BMP):
+                    PB_Drawing_Board.SaveImage(ImageFormat.Bmp); break;
+                case nameof(PB_Save_As_GIF):
+                    PB_Drawing_Board.SaveImage(ImageFormat.Gif); break;
+                case nameof(PB_Save_As_JPG):
+                    PB_Drawing_Board.SaveImage(ImageFormat.Jpeg); break;
+                case nameof(PB_Save_As_PNG):
+                    PB_Drawing_Board.SaveImage(ImageFormat.Png);break;
+                default: PB_Drawing_Board.SaveImage(); break;
             }
         }
 

@@ -293,7 +293,7 @@ namespace MDBEditor
             this.Btn_Open_File.Name = "Btn_Open_File";
             this.Btn_Open_File.Size = new System.Drawing.Size(36, 37);
             this.Btn_Open_File.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.Btn_Open_File, "Varolan bir dosyayı açın");
+            this.General_ToolTip.SetToolTip(this.Btn_Open_File, "Open Image");
             this.Btn_Open_File.UseVisualStyleBackColor = true;
             this.Btn_Open_File.Click += new System.EventHandler(this.Btn_Open_File_Click);
             // 
@@ -308,7 +308,7 @@ namespace MDBEditor
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(36, 37);
             this.button24.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.button24, "Yeni bir çizim tahtası oluşturun");
+            this.General_ToolTip.SetToolTip(this.button24, "Create new Image");
             this.button24.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -386,6 +386,7 @@ namespace MDBEditor
             this.PB_Save_As_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_Image.TabIndex = 0;
             this.PB_Save_As_Image.TabStop = false;
+            this.General_ToolTip.SetToolTip(this.PB_Save_As_Image, "Save As...");
             this.PB_Save_As_Image.Click += new System.EventHandler(this.Save_Image);
             // 
             // PB_Save_As_PNG
@@ -398,6 +399,7 @@ namespace MDBEditor
             this.PB_Save_As_PNG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_PNG.TabIndex = 1;
             this.PB_Save_As_PNG.TabStop = false;
+            this.General_ToolTip.SetToolTip(this.PB_Save_As_PNG, "Save as PNG");
             this.PB_Save_As_PNG.Click += new System.EventHandler(this.Save_Image);
             // 
             // PB_Save_As_JPG
@@ -410,6 +412,7 @@ namespace MDBEditor
             this.PB_Save_As_JPG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_JPG.TabIndex = 2;
             this.PB_Save_As_JPG.TabStop = false;
+            this.General_ToolTip.SetToolTip(this.PB_Save_As_JPG, "Save as JPG");
             this.PB_Save_As_JPG.Click += new System.EventHandler(this.Save_Image);
             // 
             // PB_Save_As_GIF
@@ -422,6 +425,7 @@ namespace MDBEditor
             this.PB_Save_As_GIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_GIF.TabIndex = 3;
             this.PB_Save_As_GIF.TabStop = false;
+            this.General_ToolTip.SetToolTip(this.PB_Save_As_GIF, "Save as GIF");
             this.PB_Save_As_GIF.Click += new System.EventHandler(this.Save_Image);
             // 
             // PB_Save_As_BMP
@@ -434,6 +438,7 @@ namespace MDBEditor
             this.PB_Save_As_BMP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_BMP.TabIndex = 4;
             this.PB_Save_As_BMP.TabStop = false;
+            this.General_ToolTip.SetToolTip(this.PB_Save_As_BMP, "Save as BMP");
             this.PB_Save_As_BMP.Click += new System.EventHandler(this.Save_Image);
             // 
             // GB_Print
@@ -470,7 +475,7 @@ namespace MDBEditor
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(37, 37);
             this.button29.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.button29, "Çiziminizi çıktı olarak alın");
+            this.General_ToolTip.SetToolTip(this.button29, "Print Image");
             this.button29.UseVisualStyleBackColor = true;
             // 
             // GB_Settings
@@ -531,7 +536,7 @@ namespace MDBEditor
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(36, 38);
             this.button25.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.button25, "Program Hakkında");
+            this.General_ToolTip.SetToolTip(this.button25, "About Program");
             this.button25.UseVisualStyleBackColor = true;
             // 
             // button26
@@ -546,7 +551,7 @@ namespace MDBEditor
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(36, 38);
             this.button26.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.button26, "Çizim tahtası hakkında bilgiler edinin");
+            this.General_ToolTip.SetToolTip(this.button26, "Get Information about drawing board");
             this.button26.UseVisualStyleBackColor = true;
             // 
             // label8
@@ -611,7 +616,7 @@ namespace MDBEditor
             this.Btn_Paste_Area.Name = "Btn_Paste_Area";
             this.Btn_Paste_Area.Size = new System.Drawing.Size(37, 37);
             this.Btn_Paste_Area.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Paste_Area, "Paste");
+            this.General_ToolTip.SetToolTip(this.Btn_Paste_Area, "Paste Image");
             this.Btn_Paste_Area.UseVisualStyleBackColor = true;
             // 
             // Btn_Paste_From_File
@@ -673,7 +678,7 @@ namespace MDBEditor
             this.Btn_Crop_Image.TabIndex = 2;
             this.Btn_Crop_Image.Text = "Crop";
             this.Btn_Crop_Image.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Crop_Image, "Resmi Kırp");
+            this.General_ToolTip.SetToolTip(this.Btn_Crop_Image, "Crop Image");
             this.Btn_Crop_Image.UseVisualStyleBackColor = true;
             // 
             // Btn_Resize_Image
@@ -690,7 +695,7 @@ namespace MDBEditor
             this.Btn_Resize_Image.Size = new System.Drawing.Size(122, 26);
             this.Btn_Resize_Image.TabIndex = 3;
             this.Btn_Resize_Image.Text = "Resize";
-            this.General_ToolTip.SetToolTip(this.Btn_Resize_Image, "Dosyayı yeniden boyutlandırın");
+            this.General_ToolTip.SetToolTip(this.Btn_Resize_Image, "Resize Image");
             this.Btn_Resize_Image.UseVisualStyleBackColor = true;
             // 
             // Btn_Rotate_Image
@@ -707,7 +712,7 @@ namespace MDBEditor
             this.Btn_Rotate_Image.Size = new System.Drawing.Size(122, 27);
             this.Btn_Rotate_Image.TabIndex = 4;
             this.Btn_Rotate_Image.Text = "Rotate";
-            this.General_ToolTip.SetToolTip(this.Btn_Rotate_Image, "Resmi saat yönünde döndürün");
+            this.General_ToolTip.SetToolTip(this.Btn_Rotate_Image, "Rotate Image");
             this.Btn_Rotate_Image.UseVisualStyleBackColor = true;
             // 
             // Btn_Select_Area
@@ -721,7 +726,7 @@ namespace MDBEditor
             this.Btn_Select_Area.Name = "Btn_Select_Area";
             this.Btn_Select_Area.Size = new System.Drawing.Size(37, 37);
             this.Btn_Select_Area.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Select_Area, "Bir alan seçin");
+            this.General_ToolTip.SetToolTip(this.Btn_Select_Area, "Select Area");
             this.Btn_Select_Area.UseVisualStyleBackColor = true;
             // 
             // GB_Tools
@@ -770,7 +775,7 @@ namespace MDBEditor
             this.Btn_Erase.Size = new System.Drawing.Size(38, 34);
             this.Btn_Erase.TabIndex = 7;
             this.Btn_Erase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Erase, "Resmi Kırp");
+            this.General_ToolTip.SetToolTip(this.Btn_Erase, "Eraser");
             this.Btn_Erase.UseVisualStyleBackColor = true;
             this.Btn_Erase.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -786,7 +791,7 @@ namespace MDBEditor
             this.Btn_Color_Picker.Size = new System.Drawing.Size(38, 34);
             this.Btn_Color_Picker.TabIndex = 6;
             this.Btn_Color_Picker.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Color_Picker, "Resmi Kırp");
+            this.General_ToolTip.SetToolTip(this.Btn_Color_Picker, "Color Picker");
             this.Btn_Color_Picker.UseVisualStyleBackColor = true;
             this.Btn_Color_Picker.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -802,7 +807,7 @@ namespace MDBEditor
             this.Btn_Pen.Size = new System.Drawing.Size(38, 34);
             this.Btn_Pen.TabIndex = 2;
             this.Btn_Pen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Pen, "Resmi Kırp");
+            this.General_ToolTip.SetToolTip(this.Btn_Pen, "Pen");
             this.Btn_Pen.UseVisualStyleBackColor = true;
             this.Btn_Pen.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -817,7 +822,7 @@ namespace MDBEditor
             this.Btn_Zoom.Name = "Btn_Zoom";
             this.Btn_Zoom.Size = new System.Drawing.Size(43, 37);
             this.Btn_Zoom.TabIndex = 3;
-            this.General_ToolTip.SetToolTip(this.Btn_Zoom, "Dosyayı yeniden boyutlandırın");
+            this.General_ToolTip.SetToolTip(this.Btn_Zoom, "Zoom");
             this.Btn_Zoom.UseVisualStyleBackColor = true;
             this.Btn_Zoom.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -835,7 +840,7 @@ namespace MDBEditor
             this.Btn_Paint_All.Size = new System.Drawing.Size(38, 34);
             this.Btn_Paint_All.TabIndex = 4;
             this.Btn_Paint_All.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Paint_All, "Resmi Kırp");
+            this.General_ToolTip.SetToolTip(this.Btn_Paint_All, "Filler");
             this.Btn_Paint_All.UseVisualStyleBackColor = false;
             this.Btn_Paint_All.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -851,7 +856,7 @@ namespace MDBEditor
             this.Btn_Add_Text.Size = new System.Drawing.Size(38, 34);
             this.Btn_Add_Text.TabIndex = 5;
             this.Btn_Add_Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Add_Text, "Crop the image");
+            this.General_ToolTip.SetToolTip(this.Btn_Add_Text, "Add Text");
             this.Btn_Add_Text.UseVisualStyleBackColor = true;
             this.Btn_Add_Text.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -905,7 +910,7 @@ namespace MDBEditor
             this.Btn_Left_Arrow.Size = new System.Drawing.Size(18, 18);
             this.Btn_Left_Arrow.TabIndex = 6;
             this.Btn_Left_Arrow.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Left_Arrow, "Resmi Kırp");
+            this.General_ToolTip.SetToolTip(this.Btn_Left_Arrow, "Backward Arrow");
             this.Btn_Left_Arrow.UseVisualStyleBackColor = true;
             // 
             // Btn_Square
@@ -920,6 +925,7 @@ namespace MDBEditor
             this.Btn_Square.Size = new System.Drawing.Size(18, 18);
             this.Btn_Square.TabIndex = 2;
             this.Btn_Square.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.General_ToolTip.SetToolTip(this.Btn_Square, "Rectangle");
             this.Btn_Square.UseVisualStyleBackColor = true;
             // 
             // Btn_Triangle
@@ -934,6 +940,7 @@ namespace MDBEditor
             this.Btn_Triangle.Size = new System.Drawing.Size(18, 18);
             this.Btn_Triangle.TabIndex = 4;
             this.Btn_Triangle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.General_ToolTip.SetToolTip(this.Btn_Triangle, "Triangle");
             this.Btn_Triangle.UseVisualStyleBackColor = true;
             // 
             // Btn_Star
@@ -948,6 +955,7 @@ namespace MDBEditor
             this.Btn_Star.Size = new System.Drawing.Size(18, 18);
             this.Btn_Star.TabIndex = 5;
             this.Btn_Star.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.General_ToolTip.SetToolTip(this.Btn_Star, "Star");
             this.Btn_Star.UseVisualStyleBackColor = true;
             // 
             // Btn_Diamond
@@ -961,6 +969,7 @@ namespace MDBEditor
             this.Btn_Diamond.Name = "Btn_Diamond";
             this.Btn_Diamond.Size = new System.Drawing.Size(22, 23);
             this.Btn_Diamond.TabIndex = 3;
+            this.General_ToolTip.SetToolTip(this.Btn_Diamond, "Equilateral triangle ");
             this.Btn_Diamond.UseVisualStyleBackColor = true;
             // 
             // Btn_Line
@@ -975,6 +984,7 @@ namespace MDBEditor
             this.Btn_Line.Size = new System.Drawing.Size(19, 18);
             this.Btn_Line.TabIndex = 7;
             this.Btn_Line.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.General_ToolTip.SetToolTip(this.Btn_Line, "Line");
             this.Btn_Line.UseVisualStyleBackColor = true;
             // 
             // Btn_Right_Arrow
@@ -989,6 +999,7 @@ namespace MDBEditor
             this.Btn_Right_Arrow.Size = new System.Drawing.Size(18, 18);
             this.Btn_Right_Arrow.TabIndex = 8;
             this.Btn_Right_Arrow.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.General_ToolTip.SetToolTip(this.Btn_Right_Arrow, "Forward Arrow");
             this.Btn_Right_Arrow.UseVisualStyleBackColor = true;
             // 
             // button18
@@ -1051,6 +1062,7 @@ namespace MDBEditor
             // 
             // Btn_Secondary_Color
             // 
+            this.Btn_Secondary_Color.BackColor = System.Drawing.Color.White;
             this.Btn_Secondary_Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Secondary_Color.FlatAppearance.BorderSize = 0;
             this.Btn_Secondary_Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1059,11 +1071,13 @@ namespace MDBEditor
             this.Btn_Secondary_Color.Name = "Btn_Secondary_Color";
             this.Btn_Secondary_Color.Size = new System.Drawing.Size(37, 37);
             this.Btn_Secondary_Color.TabIndex = 1;
+            this.General_ToolTip.SetToolTip(this.Btn_Secondary_Color, "Secondary Color");
             this.Btn_Secondary_Color.UseVisualStyleBackColor = false;
             this.Btn_Secondary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
             // Btn_Primary_Color
             // 
+            this.Btn_Primary_Color.BackColor = System.Drawing.Color.Black;
             this.Btn_Primary_Color.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Primary_Color.FlatAppearance.BorderSize = 0;
             this.Btn_Primary_Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1074,6 +1088,7 @@ namespace MDBEditor
             this.Btn_Primary_Color.TabIndex = 0;
             this.Btn_Primary_Color.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Primary_Color.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.General_ToolTip.SetToolTip(this.Btn_Primary_Color, "Primary Color");
             this.Btn_Primary_Color.UseVisualStyleBackColor = false;
             this.Btn_Primary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
@@ -1138,7 +1153,7 @@ namespace MDBEditor
             this.Btn_Zoom_Normal.Name = "Btn_Zoom_Normal";
             this.Btn_Zoom_Normal.Size = new System.Drawing.Size(37, 37);
             this.Btn_Zoom_Normal.TabIndex = 4;
-            this.General_ToolTip.SetToolTip(this.Btn_Zoom_Normal, "Panoyu normal hale getirin");
+            this.General_ToolTip.SetToolTip(this.Btn_Zoom_Normal, "Zoom to Normal");
             this.Btn_Zoom_Normal.UseVisualStyleBackColor = true;
             // 
             // label4
@@ -1172,7 +1187,7 @@ namespace MDBEditor
             this.Btn_Zoom_Out.Name = "Btn_Zoom_Out";
             this.Btn_Zoom_Out.Size = new System.Drawing.Size(37, 37);
             this.Btn_Zoom_Out.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.Btn_Zoom_Out, "Uzaklaştırın");
+            this.General_ToolTip.SetToolTip(this.Btn_Zoom_Out, "Zoom Out");
             this.Btn_Zoom_Out.UseVisualStyleBackColor = true;
             // 
             // Btn_Zoom_In
@@ -1186,7 +1201,7 @@ namespace MDBEditor
             this.Btn_Zoom_In.Name = "Btn_Zoom_In";
             this.Btn_Zoom_In.Size = new System.Drawing.Size(37, 37);
             this.Btn_Zoom_In.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Zoom_In, "Yakınlaştırın");
+            this.General_ToolTip.SetToolTip(this.Btn_Zoom_In, "Zoom In");
             this.Btn_Zoom_In.UseVisualStyleBackColor = true;
             // 
             // GB_Show_Or_Hide
@@ -1316,7 +1331,7 @@ namespace MDBEditor
             this.Btn_Cut_To_Clipboard.Size = new System.Drawing.Size(86, 32);
             this.Btn_Cut_To_Clipboard.TabIndex = 2;
             this.Btn_Cut_To_Clipboard.Text = "Cut";
-            this.General_ToolTip.SetToolTip(this.Btn_Cut_To_Clipboard, "Resmi Kırp");
+            this.General_ToolTip.SetToolTip(this.Btn_Cut_To_Clipboard, "Cut to Clipboard");
             // 
             // Btn_Copy_To_Clipboard
             // 
@@ -1332,7 +1347,7 @@ namespace MDBEditor
             this.Btn_Copy_To_Clipboard.Size = new System.Drawing.Size(86, 37);
             this.Btn_Copy_To_Clipboard.TabIndex = 3;
             this.Btn_Copy_To_Clipboard.Text = "Copy";
-            this.General_ToolTip.SetToolTip(this.Btn_Copy_To_Clipboard, "Resmi Kırp");
+            this.General_ToolTip.SetToolTip(this.Btn_Copy_To_Clipboard, "Copy to Clipboard");
             // 
             // Btn_Paste_From_Clipboard
             // 
@@ -1345,7 +1360,7 @@ namespace MDBEditor
             this.Btn_Paste_From_Clipboard.Name = "Btn_Paste_From_Clipboard";
             this.Btn_Paste_From_Clipboard.Size = new System.Drawing.Size(37, 37);
             this.Btn_Paste_From_Clipboard.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Paste_From_Clipboard, "Yapıştır");
+            this.General_ToolTip.SetToolTip(this.Btn_Paste_From_Clipboard, "Paste from Clipboard");
             this.Btn_Paste_From_Clipboard.UseVisualStyleBackColor = true;
             // 
             // GB_Text_Type
@@ -1409,7 +1424,7 @@ namespace MDBEditor
             this.PB_Font_Dialog.Name = "PB_Font_Dialog";
             this.PB_Font_Dialog.Size = new System.Drawing.Size(37, 37);
             this.PB_Font_Dialog.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.PB_Font_Dialog, "Yazı Tipini Ayarla");
+            this.General_ToolTip.SetToolTip(this.PB_Font_Dialog, "Set Font");
             this.PB_Font_Dialog.UseVisualStyleBackColor = true;
             this.PB_Font_Dialog.Click += new System.EventHandler(this.PB_Font_Dialog_Click);
             // 
@@ -1469,7 +1484,7 @@ namespace MDBEditor
             this.Btn_Text_Secondary_Color.Name = "Btn_Text_Secondary_Color";
             this.Btn_Text_Secondary_Color.Size = new System.Drawing.Size(37, 37);
             this.Btn_Text_Secondary_Color.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.Btn_Text_Secondary_Color, "Dosyadan yapıştır");
+            this.General_ToolTip.SetToolTip(this.Btn_Text_Secondary_Color, "Secondary Color");
             this.Btn_Text_Secondary_Color.UseVisualStyleBackColor = false;
             this.Btn_Text_Secondary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
@@ -1486,7 +1501,7 @@ namespace MDBEditor
             this.Btn_Text_Primary_Color.TabIndex = 0;
             this.Btn_Text_Primary_Color.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Text_Primary_Color.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.General_ToolTip.SetToolTip(this.Btn_Text_Primary_Color, "Yapıştır");
+            this.General_ToolTip.SetToolTip(this.Btn_Text_Primary_Color, "Primary Color");
             this.Btn_Text_Primary_Color.UseVisualStyleBackColor = false;
             this.Btn_Text_Primary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 

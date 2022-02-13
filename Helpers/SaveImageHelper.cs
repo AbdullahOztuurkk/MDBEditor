@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace MDBEditor.Helpers
 {
-    public static class ImageSaveHelper
+    public static class SaveImageHelper
     {
         private static string FileFilter = String.Empty;
         public static void SaveImage(this PictureBox pictureBox)

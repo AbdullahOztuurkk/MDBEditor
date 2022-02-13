@@ -1931,10 +1931,12 @@ namespace MDBEditor
             this.Controls.Add(this.Status_Bar);
             this.Controls.Add(this.Panel_Drawing_Board);
             this.Controls.Add(this.TC_Menu);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MasterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDBEditor";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Detect_Key);
             this.TC_Menu.ResumeLayout(false);
             this.TP_General.ResumeLayout(false);
             this.FLP_File.ResumeLayout(false);

@@ -5,6 +5,7 @@ using MDBEditor.Helpers;
 using MDBEditor.Tools.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
@@ -112,26 +113,7 @@ namespace MDBEditor
 
         private void Btn_Open_File_Click(object sender, EventArgs e)
         {
-            if (DialogResult.OK == Open_File_Dialog.ShowDialog())
-            {
-                string original_file_name = Open_File_Dialog.SafeFileName.Substring(0, Open_File_Dialog.SafeFileName.LastIndexOf('.'));
-                if (PB_Drawing_Board.IsNullOrEmpty())
-                {
-                    PB_Drawing_Board.Image = new Bitmap(Open_File_Dialog.FileName);
-                    this.Text = "MDBEditor - " + original_file_name;
-                }
-                else
-                {
-                    if (DialogResult.Yes ==
-                        MessageBox.Show("There are unsaved changes. Do you still want to open this file?",
-                        "Unsaved changes",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
-                    {
-                        PB_Drawing_Board.Image = new Bitmap(Open_File_Dialog.FileName);
-                        this.Text = "MDBEditor - " + original_file_name;
-                    }
-                }
-            }
+            PB_Drawing_Board.OpenImage(this);
         }
 
         /// <summary>
@@ -139,8 +121,13 @@ namespace MDBEditor
         /// </summary>
         private void CB_Ruler_CheckedChanged(object sender, EventArgs e)
         {
+            ToggleRuler();
+        }
+
+        private void ToggleRuler()
+        {
             //Drawing board location is 12,9 -> new location is 32,28
-            if (CB_Ruler.CheckState == CheckState.Checked)
+            if (PB_Ruler_Left.Visible == false || PB_Ruler_Top.Visible == false)
             {
                 PB_Ruler_Left.Visible = true;
                 PB_Ruler_Top.Visible = true;
@@ -307,6 +294,25 @@ namespace MDBEditor
             Btn_Text_Secondary_Color.BackColor = secondaryColor;
             Btn_Secondary_Color.BackColor = secondaryColor;
             #endregion
+        }
+
+        private void Detect_Key(object sender, KeyEventArgs e)
+        {
+            if (e.Modifiers == Keys.Control)
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.S:
+                        PB_Drawing_Board.SaveImage(); break;
+                    case Keys.R:
+                        ToggleRuler(); break;
+                    case Keys.G:
+                        BoxWithGrid.Visible = !BoxWithGrid.Visible; break;
+                    case Keys.O:
+                    case Keys.N:
+                        PB_Drawing_Board.OpenImage(this); break;
+                }
+            }
         }
     }
 }

@@ -61,7 +61,7 @@ namespace MDBEditor
             //Tools
             penTool = new PenTool(BoardGraphics);
             eraserTool = new EraserTool(BoardGraphics);
-            fillerTool = new FillerTool(new Bitmap(PB_Drawing_Board.Width,PB_Drawing_Board.Height));
+            fillerTool = new FillerTool(new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height));
             colorPickerTool = new ColorPickerTool(PB_Drawing_Board);
             textTool = new TextTool(BoardGraphics);
         }
@@ -206,7 +206,7 @@ namespace MDBEditor
                 primaryColor = colorPickerTool.DetectedColor;
                 Btn_Primary_Color.BackColor = primaryColor;
             }
-            if(currentTool == DrawingTool.Text)
+            if (currentTool == DrawingTool.Text)
             {
                 textTool.Loc = e.Location;
                 textTool.ForeColor = primaryColor;
@@ -276,6 +276,8 @@ namespace MDBEditor
 
         private void Save_Image(object sender, EventArgs e)
         {
+            if (CB_Guidelines.Checked)
+                BoxWithGrid.Visible = false;
             PictureBox pictureBox = sender as PictureBox;
             switch (pictureBox.Name)
             {
@@ -286,9 +288,11 @@ namespace MDBEditor
                 case nameof(PB_Save_As_JPG):
                     PB_Drawing_Board.SaveImage(ImageFormat.Jpeg); break;
                 case nameof(PB_Save_As_PNG):
-                    PB_Drawing_Board.SaveImage(ImageFormat.Png);break;
+                    PB_Drawing_Board.SaveImage(ImageFormat.Png); break;
                 default: PB_Drawing_Board.SaveImage(); break;
             }
+            if (CB_Guidelines.Checked)
+                BoxWithGrid.Visible = true;
         }
 
         /// <summary>
@@ -321,7 +325,7 @@ namespace MDBEditor
                     case Keys.N:
                         PB_Drawing_Board.OpenImage(this); break;
                     case Keys.Z:
-                        if(undoRedoStack.CanUndo)
+                        if (undoRedoStack.CanUndo)
                         {
                             undoRedoStack.Undo();
                             BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);

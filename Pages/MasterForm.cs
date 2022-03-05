@@ -3,6 +3,7 @@ using MDBEditor.Constants.Enums;
 using MDBEditor.Controls;
 using MDBEditor.Helpers;
 using MDBEditor.Tools.Concrete;
+using MDBEditor.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,6 +16,8 @@ namespace MDBEditor
     public partial class MasterForm : Form
     {
         private readonly PictureBoxWithGrid BoxWithGrid;
+        private UndoRedoStack undoRedoStack;
+        private Graphics BoardGraphics;
 
         //Mouse event properties
         bool IsMouseDown = false;
@@ -26,16 +29,18 @@ namespace MDBEditor
 
         //Tools
         public DrawingTool currentTool;
-        private readonly PenTool penTool;
-        private readonly EraserTool eraserTool;
+        private PenTool penTool;
+        private EraserTool eraserTool;
         private ColorPickerTool colorPickerTool;
         private readonly FillerTool fillerTool;
-        private readonly TextTool textTool;
+        private TextTool textTool;
 
         public MasterForm()
         {
             InitializeComponent();
             PB_Drawing_Board.Image = new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height);
+            BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
+            undoRedoStack = new UndoRedoStack(PB_Drawing_Board);
             FLP_Colors.Get_Colors();
             FLP_Text_Colors.Get_Colors();
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
@@ -54,11 +59,11 @@ namespace MDBEditor
             this.Size = AppSettings.RULER_CLOSED_COORDINATE;
 
             //Tools
-            penTool = new PenTool(Graphics.FromImage(PB_Drawing_Board.Image));
-            eraserTool = new EraserTool(Graphics.FromImage(PB_Drawing_Board.Image));
+            penTool = new PenTool(BoardGraphics);
+            eraserTool = new EraserTool(BoardGraphics);
             fillerTool = new FillerTool(new Bitmap(PB_Drawing_Board.Width,PB_Drawing_Board.Height));
             colorPickerTool = new ColorPickerTool(PB_Drawing_Board);
-            textTool = new TextTool(Graphics.FromImage(PB_Drawing_Board.Image));
+            textTool = new TextTool(BoardGraphics);
         }
 
         public void Select_Color_From_Button(object sender, EventArgs e)
@@ -191,7 +196,10 @@ namespace MDBEditor
         {
             IsMouseDown = true;
             lastPoint = e.Location;
-            if(currentTool == DrawingTool.Color_Picker)
+            Bitmap bmp = new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height);
+            PB_Drawing_Board.DrawToBitmap(bmp, PB_Drawing_Board.ClientRectangle);
+            undoRedoStack.Save(bmp);
+            if (currentTool == DrawingTool.Color_Picker)
             {
                 colorPickerTool.Loc = e.Location;
                 colorPickerTool.Handle();
@@ -296,6 +304,7 @@ namespace MDBEditor
             #endregion
         }
 
+        //Shortcut Helper method
         private void Detect_Key(object sender, KeyEventArgs e)
         {
             if (e.Modifiers == Keys.Control)
@@ -311,6 +320,26 @@ namespace MDBEditor
                     case Keys.O:
                     case Keys.N:
                         PB_Drawing_Board.OpenImage(this); break;
+                    case Keys.Z:
+                        if(undoRedoStack.CanUndo)
+                        {
+                            undoRedoStack.Undo();
+                            BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
+                            penTool = new PenTool(BoardGraphics);
+                            eraserTool = new EraserTool(BoardGraphics);
+                            textTool = new TextTool(BoardGraphics);
+                        }
+                        break;
+                    case Keys.Y:
+                        if (undoRedoStack.CanRedo)
+                        {
+                            undoRedoStack.Redo();
+                            BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
+                            penTool = new PenTool(BoardGraphics);
+                            eraserTool = new EraserTool(BoardGraphics);
+                            textTool = new TextTool(BoardGraphics);
+                        }
+                        break;
                 }
             }
         }

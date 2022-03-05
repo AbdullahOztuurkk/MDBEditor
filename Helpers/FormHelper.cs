@@ -48,5 +48,17 @@ namespace MDBEditor.Helpers
         {
             return pb == null || pb.Image == null;
         }
+
+        /// <summary>
+        /// Set image of specified picturebox
+        /// </summary>
+        /// <param name="pictureBox">Any PictureBox Control</param>
+        /// <param name="img">Any Image Object</param>
+        public static void SetImage(this PictureBox pictureBox, Image img)
+        {
+            //pictureBox.Image.Dispose();
+            pictureBox.Image = img;
+            pictureBox.Invalidate();
+        }
     }
 }

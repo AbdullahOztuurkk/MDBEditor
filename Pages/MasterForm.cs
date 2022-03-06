@@ -165,7 +165,6 @@ namespace MDBEditor
                         {
                             penTool.Loc = e.Location;
                             penTool.BackColor = primaryColor;
-                            penTool.Size = 3;
                             penTool.LastPoint = lastPoint;
                             penTool.Handle();
                             lastPoint = e.Location;
@@ -175,7 +174,6 @@ namespace MDBEditor
                         if (lastPoint != null)
                         {
                             eraserTool.Loc = e.Location;
-                            eraserTool.Size = 10;
                             eraserTool.LastPoint = lastPoint;
                             eraserTool.Handle();
                             lastPoint = e.Location;
@@ -346,6 +344,14 @@ namespace MDBEditor
                         break;
                     case Keys.P:
                         PB_Drawing_Board.PrintImage();
+                        break;
+                    case Keys.Add:
+                        penTool.IncreaseSize();
+                        eraserTool.IncreaseSize();
+                        break;
+                    case Keys.Subtract:
+                        penTool.DescreaseSize();
+                        eraserTool.DescreaseSize();
                         break;
                 }
             }

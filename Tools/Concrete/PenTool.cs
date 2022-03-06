@@ -1,4 +1,5 @@
-﻿using MDBEditor.Tools.Abstract;
+﻿using MDBEditor.Constants;
+using MDBEditor.Tools.Abstract;
 using MDBEditor.Tools.Abstract.General;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,17 @@ namespace MDBEditor.Tools.Concrete
 
             graphics.DrawLine(p, LastPoint, new Point(Loc.X, Loc.Y));
             LastPoint = new Point(Loc.X, Loc.Y);
+        }
+
+        public void IncreaseSize()
+        {
+            if (Size < AppSettings.MAXIMUM_TOOL_SIZE)
+                Size++;
+        }
+        public void DescreaseSize()
+        {
+            if (Size > AppSettings.MINIMUM_TOOL_SIZE)
+                Size--;
         }
     }
 }

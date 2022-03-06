@@ -154,7 +154,6 @@ namespace MDBEditor
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
-            this.Open_File_Dialog = new System.Windows.Forms.OpenFileDialog();
             this.Continuous_Checker = new System.Windows.Forms.Timer(this.components);
             this.TC_Menu.SuspendLayout();
             this.TP_General.SuspendLayout();
@@ -1912,14 +1911,6 @@ namespace MDBEditor
             // 
             this.Font_Dialog.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             // 
-            // Open_File_Dialog
-            // 
-            this.Open_File_Dialog.DefaultExt = "png";
-            this.Open_File_Dialog.Filter = "PNG Dosyası |*.png| JPG Dosyası|*.jpg| BMP Dosyası|*.bmp";
-            this.Open_File_Dialog.InitialDirectory = " Desktop";
-            this.Open_File_Dialog.RestoreDirectory = true;
-            this.Open_File_Dialog.Title = "Resim seçiniz";
-            // 
             // Continuous_Checker
             // 
             this.Continuous_Checker.Enabled = true;
@@ -2114,7 +2105,6 @@ namespace MDBEditor
         private System.Windows.Forms.PictureBox PB_Drawing_Board;
         private System.Windows.Forms.GroupBox GB_Text_Type;
         private System.Windows.Forms.Button PB_Font_Dialog;
-        private System.Windows.Forms.OpenFileDialog Open_File_Dialog;
         private System.Windows.Forms.PictureBox PB_Ruler_Top;
         private System.Windows.Forms.PictureBox PB_Ruler_Left;
         private System.Windows.Forms.TableLayoutPanel TLP_Features;

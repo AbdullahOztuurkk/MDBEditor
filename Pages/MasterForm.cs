@@ -361,5 +361,22 @@ namespace MDBEditor
         {
             PB_Drawing_Board.PrintImage();
         }
+
+        private void Clipboard_Events(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            switch (btn.Name)
+            {
+                case nameof(Btn_Copy_To_Clipboard): 
+                    Clipboard.SetText(Txt_Text.Text); break;
+                case nameof(Btn_Cut_To_Clipboard):
+                    Clipboard.SetText(Txt_Text.Text);
+                    Txt_Text.Clear();
+                    break;
+                case nameof(Btn_Paste_From_Clipboard):
+                    Txt_Text.Text = Clipboard.GetText();
+                    break;
+            }
+        }
     }
 }

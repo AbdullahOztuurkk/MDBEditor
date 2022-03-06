@@ -1333,6 +1333,7 @@ namespace MDBEditor
             this.Btn_Cut_To_Clipboard.TabIndex = 2;
             this.Btn_Cut_To_Clipboard.Text = "Cut";
             this.General_ToolTip.SetToolTip(this.Btn_Cut_To_Clipboard, "Cut to Clipboard");
+            this.Btn_Cut_To_Clipboard.Click += new System.EventHandler(this.Clipboard_Events);
             // 
             // Btn_Copy_To_Clipboard
             // 
@@ -1349,6 +1350,7 @@ namespace MDBEditor
             this.Btn_Copy_To_Clipboard.TabIndex = 3;
             this.Btn_Copy_To_Clipboard.Text = "Copy";
             this.General_ToolTip.SetToolTip(this.Btn_Copy_To_Clipboard, "Copy to Clipboard");
+            this.Btn_Copy_To_Clipboard.Click += new System.EventHandler(this.Clipboard_Events);
             // 
             // Btn_Paste_From_Clipboard
             // 
@@ -1363,6 +1365,7 @@ namespace MDBEditor
             this.Btn_Paste_From_Clipboard.TabIndex = 0;
             this.General_ToolTip.SetToolTip(this.Btn_Paste_From_Clipboard, "Paste from Clipboard");
             this.Btn_Paste_From_Clipboard.UseVisualStyleBackColor = true;
+            this.Btn_Paste_From_Clipboard.Click += new System.EventHandler(this.Clipboard_Events);
             // 
             // GB_Text_Type
             // 

@@ -10,7 +10,7 @@ namespace MDBEditor.Constants
     /// <summary>
     /// Customizable all options in program
     /// </summary>
-    public class AppSettings
+    public static class AppSettings
     {
         //Color settings in Menu
         public static readonly short BOX_SIZE = 20;
@@ -22,8 +22,10 @@ namespace MDBEditor.Constants
         public static readonly short NUM_OF_CELLS = 500;
         public static readonly Color PEN_FORECOLOR = Color.LightGray;
 
-        //Drawing board settings
-        public static readonly int CORNER = 16;
+        //Drawing tools settings
+        public static readonly short MINIMUM_TOOL_SIZE = 2;
+        public static readonly short DEFAULT_TOOL_SIZE = 4; 
+        public static readonly short MAXIMUM_TOOL_SIZE = 15; 
 
         //Resize Coordinates
         public static readonly Point OLD_DRAWING_BOARD_COORDINATE = new Point(12, 9);

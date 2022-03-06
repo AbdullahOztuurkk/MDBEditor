@@ -48,7 +48,7 @@ namespace MDBEditor
             this.PB_Save_As_BMP = new System.Windows.Forms.PictureBox();
             this.GB_Print = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button29 = new System.Windows.Forms.Button();
+            this.Btn_Print_Image = new System.Windows.Forms.Button();
             this.GB_Settings = new System.Windows.Forms.GroupBox();
             this.TLP_Features = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
@@ -444,7 +444,7 @@ namespace MDBEditor
             // GB_Print
             // 
             this.GB_Print.Controls.Add(this.label10);
-            this.GB_Print.Controls.Add(this.button29);
+            this.GB_Print.Controls.Add(this.Btn_Print_Image);
             this.GB_Print.Location = new System.Drawing.Point(495, 3);
             this.GB_Print.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Print.Name = "GB_Print";
@@ -464,19 +464,20 @@ namespace MDBEditor
             this.label10.Text = "Print File";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button29
+            // Btn_Print_Image
             // 
-            this.button29.BackgroundImage = global::MDBEditor.Properties.Resources.print_file;
-            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button29.FlatAppearance.BorderSize = 0;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button29.Location = new System.Drawing.Point(18, 42);
-            this.button29.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(37, 37);
-            this.button29.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.button29, "Print Image");
-            this.button29.UseVisualStyleBackColor = true;
+            this.Btn_Print_Image.BackgroundImage = global::MDBEditor.Properties.Resources.print_file;
+            this.Btn_Print_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Print_Image.FlatAppearance.BorderSize = 0;
+            this.Btn_Print_Image.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Print_Image.Location = new System.Drawing.Point(18, 42);
+            this.Btn_Print_Image.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Btn_Print_Image.Name = "Btn_Print_Image";
+            this.Btn_Print_Image.Size = new System.Drawing.Size(37, 37);
+            this.Btn_Print_Image.TabIndex = 0;
+            this.General_ToolTip.SetToolTip(this.Btn_Print_Image, "Print Image");
+            this.Btn_Print_Image.UseVisualStyleBackColor = true;
+            this.Btn_Print_Image.Click += new System.EventHandler(this.Btn_Print_Image_Click);
             // 
             // GB_Settings
             // 
@@ -2063,7 +2064,7 @@ namespace MDBEditor
         private System.Windows.Forms.PictureBox PB_Save_As_BMP;
         private System.Windows.Forms.GroupBox GB_Print;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button Btn_Print_Image;
         private System.Windows.Forms.GroupBox GB_Settings;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

@@ -344,8 +344,16 @@ namespace MDBEditor
                             textTool = new TextTool(BoardGraphics);
                         }
                         break;
+                    case Keys.P:
+                        PB_Drawing_Board.PrintImage();
+                        break;
                 }
             }
+        }
+
+        private void Btn_Print_Image_Click(object sender, EventArgs e)
+        {
+            PB_Drawing_Board.PrintImage();
         }
     }
 }

@@ -6,7 +6,6 @@ using MDBEditor.Tools.Concrete;
 using MDBEditor.Utils;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
@@ -87,10 +86,7 @@ namespace MDBEditor
         /// <summary>
         /// Set toggleable status bar 
         /// </summary>
-        private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e)
-        {
-            Status_Bar.Visible = CB_Status_Bar.Checked == true ? true : false;
-        }
+        private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e) => Status_Bar.Visible = CB_Status_Bar.Checked == true;
 
         /// <summary>
         /// Get drawing board size for status bar
@@ -106,28 +102,14 @@ namespace MDBEditor
         /// <summary>
         /// Set toggleable gridlines on drawing board
         /// </summary>
-        private void CB_Guidelines_CheckedChanged(object sender, EventArgs e)
-        {
-            BoxWithGrid.Visible = !BoxWithGrid.Visible;
-        }
-
-        private void PB_Font_Dialog_Click(object sender, EventArgs e)
-        {
-            Font_Dialog.ShowDialog();
-        }
-
-        private void Btn_Open_File_Click(object sender, EventArgs e)
-        {
-            PB_Drawing_Board.OpenImage(this);
-        }
+        private void CB_Guidelines_CheckedChanged(object sender, EventArgs e) => BoxWithGrid.Visible = !BoxWithGrid.Visible;
+        private void PB_Font_Dialog_Click(object sender, EventArgs e) => Font_Dialog.ShowDialog();
+        private void Btn_Open_File_Click(object sender, EventArgs e) => PB_Drawing_Board.OpenImage(this);
 
         /// <summary>
         /// Set visible of Ruler in drawing board
         /// </summary>
-        private void CB_Ruler_CheckedChanged(object sender, EventArgs e)
-        {
-            ToggleRuler();
-        }
+        private void CB_Ruler_CheckedChanged(object sender, EventArgs e) => ToggleRuler();
 
         private void ToggleRuler()
         {
@@ -271,26 +253,32 @@ namespace MDBEditor
                 TC_Menu.TabPages.Remove(TP_Text);
             }
         }
-
-        private void Save_Image(object sender, EventArgs e)
+        private void Check_Gridlines_Before_Save(Action SaveAction)
         {
             if (CB_Guidelines.Checked)
                 BoxWithGrid.Visible = false;
-            PictureBox pictureBox = sender as PictureBox;
-            switch (pictureBox.Name)
-            {
-                case nameof(PB_Save_As_BMP):
-                    PB_Drawing_Board.SaveImage(ImageFormat.Bmp); break;
-                case nameof(PB_Save_As_GIF):
-                    PB_Drawing_Board.SaveImage(ImageFormat.Gif); break;
-                case nameof(PB_Save_As_JPG):
-                    PB_Drawing_Board.SaveImage(ImageFormat.Jpeg); break;
-                case nameof(PB_Save_As_PNG):
-                    PB_Drawing_Board.SaveImage(ImageFormat.Png); break;
-                default: PB_Drawing_Board.SaveImage(); break;
-            }
+            SaveAction();
             if (CB_Guidelines.Checked)
                 BoxWithGrid.Visible = true;
+        }
+        private void Save_Image(object sender, EventArgs e)
+        {
+            Check_Gridlines_Before_Save(() =>
+            {
+                PictureBox pictureBox = sender as PictureBox;
+                switch (pictureBox.Name)
+                {
+                    case nameof(PB_Save_As_BMP):
+                        PB_Drawing_Board.SaveImage(ImageFormat.Bmp); break;
+                    case nameof(PB_Save_As_GIF):
+                        PB_Drawing_Board.SaveImage(ImageFormat.Gif); break;
+                    case nameof(PB_Save_As_JPG):
+                        PB_Drawing_Board.SaveImage(ImageFormat.Jpeg); break;
+                    case nameof(PB_Save_As_PNG):
+                        PB_Drawing_Board.SaveImage(ImageFormat.Png); break;
+                    default: PB_Drawing_Board.SaveImage(); break;
+                }
+            });
         }
 
         /// <summary>
@@ -314,7 +302,8 @@ namespace MDBEditor
                 switch (e.KeyCode)
                 {
                     case Keys.S:
-                        PB_Drawing_Board.SaveImage(); break;
+                        Check_Gridlines_Before_Save(() => { PB_Drawing_Board.SaveImage(); });
+                        break;
                     case Keys.R:
                         ToggleRuler(); break;
                     case Keys.G:
@@ -357,17 +346,14 @@ namespace MDBEditor
             }
         }
 
-        private void Btn_Print_Image_Click(object sender, EventArgs e)
-        {
-            PB_Drawing_Board.PrintImage();
-        }
+        private void Btn_Print_Image_Click(object sender, EventArgs e) => PB_Drawing_Board.PrintImage();
 
         private void Clipboard_Events(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             switch (btn.Name)
             {
-                case nameof(Btn_Copy_To_Clipboard): 
+                case nameof(Btn_Copy_To_Clipboard):
                     Clipboard.SetText(Txt_Text.Text); break;
                 case nameof(Btn_Cut_To_Clipboard):
                     Clipboard.SetText(Txt_Text.Text);

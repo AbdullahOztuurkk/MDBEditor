@@ -30,6 +30,7 @@ namespace MDBEditor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterForm));
             this.TC_Menu = new System.Windows.Forms.TabControl();
             this.TP_General = new System.Windows.Forms.TabPage();
             this.FLP_File = new System.Windows.Forms.FlowLayoutPanel();
@@ -523,6 +524,7 @@ namespace MDBEditor
             this.label9.TabIndex = 2;
             this.label9.Text = "About";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label9.Click += new System.EventHandler(this.Show_About_Box);
             // 
             // button25
             // 
@@ -538,6 +540,7 @@ namespace MDBEditor
             this.button25.TabIndex = 1;
             this.General_ToolTip.SetToolTip(this.button25, "About Program");
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.Show_About_Box);
             // 
             // button26
             // 
@@ -1926,6 +1929,7 @@ namespace MDBEditor
             this.Controls.Add(this.Status_Bar);
             this.Controls.Add(this.Panel_Drawing_Board);
             this.Controls.Add(this.TC_Menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MasterForm";

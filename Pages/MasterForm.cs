@@ -2,6 +2,7 @@
 using MDBEditor.Constants.Enums;
 using MDBEditor.Controls;
 using MDBEditor.Helpers;
+using MDBEditor.Pages;
 using MDBEditor.Tools.Concrete;
 using MDBEditor.Utils;
 using System;
@@ -364,5 +365,7 @@ namespace MDBEditor
                     break;
             }
         }
+
+        private void Show_About_Box(object sender, EventArgs e) => new AboutForm().ShowDialog();
     }
 }

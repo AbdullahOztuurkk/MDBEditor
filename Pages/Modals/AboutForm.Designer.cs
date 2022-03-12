@@ -33,11 +33,11 @@ namespace MDBEditor.Pages
             this.TLP_About = new System.Windows.Forms.TableLayoutPanel();
             this.PB_Logo = new System.Windows.Forms.PictureBox();
             this.GB_About = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Lbl_Website = new System.Windows.Forms.LinkLabel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.Lbl_Contribute = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Lbl_Website = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.TLP_About.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Logo)).BeginInit();
             this.GB_About.SuspendLayout();
@@ -84,15 +84,35 @@ namespace MDBEditor.Pages
             this.GB_About.TabStop = false;
             this.GB_About.Text = "About";
             // 
-            // label1
+            // Lbl_Contribute
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MDB Editor is open source image manipulation program.\r\nIts produced for alternati" +
-    "ve of MSPaint.";
+            this.Lbl_Contribute.AutoSize = true;
+            this.Lbl_Contribute.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.Lbl_Contribute.Location = new System.Drawing.Point(7, 83);
+            this.Lbl_Contribute.Name = "Lbl_Contribute";
+            this.Lbl_Contribute.Size = new System.Drawing.Size(68, 15);
+            this.Lbl_Contribute.TabIndex = 4;
+            this.Lbl_Contribute.TabStop = true;
+            this.Lbl_Contribute.Text = "Github Link";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(184, 15);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Contribute the MDBEditor Project";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Location = new System.Drawing.Point(7, 109);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(307, 227);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // Lbl_Website
             // 
@@ -105,35 +125,15 @@ namespace MDBEditor.Pages
             this.Lbl_Website.TabStop = true;
             this.Lbl_Website.Text = "Visit the MDBEditor Website";
             // 
-            // richTextBox1
+            // label1
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(7, 109);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(307, 227);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Contribute the MDBEditor Project";
-            // 
-            // Lbl_Contribute
-            // 
-            this.Lbl_Contribute.AutoSize = true;
-            this.Lbl_Contribute.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.Lbl_Contribute.Location = new System.Drawing.Point(7, 83);
-            this.Lbl_Contribute.Name = "Lbl_Contribute";
-            this.Lbl_Contribute.Size = new System.Drawing.Size(68, 15);
-            this.Lbl_Contribute.TabIndex = 4;
-            this.Lbl_Contribute.TabStop = true;
-            this.Lbl_Contribute.Text = "Github Link";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(308, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MDB Editor is open source image manipulation program.\r\nIts produced for alternati" +
+    "ve of MSPaint.";
             // 
             // AboutForm
             // 
@@ -146,7 +146,7 @@ namespace MDBEditor.Pages
             this.MinimizeBox = false;
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AboutForm";
+            this.Text = "About MDBEditor";
             this.TLP_About.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Logo)).EndInit();
             this.GB_About.ResumeLayout(false);

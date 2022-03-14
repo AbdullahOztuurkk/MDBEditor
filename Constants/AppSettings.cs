@@ -33,5 +33,8 @@ namespace MDBEditor.Constants
         public static readonly Size RULER_CLOSED_COORDINATE = new Size(1098, 772);
         public static readonly Size RULER_OPENED_COORDINATE = new Size(1116, 791);
 
+        //Resize Options
+        public static readonly short MAXIMUM_RESIZE_PERCENTAGE = 1000;
+        public static readonly short MAXIMUM_RESIZE_PIXEL = 5000;
     }
 }

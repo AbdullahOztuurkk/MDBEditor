@@ -89,22 +89,25 @@ namespace MDBEditor.Helpers
             switch (imageFormat.ToString())
             {
                 case "Png":
-                    FileFilter = "Png Image (.png)|*.png|";
+                    FileFilter = "Png Image (.png)|*.png";
+                    break;
+                case "Bmp":
+                    FileFilter = "Bitmap Image (.bmp)|*.bmp";
                     break;
                 case "Gif":
-                    FileFilter = "Gif Image (.gif)|*.gif|";
+                    FileFilter = "Gif Image (.gif)|*.gif";
                     break;
                 case "Jpeg":
-                    FileFilter = "JPEG Image (.jpeg)|*.jpeg|";
+                    FileFilter = "JPEG Image (.jpeg)|*.jpeg";
                     break;
                 case "Tiff":
-                    FileFilter = "Tiff Image (.tiff)|*.tiff|";
+                    FileFilter = "Tiff Image (.tiff)|*.tiff";
                     break;
                 case "Wmf":
-                    FileFilter = "Wmf Image (.wmf)|*.wmf|";
+                    FileFilter = "Wmf Image (.wmf)|*.wmf";
                     break;
                 case "Icon":
-                    FileFilter = "Icon (.ico)|*.ico|";
+                    FileFilter = "Icon (.ico)|*.ico";
                     break;
                 }
 

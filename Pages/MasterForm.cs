@@ -3,6 +3,7 @@ using MDBEditor.Constants.Enums;
 using MDBEditor.Controls;
 using MDBEditor.Helpers;
 using MDBEditor.Pages;
+using MDBEditor.Pages.Modals;
 using MDBEditor.Tools.Concrete;
 using MDBEditor.Utils;
 using System;
@@ -367,5 +368,18 @@ namespace MDBEditor
         }
 
         private void Show_About_Box(object sender, EventArgs e) => new AboutForm().ShowDialog();
+
+        private void Resize_Modal_Show(object sender, EventArgs e)
+        {
+            using ResizeForm resizeForm = new ResizeForm(PB_Drawing_Board);
+            resizeForm.ShowDialog();
+            PB_Drawing_Board.Size = resizeForm.sourceBitmap.Size;
+            PB_Drawing_Board.SetImage(resizeForm.sourceBitmap);
+            BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
+            penTool = new PenTool(BoardGraphics);
+            eraserTool = new EraserTool(BoardGraphics);
+            textTool = new TextTool(BoardGraphics);
+        }
+
     }
 }

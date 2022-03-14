@@ -700,6 +700,7 @@ namespace MDBEditor
             this.Btn_Resize_Image.Text = "Resize";
             this.General_ToolTip.SetToolTip(this.Btn_Resize_Image, "Resize Image");
             this.Btn_Resize_Image.UseVisualStyleBackColor = true;
+            this.Btn_Resize_Image.Click += new System.EventHandler(this.Resize_Modal_Show);
             // 
             // Btn_Rotate_Image
             // 

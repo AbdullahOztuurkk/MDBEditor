@@ -43,5 +43,25 @@ namespace MDBEditor.Helpers
             }
             form.Text = original_file_name;
         }
+
+        public static void NewImage(this PictureBox pictureBox, Form form)
+        {
+            if (pictureBox.IsNullOrEmpty())
+            {
+                pictureBox.Image = new Bitmap(pictureBox.Width, pictureBox.Height); ;
+                form.Text = "MDBEditor - " + "Untitled";
+            }
+            else
+            {
+                if (DialogResult.Yes ==
+                    MessageBox.Show("There are unsaved changes. Do you still want to open this file?",
+                    "Unsaved changes",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    pictureBox.Image = new Bitmap(pictureBox.Width, pictureBox.Height); ;
+                    form.Text = "MDBEditor - " + "Untitled";
+                }
+            }
+        }
     }
 }

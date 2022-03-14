@@ -294,6 +294,13 @@ namespace MDBEditor
             Btn_Text_Secondary_Color.BackColor = secondaryColor;
             Btn_Secondary_Color.BackColor = secondaryColor;
             #endregion
+
+            #region Update Graphics
+            BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
+            penTool = new PenTool(BoardGraphics);
+            eraserTool = new EraserTool(BoardGraphics);
+            textTool = new TextTool(BoardGraphics);
+            #endregion
         }
 
         //Shortcut Helper method
@@ -315,23 +322,11 @@ namespace MDBEditor
                         PB_Drawing_Board.OpenImage(this); break;
                     case Keys.Z:
                         if (undoRedoStack.CanUndo)
-                        {
                             undoRedoStack.Undo();
-                            BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
-                            penTool = new PenTool(BoardGraphics);
-                            eraserTool = new EraserTool(BoardGraphics);
-                            textTool = new TextTool(BoardGraphics);
-                        }
                         break;
                     case Keys.Y:
                         if (undoRedoStack.CanRedo)
-                        {
                             undoRedoStack.Redo();
-                            BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
-                            penTool = new PenTool(BoardGraphics);
-                            eraserTool = new EraserTool(BoardGraphics);
-                            textTool = new TextTool(BoardGraphics);
-                        }
                         break;
                     case Keys.P:
                         PB_Drawing_Board.PrintImage();
@@ -375,11 +370,8 @@ namespace MDBEditor
             resizeForm.ShowDialog();
             PB_Drawing_Board.Size = resizeForm.sourceBitmap.Size;
             PB_Drawing_Board.SetImage(resizeForm.sourceBitmap);
-            BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
-            penTool = new PenTool(BoardGraphics);
-            eraserTool = new EraserTool(BoardGraphics);
-            textTool = new TextTool(BoardGraphics);
         }
 
+        private void Btn_New_Image_Click(object sender, EventArgs e) => PB_Drawing_Board.NewImage(this);
     }
 }

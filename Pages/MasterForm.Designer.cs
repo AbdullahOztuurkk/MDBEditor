@@ -37,7 +37,7 @@ namespace MDBEditor
             this.GB_File_Options = new System.Windows.Forms.GroupBox();
             this.TLP_File = new System.Windows.Forms.TableLayoutPanel();
             this.Btn_Open_File = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.Btn_New_Image = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.GB_Save_File = new System.Windows.Forms.GroupBox();
@@ -269,7 +269,7 @@ namespace MDBEditor
             this.TLP_File.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.TLP_File.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.78F));
             this.TLP_File.Controls.Add(this.Btn_Open_File, 1, 1);
-            this.TLP_File.Controls.Add(this.button24, 3, 1);
+            this.TLP_File.Controls.Add(this.Btn_New_Image, 3, 1);
             this.TLP_File.Controls.Add(this.label7, 3, 2);
             this.TLP_File.Controls.Add(this.label6, 0, 2);
             this.TLP_File.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -297,19 +297,20 @@ namespace MDBEditor
             this.Btn_Open_File.UseVisualStyleBackColor = true;
             this.Btn_Open_File.Click += new System.EventHandler(this.Btn_Open_File_Click);
             // 
-            // button24
+            // Btn_New_Image
             // 
-            this.button24.BackgroundImage = global::MDBEditor.Properties.Resources.blank_page;
-            this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button24.FlatAppearance.BorderSize = 0;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Location = new System.Drawing.Point(77, 30);
-            this.button24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(36, 37);
-            this.button24.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.button24, "Create new Image");
-            this.button24.UseVisualStyleBackColor = true;
+            this.Btn_New_Image.BackgroundImage = global::MDBEditor.Properties.Resources.blank_page;
+            this.Btn_New_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_New_Image.FlatAppearance.BorderSize = 0;
+            this.Btn_New_Image.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_New_Image.Location = new System.Drawing.Point(77, 30);
+            this.Btn_New_Image.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Btn_New_Image.Name = "Btn_New_Image";
+            this.Btn_New_Image.Size = new System.Drawing.Size(36, 37);
+            this.Btn_New_Image.TabIndex = 0;
+            this.General_ToolTip.SetToolTip(this.Btn_New_Image, "Create new Image");
+            this.Btn_New_Image.UseVisualStyleBackColor = true;
+            this.Btn_New_Image.Click += new System.EventHandler(this.Btn_New_Image_Click);
             // 
             // label7
             // 
@@ -322,6 +323,7 @@ namespace MDBEditor
             this.label7.TabIndex = 3;
             this.label7.Text = "New";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Click += new System.EventHandler(this.Btn_New_Image_Click);
             // 
             // label6
             // 
@@ -2053,7 +2055,7 @@ namespace MDBEditor
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Open_File;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button Btn_New_Image;
         private System.Windows.Forms.GroupBox GB_Save_File;
         private System.Windows.Forms.TableLayoutPanel FLP_Save_Image;
         private System.Windows.Forms.PictureBox PB_Save_As_Image;

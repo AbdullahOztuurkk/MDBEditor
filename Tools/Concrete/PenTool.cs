@@ -1,6 +1,6 @@
 ﻿using MDBEditor.Constants;
-using MDBEditor.Tools.Abstract;
-using MDBEditor.Tools.Abstract.General;
+using MDBEditor.Tools.Interfaces;
+using MDBEditor.Tools.Interfaces.General;
 using System;
 using System.Collections.Generic;
 using System.Drawing;

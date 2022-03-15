@@ -20,7 +20,7 @@ namespace MDBEditor.Tools.Concrete
         public Point Loc { get; set; }
         public Point LastPoint { get; set; }
         public Color BackColor { get; set; }
-        public int Size { get; set; }
+        public int Size = AppSettings.DEFAULT_TOOL_SIZE;
 
         public void Handle()
         {

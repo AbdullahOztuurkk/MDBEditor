@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MDBEditor.Tools.Abstract.General
+namespace MDBEditor.Tools.Interfaces.General
 {
     public interface ITool
     {

@@ -1,8 +1,8 @@
 ﻿using MDBEditor.Constants;
-using MDBEditor.Tools.Abstract.General;
+using MDBEditor.Tools.Interfaces.General;
 using System.Drawing;
 
-namespace MDBEditor.Tools.Abstract
+namespace MDBEditor.Tools.Interfaces
 {
     public interface IPenTool : ITool
     {

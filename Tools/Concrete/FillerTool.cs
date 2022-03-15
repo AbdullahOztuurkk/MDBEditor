@@ -1,13 +1,5 @@
-﻿using MDBEditor.Tools.Abstract;
-using System;
-using System.Collections.Generic;
+﻿using MDBEditor.Tools.Interfaces;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace MDBEditor.Tools.Concrete
 {

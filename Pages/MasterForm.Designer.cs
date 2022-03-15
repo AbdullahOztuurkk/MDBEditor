@@ -1932,6 +1932,7 @@ namespace MDBEditor
             this.Controls.Add(this.Status_Bar);
             this.Controls.Add(this.Panel_Drawing_Board);
             this.Controls.Add(this.TC_Menu);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

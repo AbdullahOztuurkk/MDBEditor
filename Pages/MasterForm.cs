@@ -187,22 +187,29 @@ namespace MDBEditor
             Bitmap bmp = new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height);
             PB_Drawing_Board.DrawToBitmap(bmp, PB_Drawing_Board.ClientRectangle);
             undoRedoStack.Save(bmp);
-            if (currentTool == DrawingTool.Color_Picker)
+            switch (currentTool)
             {
-                colorPickerTool.Loc = e.Location;
-                colorPickerTool.Handle();
-                primaryColor = colorPickerTool.DetectedColor;
-                Btn_Primary_Color.BackColor = primaryColor;
-            }
-            if (currentTool == DrawingTool.Text)
-            {
-                textTool.Loc = e.Location;
-                textTool.ForeColor = primaryColor;
-                textTool.SideColor = secondaryColor;
-                textTool.Text = Txt_Text.Text;
-                textTool.Font = Font_Dialog.Font;
-                textTool.Handle();
-                PB_Drawing_Board.Refresh();
+                case DrawingTool.Color_Picker:
+                    colorPickerTool.Loc = e.Location;
+                    colorPickerTool.Handle();
+                    primaryColor = colorPickerTool.DetectedColor;
+                    Btn_Primary_Color.BackColor = primaryColor;
+                    break;
+                case DrawingTool.Text:
+                    textTool.Loc = e.Location;
+                    textTool.ForeColor = primaryColor;
+                    textTool.SideColor = secondaryColor;
+                    textTool.Text = Txt_Text.Text;
+                    textTool.Font = Font_Dialog.Font;
+                    textTool.Handle();
+                    PB_Drawing_Board.Refresh();
+                    break;
+                case DrawingTool.Zoom:
+                    if (e.Button == MouseButtons.Left)
+                        ZoomToImage(ZoomStatus.ZoomIn);
+                    else if (e.Button == MouseButtons.Right)
+                        ZoomToImage(ZoomStatus.ZoomOut);
+                    break;
             }
         }
 

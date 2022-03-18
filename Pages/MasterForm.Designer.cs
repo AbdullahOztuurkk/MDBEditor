@@ -1161,6 +1161,7 @@ namespace MDBEditor
             this.Btn_Zoom_Normal.TabIndex = 4;
             this.General_ToolTip.SetToolTip(this.Btn_Zoom_Normal, "Zoom to Normal");
             this.Btn_Zoom_Normal.UseVisualStyleBackColor = true;
+            this.Btn_Zoom_Normal.Click += new System.EventHandler(this.Btn_Zoom_Normal_Click);
             // 
             // label4
             // 
@@ -1195,6 +1196,7 @@ namespace MDBEditor
             this.Btn_Zoom_Out.TabIndex = 1;
             this.General_ToolTip.SetToolTip(this.Btn_Zoom_Out, "Zoom Out");
             this.Btn_Zoom_Out.UseVisualStyleBackColor = true;
+            this.Btn_Zoom_Out.Click += new System.EventHandler(this.Btn_Zoom_Out_Click);
             // 
             // Btn_Zoom_In
             // 
@@ -1209,6 +1211,7 @@ namespace MDBEditor
             this.Btn_Zoom_In.TabIndex = 0;
             this.General_ToolTip.SetToolTip(this.Btn_Zoom_In, "Zoom In");
             this.Btn_Zoom_In.UseVisualStyleBackColor = true;
+            this.Btn_Zoom_In.Click += new System.EventHandler(this.Btn_Zoom_In_Click);
             // 
             // GB_Show_Or_Hide
             // 

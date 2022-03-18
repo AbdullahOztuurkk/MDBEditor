@@ -35,6 +35,7 @@ namespace MDBEditor
         private ColorPickerTool colorPickerTool;
         private readonly FillerTool fillerTool;
         private TextTool textTool;
+        public ZoomTool zoomTool;
 
         public MasterForm()
         {
@@ -65,6 +66,7 @@ namespace MDBEditor
             fillerTool = new FillerTool(new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height));
             colorPickerTool = new ColorPickerTool(PB_Drawing_Board);
             textTool = new TextTool(BoardGraphics);
+            zoomTool = new ZoomTool(PB_Drawing_Board);
         }
 
         public void Select_Color_From_Button(object sender, EventArgs e)
@@ -106,7 +108,11 @@ namespace MDBEditor
         /// </summary>
         private void CB_Guidelines_CheckedChanged(object sender, EventArgs e) => BoxWithGrid.Visible = !BoxWithGrid.Visible;
         private void PB_Font_Dialog_Click(object sender, EventArgs e) => Font_Dialog.ShowDialog();
-        private void Btn_Open_File_Click(object sender, EventArgs e) => PB_Drawing_Board.OpenImage(this);
+        private void Btn_Open_File_Click(object sender, EventArgs e)
+        {
+            PB_Drawing_Board.OpenImage(this);
+            zoomTool = new ZoomTool(PB_Drawing_Board);
+        }
 
         /// <summary>
         /// Set visible of Ruler in drawing board
@@ -257,6 +263,7 @@ namespace MDBEditor
         }
         private void Check_Gridlines_Before_Save(Action SaveAction)
         {
+            ZoomToImage(ZoomStatus.ZoomToNormal);
             if (CB_Guidelines.Checked)
                 BoxWithGrid.Visible = false;
             SaveAction();
@@ -294,13 +301,16 @@ namespace MDBEditor
             Btn_Text_Secondary_Color.BackColor = secondaryColor;
             Btn_Secondary_Color.BackColor = secondaryColor;
             #endregion
+        }
 
-            #region Update Graphics
-            BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
+        private void UpdateGraphics()
+        {
+            Bitmap bmp = new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height);
+            PB_Drawing_Board.DrawToBitmap(bmp, PB_Drawing_Board.ClientRectangle);
+            BoardGraphics = Graphics.FromImage(bmp);
             penTool = new PenTool(BoardGraphics);
             eraserTool = new EraserTool(BoardGraphics);
             textTool = new TextTool(BoardGraphics);
-            #endregion
         }
 
         //Shortcut Helper method
@@ -319,14 +329,17 @@ namespace MDBEditor
                         BoxWithGrid.Visible = !BoxWithGrid.Visible; break;
                     case Keys.O:
                     case Keys.N:
-                        PB_Drawing_Board.OpenImage(this); break;
+                        PB_Drawing_Board.OpenImage(this);
+                        zoomTool = new ZoomTool(PB_Drawing_Board);break;
                     case Keys.Z:
                         if (undoRedoStack.CanUndo)
                             undoRedoStack.Undo();
+                        UpdateGraphics();
                         break;
                     case Keys.Y:
                         if (undoRedoStack.CanRedo)
                             undoRedoStack.Redo();
+                        UpdateGraphics();
                         break;
                     case Keys.P:
                         PB_Drawing_Board.PrintImage();
@@ -370,8 +383,24 @@ namespace MDBEditor
             resizeForm.ShowDialog();
             PB_Drawing_Board.Size = resizeForm.sourceBitmap.Size;
             PB_Drawing_Board.SetImage(resizeForm.sourceBitmap);
+            UpdateGraphics();
         }
 
         private void Btn_New_Image_Click(object sender, EventArgs e) => PB_Drawing_Board.NewImage(this);
+        private void Btn_Zoom_In_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomIn);
+        private void Btn_Zoom_Out_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomOut);
+        private void Btn_Zoom_Normal_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomToNormal);
+        private void ZoomToImage(ZoomStatus status)
+        {
+            switch (status)
+            {
+                case ZoomStatus.ZoomIn: zoomTool.ZoomIn(); break;
+                case ZoomStatus.ZoomOut: zoomTool.ZoomOut(); break;
+                case ZoomStatus.ZoomToNormal: zoomTool.ZoomToNormal(); break;
+            }
+            zoomTool.Handle();
+            PB_Drawing_Board.SetImage(zoomTool.ZoomedImage);
+            UpdateGraphics();
+        }
     }
 }

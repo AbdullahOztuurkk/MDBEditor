@@ -36,5 +36,10 @@ namespace MDBEditor.Constants
         //Resize Options
         public static readonly short MAXIMUM_RESIZE_PERCENTAGE = 1000;
         public static readonly short MAXIMUM_RESIZE_PIXEL = 5000;
+
+        //Zoom options
+        public static readonly double MAXIMUM_ZOOM_SIZE = 2;
+        public static readonly double DEFAULT_ZOOM_SIZE = 1;
+        public static readonly double MINIMUM_ZOOM_SIZE = 0.5;
     }
 }

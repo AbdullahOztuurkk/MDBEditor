@@ -25,6 +25,8 @@ namespace MDBEditor.Pages.Modals
             picturebox = pictureBox;
             sourceBitmap = (Bitmap)(picturebox.Image);
             RB_Pixel.Checked = true;
+            NUD_Horizontal.Value = sourceBitmap.Width;
+            NUD_Vertical.Value = sourceBitmap.Height;
             Btn_Exit.Click += (sender, e) => Close();
 
         }

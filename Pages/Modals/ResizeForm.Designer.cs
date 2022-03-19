@@ -29,6 +29,7 @@ namespace MDBEditor.Pages.Modals
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResizeForm));
             this.Pnl_Form = new System.Windows.Forms.Panel();
             this.GB_Resize = new System.Windows.Forms.GroupBox();
             this.NUD_Vertical = new System.Windows.Forms.NumericUpDown();
@@ -242,6 +243,7 @@ namespace MDBEditor.Pages.Modals
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(264, 275);
             this.Controls.Add(this.Pnl_Form);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ResizeForm";

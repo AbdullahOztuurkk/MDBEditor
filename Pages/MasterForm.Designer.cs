@@ -721,6 +721,7 @@ namespace MDBEditor
             this.Btn_Rotate_Image.Text = "Rotate";
             this.General_ToolTip.SetToolTip(this.Btn_Rotate_Image, "Rotate Image");
             this.Btn_Rotate_Image.UseVisualStyleBackColor = true;
+            this.Btn_Rotate_Image.Click += new System.EventHandler(this.Btn_Rotate_Image_Click);
             // 
             // Btn_Select_Area
             // 

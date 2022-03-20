@@ -421,5 +421,13 @@ namespace MDBEditor
             PB_Drawing_Board.SetImage(featuresForm.sourceBitmap);
             UpdateGraphics();
         }
+
+        private void Btn_Rotate_Image_Click(object sender, EventArgs e)
+        {
+            Bitmap rotatedImg = (Bitmap)PB_Drawing_Board.Image;
+            rotatedImg.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            PB_Drawing_Board.SetImage(rotatedImg);
+            UpdateGraphics();
+        }
     }
 }

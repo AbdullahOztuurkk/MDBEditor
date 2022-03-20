@@ -89,11 +89,6 @@ namespace MDBEditor
         }
 
         /// <summary>
-        /// Set toggleable status bar 
-        /// </summary>
-        private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e) => Status_Bar.Visible = CB_Status_Bar.Checked == true;
-
-        /// <summary>
         /// Get drawing board size for status bar
         /// </summary>
         private void PB_Drawing_Board_SizeChanged(object sender, EventArgs e)
@@ -104,11 +99,6 @@ namespace MDBEditor
             BoxWithGrid.Size = PB_Drawing_Board.Size;
         }
 
-        /// <summary>
-        /// Set toggleable gridlines on drawing board
-        /// </summary>
-        private void CB_Guidelines_CheckedChanged(object sender, EventArgs e) => BoxWithGrid.Visible = !BoxWithGrid.Visible;
-        private void PB_Font_Dialog_Click(object sender, EventArgs e) => Font_Dialog.ShowDialog();
         private void Btn_Open_File_Click(object sender, EventArgs e)
         {
             PB_Drawing_Board.OpenImage(this);
@@ -118,8 +108,6 @@ namespace MDBEditor
         /// <summary>
         /// Set visible of Ruler in drawing board
         /// </summary>
-        private void CB_Ruler_CheckedChanged(object sender, EventArgs e) => ToggleRuler();
-
         private void ToggleRuler()
         {
             //Drawing board location is 12,9 -> new location is 32,28
@@ -364,8 +352,6 @@ namespace MDBEditor
             }
         }
 
-        private void Btn_Print_Image_Click(object sender, EventArgs e) => PB_Drawing_Board.PrintImage();
-
         private void Clipboard_Events(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -383,8 +369,6 @@ namespace MDBEditor
             }
         }
 
-        private void Show_About_Box(object sender, EventArgs e) => new AboutForm().ShowDialog();
-
         private void Resize_Modal_Show(object sender, EventArgs e)
         {
             using ResizeForm resizeForm = new ResizeForm(PB_Drawing_Board);
@@ -392,12 +376,23 @@ namespace MDBEditor
             PB_Drawing_Board.Size = resizeForm.sourceBitmap.Size;
             PB_Drawing_Board.SetImage(resizeForm.sourceBitmap);
             UpdateGraphics();
+        
         }
-
+        #region Methods with lambda expression
+        
+        private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e) => Status_Bar.Visible = CB_Status_Bar.Checked == true;
+        private void CB_Guidelines_CheckedChanged(object sender, EventArgs e) => BoxWithGrid.Visible = !BoxWithGrid.Visible;
+        private void PB_Font_Dialog_Click(object sender, EventArgs e) => Font_Dialog.ShowDialog();
+        private void CB_Ruler_CheckedChanged(object sender, EventArgs e) => ToggleRuler();
+        private void Btn_Print_Image_Click(object sender, EventArgs e) => PB_Drawing_Board.PrintImage();
+        private void Show_About_Box(object sender, EventArgs e) => new AboutForm().ShowDialog();
         private void Btn_New_Image_Click(object sender, EventArgs e) => PB_Drawing_Board.NewImage(this);
         private void Btn_Zoom_In_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomIn);
         private void Btn_Zoom_Out_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomOut);
         private void Btn_Zoom_Normal_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomToNormal);
+        
+        #endregion
+
         private void ZoomToImage(ZoomStatus status)
         {
             switch (status)

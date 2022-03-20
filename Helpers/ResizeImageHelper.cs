@@ -50,7 +50,7 @@ namespace MDBEditor.Helpers
         /// <param name="bmp">Any Bitmap</param>
         /// <param name="size">Desired Size</param>
         /// <returns></returns>
-        public static Bitmap ResizeBitmap(Bitmap bmp, Size size)
+        public static Bitmap ResizeBitmap(this Bitmap bmp, Size size)
         {
             Bitmap result = new Bitmap(size.Width, size.Height);
             using (Graphics g = Graphics.FromImage(result))

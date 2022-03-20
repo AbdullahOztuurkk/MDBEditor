@@ -2,6 +2,7 @@
 using MDBEditor.Constants.Enums;
 using MDBEditor.Controls;
 using MDBEditor.Helpers;
+using MDBEditor.Models;
 using MDBEditor.Pages;
 using MDBEditor.Pages.Modals;
 using MDBEditor.Tools.Concrete;
@@ -337,7 +338,7 @@ namespace MDBEditor
                     case Keys.O:
                     case Keys.N:
                         PB_Drawing_Board.OpenImage(this);
-                        zoomTool = new ZoomTool(PB_Drawing_Board);break;
+                        zoomTool = new ZoomTool(PB_Drawing_Board); break;
                     case Keys.Z:
                         if (undoRedoStack.CanUndo)
                             undoRedoStack.Undo();
@@ -407,6 +408,17 @@ namespace MDBEditor
             }
             zoomTool.Handle();
             PB_Drawing_Board.SetImage(zoomTool.ZoomedImage);
+            UpdateGraphics();
+        }
+
+        private void Btn_Features_Click(object sender, EventArgs e)
+        {
+            using FeaturesForm featuresForm = new FeaturesForm(PB_Drawing_Board,
+                new ImageInformation(
+                    (int)((Bitmap)PB_Drawing_Board.Image).HorizontalResolution));
+            featuresForm.ShowDialog();
+            PB_Drawing_Board.Size = featuresForm.sourceBitmap.Size;
+            PB_Drawing_Board.SetImage(featuresForm.sourceBitmap);
             UpdateGraphics();
         }
     }

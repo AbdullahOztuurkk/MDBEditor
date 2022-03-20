@@ -54,7 +54,7 @@ namespace MDBEditor
             this.TLP_Features = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
+            this.Btn_Features = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.TP_Prologue = new System.Windows.Forms.TabPage();
             this.FLP_Prologue = new System.Windows.Forms.FlowLayoutPanel();
@@ -503,7 +503,7 @@ namespace MDBEditor
             this.TLP_Features.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.77769F));
             this.TLP_Features.Controls.Add(this.label9, 0, 2);
             this.TLP_Features.Controls.Add(this.button25, 1, 1);
-            this.TLP_Features.Controls.Add(this.button26, 3, 1);
+            this.TLP_Features.Controls.Add(this.Btn_Features, 3, 1);
             this.TLP_Features.Controls.Add(this.label8, 3, 2);
             this.TLP_Features.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TLP_Features.Location = new System.Drawing.Point(4, 19);
@@ -544,20 +544,21 @@ namespace MDBEditor
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.Show_About_Box);
             // 
-            // button26
+            // Btn_Features
             // 
-            this.button26.BackgroundImage = global::MDBEditor.Properties.Resources.features;
-            this.button26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button26.FlatAppearance.BorderSize = 0;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Location = new System.Drawing.Point(85, 26);
-            this.button26.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(36, 38);
-            this.button26.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.button26, "Get Information about drawing board");
-            this.button26.UseVisualStyleBackColor = true;
+            this.Btn_Features.BackgroundImage = global::MDBEditor.Properties.Resources.features;
+            this.Btn_Features.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Features.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Btn_Features.FlatAppearance.BorderSize = 0;
+            this.Btn_Features.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Features.Location = new System.Drawing.Point(85, 26);
+            this.Btn_Features.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Btn_Features.Name = "Btn_Features";
+            this.Btn_Features.Size = new System.Drawing.Size(36, 38);
+            this.Btn_Features.TabIndex = 0;
+            this.General_ToolTip.SetToolTip(this.Btn_Features, "Get Information about drawing board");
+            this.Btn_Features.UseVisualStyleBackColor = true;
+            this.Btn_Features.Click += new System.EventHandler(this.Btn_Features_Click);
             // 
             // label8
             // 
@@ -2074,7 +2075,7 @@ namespace MDBEditor
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button Btn_Features;
         private System.Windows.Forms.ColorDialog Color_Picker;
         private System.Windows.Forms.StatusStrip Status_Bar;
         private System.Windows.Forms.ToolStripStatusLabel Lbl_Mouse_Coordinates;

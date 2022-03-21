@@ -3,7 +3,7 @@ using System.Drawing.Imaging;
 
 namespace MDBEditor.Helpers
 {
-    public static class ImageManipulationHelper
+    public static class ImageOperationHelper
     {
         public static Bitmap MakeGrayscale(this Bitmap original)
         {

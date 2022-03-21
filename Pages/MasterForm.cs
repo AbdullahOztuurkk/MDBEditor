@@ -301,9 +301,7 @@ namespace MDBEditor
 
         private void UpdateGraphics()
         {
-            Bitmap bmp = new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height);
-            PB_Drawing_Board.DrawToBitmap(bmp, PB_Drawing_Board.ClientRectangle);
-            BoardGraphics = Graphics.FromImage(bmp);
+            BoardGraphics = Graphics.FromImage((Bitmap)PB_Drawing_Board.Image); 
             penTool = new PenTool(BoardGraphics);
             eraserTool = new EraserTool(BoardGraphics);
             textTool = new TextTool(BoardGraphics);
@@ -328,14 +326,16 @@ namespace MDBEditor
                         PB_Drawing_Board.OpenImage(this);
                         zoomTool = new ZoomTool(PB_Drawing_Board); break;
                     case Keys.Z:
-                        if (undoRedoStack.CanUndo)
+                        if (undoRedoStack.CanUndo){
                             undoRedoStack.Undo();
-                        UpdateGraphics();
+                            UpdateGraphics();
+                        }
                         break;
                     case Keys.Y:
-                        if (undoRedoStack.CanRedo)
+                        if (undoRedoStack.CanRedo){
                             undoRedoStack.Redo();
-                        UpdateGraphics();
+                            UpdateGraphics();
+                        }
                         break;
                     case Keys.P:
                         PB_Drawing_Board.PrintImage();

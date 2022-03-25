@@ -736,6 +736,7 @@ namespace MDBEditor
             this.Btn_Select_Area.TabIndex = 0;
             this.General_ToolTip.SetToolTip(this.Btn_Select_Area, "Select Area");
             this.Btn_Select_Area.UseVisualStyleBackColor = true;
+            this.Btn_Select_Area.Click += new System.EventHandler(this.Select_Tool);
             // 
             // GB_Tools
             // 

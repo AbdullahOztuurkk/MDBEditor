@@ -13,6 +13,7 @@ namespace MDBEditor.Constants.Enums
         Text,
         Filler,
         Color_Picker,
-        Zoom
+        Zoom,
+        Select_Area,
     }
 }

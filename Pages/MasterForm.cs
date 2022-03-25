@@ -37,6 +37,7 @@ namespace MDBEditor
         private readonly FillerTool fillerTool;
         private TextTool textTool;
         public ZoomTool zoomTool;
+        public SelectAreaTool selectAreaTool;
 
         public MasterForm()
         {
@@ -68,6 +69,7 @@ namespace MDBEditor
             colorPickerTool = new ColorPickerTool(PB_Drawing_Board);
             textTool = new TextTool(BoardGraphics);
             zoomTool = new ZoomTool(PB_Drawing_Board);
+            selectAreaTool = new SelectAreaTool();
         }
 
         public void Select_Color_From_Button(object sender, EventArgs e)
@@ -164,6 +166,13 @@ namespace MDBEditor
                         fillerTool.Handle();
                         //TODO:Needs Flood Fill Algorithm
                         break;
+                    case DrawingTool.Select_Area:
+                        if (e.Button == MouseButtons.Left)
+                        {
+                            selectAreaTool.Size = new Size(e.X - selectAreaTool.Location.X, e.Y - selectAreaTool.Location.Y);
+                            PB_Drawing_Board.CreateGraphics().DrawRectangle(selectAreaTool.Pen, selectAreaTool.SelectedRect);
+                        }
+                        break;
                 }
                 PB_Drawing_Board.Refresh();
             }
@@ -199,6 +208,14 @@ namespace MDBEditor
                     else if (e.Button == MouseButtons.Right)
                         ZoomToImage(ZoomStatus.ZoomOut);
                     break;
+                case DrawingTool.Select_Area:
+                    if (e.Button == MouseButtons.Left)
+                    {
+                        Cursor = Cursors.Cross;
+                        selectAreaTool.Location = new Point(e.X, e.Y);
+                    }
+                    PB_Drawing_Board.Refresh();
+                    break;
             }
         }
 
@@ -225,24 +242,13 @@ namespace MDBEditor
             Button btn = sender as Button;
             switch (btn.Name)
             {
-                case nameof(Btn_Pen):
-                    currentTool = DrawingTool.Pen;
-                    break;
-                case nameof(Btn_Erase):
-                    currentTool = DrawingTool.Eraser;
-                    break;
-                case nameof(Btn_Zoom):
-                    currentTool = DrawingTool.Zoom;
-                    break;
-                case nameof(Btn_Color_Picker):
-                    currentTool = DrawingTool.Color_Picker;
-                    break;
-                case nameof(Btn_Add_Text):
-                    currentTool = DrawingTool.Text;
-                    break;
-                case nameof(Btn_Paint_All):
-                    currentTool = DrawingTool.Filler;
-                    break;
+                case nameof(Btn_Pen): currentTool = DrawingTool.Pen; break;
+                case nameof(Btn_Erase): currentTool = DrawingTool.Eraser; break;
+                case nameof(Btn_Zoom): currentTool = DrawingTool.Zoom; break;
+                case nameof(Btn_Color_Picker): currentTool = DrawingTool.Color_Picker; break;
+                case nameof(Btn_Add_Text): currentTool = DrawingTool.Text; break;
+                case nameof(Btn_Paint_All): currentTool = DrawingTool.Filler; break;
+                case nameof(Btn_Select_Area): currentTool = DrawingTool.Select_Area; break;
             }
             btn.BackColor = AppSettings.CURRENT_TOOL_COLOR;
 
@@ -301,7 +307,7 @@ namespace MDBEditor
 
         private void UpdateGraphics()
         {
-            BoardGraphics = Graphics.FromImage((Bitmap)PB_Drawing_Board.Image); 
+            BoardGraphics = Graphics.FromImage((Bitmap)PB_Drawing_Board.Image);
             penTool = new PenTool(BoardGraphics);
             eraserTool = new EraserTool(BoardGraphics);
             textTool = new TextTool(BoardGraphics);
@@ -376,10 +382,10 @@ namespace MDBEditor
             PB_Drawing_Board.Size = resizeForm.sourceBitmap.Size;
             PB_Drawing_Board.SetImage(resizeForm.sourceBitmap);
             UpdateGraphics();
-        
+
         }
         #region Methods with lambda expression
-        
+
         private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e) => Status_Bar.Visible = CB_Status_Bar.Checked == true;
         private void CB_Guidelines_CheckedChanged(object sender, EventArgs e) => BoxWithGrid.Visible = !BoxWithGrid.Visible;
         private void PB_Font_Dialog_Click(object sender, EventArgs e) => Font_Dialog.ShowDialog();
@@ -390,7 +396,7 @@ namespace MDBEditor
         private void Btn_Zoom_In_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomIn);
         private void Btn_Zoom_Out_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomOut);
         private void Btn_Zoom_Normal_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomToNormal);
-        
+
         #endregion
 
         private void ZoomToImage(ZoomStatus status)

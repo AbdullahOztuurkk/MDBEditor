@@ -236,7 +236,7 @@ namespace MDBEditor
         {
             List<Button> buttonArr = new List<Button>
             {
-                Btn_Pen,Btn_Erase,Btn_Zoom,Btn_Color_Picker,Btn_Add_Text,Btn_Paint_All
+                Btn_Pen,Btn_Erase,Btn_Zoom,Btn_Color_Picker,Btn_Add_Text,Btn_Paint_All,Btn_Select_Area
             };
             buttonArr.ForEach(p => p.BackColor = AppSettings.DEFAULT_TOOL_COLOR);
             Button btn = sender as Button;

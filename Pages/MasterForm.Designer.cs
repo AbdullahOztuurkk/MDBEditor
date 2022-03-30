@@ -94,10 +94,11 @@ namespace MDBEditor
             this.TP_View = new System.Windows.Forms.TabPage();
             this.FLP_View = new System.Windows.Forms.FlowLayoutPanel();
             this.GB_Zoom = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Btn_Zoom_Normal = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.Btn_Zoom_Out = new System.Windows.Forms.Button();
             this.Btn_Zoom_In = new System.Windows.Forms.Button();
             this.GB_Show_Or_Hide = new System.Windows.Forms.GroupBox();
@@ -182,6 +183,7 @@ namespace MDBEditor
             this.TP_View.SuspendLayout();
             this.FLP_View.SuspendLayout();
             this.GB_Zoom.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.GB_Show_Or_Hide.SuspendLayout();
             this.TLP_Show_And_Hide.SuspendLayout();
             this.TP_Text.SuspendLayout();
@@ -1121,76 +1123,98 @@ namespace MDBEditor
             // 
             // GB_Zoom
             // 
-            this.GB_Zoom.Controls.Add(this.label5);
-            this.GB_Zoom.Controls.Add(this.Btn_Zoom_Normal);
-            this.GB_Zoom.Controls.Add(this.label4);
-            this.GB_Zoom.Controls.Add(this.label3);
-            this.GB_Zoom.Controls.Add(this.Btn_Zoom_Out);
-            this.GB_Zoom.Controls.Add(this.Btn_Zoom_In);
+            this.GB_Zoom.Controls.Add(this.tableLayoutPanel1);
             this.GB_Zoom.Location = new System.Drawing.Point(4, 3);
             this.GB_Zoom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Zoom.Name = "GB_Zoom";
             this.GB_Zoom.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GB_Zoom.Size = new System.Drawing.Size(187, 113);
+            this.GB_Zoom.Size = new System.Drawing.Size(313, 113);
             this.GB_Zoom.TabIndex = 0;
             this.GB_Zoom.TabStop = false;
-            this.GB_Zoom.Text = "Zoom In";
+            this.GB_Zoom.Text = "Zoom Settings";
             // 
-            // label5
+            // tableLayoutPanel1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(140, 73);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 15);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Zoom to 100%";
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.Controls.Add(this.Btn_Zoom_Normal, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Btn_Zoom_Out, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Btn_Zoom_In, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 22);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(299, 84);
+            this.tableLayoutPanel1.TabIndex = 6;
             // 
             // Btn_Zoom_Normal
             // 
-            this.Btn_Zoom_Normal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Zoom_Normal.BackgroundImage = global::MDBEditor.Properties.Resources.resize_normal;
+            this.Btn_Zoom_Normal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Btn_Zoom_Normal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn_Zoom_Normal.FlatAppearance.BorderSize = 0;
             this.Btn_Zoom_Normal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Zoom_Normal.Image = global::MDBEditor.Properties.Resources.resize_normal;
-            this.Btn_Zoom_Normal.Location = new System.Drawing.Point(142, 32);
+            this.Btn_Zoom_Normal.Location = new System.Drawing.Point(202, 3);
             this.Btn_Zoom_Normal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Zoom_Normal.Name = "Btn_Zoom_Normal";
-            this.Btn_Zoom_Normal.Size = new System.Drawing.Size(37, 37);
+            this.Btn_Zoom_Normal.Size = new System.Drawing.Size(93, 52);
             this.Btn_Zoom_Normal.TabIndex = 4;
             this.General_ToolTip.SetToolTip(this.Btn_Zoom_Normal, "Zoom to Normal");
             this.Btn_Zoom_Normal.UseVisualStyleBackColor = true;
             this.Btn_Zoom_Normal.Click += new System.EventHandler(this.Btn_Zoom_Normal_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 73);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Zoom-Out";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 73);
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(4, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 15);
+            this.label3.Size = new System.Drawing.Size(91, 26);
             this.label3.TabIndex = 2;
             this.label3.Text = "Zoom-In";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(103, 58);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 26);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Zoom-Out";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(202, 58);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 26);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Zoom to 100%";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Btn_Zoom_Out
             // 
             this.Btn_Zoom_Out.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Zoom_Out.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn_Zoom_Out.FlatAppearance.BorderSize = 0;
             this.Btn_Zoom_Out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Zoom_Out.Image = global::MDBEditor.Properties.Resources.zoom_out;
-            this.Btn_Zoom_Out.Location = new System.Drawing.Point(75, 32);
+            this.Btn_Zoom_Out.Location = new System.Drawing.Point(103, 3);
             this.Btn_Zoom_Out.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Zoom_Out.Name = "Btn_Zoom_Out";
-            this.Btn_Zoom_Out.Size = new System.Drawing.Size(37, 37);
+            this.Btn_Zoom_Out.Size = new System.Drawing.Size(91, 52);
             this.Btn_Zoom_Out.TabIndex = 1;
             this.General_ToolTip.SetToolTip(this.Btn_Zoom_Out, "Zoom Out");
             this.Btn_Zoom_Out.UseVisualStyleBackColor = true;
@@ -1198,14 +1222,15 @@ namespace MDBEditor
             // 
             // Btn_Zoom_In
             // 
-            this.Btn_Zoom_In.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Zoom_In.BackgroundImage = global::MDBEditor.Properties.Resources.zoom_in;
+            this.Btn_Zoom_In.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Btn_Zoom_In.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Btn_Zoom_In.FlatAppearance.BorderSize = 0;
             this.Btn_Zoom_In.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Zoom_In.Image = global::MDBEditor.Properties.Resources.zoom_in;
-            this.Btn_Zoom_In.Location = new System.Drawing.Point(7, 32);
+            this.Btn_Zoom_In.Location = new System.Drawing.Point(4, 3);
             this.Btn_Zoom_In.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Zoom_In.Name = "Btn_Zoom_In";
-            this.Btn_Zoom_In.Size = new System.Drawing.Size(37, 37);
+            this.Btn_Zoom_In.Size = new System.Drawing.Size(91, 52);
             this.Btn_Zoom_In.TabIndex = 0;
             this.General_ToolTip.SetToolTip(this.Btn_Zoom_In, "Zoom In");
             this.Btn_Zoom_In.UseVisualStyleBackColor = true;
@@ -1214,7 +1239,7 @@ namespace MDBEditor
             // GB_Show_Or_Hide
             // 
             this.GB_Show_Or_Hide.Controls.Add(this.TLP_Show_And_Hide);
-            this.GB_Show_Or_Hide.Location = new System.Drawing.Point(199, 3);
+            this.GB_Show_Or_Hide.Location = new System.Drawing.Point(325, 3);
             this.GB_Show_Or_Hide.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Show_Or_Hide.Name = "GB_Show_Or_Hide";
             this.GB_Show_Or_Hide.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1939,7 +1964,8 @@ namespace MDBEditor
             this.TP_View.ResumeLayout(false);
             this.FLP_View.ResumeLayout(false);
             this.GB_Zoom.ResumeLayout(false);
-            this.GB_Zoom.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.GB_Show_Or_Hide.ResumeLayout(false);
             this.TLP_Show_And_Hide.ResumeLayout(false);
             this.TP_Text.ResumeLayout(false);
@@ -2092,6 +2118,7 @@ namespace MDBEditor
         private System.Windows.Forms.Button Btn_Text_Secondary_Color;
         private System.Windows.Forms.Button Btn_Text_Primary_Color;
         private System.Windows.Forms.Timer Continuous_Checker;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

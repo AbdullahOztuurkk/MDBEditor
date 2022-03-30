@@ -73,16 +73,6 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_outline {
-            get {
-                object obj = ResourceManager.GetObject("circle_outline", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap color_picker {
             get {
                 object obj = ResourceManager.GetObject("color_picker", resourceCulture);
@@ -116,16 +106,6 @@ namespace MDBEditor.Properties {
         internal static System.Drawing.Bitmap cut_to_clipboard {
             get {
                 object obj = ResourceManager.GetObject("cut_to_clipboard", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap diamond_outline {
-            get {
-                object obj = ResourceManager.GetObject("diamond_outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,26 +166,6 @@ namespace MDBEditor.Properties {
         internal static System.Drawing.Bitmap info {
             get {
                 object obj = ResourceManager.GetObject("info", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap left_arrow_outline {
-            get {
-                object obj = ResourceManager.GetObject("left_arrow_outline", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap line_outline {
-            get {
-                object obj = ResourceManager.GetObject("line_outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,16 +273,6 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pentagon_outline {
-            get {
-                object obj = ResourceManager.GetObject("pentagon_outline", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap print_file {
             get {
                 object obj = ResourceManager.GetObject("print_file", resourceCulture);
@@ -356,16 +306,6 @@ namespace MDBEditor.Properties {
         internal static System.Drawing.Bitmap resize_status {
             get {
                 object obj = ResourceManager.GetObject("resize_status", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap right_arrow_outline {
-            get {
-                object obj = ResourceManager.GetObject("right_arrow_outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,9 +393,9 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_outline {
+        internal static System.Drawing.Bitmap shape_circle {
             get {
-                object obj = ResourceManager.GetObject("square_outline", resourceCulture);
+                object obj = ResourceManager.GetObject("shape_circle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,9 +403,49 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap star_outline {
+        internal static System.Drawing.Bitmap shape_rectangle {
             get {
-                object obj = ResourceManager.GetObject("star_outline", resourceCulture);
+                object obj = ResourceManager.GetObject("shape_rectangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_rhombus {
+            get {
+                object obj = ResourceManager.GetObject("shape_rhombus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_square {
+            get {
+                object obj = ResourceManager.GetObject("shape_square", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_star {
+            get {
+                object obj = ResourceManager.GetObject("shape_star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_triangle {
+            get {
+                object obj = ResourceManager.GetObject("shape_triangle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -486,16 +466,6 @@ namespace MDBEditor.Properties {
         internal static System.Drawing.Bitmap text_area {
             get {
                 object obj = ResourceManager.GetObject("text_area", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap triangle_outline {
-            get {
-                object obj = ResourceManager.GetObject("triangle_outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

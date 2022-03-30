@@ -912,7 +912,6 @@ namespace MDBEditor
             this.Btn_Left_Arrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Btn_Left_Arrow.FlatAppearance.BorderSize = 0;
             this.Btn_Left_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Left_Arrow.Image = global::MDBEditor.Properties.Resources.left_arrow_outline;
             this.Btn_Left_Arrow.Location = new System.Drawing.Point(6, 36);
             this.Btn_Left_Arrow.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Left_Arrow.Name = "Btn_Left_Arrow";
@@ -924,10 +923,10 @@ namespace MDBEditor
             // 
             // Btn_Square
             // 
-            this.Btn_Square.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Square.BackgroundImage = global::MDBEditor.Properties.Resources.shape_square;
+            this.Btn_Square.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Square.FlatAppearance.BorderSize = 0;
             this.Btn_Square.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Square.Image = global::MDBEditor.Properties.Resources.square_outline;
             this.Btn_Square.Location = new System.Drawing.Point(6, 6);
             this.Btn_Square.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Square.Name = "Btn_Square";
@@ -939,10 +938,10 @@ namespace MDBEditor
             // 
             // Btn_Triangle
             // 
-            this.Btn_Triangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Triangle.BackgroundImage = global::MDBEditor.Properties.Resources.shape_triangle;
+            this.Btn_Triangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Triangle.FlatAppearance.BorderSize = 0;
             this.Btn_Triangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Triangle.Image = global::MDBEditor.Properties.Resources.triangle_outline;
             this.Btn_Triangle.Location = new System.Drawing.Point(36, 6);
             this.Btn_Triangle.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Triangle.Name = "Btn_Triangle";
@@ -954,10 +953,10 @@ namespace MDBEditor
             // 
             // Btn_Star
             // 
-            this.Btn_Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Star.BackgroundImage = global::MDBEditor.Properties.Resources.shape_rectangle;
+            this.Btn_Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Star.FlatAppearance.BorderSize = 0;
             this.Btn_Star.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Star.Image = global::MDBEditor.Properties.Resources.star_outline;
             this.Btn_Star.Location = new System.Drawing.Point(66, 6);
             this.Btn_Star.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Star.Name = "Btn_Star";
@@ -969,10 +968,10 @@ namespace MDBEditor
             // 
             // Btn_Diamond
             // 
-            this.Btn_Diamond.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Diamond.BackgroundImage = global::MDBEditor.Properties.Resources.shape_rhombus;
+            this.Btn_Diamond.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Diamond.FlatAppearance.BorderSize = 0;
             this.Btn_Diamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Diamond.Image = global::MDBEditor.Properties.Resources.diamond_outline;
             this.Btn_Diamond.Location = new System.Drawing.Point(94, 3);
             this.Btn_Diamond.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Diamond.Name = "Btn_Diamond";
@@ -983,10 +982,10 @@ namespace MDBEditor
             // 
             // Btn_Line
             // 
-            this.Btn_Line.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Line.BackgroundImage = global::MDBEditor.Properties.Resources.shape_circle;
+            this.Btn_Line.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Line.FlatAppearance.BorderSize = 0;
             this.Btn_Line.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Line.Image = global::MDBEditor.Properties.Resources.line_outline;
             this.Btn_Line.Location = new System.Drawing.Point(126, 6);
             this.Btn_Line.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Line.Name = "Btn_Line";
@@ -1001,7 +1000,6 @@ namespace MDBEditor
             this.Btn_Right_Arrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_Right_Arrow.FlatAppearance.BorderSize = 0;
             this.Btn_Right_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Right_Arrow.Image = global::MDBEditor.Properties.Resources.right_arrow_outline;
             this.Btn_Right_Arrow.Location = new System.Drawing.Point(36, 36);
             this.Btn_Right_Arrow.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Right_Arrow.Name = "Btn_Right_Arrow";

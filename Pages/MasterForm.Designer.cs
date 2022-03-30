@@ -113,7 +113,7 @@ namespace MDBEditor
             this.Btn_Copy_To_Clipboard = new System.Windows.Forms.Button();
             this.Btn_Paste_From_Clipboard = new System.Windows.Forms.Button();
             this.GB_Text_Type = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.TLP_Text_Type = new System.Windows.Forms.TableLayoutPanel();
             this.label13 = new System.Windows.Forms.Label();
             this.Txt_Text = new System.Windows.Forms.TextBox();
             this.PB_Font_Dialog = new System.Windows.Forms.Button();
@@ -132,8 +132,6 @@ namespace MDBEditor
             this.button6 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -191,7 +189,7 @@ namespace MDBEditor
             this.GB_Paste_Text.SuspendLayout();
             this.TLP_Text_Operations.SuspendLayout();
             this.GB_Text_Type.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.TLP_Text_Type.SuspendLayout();
             this.GB_Text_Colors.SuspendLayout();
             this.Panel_Drawing_Board.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Ruler_Top)).BeginInit();
@@ -203,7 +201,6 @@ namespace MDBEditor
             this.tableLayoutPanel6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1378,7 +1375,7 @@ namespace MDBEditor
             // 
             // GB_Text_Type
             // 
-            this.GB_Text_Type.Controls.Add(this.tableLayoutPanel1);
+            this.GB_Text_Type.Controls.Add(this.TLP_Text_Type);
             this.GB_Text_Type.Controls.Add(this.PB_Font_Dialog);
             this.GB_Text_Type.Location = new System.Drawing.Point(165, 3);
             this.GB_Text_Type.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1389,22 +1386,22 @@ namespace MDBEditor
             this.GB_Text_Type.TabStop = false;
             this.GB_Text_Type.Text = "Text Type";
             // 
-            // tableLayoutPanel1
+            // TLP_Text_Type
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Txt_Text, 0, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(62, 14);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(124, 89);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.TLP_Text_Type.ColumnCount = 1;
+            this.TLP_Text_Type.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TLP_Text_Type.Controls.Add(this.label13, 0, 1);
+            this.TLP_Text_Type.Controls.Add(this.Txt_Text, 0, 3);
+            this.TLP_Text_Type.Location = new System.Drawing.Point(62, 14);
+            this.TLP_Text_Type.Name = "TLP_Text_Type";
+            this.TLP_Text_Type.RowCount = 5;
+            this.TLP_Text_Type.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.TLP_Text_Type.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.TLP_Text_Type.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.TLP_Text_Type.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.TLP_Text_Type.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.TLP_Text_Type.Size = new System.Drawing.Size(124, 89);
+            this.TLP_Text_Type.TabIndex = 1;
             // 
             // label13
             // 
@@ -1641,36 +1638,6 @@ namespace MDBEditor
             this.General_ToolTip.SetToolTip(this.button12, "Resmi Kırp");
             this.button12.UseVisualStyleBackColor = true;
             // 
-            // button13
-            // 
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Image = global::MDBEditor.Properties.Resources.left_arrow_outline;
-            this.button13.Location = new System.Drawing.Point(6, 6);
-            this.button13.Margin = new System.Windows.Forms.Padding(6);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(18, 18);
-            this.button13.TabIndex = 6;
-            this.button13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button13, "Resmi Kırp");
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Image = global::MDBEditor.Properties.Resources.square_outline;
-            this.button14.Location = new System.Drawing.Point(6, 6);
-            this.button14.Margin = new System.Windows.Forms.Padding(6);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(18, 18);
-            this.button14.TabIndex = 2;
-            this.button14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button14, "Resmi Kırp");
-            this.button14.UseVisualStyleBackColor = true;
-            // 
             // button7
             // 
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1900,7 +1867,6 @@ namespace MDBEditor
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.Controls.Add(this.button13, 0, 1);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
@@ -1981,8 +1947,8 @@ namespace MDBEditor
             this.GB_Paste_Text.ResumeLayout(false);
             this.TLP_Text_Operations.ResumeLayout(false);
             this.GB_Text_Type.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.TLP_Text_Type.ResumeLayout(false);
+            this.TLP_Text_Type.PerformLayout();
             this.GB_Text_Colors.ResumeLayout(false);
             this.GB_Text_Colors.PerformLayout();
             this.Panel_Drawing_Board.ResumeLayout(false);
@@ -1996,7 +1962,6 @@ namespace MDBEditor
             this.tableLayoutPanel6.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2098,8 +2063,6 @@ namespace MDBEditor
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TabPage TP_Text;
         private System.Windows.Forms.FlowLayoutPanel FLP_Text;
@@ -2121,7 +2084,7 @@ namespace MDBEditor
         private System.Windows.Forms.PictureBox PB_Ruler_Left;
         private System.Windows.Forms.TableLayoutPanel TLP_Features;
         private System.Windows.Forms.TableLayoutPanel TLP_File;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel TLP_Text_Type;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox Txt_Text;
         private System.Windows.Forms.Button Btn_Secondary_Color;

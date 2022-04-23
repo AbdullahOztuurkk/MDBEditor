@@ -37,6 +37,9 @@ namespace MDBEditor.Shapes
                 case GeometricalShape.Parallelogram:
                     desiredShape = new Parallelogram();
                     break;
+                case GeometricalShape.Trapezoid:
+                    desiredShape = new Trapezoid();
+                    break;
             }
             return desiredShape;
         }

@@ -20,5 +20,6 @@ namespace MDBEditor.Constants.Enums
         Star,
         Six_Pointed_Star,
         Parallelogram,
+        Trapezoid,
     }
 }

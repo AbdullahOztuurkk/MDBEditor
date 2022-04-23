@@ -34,6 +34,9 @@ namespace MDBEditor.Shapes
                 case GeometricalShape.Rounded_Rectangle:
                     desiredShape = new RoundedRectangle();
                     break;
+                case GeometricalShape.Parallelogram:
+                    desiredShape = new Parallelogram();
+                    break;
             }
             return desiredShape;
         }

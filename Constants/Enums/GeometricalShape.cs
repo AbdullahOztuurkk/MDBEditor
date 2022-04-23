@@ -19,5 +19,6 @@ namespace MDBEditor.Constants.Enums
         Hexagon,
         Star,
         Six_Pointed_Star,
+        Parallelogram,
     }
 }

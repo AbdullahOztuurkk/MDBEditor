@@ -29,6 +29,9 @@ namespace MDBEditor.Shapes
                 case GeometricalShape.Star:
                     desiredShape = new Star();
                     break;
+                case GeometricalShape.Six_Pointed_Star:
+                    desiredShape = new SixPointedStar();
+                    break;
             }
             return desiredShape;
         }

@@ -1,10 +1,9 @@
-﻿using MDBEditor.Extensions;
-using System;
+﻿using System;
 using System.Drawing;
 
 namespace MDBEditor.Shapes.Concrete
 {
-    public class Star: ShapeBase
+    public class Star: RegularShapeBase
     {
         public override Point[] GetCoordinates(Rectangle rect)
         {

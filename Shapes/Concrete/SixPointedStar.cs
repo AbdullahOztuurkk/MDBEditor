@@ -1,10 +1,9 @@
-﻿using MDBEditor.Extensions;
-using System;
+﻿using System;
 using System.Drawing;
 
 namespace MDBEditor.Shapes.Concrete
 {
-    public class SixPointedStar : ShapeBase
+    public class SixPointedStar : RegularShapeBase
     {
         public override Point[] GetCoordinates(Rectangle rect)
         {

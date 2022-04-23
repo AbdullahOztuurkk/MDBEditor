@@ -1,10 +1,9 @@
-﻿using MDBEditor.Extensions;
-using System;
+﻿using System;
 using System.Drawing;
 
 namespace MDBEditor.Shapes.Concrete
 {
-    public class LeftArrow: ShapeBase
+    public class LeftArrow: RegularShapeBase
     {
         public override Point[] GetCoordinates(Rectangle rect)
         {

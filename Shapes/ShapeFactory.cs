@@ -1,13 +1,12 @@
 ﻿using MDBEditor.Constants.Enums;
-using MDBEditor.Extensions;
 using MDBEditor.Shapes.Concrete;
 
 namespace MDBEditor.Shapes
 {
     public static class ShapeFactory
     {
-        private static ShapeBase desiredShape;
-        public static ShapeBase GetShapeBase(GeometricalShape shape)
+        private static Shape desiredShape;
+        public static Shape GetShapeBase(GeometricalShape shape)
         {
             switch (shape)
             {
@@ -31,6 +30,9 @@ namespace MDBEditor.Shapes
                     break;
                 case GeometricalShape.Six_Pointed_Star:
                     desiredShape = new SixPointedStar();
+                    break;
+                case GeometricalShape.Rounded_Rectangle:
+                    desiredShape = new RoundedRectangle();
                     break;
             }
             return desiredShape;

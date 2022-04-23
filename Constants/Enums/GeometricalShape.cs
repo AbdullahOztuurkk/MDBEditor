@@ -14,6 +14,7 @@ namespace MDBEditor.Constants.Enums
         Left_Triangle,
         Right_Triangle,
         Bottom_Triangle,
+        Rounded_Rectangle,
         Pentagon,
         Hexagon,
         Star,

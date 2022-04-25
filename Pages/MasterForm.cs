@@ -78,13 +78,11 @@ namespace MDBEditor
             if (Color_Picker.ShowDialog() == DialogResult.OK)
             {
                 selectedButton.BackColor = Color_Picker.Color;
-                switch (selectedButton.Name)
+                switch (selectedButton.Tag)
                 {
-                    case nameof(Btn_Primary_Color):
-                    case nameof(Btn_Text_Primary_Color):
+                    case "PrimaryColor":
                         primaryColor = Color_Picker.Color; break;
-                    case nameof(Btn_Secondary_Color):
-                    case nameof(Btn_Text_Secondary_Color):
+                    case "SecondaryColor":
                         secondaryColor = Color_Picker.Color; break;
                 }
             }
@@ -236,20 +234,19 @@ namespace MDBEditor
         {
             List<Button> buttonArr = new List<Button>
             {
-                Btn_Pen,Btn_Erase,Btn_Zoom,Btn_Color_Picker,Btn_Add_Text,Btn_Paint_All,Btn_Select_Area
+                Btn_Pen,
+                Btn_Erase,
+                Btn_Zoom,
+                Btn_Color_Picker,
+                Btn_Add_Text,
+                Btn_Paint_All,
+                Btn_Select_Area
             };
             buttonArr.ForEach(p => p.BackColor = AppSettings.DEFAULT_TOOL_COLOR);
             Button btn = sender as Button;
-            switch (btn.Name)
-            {
-                case nameof(Btn_Pen): currentTool = DrawingTool.Pen; break;
-                case nameof(Btn_Erase): currentTool = DrawingTool.Eraser; break;
-                case nameof(Btn_Zoom): currentTool = DrawingTool.Zoom; break;
-                case nameof(Btn_Color_Picker): currentTool = DrawingTool.Color_Picker; break;
-                case nameof(Btn_Add_Text): currentTool = DrawingTool.Text; break;
-                case nameof(Btn_Paint_All): currentTool = DrawingTool.Filler; break;
-                case nameof(Btn_Select_Area): currentTool = DrawingTool.Select_Area; break;
-            }
+            
+            //Select drawing tool by sender's tag
+            currentTool = (DrawingTool)Enum.Parse(typeof(DrawingTool), btn.Tag.ToString());
             btn.BackColor = AppSettings.CURRENT_TOOL_COLOR;
 
             //Toggle Text Tab
@@ -259,9 +256,7 @@ namespace MDBEditor
                 TC_Menu.SelectedTab = TP_Text;
             }
             else
-            {
                 TC_Menu.TabPages.Remove(TP_Text);
-            }
         }
         private void Check_Gridlines_Before_Save(Action SaveAction)
         {

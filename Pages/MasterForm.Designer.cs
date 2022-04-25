@@ -733,6 +733,7 @@ namespace MDBEditor
             this.Btn_Select_Area.Name = "Btn_Select_Area";
             this.Btn_Select_Area.Size = new System.Drawing.Size(37, 37);
             this.Btn_Select_Area.TabIndex = 0;
+            this.Btn_Select_Area.Tag = "Select_Area";
             this.General_ToolTip.SetToolTip(this.Btn_Select_Area, "Select Area");
             this.Btn_Select_Area.UseVisualStyleBackColor = true;
             this.Btn_Select_Area.Click += new System.EventHandler(this.Select_Tool);
@@ -782,6 +783,7 @@ namespace MDBEditor
             this.Btn_Erase.Name = "Btn_Erase";
             this.Btn_Erase.Size = new System.Drawing.Size(38, 34);
             this.Btn_Erase.TabIndex = 7;
+            this.Btn_Erase.Tag = "Eraser";
             this.Btn_Erase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Erase, "Eraser");
             this.Btn_Erase.UseVisualStyleBackColor = true;
@@ -798,6 +800,7 @@ namespace MDBEditor
             this.Btn_Color_Picker.Name = "Btn_Color_Picker";
             this.Btn_Color_Picker.Size = new System.Drawing.Size(38, 34);
             this.Btn_Color_Picker.TabIndex = 6;
+            this.Btn_Color_Picker.Tag = "Color_Picker";
             this.Btn_Color_Picker.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Color_Picker, "Color Picker");
             this.Btn_Color_Picker.UseVisualStyleBackColor = true;
@@ -814,6 +817,7 @@ namespace MDBEditor
             this.Btn_Pen.Name = "Btn_Pen";
             this.Btn_Pen.Size = new System.Drawing.Size(38, 34);
             this.Btn_Pen.TabIndex = 2;
+            this.Btn_Pen.Tag = "Pen";
             this.Btn_Pen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Pen, "Pen");
             this.Btn_Pen.UseVisualStyleBackColor = true;
@@ -830,6 +834,7 @@ namespace MDBEditor
             this.Btn_Zoom.Name = "Btn_Zoom";
             this.Btn_Zoom.Size = new System.Drawing.Size(43, 37);
             this.Btn_Zoom.TabIndex = 3;
+            this.Btn_Zoom.Tag = "Zoom";
             this.General_ToolTip.SetToolTip(this.Btn_Zoom, "Zoom");
             this.Btn_Zoom.UseVisualStyleBackColor = true;
             this.Btn_Zoom.Click += new System.EventHandler(this.Select_Tool);
@@ -847,6 +852,7 @@ namespace MDBEditor
             this.Btn_Paint_All.Name = "Btn_Paint_All";
             this.Btn_Paint_All.Size = new System.Drawing.Size(38, 34);
             this.Btn_Paint_All.TabIndex = 4;
+            this.Btn_Paint_All.Tag = "Filler";
             this.Btn_Paint_All.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Paint_All, "Filler");
             this.Btn_Paint_All.UseVisualStyleBackColor = false;
@@ -863,6 +869,7 @@ namespace MDBEditor
             this.Btn_Add_Text.Name = "Btn_Add_Text";
             this.Btn_Add_Text.Size = new System.Drawing.Size(38, 34);
             this.Btn_Add_Text.TabIndex = 5;
+            this.Btn_Add_Text.Tag = "Text";
             this.Btn_Add_Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.General_ToolTip.SetToolTip(this.Btn_Add_Text, "Add Text");
             this.Btn_Add_Text.UseVisualStyleBackColor = true;
@@ -1077,6 +1084,7 @@ namespace MDBEditor
             this.Btn_Secondary_Color.Name = "Btn_Secondary_Color";
             this.Btn_Secondary_Color.Size = new System.Drawing.Size(37, 37);
             this.Btn_Secondary_Color.TabIndex = 1;
+            this.Btn_Secondary_Color.Tag = "SecondaryColor";
             this.General_ToolTip.SetToolTip(this.Btn_Secondary_Color, "Secondary Color");
             this.Btn_Secondary_Color.UseVisualStyleBackColor = false;
             this.Btn_Secondary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
@@ -1092,6 +1100,7 @@ namespace MDBEditor
             this.Btn_Primary_Color.Name = "Btn_Primary_Color";
             this.Btn_Primary_Color.Size = new System.Drawing.Size(37, 37);
             this.Btn_Primary_Color.TabIndex = 0;
+            this.Btn_Primary_Color.Tag = "PrimaryColor";
             this.Btn_Primary_Color.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Primary_Color.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.General_ToolTip.SetToolTip(this.Btn_Primary_Color, "Primary Color");
@@ -1519,6 +1528,7 @@ namespace MDBEditor
             this.Btn_Text_Secondary_Color.Name = "Btn_Text_Secondary_Color";
             this.Btn_Text_Secondary_Color.Size = new System.Drawing.Size(37, 37);
             this.Btn_Text_Secondary_Color.TabIndex = 1;
+            this.Btn_Text_Secondary_Color.Tag = "SecondaryColor";
             this.General_ToolTip.SetToolTip(this.Btn_Text_Secondary_Color, "Secondary Color");
             this.Btn_Text_Secondary_Color.UseVisualStyleBackColor = false;
             this.Btn_Text_Secondary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
@@ -1534,6 +1544,7 @@ namespace MDBEditor
             this.Btn_Text_Primary_Color.Name = "Btn_Text_Primary_Color";
             this.Btn_Text_Primary_Color.Size = new System.Drawing.Size(37, 37);
             this.Btn_Text_Primary_Color.TabIndex = 0;
+            this.Btn_Text_Primary_Color.Tag = "PrimaryColor";
             this.Btn_Text_Primary_Color.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Text_Primary_Color.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.General_ToolTip.SetToolTip(this.Btn_Text_Primary_Color, "Primary Color");

@@ -9,7 +9,7 @@ namespace MDBEditor.Shapes.Concrete
 {
     public class Trapezoid : RegularShapeBase
     {
-        public override Point[] GetCoordinates(Rectangle rect)
+        public override Point[] GetCoordinates(System.Drawing.Rectangle rect)
         {
             return new Point[] { 
                 new Point((int)Math.Abs(rect.Width *0.125), rect.Y),

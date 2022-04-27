@@ -5,7 +5,7 @@ namespace MDBEditor.Shapes.Concrete
 {
     public class SixPointedStar : RegularShapeBase
     {
-        public override Point[] GetCoordinates(Rectangle rect)
+        public override Point[] GetCoordinates(System.Drawing.Rectangle rect)
         {
             int size = rect.Width > rect.Height ? rect.Height : rect.Width;
             return new Point[]

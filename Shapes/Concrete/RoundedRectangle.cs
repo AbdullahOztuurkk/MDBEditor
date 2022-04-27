@@ -1,16 +1,15 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Drawing2D;
 
 namespace MDBEditor.Shapes.Concrete
 {
     public class RoundedRectangle:Shape
     {
-        public static GraphicsPath RoundedRect(Rectangle bounds, int radius = 45)
+        public static GraphicsPath RoundedRect(System.Drawing.Rectangle bounds, int radius = 45)
         {
             int diameter = radius * 2;
             Size size = new Size(diameter, diameter);
-            Rectangle arc = new Rectangle(bounds.Location, size);
+            System.Drawing.Rectangle arc = new System.Drawing.Rectangle(bounds.Location, size);
             GraphicsPath path = new GraphicsPath();
 
             if (radius == 0)
@@ -38,12 +37,12 @@ namespace MDBEditor.Shapes.Concrete
             return path;
         }
 
-        public override void Draw(Graphics graphics, Rectangle rect, Pen pen)
+        public void Draw(Graphics graphics, System.Drawing.Rectangle rect, Pen pen)
         {
             graphics.DrawPath(pen, RoundedRect(rect));
         }
 
-        public override void Fill(Graphics graphics, Rectangle rect, Brush brush)
+        public void Fill(Graphics graphics, System.Drawing.Rectangle rect, Brush brush)
         {
             graphics.FillPath(brush, RoundedRect(rect));
         }

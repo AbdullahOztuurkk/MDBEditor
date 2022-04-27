@@ -2,10 +2,10 @@
 
 namespace MDBEditor.Shapes.Concrete
 {
-    public abstract class Shape
+    public interface Shape
     {
-        public abstract void Draw(Graphics graphics, Rectangle rect, Pen pen);
-        public abstract void Fill(Graphics graphics, Rectangle rect, Brush brush);
+        public void Draw(Graphics graphics, System.Drawing.Rectangle rect, Pen pen);
+        public void Fill(Graphics graphics, System.Drawing.Rectangle rect, Brush brush);
 
     }
 }

@@ -5,7 +5,7 @@ namespace MDBEditor.Shapes.Concrete
 {
     public class RightArrow : RegularShapeBase
     {
-        public override Point[] GetCoordinates(Rectangle rect)
+        public override Point[] GetCoordinates(System.Drawing.Rectangle rect)
         {
             return new Point[]
             {

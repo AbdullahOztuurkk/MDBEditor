@@ -1,17 +1,22 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MDBEditor.Shapes.Concrete
 {
-    public class Rectangle : Shape
+    public class Circle : Shape
     {
         public void Draw(Graphics graphics, System.Drawing.Rectangle rect, Pen pen)
         {
-            graphics.DrawRectangle(pen, rect);
+            graphics.DrawEllipse(pen, rect);
         }
 
         public void Fill(Graphics graphics, System.Drawing.Rectangle rect, Brush brush)
         {
-            graphics.FillRectangle(brush, rect);
+            graphics.FillEllipse(brush, rect);
         }
     }
 }

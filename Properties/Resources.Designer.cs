@@ -403,6 +403,46 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shape_cube {
+            get {
+                object obj = ResourceManager.GetObject("shape_cube", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_hexagon {
+            get {
+                object obj = ResourceManager.GetObject("shape_hexagon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_parallelogram {
+            get {
+                object obj = ResourceManager.GetObject("shape_parallelogram", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_pentagon {
+            get {
+                object obj = ResourceManager.GetObject("shape_pentagon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shape_rectangle {
             get {
                 object obj = ResourceManager.GetObject("shape_rectangle", resourceCulture);
@@ -436,6 +476,16 @@ namespace MDBEditor.Properties {
         internal static System.Drawing.Bitmap shape_star {
             get {
                 object obj = ResourceManager.GetObject("shape_star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_trapezoid {
+            get {
+                object obj = ResourceManager.GetObject("shape_trapezoid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

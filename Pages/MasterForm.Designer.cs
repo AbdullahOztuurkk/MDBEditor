@@ -76,15 +76,18 @@ namespace MDBEditor
             this.Btn_Paint_All = new System.Windows.Forms.Button();
             this.Btn_Add_Text = new System.Windows.Forms.Button();
             this.GB_Shapes = new System.Windows.Forms.GroupBox();
-            this.TLP_Shapes = new System.Windows.Forms.TableLayoutPanel();
-            this.Btn_Left_Arrow = new System.Windows.Forms.Button();
-            this.Btn_Square = new System.Windows.Forms.Button();
-            this.Btn_Triangle = new System.Windows.Forms.Button();
-            this.Btn_Star = new System.Windows.Forms.Button();
-            this.Btn_Diamond = new System.Windows.Forms.Button();
-            this.Btn_Line = new System.Windows.Forms.Button();
-            this.Btn_Right_Arrow = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.FLP_Shapes = new System.Windows.Forms.FlowLayoutPanel();
+            this.PB_Square = new System.Windows.Forms.PictureBox();
+            this.PB_Rectangle = new System.Windows.Forms.PictureBox();
+            this.PB_Triangle = new System.Windows.Forms.PictureBox();
+            this.PB_Rhombus = new System.Windows.Forms.PictureBox();
+            this.PB_Star = new System.Windows.Forms.PictureBox();
+            this.PB_Circle = new System.Windows.Forms.PictureBox();
+            this.PB_Cube = new System.Windows.Forms.PictureBox();
+            this.O = new System.Windows.Forms.PictureBox();
+            this.PB_Hexagon = new System.Windows.Forms.PictureBox();
+            this.PB_Parallelogram = new System.Windows.Forms.PictureBox();
+            this.PB_Tripazoid = new System.Windows.Forms.PictureBox();
             this.GB_Colors = new System.Windows.Forms.GroupBox();
             this.FLP_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -178,7 +181,18 @@ namespace MDBEditor
             this.GB_Tools.SuspendLayout();
             this.TLP_Tools.SuspendLayout();
             this.GB_Shapes.SuspendLayout();
-            this.TLP_Shapes.SuspendLayout();
+            this.FLP_Shapes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rhombus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Circle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Cube)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.O)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Tripazoid)).BeginInit();
             this.GB_Colors.SuspendLayout();
             this.TP_View.SuspendLayout();
             this.FLP_View.SuspendLayout();
@@ -877,156 +891,155 @@ namespace MDBEditor
             // 
             // GB_Shapes
             // 
-            this.GB_Shapes.Controls.Add(this.TLP_Shapes);
+            this.GB_Shapes.Controls.Add(this.FLP_Shapes);
             this.GB_Shapes.Location = new System.Drawing.Point(489, 3);
             this.GB_Shapes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Shapes.Name = "GB_Shapes";
             this.GB_Shapes.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GB_Shapes.Size = new System.Drawing.Size(167, 113);
+            this.GB_Shapes.Size = new System.Drawing.Size(200, 113);
             this.GB_Shapes.TabIndex = 4;
             this.GB_Shapes.TabStop = false;
             this.GB_Shapes.Text = "Shapes";
             // 
-            // TLP_Shapes
+            // FLP_Shapes
             // 
-            this.TLP_Shapes.ColumnCount = 5;
-            this.TLP_Shapes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TLP_Shapes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TLP_Shapes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TLP_Shapes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TLP_Shapes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TLP_Shapes.Controls.Add(this.Btn_Left_Arrow, 0, 1);
-            this.TLP_Shapes.Controls.Add(this.Btn_Square, 0, 0);
-            this.TLP_Shapes.Controls.Add(this.Btn_Triangle, 1, 0);
-            this.TLP_Shapes.Controls.Add(this.Btn_Star, 2, 0);
-            this.TLP_Shapes.Controls.Add(this.Btn_Diamond, 3, 0);
-            this.TLP_Shapes.Controls.Add(this.Btn_Line, 4, 0);
-            this.TLP_Shapes.Controls.Add(this.Btn_Right_Arrow, 1, 1);
-            this.TLP_Shapes.Controls.Add(this.button18, 2, 1);
-            this.TLP_Shapes.Location = new System.Drawing.Point(7, 14);
-            this.TLP_Shapes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.TLP_Shapes.Name = "TLP_Shapes";
-            this.TLP_Shapes.RowCount = 3;
-            this.TLP_Shapes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.TLP_Shapes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
-            this.TLP_Shapes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.TLP_Shapes.Size = new System.Drawing.Size(153, 92);
-            this.TLP_Shapes.TabIndex = 1;
+            this.FLP_Shapes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.FLP_Shapes.Controls.Add(this.PB_Square);
+            this.FLP_Shapes.Controls.Add(this.PB_Rectangle);
+            this.FLP_Shapes.Controls.Add(this.PB_Triangle);
+            this.FLP_Shapes.Controls.Add(this.PB_Rhombus);
+            this.FLP_Shapes.Controls.Add(this.PB_Star);
+            this.FLP_Shapes.Controls.Add(this.PB_Circle);
+            this.FLP_Shapes.Controls.Add(this.PB_Cube);
+            this.FLP_Shapes.Controls.Add(this.O);
+            this.FLP_Shapes.Controls.Add(this.PB_Hexagon);
+            this.FLP_Shapes.Controls.Add(this.PB_Parallelogram);
+            this.FLP_Shapes.Controls.Add(this.PB_Tripazoid);
+            this.FLP_Shapes.Location = new System.Drawing.Point(4, 19);
+            this.FLP_Shapes.Name = "FLP_Shapes";
+            this.FLP_Shapes.Size = new System.Drawing.Size(189, 91);
+            this.FLP_Shapes.TabIndex = 0;
             // 
-            // Btn_Left_Arrow
+            // PB_Square
             // 
-            this.Btn_Left_Arrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Btn_Left_Arrow.FlatAppearance.BorderSize = 0;
-            this.Btn_Left_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Left_Arrow.Location = new System.Drawing.Point(6, 36);
-            this.Btn_Left_Arrow.Margin = new System.Windows.Forms.Padding(6);
-            this.Btn_Left_Arrow.Name = "Btn_Left_Arrow";
-            this.Btn_Left_Arrow.Size = new System.Drawing.Size(18, 18);
-            this.Btn_Left_Arrow.TabIndex = 6;
-            this.Btn_Left_Arrow.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Left_Arrow, "Backward Arrow");
-            this.Btn_Left_Arrow.UseVisualStyleBackColor = true;
+            this.PB_Square.Image = global::MDBEditor.Properties.Resources.shape_square;
+            this.PB_Square.Location = new System.Drawing.Point(3, 3);
+            this.PB_Square.Name = "PB_Square";
+            this.PB_Square.Size = new System.Drawing.Size(20, 20);
+            this.PB_Square.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Square.TabIndex = 0;
+            this.PB_Square.TabStop = false;
+            this.PB_Square.Tag = "Square";
             // 
-            // Btn_Square
+            // PB_Rectangle
             // 
-            this.Btn_Square.BackgroundImage = global::MDBEditor.Properties.Resources.shape_square;
-            this.Btn_Square.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Square.FlatAppearance.BorderSize = 0;
-            this.Btn_Square.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Square.Location = new System.Drawing.Point(6, 6);
-            this.Btn_Square.Margin = new System.Windows.Forms.Padding(6);
-            this.Btn_Square.Name = "Btn_Square";
-            this.Btn_Square.Size = new System.Drawing.Size(18, 18);
-            this.Btn_Square.TabIndex = 2;
-            this.Btn_Square.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Square, "Rectangle");
-            this.Btn_Square.UseVisualStyleBackColor = true;
+            this.PB_Rectangle.Image = global::MDBEditor.Properties.Resources.shape_rectangle;
+            this.PB_Rectangle.Location = new System.Drawing.Point(29, 3);
+            this.PB_Rectangle.Name = "PB_Rectangle";
+            this.PB_Rectangle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Rectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PB_Rectangle.TabIndex = 1;
+            this.PB_Rectangle.TabStop = false;
+            this.PB_Rectangle.Tag = "Rectangle";
             // 
-            // Btn_Triangle
+            // PB_Triangle
             // 
-            this.Btn_Triangle.BackgroundImage = global::MDBEditor.Properties.Resources.shape_triangle;
-            this.Btn_Triangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Triangle.FlatAppearance.BorderSize = 0;
-            this.Btn_Triangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Triangle.Location = new System.Drawing.Point(36, 6);
-            this.Btn_Triangle.Margin = new System.Windows.Forms.Padding(6);
-            this.Btn_Triangle.Name = "Btn_Triangle";
-            this.Btn_Triangle.Size = new System.Drawing.Size(18, 18);
-            this.Btn_Triangle.TabIndex = 4;
-            this.Btn_Triangle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Triangle, "Triangle");
-            this.Btn_Triangle.UseVisualStyleBackColor = true;
+            this.PB_Triangle.Image = global::MDBEditor.Properties.Resources.shape_triangle;
+            this.PB_Triangle.Location = new System.Drawing.Point(55, 3);
+            this.PB_Triangle.Name = "PB_Triangle";
+            this.PB_Triangle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Triangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Triangle.TabIndex = 2;
+            this.PB_Triangle.TabStop = false;
+            this.PB_Triangle.Tag = "Triangle";
             // 
-            // Btn_Star
+            // PB_Rhombus
             // 
-            this.Btn_Star.BackgroundImage = global::MDBEditor.Properties.Resources.shape_rectangle;
-            this.Btn_Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Star.FlatAppearance.BorderSize = 0;
-            this.Btn_Star.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Star.Location = new System.Drawing.Point(66, 6);
-            this.Btn_Star.Margin = new System.Windows.Forms.Padding(6);
-            this.Btn_Star.Name = "Btn_Star";
-            this.Btn_Star.Size = new System.Drawing.Size(18, 18);
-            this.Btn_Star.TabIndex = 5;
-            this.Btn_Star.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Star, "Star");
-            this.Btn_Star.UseVisualStyleBackColor = true;
+            this.PB_Rhombus.Image = global::MDBEditor.Properties.Resources.shape_rhombus;
+            this.PB_Rhombus.Location = new System.Drawing.Point(81, 3);
+            this.PB_Rhombus.Name = "PB_Rhombus";
+            this.PB_Rhombus.Size = new System.Drawing.Size(20, 20);
+            this.PB_Rhombus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Rhombus.TabIndex = 3;
+            this.PB_Rhombus.TabStop = false;
+            this.PB_Rhombus.Tag = "Rhombus";
             // 
-            // Btn_Diamond
+            // PB_Star
             // 
-            this.Btn_Diamond.BackgroundImage = global::MDBEditor.Properties.Resources.shape_rhombus;
-            this.Btn_Diamond.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Diamond.FlatAppearance.BorderSize = 0;
-            this.Btn_Diamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Diamond.Location = new System.Drawing.Point(94, 3);
-            this.Btn_Diamond.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Btn_Diamond.Name = "Btn_Diamond";
-            this.Btn_Diamond.Size = new System.Drawing.Size(22, 23);
-            this.Btn_Diamond.TabIndex = 3;
-            this.General_ToolTip.SetToolTip(this.Btn_Diamond, "Equilateral triangle ");
-            this.Btn_Diamond.UseVisualStyleBackColor = true;
+            this.PB_Star.Image = global::MDBEditor.Properties.Resources.shape_star;
+            this.PB_Star.Location = new System.Drawing.Point(107, 3);
+            this.PB_Star.Name = "PB_Star";
+            this.PB_Star.Size = new System.Drawing.Size(20, 20);
+            this.PB_Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Star.TabIndex = 4;
+            this.PB_Star.TabStop = false;
+            this.PB_Star.Tag = "Star";
             // 
-            // Btn_Line
+            // PB_Circle
             // 
-            this.Btn_Line.BackgroundImage = global::MDBEditor.Properties.Resources.shape_circle;
-            this.Btn_Line.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Btn_Line.FlatAppearance.BorderSize = 0;
-            this.Btn_Line.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Line.Location = new System.Drawing.Point(126, 6);
-            this.Btn_Line.Margin = new System.Windows.Forms.Padding(6);
-            this.Btn_Line.Name = "Btn_Line";
-            this.Btn_Line.Size = new System.Drawing.Size(19, 18);
-            this.Btn_Line.TabIndex = 7;
-            this.Btn_Line.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Line, "Line");
-            this.Btn_Line.UseVisualStyleBackColor = true;
+            this.PB_Circle.Image = global::MDBEditor.Properties.Resources.shape_circle;
+            this.PB_Circle.Location = new System.Drawing.Point(133, 3);
+            this.PB_Circle.Name = "PB_Circle";
+            this.PB_Circle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Circle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Circle.TabIndex = 5;
+            this.PB_Circle.TabStop = false;
+            this.PB_Circle.Tag = "Circle";
             // 
-            // Btn_Right_Arrow
+            // PB_Cube
             // 
-            this.Btn_Right_Arrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_Right_Arrow.FlatAppearance.BorderSize = 0;
-            this.Btn_Right_Arrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Right_Arrow.Location = new System.Drawing.Point(36, 36);
-            this.Btn_Right_Arrow.Margin = new System.Windows.Forms.Padding(6);
-            this.Btn_Right_Arrow.Name = "Btn_Right_Arrow";
-            this.Btn_Right_Arrow.Size = new System.Drawing.Size(18, 18);
-            this.Btn_Right_Arrow.TabIndex = 8;
-            this.Btn_Right_Arrow.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Right_Arrow, "Forward Arrow");
-            this.Btn_Right_Arrow.UseVisualStyleBackColor = true;
+            this.PB_Cube.Image = global::MDBEditor.Properties.Resources.shape_cube;
+            this.PB_Cube.Location = new System.Drawing.Point(159, 3);
+            this.PB_Cube.Name = "PB_Cube";
+            this.PB_Cube.Size = new System.Drawing.Size(20, 20);
+            this.PB_Cube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Cube.TabIndex = 6;
+            this.PB_Cube.TabStop = false;
+            this.PB_Cube.Tag = "Cube";
             // 
-            // button18
+            // O
             // 
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Location = new System.Drawing.Point(66, 36);
-            this.button18.Margin = new System.Windows.Forms.Padding(6);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(18, 18);
-            this.button18.TabIndex = 9;
-            this.button18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button18.UseVisualStyleBackColor = true;
+            this.O.Image = global::MDBEditor.Properties.Resources.shape_pentagon;
+            this.O.Location = new System.Drawing.Point(3, 29);
+            this.O.Name = "O";
+            this.O.Size = new System.Drawing.Size(20, 20);
+            this.O.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.O.TabIndex = 7;
+            this.O.TabStop = false;
+            this.O.Tag = "Pentagon";
+            // 
+            // PB_Hexagon
+            // 
+            this.PB_Hexagon.Image = global::MDBEditor.Properties.Resources.shape_hexagon;
+            this.PB_Hexagon.Location = new System.Drawing.Point(29, 29);
+            this.PB_Hexagon.Name = "PB_Hexagon";
+            this.PB_Hexagon.Size = new System.Drawing.Size(20, 20);
+            this.PB_Hexagon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Hexagon.TabIndex = 8;
+            this.PB_Hexagon.TabStop = false;
+            this.PB_Hexagon.Tag = "Hexagon";
+            // 
+            // PB_Parallelogram
+            // 
+            this.PB_Parallelogram.Image = global::MDBEditor.Properties.Resources.shape_parallelogram;
+            this.PB_Parallelogram.Location = new System.Drawing.Point(55, 29);
+            this.PB_Parallelogram.Name = "PB_Parallelogram";
+            this.PB_Parallelogram.Size = new System.Drawing.Size(20, 20);
+            this.PB_Parallelogram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Parallelogram.TabIndex = 9;
+            this.PB_Parallelogram.TabStop = false;
+            this.PB_Parallelogram.Tag = "Parallelogram";
+            // 
+            // PB_Tripazoid
+            // 
+            this.PB_Tripazoid.Image = global::MDBEditor.Properties.Resources.shape_trapezoid;
+            this.PB_Tripazoid.Location = new System.Drawing.Point(81, 29);
+            this.PB_Tripazoid.Name = "PB_Tripazoid";
+            this.PB_Tripazoid.Size = new System.Drawing.Size(20, 20);
+            this.PB_Tripazoid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Tripazoid.TabIndex = 10;
+            this.PB_Tripazoid.TabStop = false;
+            this.PB_Tripazoid.Tag = "Tripazoid";
             // 
             // GB_Colors
             // 
@@ -1035,11 +1048,11 @@ namespace MDBEditor
             this.GB_Colors.Controls.Add(this.label1);
             this.GB_Colors.Controls.Add(this.Btn_Secondary_Color);
             this.GB_Colors.Controls.Add(this.Btn_Primary_Color);
-            this.GB_Colors.Location = new System.Drawing.Point(664, 3);
+            this.GB_Colors.Location = new System.Drawing.Point(697, 3);
             this.GB_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Colors.Name = "GB_Colors";
             this.GB_Colors.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GB_Colors.Size = new System.Drawing.Size(392, 113);
+            this.GB_Colors.Size = new System.Drawing.Size(366, 113);
             this.GB_Colors.TabIndex = 2;
             this.GB_Colors.TabStop = false;
             this.GB_Colors.Text = "Colors";
@@ -1050,7 +1063,7 @@ namespace MDBEditor
             this.FLP_Colors.Location = new System.Drawing.Point(118, 14);
             this.FLP_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FLP_Colors.Name = "FLP_Colors";
-            this.FLP_Colors.Size = new System.Drawing.Size(267, 92);
+            this.FLP_Colors.Size = new System.Drawing.Size(240, 92);
             this.FLP_Colors.TabIndex = 4;
             // 
             // label2
@@ -1483,7 +1496,7 @@ namespace MDBEditor
             this.GB_Text_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Text_Colors.Name = "GB_Text_Colors";
             this.GB_Text_Colors.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GB_Text_Colors.Size = new System.Drawing.Size(392, 113);
+            this.GB_Text_Colors.Size = new System.Drawing.Size(367, 113);
             this.GB_Text_Colors.TabIndex = 4;
             this.GB_Text_Colors.TabStop = false;
             this.GB_Text_Colors.Text = "Colors";
@@ -1494,7 +1507,7 @@ namespace MDBEditor
             this.FLP_Text_Colors.Location = new System.Drawing.Point(119, 14);
             this.FLP_Text_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FLP_Text_Colors.Name = "FLP_Text_Colors";
-            this.FLP_Text_Colors.Size = new System.Drawing.Size(266, 92);
+            this.FLP_Text_Colors.Size = new System.Drawing.Size(240, 92);
             this.FLP_Text_Colors.TabIndex = 4;
             // 
             // label11
@@ -1969,7 +1982,18 @@ namespace MDBEditor
             this.GB_Tools.ResumeLayout(false);
             this.TLP_Tools.ResumeLayout(false);
             this.GB_Shapes.ResumeLayout(false);
-            this.TLP_Shapes.ResumeLayout(false);
+            this.FLP_Shapes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rhombus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Circle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Cube)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.O)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Tripazoid)).EndInit();
             this.GB_Colors.ResumeLayout(false);
             this.GB_Colors.PerformLayout();
             this.TP_View.ResumeLayout(false);
@@ -2030,15 +2054,6 @@ namespace MDBEditor
         private System.Windows.Forms.Button Btn_Paint_All;
         private System.Windows.Forms.Button Btn_Add_Text;
         private System.Windows.Forms.GroupBox GB_Shapes;
-        private System.Windows.Forms.TableLayoutPanel TLP_Shapes;
-        private System.Windows.Forms.Button Btn_Line;
-        private System.Windows.Forms.Button Btn_Left_Arrow;
-        private System.Windows.Forms.Button Btn_Square;
-        private System.Windows.Forms.Button Btn_Diamond;
-        private System.Windows.Forms.Button Btn_Triangle;
-        private System.Windows.Forms.Button Btn_Star;
-        private System.Windows.Forms.Button Btn_Right_Arrow;
-        private System.Windows.Forms.Button button18;
         private System.Windows.Forms.GroupBox GB_Colors;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -2130,6 +2145,18 @@ namespace MDBEditor
         private System.Windows.Forms.Button Btn_Text_Primary_Color;
         private System.Windows.Forms.Timer Continuous_Checker;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel FLP_Shapes;
+        private System.Windows.Forms.PictureBox PB_Square;
+        private System.Windows.Forms.PictureBox PB_Rectangle;
+        private System.Windows.Forms.PictureBox PB_Triangle;
+        private System.Windows.Forms.PictureBox PB_Rhombus;
+        private System.Windows.Forms.PictureBox PB_Star;
+        private System.Windows.Forms.PictureBox PB_Circle;
+        private System.Windows.Forms.PictureBox PB_Cube;
+        private System.Windows.Forms.PictureBox O;
+        private System.Windows.Forms.PictureBox PB_Hexagon;
+        private System.Windows.Forms.PictureBox PB_Parallelogram;
+        private System.Windows.Forms.PictureBox PB_Tripazoid;
     }
 }
 

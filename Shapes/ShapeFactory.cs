@@ -5,8 +5,8 @@ namespace MDBEditor.Shapes
 {
     public static class ShapeFactory
     {
-        private static Shape desiredShape;
-        public static Shape GetShapeBase(GeometricalShape shape)
+        private static IShape desiredShape;
+        public static IShape GetShapeBase(GeometricalShape shape)
         {
             switch (shape)
             {

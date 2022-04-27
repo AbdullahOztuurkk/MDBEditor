@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace MDBEditor.Shapes
 {
-    public abstract class RegularShapeBase: Shape
+    public abstract class RegularShapeBase: IShape
     {
         public abstract Point[] GetCoordinates(System.Drawing.Rectangle rect);
         public void Draw(Graphics graphics, System.Drawing.Rectangle rect, Pen pen)

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MDBEditor.Shapes.Concrete
 {
-    public class Circle : Shape
+    public class Circle : IShape
     {
         public void Draw(Graphics graphics, System.Drawing.Rectangle rect, Pen pen)
         {

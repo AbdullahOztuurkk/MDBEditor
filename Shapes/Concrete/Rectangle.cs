@@ -2,7 +2,7 @@
 
 namespace MDBEditor.Shapes.Concrete
 {
-    public class Rectangle : Shape
+    public class Rectangle : IShape
     {
         public void Draw(Graphics graphics, System.Drawing.Rectangle rect, Pen pen)
         {

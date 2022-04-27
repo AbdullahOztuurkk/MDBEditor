@@ -3,7 +3,7 @@ using System.Drawing.Drawing2D;
 
 namespace MDBEditor.Shapes.Concrete
 {
-    public class RoundedRectangle:Shape
+    public class RoundedRectangle:IShape
     {
         public static GraphicsPath RoundedRect(System.Drawing.Rectangle bounds, int radius = 45)
         {

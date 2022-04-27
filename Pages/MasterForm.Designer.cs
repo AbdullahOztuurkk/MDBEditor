@@ -80,14 +80,14 @@ namespace MDBEditor
             this.PB_Square = new System.Windows.Forms.PictureBox();
             this.PB_Rectangle = new System.Windows.Forms.PictureBox();
             this.PB_Triangle = new System.Windows.Forms.PictureBox();
-            this.PB_Rhombus = new System.Windows.Forms.PictureBox();
+            this.PB_Diamond = new System.Windows.Forms.PictureBox();
             this.PB_Star = new System.Windows.Forms.PictureBox();
             this.PB_Circle = new System.Windows.Forms.PictureBox();
             this.PB_Cube = new System.Windows.Forms.PictureBox();
             this.O = new System.Windows.Forms.PictureBox();
             this.PB_Hexagon = new System.Windows.Forms.PictureBox();
             this.PB_Parallelogram = new System.Windows.Forms.PictureBox();
-            this.PB_Tripazoid = new System.Windows.Forms.PictureBox();
+            this.PB_Trapezoid = new System.Windows.Forms.PictureBox();
             this.GB_Colors = new System.Windows.Forms.GroupBox();
             this.FLP_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -185,14 +185,14 @@ namespace MDBEditor
             ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Rhombus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Diamond)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Circle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Cube)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.O)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Tripazoid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).BeginInit();
             this.GB_Colors.SuspendLayout();
             this.TP_View.SuspendLayout();
             this.FLP_View.SuspendLayout();
@@ -907,14 +907,14 @@ namespace MDBEditor
             this.FLP_Shapes.Controls.Add(this.PB_Square);
             this.FLP_Shapes.Controls.Add(this.PB_Rectangle);
             this.FLP_Shapes.Controls.Add(this.PB_Triangle);
-            this.FLP_Shapes.Controls.Add(this.PB_Rhombus);
+            this.FLP_Shapes.Controls.Add(this.PB_Diamond);
             this.FLP_Shapes.Controls.Add(this.PB_Star);
             this.FLP_Shapes.Controls.Add(this.PB_Circle);
             this.FLP_Shapes.Controls.Add(this.PB_Cube);
             this.FLP_Shapes.Controls.Add(this.O);
             this.FLP_Shapes.Controls.Add(this.PB_Hexagon);
             this.FLP_Shapes.Controls.Add(this.PB_Parallelogram);
-            this.FLP_Shapes.Controls.Add(this.PB_Tripazoid);
+            this.FLP_Shapes.Controls.Add(this.PB_Trapezoid);
             this.FLP_Shapes.Location = new System.Drawing.Point(4, 19);
             this.FLP_Shapes.Name = "FLP_Shapes";
             this.FLP_Shapes.Size = new System.Drawing.Size(189, 91);
@@ -930,6 +930,7 @@ namespace MDBEditor
             this.PB_Square.TabIndex = 0;
             this.PB_Square.TabStop = false;
             this.PB_Square.Tag = "Square";
+            this.PB_Square.Click += new System.EventHandler(this.Select_Shape);
             // 
             // PB_Rectangle
             // 
@@ -941,6 +942,7 @@ namespace MDBEditor
             this.PB_Rectangle.TabIndex = 1;
             this.PB_Rectangle.TabStop = false;
             this.PB_Rectangle.Tag = "Rectangle";
+            this.PB_Rectangle.Click += new System.EventHandler(this.Select_Shape);
             // 
             // PB_Triangle
             // 
@@ -952,17 +954,19 @@ namespace MDBEditor
             this.PB_Triangle.TabIndex = 2;
             this.PB_Triangle.TabStop = false;
             this.PB_Triangle.Tag = "Triangle";
+            this.PB_Triangle.Click += new System.EventHandler(this.Select_Shape);
             // 
-            // PB_Rhombus
+            // PB_Diamond
             // 
-            this.PB_Rhombus.Image = global::MDBEditor.Properties.Resources.shape_rhombus;
-            this.PB_Rhombus.Location = new System.Drawing.Point(81, 3);
-            this.PB_Rhombus.Name = "PB_Rhombus";
-            this.PB_Rhombus.Size = new System.Drawing.Size(20, 20);
-            this.PB_Rhombus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Rhombus.TabIndex = 3;
-            this.PB_Rhombus.TabStop = false;
-            this.PB_Rhombus.Tag = "Rhombus";
+            this.PB_Diamond.Image = global::MDBEditor.Properties.Resources.shape_rhombus;
+            this.PB_Diamond.Location = new System.Drawing.Point(81, 3);
+            this.PB_Diamond.Name = "PB_Diamond";
+            this.PB_Diamond.Size = new System.Drawing.Size(20, 20);
+            this.PB_Diamond.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Diamond.TabIndex = 3;
+            this.PB_Diamond.TabStop = false;
+            this.PB_Diamond.Tag = "Diamond";
+            this.PB_Diamond.Click += new System.EventHandler(this.Select_Shape);
             // 
             // PB_Star
             // 
@@ -974,6 +978,7 @@ namespace MDBEditor
             this.PB_Star.TabIndex = 4;
             this.PB_Star.TabStop = false;
             this.PB_Star.Tag = "Star";
+            this.PB_Star.Click += new System.EventHandler(this.Select_Shape);
             // 
             // PB_Circle
             // 
@@ -985,6 +990,7 @@ namespace MDBEditor
             this.PB_Circle.TabIndex = 5;
             this.PB_Circle.TabStop = false;
             this.PB_Circle.Tag = "Circle";
+            this.PB_Circle.Click += new System.EventHandler(this.Select_Shape);
             // 
             // PB_Cube
             // 
@@ -996,6 +1002,7 @@ namespace MDBEditor
             this.PB_Cube.TabIndex = 6;
             this.PB_Cube.TabStop = false;
             this.PB_Cube.Tag = "Cube";
+            this.PB_Cube.Click += new System.EventHandler(this.Select_Shape);
             // 
             // O
             // 
@@ -1007,6 +1014,7 @@ namespace MDBEditor
             this.O.TabIndex = 7;
             this.O.TabStop = false;
             this.O.Tag = "Pentagon";
+            this.O.Click += new System.EventHandler(this.Select_Shape);
             // 
             // PB_Hexagon
             // 
@@ -1018,6 +1026,7 @@ namespace MDBEditor
             this.PB_Hexagon.TabIndex = 8;
             this.PB_Hexagon.TabStop = false;
             this.PB_Hexagon.Tag = "Hexagon";
+            this.PB_Hexagon.Click += new System.EventHandler(this.Select_Shape);
             // 
             // PB_Parallelogram
             // 
@@ -1029,17 +1038,19 @@ namespace MDBEditor
             this.PB_Parallelogram.TabIndex = 9;
             this.PB_Parallelogram.TabStop = false;
             this.PB_Parallelogram.Tag = "Parallelogram";
+            this.PB_Parallelogram.Click += new System.EventHandler(this.Select_Shape);
             // 
-            // PB_Tripazoid
+            // PB_Trapezoid
             // 
-            this.PB_Tripazoid.Image = global::MDBEditor.Properties.Resources.shape_trapezoid;
-            this.PB_Tripazoid.Location = new System.Drawing.Point(81, 29);
-            this.PB_Tripazoid.Name = "PB_Tripazoid";
-            this.PB_Tripazoid.Size = new System.Drawing.Size(20, 20);
-            this.PB_Tripazoid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Tripazoid.TabIndex = 10;
-            this.PB_Tripazoid.TabStop = false;
-            this.PB_Tripazoid.Tag = "Tripazoid";
+            this.PB_Trapezoid.Image = global::MDBEditor.Properties.Resources.shape_trapezoid;
+            this.PB_Trapezoid.Location = new System.Drawing.Point(81, 29);
+            this.PB_Trapezoid.Name = "PB_Trapezoid";
+            this.PB_Trapezoid.Size = new System.Drawing.Size(20, 20);
+            this.PB_Trapezoid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Trapezoid.TabIndex = 10;
+            this.PB_Trapezoid.TabStop = false;
+            this.PB_Trapezoid.Tag = "Trapezoid";
+            this.PB_Trapezoid.Click += new System.EventHandler(this.Select_Shape);
             // 
             // GB_Colors
             // 
@@ -1986,14 +1997,14 @@ namespace MDBEditor
             ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Rhombus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Diamond)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Circle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Cube)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.O)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Tripazoid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).EndInit();
             this.GB_Colors.ResumeLayout(false);
             this.GB_Colors.PerformLayout();
             this.TP_View.ResumeLayout(false);
@@ -2149,14 +2160,14 @@ namespace MDBEditor
         private System.Windows.Forms.PictureBox PB_Square;
         private System.Windows.Forms.PictureBox PB_Rectangle;
         private System.Windows.Forms.PictureBox PB_Triangle;
-        private System.Windows.Forms.PictureBox PB_Rhombus;
+        private System.Windows.Forms.PictureBox PB_Diamond;
         private System.Windows.Forms.PictureBox PB_Star;
         private System.Windows.Forms.PictureBox PB_Circle;
         private System.Windows.Forms.PictureBox PB_Cube;
         private System.Windows.Forms.PictureBox O;
         private System.Windows.Forms.PictureBox PB_Hexagon;
         private System.Windows.Forms.PictureBox PB_Parallelogram;
-        private System.Windows.Forms.PictureBox PB_Tripazoid;
+        private System.Windows.Forms.PictureBox PB_Trapezoid;
     }
 }
 

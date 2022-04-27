@@ -40,6 +40,18 @@ namespace MDBEditor.Shapes
                 case GeometricalShape.Trapezoid:
                     desiredShape = new Trapezoid();
                     break;
+                case GeometricalShape.Rectangle:
+                    desiredShape = new Rectangle();
+                    break;
+                case GeometricalShape.Circle:
+                    desiredShape = new Circle();
+                    break;
+                case GeometricalShape.Diamond:
+                    desiredShape = new Diamond();
+                    break;
+                case GeometricalShape.Cube:
+                    desiredShape = new Cube();
+                    break;
             }
             return desiredShape;
         }

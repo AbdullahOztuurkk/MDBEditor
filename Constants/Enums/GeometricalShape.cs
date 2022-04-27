@@ -15,11 +15,15 @@ namespace MDBEditor.Constants.Enums
         Right_Triangle,
         Bottom_Triangle,
         Rounded_Rectangle,
+        Diamond,
         Pentagon,
         Hexagon,
         Star,
         Six_Pointed_Star,
         Parallelogram,
         Trapezoid,
+        Rectangle,
+        Circle,
+        Cube,
     }
 }

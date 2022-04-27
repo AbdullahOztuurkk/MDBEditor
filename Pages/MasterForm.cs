@@ -5,6 +5,8 @@ using MDBEditor.Helpers;
 using MDBEditor.Models;
 using MDBEditor.Pages;
 using MDBEditor.Pages.Modals;
+using MDBEditor.Shapes;
+using MDBEditor.Shapes.Concrete;
 using MDBEditor.Tools.Concrete;
 using MDBEditor.Utils;
 using System;
@@ -30,6 +32,7 @@ namespace MDBEditor
         public static Color secondaryColor = Color.White;
 
         //Tools
+        private GeometricalShape? currentShape;
         public DrawingTool currentTool;
         private PenTool penTool;
         private EraserTool eraserTool;
@@ -219,6 +222,15 @@ namespace MDBEditor
 
         private void PB_Drawing_Board_MouseUp(object sender, MouseEventArgs e)
         {
+            if(currentTool == DrawingTool.Select_Area)
+            {
+                if (selectAreaTool.IsSelected && currentShape != null)
+                {
+                    ShapeFactory.GetShapeBase((GeometricalShape)currentShape).
+                        Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(Color.DeepPink, 3f));
+                    currentShape = null;
+                }
+            }
             lastPoint = e.Location;
             IsMouseDown = false;
         }
@@ -424,6 +436,13 @@ namespace MDBEditor
             rotatedImg.RotateFlip(RotateFlipType.Rotate90FlipNone);
             PB_Drawing_Board.SetImage(rotatedImg);
             UpdateGraphics();
+        }
+
+        private void Select_Shape(object sender, EventArgs e)
+        {
+            PictureBox pb = sender as PictureBox;
+            currentShape = (GeometricalShape)Enum.Parse(typeof(GeometricalShape), pb.Tag.ToString());
+            currentTool = DrawingTool.Select_Area;
         }
     }
 }

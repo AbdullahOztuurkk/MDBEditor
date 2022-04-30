@@ -233,7 +233,7 @@ namespace MDBEditor
             {
                 if (currentShape != null && selectAreaTool.SelectedRect.Width > 1)
                 {
-                    ShapeFactory.GetShapeBase((GeometricalShape)currentShape).
+                    ShapeFactory.Create((GeometricalShape)currentShape).
                         Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(Color.DeepPink, 3f));
                     selectAreaTool.Clear();
                 }

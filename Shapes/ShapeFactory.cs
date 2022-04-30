@@ -9,7 +9,7 @@ namespace MDBEditor.Shapes
 {
     public static class ShapeFactory
     {
-        public static IShape GetShapeBase(GeometricalShape shape)
+        public static IShape Create(GeometricalShape shape)
         {
             var assembly = Assembly.GetExecutingAssembly();
 

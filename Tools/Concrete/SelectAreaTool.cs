@@ -12,11 +12,9 @@ namespace MDBEditor.Tools.Concrete
 {
     public class SelectAreaTool : ISelectAreaTool
     {
-        public bool IsSelected { get { return Location != null && Size != null; } }
-        public Rectangle SelectedRect => new Rectangle(Location, Size);
-        public Point Location { get; set; }
-        public Size Size { get; set; }
+        public Rectangle SelectedRect { get; set; }
         public Pen Pen { get; }
+        public void Clear() => SelectedRect = Rectangle.Empty;
 
         public SelectAreaTool()
         {

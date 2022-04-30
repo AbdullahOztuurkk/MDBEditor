@@ -9,10 +9,7 @@ namespace MDBEditor.Tools.Interfaces
 {
     public interface ISelectAreaTool
     {
-        public Rectangle SelectedRect => new Rectangle(Location, Size);
-        public bool IsSelected { get { return Location != null && Size != null; } }
+        public Rectangle SelectedRect { get; set; }
         public Pen Pen { get; }
-        public Point Location { get; set; }
-        public Size Size { get; set; }
     }
 }

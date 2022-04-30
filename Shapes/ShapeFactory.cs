@@ -1,5 +1,6 @@
 ﻿using MDBEditor.Constants.Enums;
 using MDBEditor.Shapes.Concrete;
+using MDBEditor.Shapes.Interfaces;
 using System;
 using System.Diagnostics;
 using System.Linq;

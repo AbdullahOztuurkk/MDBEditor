@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace MDBEditor.Shapes.Concrete
+namespace MDBEditor.Shapes.Interfaces
 {
     public interface IShape
     {

@@ -14,8 +14,8 @@ namespace MDBEditor.Shapes.Concrete
             double dtheta = Math.PI * 0.8;
             for (int i = 0; i <= 4; i++)
             {
-                points[i].X = (int)( cx + cx * Math.Cos(theta) );
-                points[i].Y = (int)( cy + cy * Math.Sin(theta) );
+                points[i].X = rect.Left + (int)( cx + cx * Math.Cos(theta) );
+                points[i].Y = rect.Top + (int)( cy + cy * Math.Sin(theta) );
                 theta += dtheta;
             }
             return points;

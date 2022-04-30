@@ -9,9 +9,9 @@ namespace MDBEditor.Shapes.Concrete
         {
             return new Point[]
             {
-                new Point(rect.X,rect.Height), //Left bottom
-                new Point(Math.Abs(rect.Width / 2),rect.Y),//Top center
-                new Point(rect.Width,rect.Height),//Right bottom
+                new Point(rect.Left,rect.Bottom), //Left bottom
+                new Point(rect.Left + (rect.Width / 2), rect.Top),//Top center
+                new Point(rect.Right,rect.Bottom),//Right bottom
             };
         }
     }

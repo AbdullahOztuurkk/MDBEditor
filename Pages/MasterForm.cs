@@ -6,7 +6,6 @@ using MDBEditor.Models;
 using MDBEditor.Pages;
 using MDBEditor.Pages.Modals;
 using MDBEditor.Shapes;
-using MDBEditor.Shapes.Concrete;
 using MDBEditor.Tools.Concrete;
 using MDBEditor.Utils;
 using System;
@@ -26,6 +25,7 @@ namespace MDBEditor
         //Mouse event properties
         bool IsMouseDown = false;
         private Point lastPoint;
+        private Point StartPoint;
 
         //Colors
         public static Color primaryColor = Color.Black;
@@ -33,14 +33,14 @@ namespace MDBEditor
 
         //Tools
         private GeometricalShape? currentShape;
-        public DrawingTool currentTool;
+        private DrawingTool currentTool;
         private PenTool penTool;
         private EraserTool eraserTool;
         private ColorPickerTool colorPickerTool;
-        private readonly FillerTool fillerTool;
+        private FillerTool fillerTool;
         private TextTool textTool;
-        public ZoomTool zoomTool;
-        public SelectAreaTool selectAreaTool;
+        private ZoomTool zoomTool;
+        private SelectAreaTool selectAreaTool;
 
         public MasterForm()
         {
@@ -170,8 +170,16 @@ namespace MDBEditor
                     case DrawingTool.Select_Area:
                         if (e.Button == MouseButtons.Left)
                         {
-                            selectAreaTool.Size = new Size(e.X - selectAreaTool.Location.X, e.Y - selectAreaTool.Location.Y);
-                            PB_Drawing_Board.CreateGraphics().DrawRectangle(selectAreaTool.Pen, selectAreaTool.SelectedRect);
+                            PB_Drawing_Board.Refresh();
+                            using (Graphics g = PB_Drawing_Board.CreateGraphics())
+                            {
+                                selectAreaTool.SelectedRect = new System.Drawing.Rectangle(
+                                    Math.Min(StartPoint.X,  e.Location.X), 
+                                    Math.Min(StartPoint.Y,  e.Location.Y),
+                                    Math.Abs(StartPoint.X - e.Location.X), 
+                                    Math.Abs(StartPoint.Y - e.Location.Y));
+                                g.DrawRectangle(Pens.Red, selectAreaTool.SelectedRect);
+                            }
                         }
                         break;
                 }
@@ -192,7 +200,6 @@ namespace MDBEditor
                     colorPickerTool.Loc = e.Location;
                     colorPickerTool.Handle();
                     primaryColor = colorPickerTool.DetectedColor;
-                    Btn_Primary_Color.BackColor = primaryColor;
                     break;
                 case DrawingTool.Text:
                     textTool.Loc = e.Location;
@@ -213,7 +220,7 @@ namespace MDBEditor
                     if (e.Button == MouseButtons.Left)
                     {
                         Cursor = Cursors.Cross;
-                        selectAreaTool.Location = new Point(e.X, e.Y);
+                        StartPoint = e.Location;
                     }
                     PB_Drawing_Board.Refresh();
                     break;
@@ -224,15 +231,16 @@ namespace MDBEditor
         {
             if(currentTool == DrawingTool.Select_Area)
             {
-                if (selectAreaTool.IsSelected && currentShape != null)
+                if (currentShape != null && selectAreaTool.SelectedRect.Width > 1)
                 {
                     ShapeFactory.GetShapeBase((GeometricalShape)currentShape).
                         Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(Color.DeepPink, 3f));
-                    currentShape = null;
+                    selectAreaTool.Clear();
                 }
             }
             lastPoint = e.Location;
             IsMouseDown = false;
+            PB_Drawing_Board.Refresh();
         }
 
         #endregion

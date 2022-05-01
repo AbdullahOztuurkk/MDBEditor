@@ -413,6 +413,26 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shape_diamond {
+            get {
+                object obj = ResourceManager.GetObject("shape_diamond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_four_pointed_star {
+            get {
+                object obj = ResourceManager.GetObject("shape_four_pointed_star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shape_hexagon {
             get {
                 object obj = ResourceManager.GetObject("shape_hexagon", resourceCulture);
@@ -443,9 +463,9 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shape_rectangle {
+        internal static System.Drawing.Bitmap shape_plus {
             get {
-                object obj = ResourceManager.GetObject("shape_rectangle", resourceCulture);
+                object obj = ResourceManager.GetObject("shape_plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,9 +473,9 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shape_rhombus {
+        internal static System.Drawing.Bitmap shape_rectangle {
             get {
-                object obj = ResourceManager.GetObject("shape_rhombus", resourceCulture);
+                object obj = ResourceManager.GetObject("shape_rectangle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -496,6 +516,26 @@ namespace MDBEditor.Properties {
         internal static System.Drawing.Bitmap shape_triangle {
             get {
                 object obj = ResourceManager.GetObject("shape_triangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_triangle_pyramid {
+            get {
+                object obj = ResourceManager.GetObject("shape_triangle_pyramid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap six_pointed_star {
+            get {
+                object obj = ResourceManager.GetObject("six_pointed_star", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

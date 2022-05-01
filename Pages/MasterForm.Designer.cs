@@ -958,7 +958,7 @@ namespace MDBEditor
             // 
             // PB_Diamond
             // 
-            this.PB_Diamond.Image = global::MDBEditor.Properties.Resources.shape_rhombus;
+            this.PB_Diamond.Image = global::MDBEditor.Properties.Resources.shape_diamond;
             this.PB_Diamond.Location = new System.Drawing.Point(81, 3);
             this.PB_Diamond.Name = "PB_Diamond";
             this.PB_Diamond.Size = new System.Drawing.Size(20, 20);

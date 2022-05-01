@@ -88,6 +88,7 @@ namespace MDBEditor
             this.PB_Hexagon = new System.Windows.Forms.PictureBox();
             this.PB_Parallelogram = new System.Windows.Forms.PictureBox();
             this.PB_Trapezoid = new System.Windows.Forms.PictureBox();
+            this.PB_Six_Pointed_Star = new System.Windows.Forms.PictureBox();
             this.GB_Colors = new System.Windows.Forms.GroupBox();
             this.FLP_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -193,6 +194,7 @@ namespace MDBEditor
             ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Six_Pointed_Star)).BeginInit();
             this.GB_Colors.SuspendLayout();
             this.TP_View.SuspendLayout();
             this.FLP_View.SuspendLayout();
@@ -915,6 +917,7 @@ namespace MDBEditor
             this.FLP_Shapes.Controls.Add(this.PB_Hexagon);
             this.FLP_Shapes.Controls.Add(this.PB_Parallelogram);
             this.FLP_Shapes.Controls.Add(this.PB_Trapezoid);
+            this.FLP_Shapes.Controls.Add(this.PB_Six_Pointed_Star);
             this.FLP_Shapes.Location = new System.Drawing.Point(4, 19);
             this.FLP_Shapes.Name = "FLP_Shapes";
             this.FLP_Shapes.Size = new System.Drawing.Size(189, 91);
@@ -1051,6 +1054,18 @@ namespace MDBEditor
             this.PB_Trapezoid.TabStop = false;
             this.PB_Trapezoid.Tag = "Trapezoid";
             this.PB_Trapezoid.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Six_Pointed_Star
+            // 
+            this.PB_Six_Pointed_Star.Image = global::MDBEditor.Properties.Resources.shape_six_pointed_star;
+            this.PB_Six_Pointed_Star.Location = new System.Drawing.Point(107, 29);
+            this.PB_Six_Pointed_Star.Name = "PB_Six_Pointed_Star";
+            this.PB_Six_Pointed_Star.Size = new System.Drawing.Size(20, 20);
+            this.PB_Six_Pointed_Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Six_Pointed_Star.TabIndex = 11;
+            this.PB_Six_Pointed_Star.TabStop = false;
+            this.PB_Six_Pointed_Star.Tag = "SixPointedStar";
+            this.PB_Six_Pointed_Star.Click += new System.EventHandler(this.Select_Shape);
             // 
             // GB_Colors
             // 
@@ -2005,6 +2020,7 @@ namespace MDBEditor
             ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Six_Pointed_Star)).EndInit();
             this.GB_Colors.ResumeLayout(false);
             this.GB_Colors.PerformLayout();
             this.TP_View.ResumeLayout(false);
@@ -2168,6 +2184,7 @@ namespace MDBEditor
         private System.Windows.Forms.PictureBox PB_Hexagon;
         private System.Windows.Forms.PictureBox PB_Parallelogram;
         private System.Windows.Forms.PictureBox PB_Trapezoid;
+        private System.Windows.Forms.PictureBox PB_Six_Pointed_Star;
     }
 }
 

@@ -483,6 +483,16 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shape_six_pointed_star {
+            get {
+                object obj = ResourceManager.GetObject("shape_six_pointed_star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shape_square {
             get {
                 object obj = ResourceManager.GetObject("shape_square", resourceCulture);
@@ -526,16 +536,6 @@ namespace MDBEditor.Properties {
         internal static System.Drawing.Bitmap shape_triangle_pyramid {
             get {
                 object obj = ResourceManager.GetObject("shape_triangle_pyramid", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap six_pointed_star {
-            get {
-                object obj = ResourceManager.GetObject("six_pointed_star", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

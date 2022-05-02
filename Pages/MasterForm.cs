@@ -196,9 +196,7 @@ namespace MDBEditor
         {
             IsMouseDown = true;
             lastPoint = e.Location;
-            Bitmap bmp = new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height);
-            PB_Drawing_Board.DrawToBitmap(bmp, PB_Drawing_Board.ClientRectangle);
-            undoRedoStack.Save(bmp);
+            undoRedoStack.Save(PB_Drawing_Board.TakeSnapshot());
             switch (currentTool)
             {
                 case DrawingTool.Color_Picker:
@@ -238,6 +236,7 @@ namespace MDBEditor
             {
                 if (currentShape != null && selectAreaTool.SelectedRect.Width > 1)
                 {
+                    undoRedoStack.Save(PB_Drawing_Board.TakeSnapshot());
                     ShapeFactory.Create((GeometricalShape)currentShape)
                         .Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(primaryColor, penTool.Size));
                     selectAreaTool.Clear();

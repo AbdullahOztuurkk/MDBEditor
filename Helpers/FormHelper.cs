@@ -60,5 +60,17 @@ namespace MDBEditor.Helpers
             pictureBox.Image = img;
             pictureBox.Invalidate();
         }
+
+        /// <summary>
+        /// Get copy of drawing area before undo & redo
+        /// </summary>
+        /// <param name="pictureBox"></param>
+        /// <returns></returns>
+        public static Bitmap TakeSnapshot(this PictureBox pictureBox)
+        {
+            Bitmap bmp = new Bitmap(pictureBox.Width, pictureBox.Height);
+            pictureBox.DrawToBitmap(bmp, pictureBox.ClientRectangle);
+            return bmp;
+        }
     }
 }

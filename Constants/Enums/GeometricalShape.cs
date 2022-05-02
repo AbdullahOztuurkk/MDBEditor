@@ -25,5 +25,6 @@ namespace MDBEditor.Constants.Enums
         Rectangle,
         Circle,
         Cube,
+        Square,
     }
 }

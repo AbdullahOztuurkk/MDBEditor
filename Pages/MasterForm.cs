@@ -170,15 +170,20 @@ namespace MDBEditor
                     case DrawingTool.Select_Area:
                         if (e.Button == MouseButtons.Left)
                         {
-                            PB_Drawing_Board.Refresh();
+                            selectAreaTool.SelectedRect = new Rectangle(
+                                Math.Min(StartPoint.X,  e.Location.X), 
+                                Math.Min(StartPoint.Y,  e.Location.Y),
+                                Math.Abs(StartPoint.X - e.Location.X), 
+                                Math.Abs(StartPoint.Y - e.Location.Y));
+                            //Preview shape and rubber band box
                             using (Graphics g = PB_Drawing_Board.CreateGraphics())
                             {
-                                selectAreaTool.SelectedRect = new System.Drawing.Rectangle(
-                                    Math.Min(StartPoint.X,  e.Location.X), 
-                                    Math.Min(StartPoint.Y,  e.Location.Y),
-                                    Math.Abs(StartPoint.X - e.Location.X), 
-                                    Math.Abs(StartPoint.Y - e.Location.Y));
                                 g.DrawRectangle(Pens.Red, selectAreaTool.SelectedRect);
+                                if (currentShape != null && selectAreaTool.SelectedRect.Width > 1)
+                                {
+                                    ShapeFactory.Create((GeometricalShape)currentShape)
+                                        .Draw(g, selectAreaTool.SelectedRect, new Pen(primaryColor, penTool.Size));
+                                }
                             }
                         }
                         break;
@@ -233,8 +238,8 @@ namespace MDBEditor
             {
                 if (currentShape != null && selectAreaTool.SelectedRect.Width > 1)
                 {
-                    ShapeFactory.Create((GeometricalShape)currentShape).
-                        Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(Color.DeepPink, 3f));
+                    ShapeFactory.Create((GeometricalShape)currentShape)
+                        .Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(primaryColor, penTool.Size));
                     selectAreaTool.Clear();
                 }
             }

@@ -89,6 +89,8 @@ namespace MDBEditor
             this.PB_Parallelogram = new System.Windows.Forms.PictureBox();
             this.PB_Trapezoid = new System.Windows.Forms.PictureBox();
             this.PB_Six_Pointed_Star = new System.Windows.Forms.PictureBox();
+            this.PB_Left_Arrow = new System.Windows.Forms.PictureBox();
+            this.PB_Right_Arrow = new System.Windows.Forms.PictureBox();
             this.GB_Colors = new System.Windows.Forms.GroupBox();
             this.FLP_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -159,8 +161,9 @@ namespace MDBEditor
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
             this.Continuous_Checker = new System.Windows.Forms.Timer(this.components);
-            this.PB_Left_Arrow = new System.Windows.Forms.PictureBox();
-            this.PB_Right_Arrow = new System.Windows.Forms.PictureBox();
+            this.PB_Bottom_Triangle = new System.Windows.Forms.PictureBox();
+            this.PB_Left_Triangle = new System.Windows.Forms.PictureBox();
+            this.PB_Right_Triangle = new System.Windows.Forms.PictureBox();
             this.TC_Menu.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -197,6 +200,8 @@ namespace MDBEditor
             ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Six_Pointed_Star)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).BeginInit();
             this.GB_Colors.SuspendLayout();
             this.TP_View.SuspendLayout();
             this.FLP_View.SuspendLayout();
@@ -222,8 +227,9 @@ namespace MDBEditor
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Bottom_Triangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Triangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Triangle)).BeginInit();
             this.SuspendLayout();
             // 
             // TC_Menu
@@ -924,6 +930,9 @@ namespace MDBEditor
             this.FLP_Shapes.Controls.Add(this.PB_Six_Pointed_Star);
             this.FLP_Shapes.Controls.Add(this.PB_Left_Arrow);
             this.FLP_Shapes.Controls.Add(this.PB_Right_Arrow);
+            this.FLP_Shapes.Controls.Add(this.PB_Bottom_Triangle);
+            this.FLP_Shapes.Controls.Add(this.PB_Left_Triangle);
+            this.FLP_Shapes.Controls.Add(this.PB_Right_Triangle);
             this.FLP_Shapes.Location = new System.Drawing.Point(4, 19);
             this.FLP_Shapes.Name = "FLP_Shapes";
             this.FLP_Shapes.Size = new System.Drawing.Size(189, 91);
@@ -1072,6 +1081,30 @@ namespace MDBEditor
             this.PB_Six_Pointed_Star.TabStop = false;
             this.PB_Six_Pointed_Star.Tag = "SixPointedStar";
             this.PB_Six_Pointed_Star.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Left_Arrow
+            // 
+            this.PB_Left_Arrow.Image = global::MDBEditor.Properties.Resources.shape_left_arrow;
+            this.PB_Left_Arrow.Location = new System.Drawing.Point(133, 29);
+            this.PB_Left_Arrow.Name = "PB_Left_Arrow";
+            this.PB_Left_Arrow.Size = new System.Drawing.Size(20, 20);
+            this.PB_Left_Arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Left_Arrow.TabIndex = 12;
+            this.PB_Left_Arrow.TabStop = false;
+            this.PB_Left_Arrow.Tag = "LeftArrow";
+            this.PB_Left_Arrow.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Right_Arrow
+            // 
+            this.PB_Right_Arrow.Image = global::MDBEditor.Properties.Resources.shape_right_arrow;
+            this.PB_Right_Arrow.Location = new System.Drawing.Point(159, 29);
+            this.PB_Right_Arrow.Name = "PB_Right_Arrow";
+            this.PB_Right_Arrow.Size = new System.Drawing.Size(20, 20);
+            this.PB_Right_Arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Right_Arrow.TabIndex = 13;
+            this.PB_Right_Arrow.TabStop = false;
+            this.PB_Right_Arrow.Tag = "RightArrow";
+            this.PB_Right_Arrow.Click += new System.EventHandler(this.Select_Shape);
             // 
             // GB_Colors
             // 
@@ -1974,29 +2007,41 @@ namespace MDBEditor
             this.Continuous_Checker.Interval = 250;
             this.Continuous_Checker.Tick += new System.EventHandler(this.Continuous_Checker_Tick);
             // 
-            // PB_Left_Arrow
+            // PB_Bottom_Triangle
             // 
-            this.PB_Left_Arrow.Image = global::MDBEditor.Properties.Resources.shape_left_arrow;
-            this.PB_Left_Arrow.Location = new System.Drawing.Point(133, 29);
-            this.PB_Left_Arrow.Name = "PB_Left_Arrow";
-            this.PB_Left_Arrow.Size = new System.Drawing.Size(20, 20);
-            this.PB_Left_Arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Left_Arrow.TabIndex = 12;
-            this.PB_Left_Arrow.TabStop = false;
-            this.PB_Left_Arrow.Tag = "LeftArrow";
-            this.PB_Left_Arrow.Click += new System.EventHandler(this.Select_Shape);
+            this.PB_Bottom_Triangle.Image = global::MDBEditor.Properties.Resources.shape_bottom_triangle;
+            this.PB_Bottom_Triangle.Location = new System.Drawing.Point(3, 55);
+            this.PB_Bottom_Triangle.Name = "PB_Bottom_Triangle";
+            this.PB_Bottom_Triangle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Bottom_Triangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Bottom_Triangle.TabIndex = 14;
+            this.PB_Bottom_Triangle.TabStop = false;
+            this.PB_Bottom_Triangle.Tag = "BottomTriangle";
+            this.PB_Bottom_Triangle.Click += new System.EventHandler(this.Select_Shape);
             // 
-            // PB_Right_Arrow
+            // PB_Left_Triangle
             // 
-            this.PB_Right_Arrow.Image = global::MDBEditor.Properties.Resources.shape_right_arrow;
-            this.PB_Right_Arrow.Location = new System.Drawing.Point(159, 29);
-            this.PB_Right_Arrow.Name = "PB_Right_Arrow";
-            this.PB_Right_Arrow.Size = new System.Drawing.Size(20, 20);
-            this.PB_Right_Arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Right_Arrow.TabIndex = 13;
-            this.PB_Right_Arrow.TabStop = false;
-            this.PB_Right_Arrow.Tag = "RightArrow";
-            this.PB_Right_Arrow.Click += new System.EventHandler(this.Select_Shape);
+            this.PB_Left_Triangle.Image = global::MDBEditor.Properties.Resources.shape_left_triangle;
+            this.PB_Left_Triangle.Location = new System.Drawing.Point(29, 55);
+            this.PB_Left_Triangle.Name = "PB_Left_Triangle";
+            this.PB_Left_Triangle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Left_Triangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Left_Triangle.TabIndex = 15;
+            this.PB_Left_Triangle.TabStop = false;
+            this.PB_Left_Triangle.Tag = "LeftTriangle";
+            this.PB_Left_Triangle.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Right_Triangle
+            // 
+            this.PB_Right_Triangle.Image = global::MDBEditor.Properties.Resources.shape_right_triangle;
+            this.PB_Right_Triangle.Location = new System.Drawing.Point(55, 55);
+            this.PB_Right_Triangle.Name = "PB_Right_Triangle";
+            this.PB_Right_Triangle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Right_Triangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Right_Triangle.TabIndex = 16;
+            this.PB_Right_Triangle.TabStop = false;
+            this.PB_Right_Triangle.Tag = "RightTriangle";
+            this.PB_Right_Triangle.Click += new System.EventHandler(this.Select_Shape);
             // 
             // MasterForm
             // 
@@ -2051,6 +2096,8 @@ namespace MDBEditor
             ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Six_Pointed_Star)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).EndInit();
             this.GB_Colors.ResumeLayout(false);
             this.GB_Colors.PerformLayout();
             this.TP_View.ResumeLayout(false);
@@ -2081,8 +2128,9 @@ namespace MDBEditor
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Bottom_Triangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Triangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Triangle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2219,6 +2267,9 @@ namespace MDBEditor
         private System.Windows.Forms.PictureBox PB_Six_Pointed_Star;
         private System.Windows.Forms.PictureBox PB_Left_Arrow;
         private System.Windows.Forms.PictureBox PB_Right_Arrow;
+        private System.Windows.Forms.PictureBox PB_Bottom_Triangle;
+        private System.Windows.Forms.PictureBox PB_Left_Triangle;
+        private System.Windows.Forms.PictureBox PB_Right_Triangle;
     }
 }
 

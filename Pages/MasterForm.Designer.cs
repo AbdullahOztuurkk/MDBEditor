@@ -159,6 +159,8 @@ namespace MDBEditor
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
             this.Continuous_Checker = new System.Windows.Forms.Timer(this.components);
+            this.PB_Left_Arrow = new System.Windows.Forms.PictureBox();
+            this.PB_Right_Arrow = new System.Windows.Forms.PictureBox();
             this.TC_Menu.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -220,6 +222,8 @@ namespace MDBEditor
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).BeginInit();
             this.SuspendLayout();
             // 
             // TC_Menu
@@ -918,6 +922,8 @@ namespace MDBEditor
             this.FLP_Shapes.Controls.Add(this.PB_Parallelogram);
             this.FLP_Shapes.Controls.Add(this.PB_Trapezoid);
             this.FLP_Shapes.Controls.Add(this.PB_Six_Pointed_Star);
+            this.FLP_Shapes.Controls.Add(this.PB_Left_Arrow);
+            this.FLP_Shapes.Controls.Add(this.PB_Right_Arrow);
             this.FLP_Shapes.Location = new System.Drawing.Point(4, 19);
             this.FLP_Shapes.Name = "FLP_Shapes";
             this.FLP_Shapes.Size = new System.Drawing.Size(189, 91);
@@ -1968,6 +1974,30 @@ namespace MDBEditor
             this.Continuous_Checker.Interval = 250;
             this.Continuous_Checker.Tick += new System.EventHandler(this.Continuous_Checker_Tick);
             // 
+            // PB_Left_Arrow
+            // 
+            this.PB_Left_Arrow.Image = global::MDBEditor.Properties.Resources.shape_left_arrow;
+            this.PB_Left_Arrow.Location = new System.Drawing.Point(133, 29);
+            this.PB_Left_Arrow.Name = "PB_Left_Arrow";
+            this.PB_Left_Arrow.Size = new System.Drawing.Size(20, 20);
+            this.PB_Left_Arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Left_Arrow.TabIndex = 12;
+            this.PB_Left_Arrow.TabStop = false;
+            this.PB_Left_Arrow.Tag = "LeftArrow";
+            this.PB_Left_Arrow.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Right_Arrow
+            // 
+            this.PB_Right_Arrow.Image = global::MDBEditor.Properties.Resources.shape_right_arrow;
+            this.PB_Right_Arrow.Location = new System.Drawing.Point(159, 29);
+            this.PB_Right_Arrow.Name = "PB_Right_Arrow";
+            this.PB_Right_Arrow.Size = new System.Drawing.Size(20, 20);
+            this.PB_Right_Arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Right_Arrow.TabIndex = 13;
+            this.PB_Right_Arrow.TabStop = false;
+            this.PB_Right_Arrow.Tag = "RightArrow";
+            this.PB_Right_Arrow.Click += new System.EventHandler(this.Select_Shape);
+            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2051,6 +2081,8 @@ namespace MDBEditor
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2185,6 +2217,8 @@ namespace MDBEditor
         private System.Windows.Forms.PictureBox PB_Parallelogram;
         private System.Windows.Forms.PictureBox PB_Trapezoid;
         private System.Windows.Forms.PictureBox PB_Six_Pointed_Star;
+        private System.Windows.Forms.PictureBox PB_Left_Arrow;
+        private System.Windows.Forms.PictureBox PB_Right_Arrow;
     }
 }
 

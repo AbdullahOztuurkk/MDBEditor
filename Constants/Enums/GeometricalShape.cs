@@ -19,6 +19,7 @@ namespace MDBEditor.Constants.Enums
         Pentagon,
         Hexagon,
         Star,
+        FourPointedStar,
         SixPointedStar,
         Parallelogram,
         Trapezoid,

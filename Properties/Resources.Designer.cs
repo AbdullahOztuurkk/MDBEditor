@@ -533,6 +533,16 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shape_rounded_rectangle {
+            get {
+                object obj = ResourceManager.GetObject("shape_rounded_rectangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shape_six_pointed_star {
             get {
                 object obj = ResourceManager.GetObject("shape_six_pointed_star", resourceCulture);

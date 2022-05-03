@@ -79,7 +79,7 @@ namespace MDBEditor
             this.FLP_Shapes = new System.Windows.Forms.FlowLayoutPanel();
             this.PB_Square = new System.Windows.Forms.PictureBox();
             this.PB_Rectangle = new System.Windows.Forms.PictureBox();
-            this.PB_Triangle = new System.Windows.Forms.PictureBox();
+            this.PB_Rounded_Rectangle = new System.Windows.Forms.PictureBox();
             this.PB_Diamond = new System.Windows.Forms.PictureBox();
             this.O = new System.Windows.Forms.PictureBox();
             this.PB_Hexagon = new System.Windows.Forms.PictureBox();
@@ -91,6 +91,7 @@ namespace MDBEditor
             this.PB_Circle = new System.Windows.Forms.PictureBox();
             this.PB_Left_Arrow = new System.Windows.Forms.PictureBox();
             this.PB_Right_Arrow = new System.Windows.Forms.PictureBox();
+            this.PB_Triangle = new System.Windows.Forms.PictureBox();
             this.PB_Left_Triangle = new System.Windows.Forms.PictureBox();
             this.PB_Right_Triangle = new System.Windows.Forms.PictureBox();
             this.PB_Bottom_Triangle = new System.Windows.Forms.PictureBox();
@@ -134,7 +135,6 @@ namespace MDBEditor
             this.label12 = new System.Windows.Forms.Label();
             this.Btn_Text_Secondary_Color = new System.Windows.Forms.Button();
             this.Btn_Text_Primary_Color = new System.Windows.Forms.Button();
-            this.General_ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -165,7 +165,6 @@ namespace MDBEditor
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
             this.Continuous_Checker = new System.Windows.Forms.Timer(this.components);
-            this.PB_Rounded_Rectangle = new System.Windows.Forms.PictureBox();
             this.TC_Menu.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -192,7 +191,7 @@ namespace MDBEditor
             this.FLP_Shapes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rounded_Rectangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Diamond)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.O)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).BeginInit();
@@ -204,6 +203,7 @@ namespace MDBEditor
             ((System.ComponentModel.ISupportInitialize)(this.PB_Circle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Triangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Triangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Bottom_Triangle)).BeginInit();
@@ -233,7 +233,6 @@ namespace MDBEditor
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Rounded_Rectangle)).BeginInit();
             this.SuspendLayout();
             // 
             // TC_Menu
@@ -322,7 +321,6 @@ namespace MDBEditor
             this.Btn_Open_File.Name = "Btn_Open_File";
             this.Btn_Open_File.Size = new System.Drawing.Size(36, 37);
             this.Btn_Open_File.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.Btn_Open_File, "Open Image");
             this.Btn_Open_File.UseVisualStyleBackColor = true;
             this.Btn_Open_File.Click += new System.EventHandler(this.Btn_Open_File_Click);
             // 
@@ -337,7 +335,6 @@ namespace MDBEditor
             this.Btn_New_Image.Name = "Btn_New_Image";
             this.Btn_New_Image.Size = new System.Drawing.Size(36, 37);
             this.Btn_New_Image.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_New_Image, "Create new Image");
             this.Btn_New_Image.UseVisualStyleBackColor = true;
             this.Btn_New_Image.Click += new System.EventHandler(this.Btn_New_Image_Click);
             // 
@@ -417,7 +414,6 @@ namespace MDBEditor
             this.PB_Save_As_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_Image.TabIndex = 0;
             this.PB_Save_As_Image.TabStop = false;
-            this.General_ToolTip.SetToolTip(this.PB_Save_As_Image, "Save As...");
             this.PB_Save_As_Image.Click += new System.EventHandler(this.Save_Image);
             // 
             // PB_Save_As_PNG
@@ -430,7 +426,6 @@ namespace MDBEditor
             this.PB_Save_As_PNG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_PNG.TabIndex = 1;
             this.PB_Save_As_PNG.TabStop = false;
-            this.General_ToolTip.SetToolTip(this.PB_Save_As_PNG, "Save as PNG");
             this.PB_Save_As_PNG.Click += new System.EventHandler(this.Save_Image);
             // 
             // PB_Save_As_JPG
@@ -443,7 +438,6 @@ namespace MDBEditor
             this.PB_Save_As_JPG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_JPG.TabIndex = 2;
             this.PB_Save_As_JPG.TabStop = false;
-            this.General_ToolTip.SetToolTip(this.PB_Save_As_JPG, "Save as JPG");
             this.PB_Save_As_JPG.Click += new System.EventHandler(this.Save_Image);
             // 
             // PB_Save_As_GIF
@@ -456,7 +450,6 @@ namespace MDBEditor
             this.PB_Save_As_GIF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_GIF.TabIndex = 3;
             this.PB_Save_As_GIF.TabStop = false;
-            this.General_ToolTip.SetToolTip(this.PB_Save_As_GIF, "Save as GIF");
             this.PB_Save_As_GIF.Click += new System.EventHandler(this.Save_Image);
             // 
             // PB_Save_As_BMP
@@ -469,7 +462,6 @@ namespace MDBEditor
             this.PB_Save_As_BMP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Save_As_BMP.TabIndex = 4;
             this.PB_Save_As_BMP.TabStop = false;
-            this.General_ToolTip.SetToolTip(this.PB_Save_As_BMP, "Save as BMP");
             this.PB_Save_As_BMP.Click += new System.EventHandler(this.Save_Image);
             // 
             // GB_Print
@@ -506,7 +498,6 @@ namespace MDBEditor
             this.Btn_Print_Image.Name = "Btn_Print_Image";
             this.Btn_Print_Image.Size = new System.Drawing.Size(37, 37);
             this.Btn_Print_Image.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Print_Image, "Print Image");
             this.Btn_Print_Image.UseVisualStyleBackColor = true;
             this.Btn_Print_Image.Click += new System.EventHandler(this.Btn_Print_Image_Click);
             // 
@@ -569,7 +560,6 @@ namespace MDBEditor
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(36, 38);
             this.button25.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.button25, "About Program");
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.Show_About_Box);
             // 
@@ -585,7 +575,6 @@ namespace MDBEditor
             this.Btn_Features.Name = "Btn_Features";
             this.Btn_Features.Size = new System.Drawing.Size(36, 38);
             this.Btn_Features.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Features, "Get Information about drawing board");
             this.Btn_Features.UseVisualStyleBackColor = true;
             this.Btn_Features.Click += new System.EventHandler(this.Btn_Features_Click);
             // 
@@ -651,7 +640,6 @@ namespace MDBEditor
             this.Btn_Paste_Area.Name = "Btn_Paste_Area";
             this.Btn_Paste_Area.Size = new System.Drawing.Size(37, 37);
             this.Btn_Paste_Area.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Paste_Area, "Paste Image");
             this.Btn_Paste_Area.UseVisualStyleBackColor = true;
             // 
             // Btn_Paste_From_File
@@ -665,7 +653,6 @@ namespace MDBEditor
             this.Btn_Paste_From_File.Name = "Btn_Paste_From_File";
             this.Btn_Paste_From_File.Size = new System.Drawing.Size(37, 37);
             this.Btn_Paste_From_File.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.Btn_Paste_From_File, "Paste from file");
             this.Btn_Paste_From_File.UseVisualStyleBackColor = true;
             // 
             // GB_Image_Area
@@ -713,7 +700,6 @@ namespace MDBEditor
             this.Btn_Crop_Image.TabIndex = 2;
             this.Btn_Crop_Image.Text = "Crop";
             this.Btn_Crop_Image.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Crop_Image, "Crop Image");
             this.Btn_Crop_Image.UseVisualStyleBackColor = true;
             // 
             // Btn_Resize_Image
@@ -730,7 +716,6 @@ namespace MDBEditor
             this.Btn_Resize_Image.Size = new System.Drawing.Size(122, 26);
             this.Btn_Resize_Image.TabIndex = 3;
             this.Btn_Resize_Image.Text = "Resize";
-            this.General_ToolTip.SetToolTip(this.Btn_Resize_Image, "Resize Image");
             this.Btn_Resize_Image.UseVisualStyleBackColor = true;
             this.Btn_Resize_Image.Click += new System.EventHandler(this.Resize_Modal_Show);
             // 
@@ -748,7 +733,6 @@ namespace MDBEditor
             this.Btn_Rotate_Image.Size = new System.Drawing.Size(122, 27);
             this.Btn_Rotate_Image.TabIndex = 4;
             this.Btn_Rotate_Image.Text = "Rotate";
-            this.General_ToolTip.SetToolTip(this.Btn_Rotate_Image, "Rotate Image");
             this.Btn_Rotate_Image.UseVisualStyleBackColor = true;
             this.Btn_Rotate_Image.Click += new System.EventHandler(this.Btn_Rotate_Image_Click);
             // 
@@ -764,7 +748,6 @@ namespace MDBEditor
             this.Btn_Select_Area.Size = new System.Drawing.Size(37, 37);
             this.Btn_Select_Area.TabIndex = 0;
             this.Btn_Select_Area.Tag = "Select_Area";
-            this.General_ToolTip.SetToolTip(this.Btn_Select_Area, "Select Area");
             this.Btn_Select_Area.UseVisualStyleBackColor = true;
             this.Btn_Select_Area.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -815,7 +798,6 @@ namespace MDBEditor
             this.Btn_Erase.TabIndex = 7;
             this.Btn_Erase.Tag = "Eraser";
             this.Btn_Erase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Erase, "Eraser");
             this.Btn_Erase.UseVisualStyleBackColor = true;
             this.Btn_Erase.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -832,7 +814,6 @@ namespace MDBEditor
             this.Btn_Color_Picker.TabIndex = 6;
             this.Btn_Color_Picker.Tag = "Color_Picker";
             this.Btn_Color_Picker.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Color_Picker, "Color Picker");
             this.Btn_Color_Picker.UseVisualStyleBackColor = true;
             this.Btn_Color_Picker.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -849,7 +830,6 @@ namespace MDBEditor
             this.Btn_Pen.TabIndex = 2;
             this.Btn_Pen.Tag = "Pen";
             this.Btn_Pen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Pen, "Pen");
             this.Btn_Pen.UseVisualStyleBackColor = true;
             this.Btn_Pen.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -865,7 +845,6 @@ namespace MDBEditor
             this.Btn_Zoom.Size = new System.Drawing.Size(43, 37);
             this.Btn_Zoom.TabIndex = 3;
             this.Btn_Zoom.Tag = "Zoom";
-            this.General_ToolTip.SetToolTip(this.Btn_Zoom, "Zoom");
             this.Btn_Zoom.UseVisualStyleBackColor = true;
             this.Btn_Zoom.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -884,7 +863,6 @@ namespace MDBEditor
             this.Btn_Paint_All.TabIndex = 4;
             this.Btn_Paint_All.Tag = "Filler";
             this.Btn_Paint_All.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Paint_All, "Filler");
             this.Btn_Paint_All.UseVisualStyleBackColor = false;
             this.Btn_Paint_All.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -901,7 +879,6 @@ namespace MDBEditor
             this.Btn_Add_Text.TabIndex = 5;
             this.Btn_Add_Text.Tag = "Text";
             this.Btn_Add_Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.Btn_Add_Text, "Add Text");
             this.Btn_Add_Text.UseVisualStyleBackColor = true;
             this.Btn_Add_Text.Click += new System.EventHandler(this.Select_Tool);
             // 
@@ -968,17 +945,17 @@ namespace MDBEditor
             this.PB_Rectangle.Tag = "Rectangle";
             this.PB_Rectangle.Click += new System.EventHandler(this.Select_Shape);
             // 
-            // PB_Triangle
+            // PB_Rounded_Rectangle
             // 
-            this.PB_Triangle.Image = global::MDBEditor.Properties.Resources.shape_triangle;
-            this.PB_Triangle.Location = new System.Drawing.Point(3, 55);
-            this.PB_Triangle.Name = "PB_Triangle";
-            this.PB_Triangle.Size = new System.Drawing.Size(20, 20);
-            this.PB_Triangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Triangle.TabIndex = 2;
-            this.PB_Triangle.TabStop = false;
-            this.PB_Triangle.Tag = "Triangle";
-            this.PB_Triangle.Click += new System.EventHandler(this.Select_Shape);
+            this.PB_Rounded_Rectangle.Image = global::MDBEditor.Properties.Resources.shape_rectangle;
+            this.PB_Rounded_Rectangle.Location = new System.Drawing.Point(55, 3);
+            this.PB_Rounded_Rectangle.Name = "PB_Rounded_Rectangle";
+            this.PB_Rounded_Rectangle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Rounded_Rectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Rounded_Rectangle.TabIndex = 18;
+            this.PB_Rounded_Rectangle.TabStop = false;
+            this.PB_Rounded_Rectangle.Tag = "RoundedRectangle";
+            this.PB_Rounded_Rectangle.Click += new System.EventHandler(this.Select_Shape);
             // 
             // PB_Diamond
             // 
@@ -1112,6 +1089,18 @@ namespace MDBEditor
             this.PB_Right_Arrow.Tag = "RightArrow";
             this.PB_Right_Arrow.Click += new System.EventHandler(this.Select_Shape);
             // 
+            // PB_Triangle
+            // 
+            this.PB_Triangle.Image = global::MDBEditor.Properties.Resources.shape_triangle;
+            this.PB_Triangle.Location = new System.Drawing.Point(3, 55);
+            this.PB_Triangle.Name = "PB_Triangle";
+            this.PB_Triangle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Triangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Triangle.TabIndex = 2;
+            this.PB_Triangle.TabStop = false;
+            this.PB_Triangle.Tag = "Triangle";
+            this.PB_Triangle.Click += new System.EventHandler(this.Select_Shape);
+            // 
             // PB_Left_Triangle
             // 
             this.PB_Left_Triangle.Image = global::MDBEditor.Properties.Resources.shape_left_triangle;
@@ -1217,7 +1206,6 @@ namespace MDBEditor
             this.Btn_Secondary_Color.Size = new System.Drawing.Size(37, 37);
             this.Btn_Secondary_Color.TabIndex = 1;
             this.Btn_Secondary_Color.Tag = "SecondaryColor";
-            this.General_ToolTip.SetToolTip(this.Btn_Secondary_Color, "Secondary Color");
             this.Btn_Secondary_Color.UseVisualStyleBackColor = false;
             this.Btn_Secondary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
@@ -1235,7 +1223,6 @@ namespace MDBEditor
             this.Btn_Primary_Color.Tag = "PrimaryColor";
             this.Btn_Primary_Color.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Primary_Color.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.General_ToolTip.SetToolTip(this.Btn_Primary_Color, "Primary Color");
             this.Btn_Primary_Color.UseVisualStyleBackColor = false;
             this.Btn_Primary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
@@ -1306,7 +1293,6 @@ namespace MDBEditor
             this.Btn_Zoom_Normal.Name = "Btn_Zoom_Normal";
             this.Btn_Zoom_Normal.Size = new System.Drawing.Size(93, 52);
             this.Btn_Zoom_Normal.TabIndex = 4;
-            this.General_ToolTip.SetToolTip(this.Btn_Zoom_Normal, "Zoom to Normal");
             this.Btn_Zoom_Normal.UseVisualStyleBackColor = true;
             this.Btn_Zoom_Normal.Click += new System.EventHandler(this.Btn_Zoom_Normal_Click);
             // 
@@ -1357,7 +1343,6 @@ namespace MDBEditor
             this.Btn_Zoom_Out.Name = "Btn_Zoom_Out";
             this.Btn_Zoom_Out.Size = new System.Drawing.Size(91, 52);
             this.Btn_Zoom_Out.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.Btn_Zoom_Out, "Zoom Out");
             this.Btn_Zoom_Out.UseVisualStyleBackColor = true;
             this.Btn_Zoom_Out.Click += new System.EventHandler(this.Btn_Zoom_Out_Click);
             // 
@@ -1373,7 +1358,6 @@ namespace MDBEditor
             this.Btn_Zoom_In.Name = "Btn_Zoom_In";
             this.Btn_Zoom_In.Size = new System.Drawing.Size(91, 52);
             this.Btn_Zoom_In.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Zoom_In, "Zoom In");
             this.Btn_Zoom_In.UseVisualStyleBackColor = true;
             this.Btn_Zoom_In.Click += new System.EventHandler(this.Btn_Zoom_In_Click);
             // 
@@ -1504,7 +1488,6 @@ namespace MDBEditor
             this.Btn_Cut_To_Clipboard.Size = new System.Drawing.Size(86, 32);
             this.Btn_Cut_To_Clipboard.TabIndex = 2;
             this.Btn_Cut_To_Clipboard.Text = "Cut";
-            this.General_ToolTip.SetToolTip(this.Btn_Cut_To_Clipboard, "Cut to Clipboard");
             this.Btn_Cut_To_Clipboard.Click += new System.EventHandler(this.Clipboard_Events);
             // 
             // Btn_Copy_To_Clipboard
@@ -1521,7 +1504,6 @@ namespace MDBEditor
             this.Btn_Copy_To_Clipboard.Size = new System.Drawing.Size(86, 37);
             this.Btn_Copy_To_Clipboard.TabIndex = 3;
             this.Btn_Copy_To_Clipboard.Text = "Copy";
-            this.General_ToolTip.SetToolTip(this.Btn_Copy_To_Clipboard, "Copy to Clipboard");
             this.Btn_Copy_To_Clipboard.Click += new System.EventHandler(this.Clipboard_Events);
             // 
             // Btn_Paste_From_Clipboard
@@ -1535,7 +1517,6 @@ namespace MDBEditor
             this.Btn_Paste_From_Clipboard.Name = "Btn_Paste_From_Clipboard";
             this.Btn_Paste_From_Clipboard.Size = new System.Drawing.Size(37, 37);
             this.Btn_Paste_From_Clipboard.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.Btn_Paste_From_Clipboard, "Paste from Clipboard");
             this.Btn_Paste_From_Clipboard.UseVisualStyleBackColor = true;
             this.Btn_Paste_From_Clipboard.Click += new System.EventHandler(this.Clipboard_Events);
             // 
@@ -1600,7 +1581,6 @@ namespace MDBEditor
             this.PB_Font_Dialog.Name = "PB_Font_Dialog";
             this.PB_Font_Dialog.Size = new System.Drawing.Size(37, 37);
             this.PB_Font_Dialog.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.PB_Font_Dialog, "Set Font");
             this.PB_Font_Dialog.UseVisualStyleBackColor = true;
             this.PB_Font_Dialog.Click += new System.EventHandler(this.PB_Font_Dialog_Click);
             // 
@@ -1661,7 +1641,6 @@ namespace MDBEditor
             this.Btn_Text_Secondary_Color.Size = new System.Drawing.Size(37, 37);
             this.Btn_Text_Secondary_Color.TabIndex = 1;
             this.Btn_Text_Secondary_Color.Tag = "SecondaryColor";
-            this.General_ToolTip.SetToolTip(this.Btn_Text_Secondary_Color, "Secondary Color");
             this.Btn_Text_Secondary_Color.UseVisualStyleBackColor = false;
             this.Btn_Text_Secondary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
@@ -1679,7 +1658,6 @@ namespace MDBEditor
             this.Btn_Text_Primary_Color.Tag = "PrimaryColor";
             this.Btn_Text_Primary_Color.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_Text_Primary_Color.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.General_ToolTip.SetToolTip(this.Btn_Text_Primary_Color, "Primary Color");
             this.Btn_Text_Primary_Color.UseVisualStyleBackColor = false;
             this.Btn_Text_Primary_Color.Click += new System.EventHandler(this.Select_Color_From_Button);
             // 
@@ -1694,7 +1672,6 @@ namespace MDBEditor
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 37);
             this.button1.TabIndex = 1;
-            this.General_ToolTip.SetToolTip(this.button1, "Dosyadan yapıştır");
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -1708,7 +1685,6 @@ namespace MDBEditor
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 37);
             this.button2.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.button2, "Yapıştır");
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -1725,7 +1701,6 @@ namespace MDBEditor
             this.button3.TabIndex = 2;
             this.button3.Text = "Crop";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button3, "Resmi Kırp");
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -1742,7 +1717,6 @@ namespace MDBEditor
             this.button4.TabIndex = 3;
             this.button4.Text = "Resize";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button4, "Dosyayı yeniden boyutlandırın");
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -1760,7 +1734,6 @@ namespace MDBEditor
             this.button5.Text = "Rotate";
             this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.General_ToolTip.SetToolTip(this.button5, "Resmi saat yönünde döndürün");
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
@@ -1774,7 +1747,6 @@ namespace MDBEditor
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(37, 37);
             this.button6.TabIndex = 0;
-            this.General_ToolTip.SetToolTip(this.button6, "Select area");
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button10
@@ -1788,7 +1760,6 @@ namespace MDBEditor
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(43, 37);
             this.button10.TabIndex = 3;
-            this.General_ToolTip.SetToolTip(this.button10, "Resize image");
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button12
@@ -1803,7 +1774,6 @@ namespace MDBEditor
             this.button12.Size = new System.Drawing.Size(38, 34);
             this.button12.TabIndex = 5;
             this.button12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.General_ToolTip.SetToolTip(this.button12, "Resmi Kırp");
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -2061,18 +2031,6 @@ namespace MDBEditor
             this.Continuous_Checker.Interval = 250;
             this.Continuous_Checker.Tick += new System.EventHandler(this.Continuous_Checker_Tick);
             // 
-            // PB_Rounded_Rectangle
-            // 
-            this.PB_Rounded_Rectangle.Image = global::MDBEditor.Properties.Resources.shape_rectangle;
-            this.PB_Rounded_Rectangle.Location = new System.Drawing.Point(55, 3);
-            this.PB_Rounded_Rectangle.Name = "PB_Rounded_Rectangle";
-            this.PB_Rounded_Rectangle.Size = new System.Drawing.Size(20, 20);
-            this.PB_Rounded_Rectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Rounded_Rectangle.TabIndex = 18;
-            this.PB_Rounded_Rectangle.TabStop = false;
-            this.PB_Rounded_Rectangle.Tag = "RoundedRectangle";
-            this.PB_Rounded_Rectangle.Click += new System.EventHandler(this.Select_Shape);
-            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2116,7 +2074,7 @@ namespace MDBEditor
             this.FLP_Shapes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rounded_Rectangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Diamond)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.O)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).EndInit();
@@ -2128,6 +2086,7 @@ namespace MDBEditor
             ((System.ComponentModel.ISupportInitialize)(this.PB_Circle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Triangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Triangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Bottom_Triangle)).EndInit();
@@ -2162,7 +2121,6 @@ namespace MDBEditor
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Rounded_Rectangle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2175,7 +2133,6 @@ namespace MDBEditor
         private System.Windows.Forms.FlowLayoutPanel FLP_Prologue;
         private System.Windows.Forms.GroupBox GB_Paste_Box;
         private System.Windows.Forms.Button Btn_Paste_From_File;
-        private System.Windows.Forms.ToolTip General_ToolTip;
         private System.Windows.Forms.Button Btn_Paste_Area;
         private System.Windows.Forms.GroupBox GB_Image_Area;
         private System.Windows.Forms.Button Btn_Select_Area;

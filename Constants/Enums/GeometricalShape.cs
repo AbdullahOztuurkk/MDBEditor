@@ -21,5 +21,6 @@
         Circle              = 17,
         Cube                = 18,
         Square              = 19,
+        TrianglePyramid     = 20,
     }
 }

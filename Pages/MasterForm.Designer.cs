@@ -165,6 +165,7 @@ namespace MDBEditor
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
             this.Continuous_Checker = new System.Windows.Forms.Timer(this.components);
+            this.PB_Triangle_Pyramid = new System.Windows.Forms.PictureBox();
             this.TC_Menu.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -233,6 +234,7 @@ namespace MDBEditor
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle_Pyramid)).BeginInit();
             this.SuspendLayout();
             // 
             // TC_Menu
@@ -904,7 +906,7 @@ namespace MDBEditor
             this.FLP_Shapes.Controls.Add(this.O);
             this.FLP_Shapes.Controls.Add(this.PB_Hexagon);
             this.FLP_Shapes.Controls.Add(this.PB_Trapezoid);
-            this.FLP_Shapes.Controls.Add(this.PB_Cube);
+            this.FLP_Shapes.Controls.Add(this.PB_Parallelogram);
             this.FLP_Shapes.Controls.Add(this.PB_Four_Pointed_Star);
             this.FLP_Shapes.Controls.Add(this.PB_Star);
             this.FLP_Shapes.Controls.Add(this.PB_Six_Pointed_Star);
@@ -915,7 +917,8 @@ namespace MDBEditor
             this.FLP_Shapes.Controls.Add(this.PB_Left_Triangle);
             this.FLP_Shapes.Controls.Add(this.PB_Right_Triangle);
             this.FLP_Shapes.Controls.Add(this.PB_Bottom_Triangle);
-            this.FLP_Shapes.Controls.Add(this.PB_Parallelogram);
+            this.FLP_Shapes.Controls.Add(this.PB_Cube);
+            this.FLP_Shapes.Controls.Add(this.PB_Triangle_Pyramid);
             this.FLP_Shapes.Location = new System.Drawing.Point(4, 19);
             this.FLP_Shapes.Name = "FLP_Shapes";
             this.FLP_Shapes.Size = new System.Drawing.Size(189, 91);
@@ -1008,7 +1011,7 @@ namespace MDBEditor
             // PB_Cube
             // 
             this.PB_Cube.Image = global::MDBEditor.Properties.Resources.shape_cube;
-            this.PB_Cube.Location = new System.Drawing.Point(3, 29);
+            this.PB_Cube.Location = new System.Drawing.Point(107, 55);
             this.PB_Cube.Name = "PB_Cube";
             this.PB_Cube.Size = new System.Drawing.Size(20, 20);
             this.PB_Cube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1140,7 +1143,7 @@ namespace MDBEditor
             // PB_Parallelogram
             // 
             this.PB_Parallelogram.Image = global::MDBEditor.Properties.Resources.shape_parallelogram;
-            this.PB_Parallelogram.Location = new System.Drawing.Point(107, 55);
+            this.PB_Parallelogram.Location = new System.Drawing.Point(3, 29);
             this.PB_Parallelogram.Name = "PB_Parallelogram";
             this.PB_Parallelogram.Size = new System.Drawing.Size(20, 20);
             this.PB_Parallelogram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2031,6 +2034,18 @@ namespace MDBEditor
             this.Continuous_Checker.Interval = 250;
             this.Continuous_Checker.Tick += new System.EventHandler(this.Continuous_Checker_Tick);
             // 
+            // PB_Triangle_Pyramid
+            // 
+            this.PB_Triangle_Pyramid.Image = global::MDBEditor.Properties.Resources.shape_triangle_pyramid;
+            this.PB_Triangle_Pyramid.Location = new System.Drawing.Point(133, 55);
+            this.PB_Triangle_Pyramid.Name = "PB_Triangle_Pyramid";
+            this.PB_Triangle_Pyramid.Size = new System.Drawing.Size(20, 20);
+            this.PB_Triangle_Pyramid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Triangle_Pyramid.TabIndex = 19;
+            this.PB_Triangle_Pyramid.TabStop = false;
+            this.PB_Triangle_Pyramid.Tag = "TrianglePyramid";
+            this.PB_Triangle_Pyramid.Click += new System.EventHandler(this.Select_Shape);
+            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2121,6 +2136,7 @@ namespace MDBEditor
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle_Pyramid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2261,6 +2277,7 @@ namespace MDBEditor
         private System.Windows.Forms.PictureBox PB_Right_Triangle;
         private System.Windows.Forms.PictureBox PB_Four_Pointed_Star;
         private System.Windows.Forms.PictureBox PB_Rounded_Rectangle;
+        private System.Windows.Forms.PictureBox PB_Triangle_Pyramid;
     }
 }
 

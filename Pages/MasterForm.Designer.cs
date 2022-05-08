@@ -1,5 +1,4 @@
-﻿
-namespace MDBEditor
+﻿namespace MDBEditor
 {
     partial class MasterForm
     {
@@ -76,21 +75,25 @@ namespace MDBEditor
             this.Btn_Paint_All = new System.Windows.Forms.Button();
             this.Btn_Add_Text = new System.Windows.Forms.Button();
             this.GB_Shapes = new System.Windows.Forms.GroupBox();
-            this.FLP_Shapes = new System.Windows.Forms.FlowLayoutPanel();
-            this.PB_Square = new System.Windows.Forms.PictureBox();
-            this.PB_Rectangle = new System.Windows.Forms.PictureBox();
-            this.PB_Rounded_Rectangle = new System.Windows.Forms.PictureBox();
-            this.PB_Diamond = new System.Windows.Forms.PictureBox();
-            this.O = new System.Windows.Forms.PictureBox();
-            this.PB_Hexagon = new System.Windows.Forms.PictureBox();
-            this.PB_Trapezoid = new System.Windows.Forms.PictureBox();
-            this.PB_Parallelogram = new System.Windows.Forms.PictureBox();
-            this.PB_Four_Pointed_Star = new System.Windows.Forms.PictureBox();
-            this.PB_Star = new System.Windows.Forms.PictureBox();
-            this.PB_Six_Pointed_Star = new System.Windows.Forms.PictureBox();
+            this.TC_Shape = new System.Windows.Forms.TabControl();
+            this.TC_Shape_Page_1 = new System.Windows.Forms.TabPage();
+            this.FLP_Shape_Page_1 = new System.Windows.Forms.FlowLayoutPanel();
             this.PB_Circle = new System.Windows.Forms.PictureBox();
-            this.PB_Left_Arrow = new System.Windows.Forms.PictureBox();
+            this.PB_Square = new System.Windows.Forms.PictureBox();
+            this.PB_Rounded_Rectangle = new System.Windows.Forms.PictureBox();
+            this.PB_Rectangle = new System.Windows.Forms.PictureBox();
+            this.PB_Parallelogram = new System.Windows.Forms.PictureBox();
+            this.PB_Trapezoid = new System.Windows.Forms.PictureBox();
+            this.PB_Diamond = new System.Windows.Forms.PictureBox();
             this.PB_Right_Arrow = new System.Windows.Forms.PictureBox();
+            this.PB_Left_Arrow = new System.Windows.Forms.PictureBox();
+            this.PB_Six_Pointed_Star = new System.Windows.Forms.PictureBox();
+            this.PB_Star = new System.Windows.Forms.PictureBox();
+            this.PB_Four_Pointed_Star = new System.Windows.Forms.PictureBox();
+            this.PB_Hexagon = new System.Windows.Forms.PictureBox();
+            this.O = new System.Windows.Forms.PictureBox();
+            this.TC_Shape_Page_2 = new System.Windows.Forms.TabPage();
+            this.FLP_Shapes = new System.Windows.Forms.FlowLayoutPanel();
             this.PB_Triangle = new System.Windows.Forms.PictureBox();
             this.PB_Left_Triangle = new System.Windows.Forms.PictureBox();
             this.PB_Right_Triangle = new System.Windows.Forms.PictureBox();
@@ -167,10 +170,7 @@ namespace MDBEditor
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
             this.Continuous_Checker = new System.Windows.Forms.Timer(this.components);
-            this.TC_Shape = new System.Windows.Forms.TabControl();
-            this.TC_Shape_Page_1 = new System.Windows.Forms.TabPage();
-            this.TC_Shape_Page_2 = new System.Windows.Forms.TabPage();
-            this.FLP_Shape_Page_1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.PB_Note = new System.Windows.Forms.PictureBox();
             this.TC_Menu.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -194,21 +194,25 @@ namespace MDBEditor
             this.GB_Tools.SuspendLayout();
             this.TLP_Tools.SuspendLayout();
             this.GB_Shapes.SuspendLayout();
-            this.FLP_Shapes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Rounded_Rectangle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Diamond)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.O)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Four_Pointed_Star)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Six_Pointed_Star)).BeginInit();
+            this.TC_Shape.SuspendLayout();
+            this.TC_Shape_Page_1.SuspendLayout();
+            this.FLP_Shape_Page_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Circle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rounded_Rectangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Diamond)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Six_Pointed_Star)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Four_Pointed_Star)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.O)).BeginInit();
+            this.TC_Shape_Page_2.SuspendLayout();
+            this.FLP_Shapes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Triangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Triangle)).BeginInit();
@@ -241,10 +245,7 @@ namespace MDBEditor
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.TC_Shape.SuspendLayout();
-            this.TC_Shape_Page_1.SuspendLayout();
-            this.TC_Shape_Page_2.SuspendLayout();
-            this.FLP_Shape_Page_1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).BeginInit();
             this.SuspendLayout();
             // 
             // TC_Menu
@@ -906,153 +907,51 @@ namespace MDBEditor
             this.GB_Shapes.TabStop = false;
             this.GB_Shapes.Text = "Shapes";
             // 
-            // FLP_Shapes
+            // TC_Shape
             // 
-            this.FLP_Shapes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.FLP_Shapes.Controls.Add(this.PB_Triangle);
-            this.FLP_Shapes.Controls.Add(this.PB_Left_Triangle);
-            this.FLP_Shapes.Controls.Add(this.PB_Right_Triangle);
-            this.FLP_Shapes.Controls.Add(this.PB_Bottom_Triangle);
-            this.FLP_Shapes.Controls.Add(this.PB_Cube);
-            this.FLP_Shapes.Controls.Add(this.PB_Triangle_Pyramid);
-            this.FLP_Shapes.Controls.Add(this.PB_Plus);
-            this.FLP_Shapes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FLP_Shapes.Location = new System.Drawing.Point(3, 3);
-            this.FLP_Shapes.Name = "FLP_Shapes";
-            this.FLP_Shapes.Size = new System.Drawing.Size(186, 57);
-            this.FLP_Shapes.TabIndex = 0;
+            this.TC_Shape.Controls.Add(this.TC_Shape_Page_1);
+            this.TC_Shape.Controls.Add(this.TC_Shape_Page_2);
+            this.TC_Shape.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TC_Shape.ItemSize = new System.Drawing.Size(26, 20);
+            this.TC_Shape.Location = new System.Drawing.Point(4, 19);
+            this.TC_Shape.Name = "TC_Shape";
+            this.TC_Shape.SelectedIndex = 0;
+            this.TC_Shape.Size = new System.Drawing.Size(200, 91);
+            this.TC_Shape.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.TC_Shape.TabIndex = 0;
             // 
-            // PB_Square
+            // TC_Shape_Page_1
             // 
-            this.PB_Square.Image = global::MDBEditor.Properties.Resources.shape_square;
-            this.PB_Square.Location = new System.Drawing.Point(29, 3);
-            this.PB_Square.Name = "PB_Square";
-            this.PB_Square.Size = new System.Drawing.Size(20, 20);
-            this.PB_Square.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Square.TabIndex = 0;
-            this.PB_Square.TabStop = false;
-            this.PB_Square.Tag = "Square";
-            this.PB_Square.Click += new System.EventHandler(this.Select_Shape);
+            this.TC_Shape_Page_1.BackColor = System.Drawing.SystemColors.Control;
+            this.TC_Shape_Page_1.Controls.Add(this.FLP_Shape_Page_1);
+            this.TC_Shape_Page_1.Location = new System.Drawing.Point(4, 24);
+            this.TC_Shape_Page_1.Name = "TC_Shape_Page_1";
+            this.TC_Shape_Page_1.Padding = new System.Windows.Forms.Padding(3);
+            this.TC_Shape_Page_1.Size = new System.Drawing.Size(192, 63);
+            this.TC_Shape_Page_1.TabIndex = 0;
+            this.TC_Shape_Page_1.Text = "1";
             // 
-            // PB_Rectangle
+            // FLP_Shape_Page_1
             // 
-            this.PB_Rectangle.Image = global::MDBEditor.Properties.Resources.shape_rectangle;
-            this.PB_Rectangle.Location = new System.Drawing.Point(81, 3);
-            this.PB_Rectangle.Name = "PB_Rectangle";
-            this.PB_Rectangle.Size = new System.Drawing.Size(20, 20);
-            this.PB_Rectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Rectangle.TabIndex = 1;
-            this.PB_Rectangle.TabStop = false;
-            this.PB_Rectangle.Tag = "Rectangle";
-            this.PB_Rectangle.Click += new System.EventHandler(this.Select_Shape);
-            // 
-            // PB_Rounded_Rectangle
-            // 
-            this.PB_Rounded_Rectangle.Image = global::MDBEditor.Properties.Resources.shape_rectangle;
-            this.PB_Rounded_Rectangle.Location = new System.Drawing.Point(55, 3);
-            this.PB_Rounded_Rectangle.Name = "PB_Rounded_Rectangle";
-            this.PB_Rounded_Rectangle.Size = new System.Drawing.Size(20, 20);
-            this.PB_Rounded_Rectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Rounded_Rectangle.TabIndex = 18;
-            this.PB_Rounded_Rectangle.TabStop = false;
-            this.PB_Rounded_Rectangle.Tag = "RoundedRectangle";
-            this.PB_Rounded_Rectangle.Click += new System.EventHandler(this.Select_Shape);
-            // 
-            // PB_Diamond
-            // 
-            this.PB_Diamond.Image = global::MDBEditor.Properties.Resources.shape_diamond;
-            this.PB_Diamond.Location = new System.Drawing.Point(159, 3);
-            this.PB_Diamond.Name = "PB_Diamond";
-            this.PB_Diamond.Size = new System.Drawing.Size(20, 20);
-            this.PB_Diamond.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Diamond.TabIndex = 3;
-            this.PB_Diamond.TabStop = false;
-            this.PB_Diamond.Tag = "Diamond";
-            this.PB_Diamond.Click += new System.EventHandler(this.Select_Shape);
-            // 
-            // O
-            // 
-            this.O.Image = global::MDBEditor.Properties.Resources.shape_pentagon;
-            this.O.Location = new System.Drawing.Point(159, 29);
-            this.O.Name = "O";
-            this.O.Size = new System.Drawing.Size(20, 20);
-            this.O.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.O.TabIndex = 7;
-            this.O.TabStop = false;
-            this.O.Tag = "Pentagon";
-            this.O.Click += new System.EventHandler(this.Select_Shape);
-            // 
-            // PB_Hexagon
-            // 
-            this.PB_Hexagon.Image = global::MDBEditor.Properties.Resources.shape_hexagon;
-            this.PB_Hexagon.Location = new System.Drawing.Point(133, 29);
-            this.PB_Hexagon.Name = "PB_Hexagon";
-            this.PB_Hexagon.Size = new System.Drawing.Size(20, 20);
-            this.PB_Hexagon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Hexagon.TabIndex = 8;
-            this.PB_Hexagon.TabStop = false;
-            this.PB_Hexagon.Tag = "Hexagon";
-            this.PB_Hexagon.Click += new System.EventHandler(this.Select_Shape);
-            // 
-            // PB_Trapezoid
-            // 
-            this.PB_Trapezoid.Image = global::MDBEditor.Properties.Resources.shape_trapezoid;
-            this.PB_Trapezoid.Location = new System.Drawing.Point(133, 3);
-            this.PB_Trapezoid.Name = "PB_Trapezoid";
-            this.PB_Trapezoid.Size = new System.Drawing.Size(20, 20);
-            this.PB_Trapezoid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Trapezoid.TabIndex = 10;
-            this.PB_Trapezoid.TabStop = false;
-            this.PB_Trapezoid.Tag = "Trapezoid";
-            this.PB_Trapezoid.Click += new System.EventHandler(this.Select_Shape);
-            // 
-            // PB_Parallelogram
-            // 
-            this.PB_Parallelogram.Image = global::MDBEditor.Properties.Resources.shape_parallelogram;
-            this.PB_Parallelogram.Location = new System.Drawing.Point(107, 3);
-            this.PB_Parallelogram.Name = "PB_Parallelogram";
-            this.PB_Parallelogram.Size = new System.Drawing.Size(20, 20);
-            this.PB_Parallelogram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Parallelogram.TabIndex = 9;
-            this.PB_Parallelogram.TabStop = false;
-            this.PB_Parallelogram.Tag = "Parallelogram";
-            this.PB_Parallelogram.Click += new System.EventHandler(this.Select_Shape);
-            // 
-            // PB_Four_Pointed_Star
-            // 
-            this.PB_Four_Pointed_Star.Image = global::MDBEditor.Properties.Resources.shape_four_pointed_star;
-            this.PB_Four_Pointed_Star.Location = new System.Drawing.Point(107, 29);
-            this.PB_Four_Pointed_Star.Name = "PB_Four_Pointed_Star";
-            this.PB_Four_Pointed_Star.Size = new System.Drawing.Size(20, 20);
-            this.PB_Four_Pointed_Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Four_Pointed_Star.TabIndex = 17;
-            this.PB_Four_Pointed_Star.TabStop = false;
-            this.PB_Four_Pointed_Star.Tag = "FourPointedStar";
-            this.PB_Four_Pointed_Star.Click += new System.EventHandler(this.Select_Shape);
-            // 
-            // PB_Star
-            // 
-            this.PB_Star.Image = global::MDBEditor.Properties.Resources.shape_star;
-            this.PB_Star.Location = new System.Drawing.Point(81, 29);
-            this.PB_Star.Name = "PB_Star";
-            this.PB_Star.Size = new System.Drawing.Size(20, 20);
-            this.PB_Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Star.TabIndex = 4;
-            this.PB_Star.TabStop = false;
-            this.PB_Star.Tag = "Star";
-            this.PB_Star.Click += new System.EventHandler(this.Select_Shape);
-            // 
-            // PB_Six_Pointed_Star
-            // 
-            this.PB_Six_Pointed_Star.Image = global::MDBEditor.Properties.Resources.shape_six_pointed_star;
-            this.PB_Six_Pointed_Star.Location = new System.Drawing.Point(55, 29);
-            this.PB_Six_Pointed_Star.Name = "PB_Six_Pointed_Star";
-            this.PB_Six_Pointed_Star.Size = new System.Drawing.Size(20, 20);
-            this.PB_Six_Pointed_Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Six_Pointed_Star.TabIndex = 11;
-            this.PB_Six_Pointed_Star.TabStop = false;
-            this.PB_Six_Pointed_Star.Tag = "SixPointedStar";
-            this.PB_Six_Pointed_Star.Click += new System.EventHandler(this.Select_Shape);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Circle);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Square);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Rounded_Rectangle);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Rectangle);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Parallelogram);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Trapezoid);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Diamond);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Right_Arrow);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Left_Arrow);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Six_Pointed_Star);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Star);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Four_Pointed_Star);
+            this.FLP_Shape_Page_1.Controls.Add(this.PB_Hexagon);
+            this.FLP_Shape_Page_1.Controls.Add(this.O);
+            this.FLP_Shape_Page_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FLP_Shape_Page_1.Location = new System.Drawing.Point(3, 3);
+            this.FLP_Shape_Page_1.Name = "FLP_Shape_Page_1";
+            this.FLP_Shape_Page_1.Size = new System.Drawing.Size(186, 57);
+            this.FLP_Shape_Page_1.TabIndex = 0;
             // 
             // PB_Circle
             // 
@@ -1066,17 +965,77 @@ namespace MDBEditor
             this.PB_Circle.Tag = "Circle";
             this.PB_Circle.Click += new System.EventHandler(this.Select_Shape);
             // 
-            // PB_Left_Arrow
+            // PB_Square
             // 
-            this.PB_Left_Arrow.Image = global::MDBEditor.Properties.Resources.shape_left_arrow;
-            this.PB_Left_Arrow.Location = new System.Drawing.Point(29, 29);
-            this.PB_Left_Arrow.Name = "PB_Left_Arrow";
-            this.PB_Left_Arrow.Size = new System.Drawing.Size(20, 20);
-            this.PB_Left_Arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Left_Arrow.TabIndex = 12;
-            this.PB_Left_Arrow.TabStop = false;
-            this.PB_Left_Arrow.Tag = "LeftArrow";
-            this.PB_Left_Arrow.Click += new System.EventHandler(this.Select_Shape);
+            this.PB_Square.Image = global::MDBEditor.Properties.Resources.shape_square;
+            this.PB_Square.Location = new System.Drawing.Point(29, 3);
+            this.PB_Square.Name = "PB_Square";
+            this.PB_Square.Size = new System.Drawing.Size(20, 20);
+            this.PB_Square.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Square.TabIndex = 0;
+            this.PB_Square.TabStop = false;
+            this.PB_Square.Tag = "Square";
+            this.PB_Square.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Rounded_Rectangle
+            // 
+            this.PB_Rounded_Rectangle.Image = global::MDBEditor.Properties.Resources.shape_rectangle;
+            this.PB_Rounded_Rectangle.Location = new System.Drawing.Point(55, 3);
+            this.PB_Rounded_Rectangle.Name = "PB_Rounded_Rectangle";
+            this.PB_Rounded_Rectangle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Rounded_Rectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Rounded_Rectangle.TabIndex = 18;
+            this.PB_Rounded_Rectangle.TabStop = false;
+            this.PB_Rounded_Rectangle.Tag = "RoundedRectangle";
+            this.PB_Rounded_Rectangle.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Rectangle
+            // 
+            this.PB_Rectangle.Image = global::MDBEditor.Properties.Resources.shape_rectangle;
+            this.PB_Rectangle.Location = new System.Drawing.Point(81, 3);
+            this.PB_Rectangle.Name = "PB_Rectangle";
+            this.PB_Rectangle.Size = new System.Drawing.Size(20, 20);
+            this.PB_Rectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Rectangle.TabIndex = 1;
+            this.PB_Rectangle.TabStop = false;
+            this.PB_Rectangle.Tag = "Rectangle";
+            this.PB_Rectangle.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Parallelogram
+            // 
+            this.PB_Parallelogram.Image = global::MDBEditor.Properties.Resources.shape_parallelogram;
+            this.PB_Parallelogram.Location = new System.Drawing.Point(107, 3);
+            this.PB_Parallelogram.Name = "PB_Parallelogram";
+            this.PB_Parallelogram.Size = new System.Drawing.Size(20, 20);
+            this.PB_Parallelogram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Parallelogram.TabIndex = 9;
+            this.PB_Parallelogram.TabStop = false;
+            this.PB_Parallelogram.Tag = "Parallelogram";
+            this.PB_Parallelogram.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Trapezoid
+            // 
+            this.PB_Trapezoid.Image = global::MDBEditor.Properties.Resources.shape_trapezoid;
+            this.PB_Trapezoid.Location = new System.Drawing.Point(133, 3);
+            this.PB_Trapezoid.Name = "PB_Trapezoid";
+            this.PB_Trapezoid.Size = new System.Drawing.Size(20, 20);
+            this.PB_Trapezoid.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Trapezoid.TabIndex = 10;
+            this.PB_Trapezoid.TabStop = false;
+            this.PB_Trapezoid.Tag = "Trapezoid";
+            this.PB_Trapezoid.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Diamond
+            // 
+            this.PB_Diamond.Image = global::MDBEditor.Properties.Resources.shape_diamond;
+            this.PB_Diamond.Location = new System.Drawing.Point(159, 3);
+            this.PB_Diamond.Name = "PB_Diamond";
+            this.PB_Diamond.Size = new System.Drawing.Size(20, 20);
+            this.PB_Diamond.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Diamond.TabIndex = 3;
+            this.PB_Diamond.TabStop = false;
+            this.PB_Diamond.Tag = "Diamond";
+            this.PB_Diamond.Click += new System.EventHandler(this.Select_Shape);
             // 
             // PB_Right_Arrow
             // 
@@ -1089,6 +1048,106 @@ namespace MDBEditor
             this.PB_Right_Arrow.TabStop = false;
             this.PB_Right_Arrow.Tag = "RightArrow";
             this.PB_Right_Arrow.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Left_Arrow
+            // 
+            this.PB_Left_Arrow.Image = global::MDBEditor.Properties.Resources.shape_left_arrow;
+            this.PB_Left_Arrow.Location = new System.Drawing.Point(29, 29);
+            this.PB_Left_Arrow.Name = "PB_Left_Arrow";
+            this.PB_Left_Arrow.Size = new System.Drawing.Size(20, 20);
+            this.PB_Left_Arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Left_Arrow.TabIndex = 12;
+            this.PB_Left_Arrow.TabStop = false;
+            this.PB_Left_Arrow.Tag = "LeftArrow";
+            this.PB_Left_Arrow.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Six_Pointed_Star
+            // 
+            this.PB_Six_Pointed_Star.Image = global::MDBEditor.Properties.Resources.shape_six_pointed_star;
+            this.PB_Six_Pointed_Star.Location = new System.Drawing.Point(55, 29);
+            this.PB_Six_Pointed_Star.Name = "PB_Six_Pointed_Star";
+            this.PB_Six_Pointed_Star.Size = new System.Drawing.Size(20, 20);
+            this.PB_Six_Pointed_Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Six_Pointed_Star.TabIndex = 11;
+            this.PB_Six_Pointed_Star.TabStop = false;
+            this.PB_Six_Pointed_Star.Tag = "SixPointedStar";
+            this.PB_Six_Pointed_Star.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Star
+            // 
+            this.PB_Star.Image = global::MDBEditor.Properties.Resources.shape_star;
+            this.PB_Star.Location = new System.Drawing.Point(81, 29);
+            this.PB_Star.Name = "PB_Star";
+            this.PB_Star.Size = new System.Drawing.Size(20, 20);
+            this.PB_Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Star.TabIndex = 4;
+            this.PB_Star.TabStop = false;
+            this.PB_Star.Tag = "Star";
+            this.PB_Star.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Four_Pointed_Star
+            // 
+            this.PB_Four_Pointed_Star.Image = global::MDBEditor.Properties.Resources.shape_four_pointed_star;
+            this.PB_Four_Pointed_Star.Location = new System.Drawing.Point(107, 29);
+            this.PB_Four_Pointed_Star.Name = "PB_Four_Pointed_Star";
+            this.PB_Four_Pointed_Star.Size = new System.Drawing.Size(20, 20);
+            this.PB_Four_Pointed_Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Four_Pointed_Star.TabIndex = 17;
+            this.PB_Four_Pointed_Star.TabStop = false;
+            this.PB_Four_Pointed_Star.Tag = "FourPointedStar";
+            this.PB_Four_Pointed_Star.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Hexagon
+            // 
+            this.PB_Hexagon.Image = global::MDBEditor.Properties.Resources.shape_hexagon;
+            this.PB_Hexagon.Location = new System.Drawing.Point(133, 29);
+            this.PB_Hexagon.Name = "PB_Hexagon";
+            this.PB_Hexagon.Size = new System.Drawing.Size(20, 20);
+            this.PB_Hexagon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Hexagon.TabIndex = 8;
+            this.PB_Hexagon.TabStop = false;
+            this.PB_Hexagon.Tag = "Hexagon";
+            this.PB_Hexagon.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // O
+            // 
+            this.O.Image = global::MDBEditor.Properties.Resources.shape_pentagon;
+            this.O.Location = new System.Drawing.Point(159, 29);
+            this.O.Name = "O";
+            this.O.Size = new System.Drawing.Size(20, 20);
+            this.O.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.O.TabIndex = 7;
+            this.O.TabStop = false;
+            this.O.Tag = "Pentagon";
+            this.O.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // TC_Shape_Page_2
+            // 
+            this.TC_Shape_Page_2.BackColor = System.Drawing.SystemColors.Control;
+            this.TC_Shape_Page_2.Controls.Add(this.FLP_Shapes);
+            this.TC_Shape_Page_2.Location = new System.Drawing.Point(4, 24);
+            this.TC_Shape_Page_2.Name = "TC_Shape_Page_2";
+            this.TC_Shape_Page_2.Padding = new System.Windows.Forms.Padding(3);
+            this.TC_Shape_Page_2.Size = new System.Drawing.Size(192, 63);
+            this.TC_Shape_Page_2.TabIndex = 1;
+            this.TC_Shape_Page_2.Text = "2";
+            // 
+            // FLP_Shapes
+            // 
+            this.FLP_Shapes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.FLP_Shapes.Controls.Add(this.PB_Triangle);
+            this.FLP_Shapes.Controls.Add(this.PB_Left_Triangle);
+            this.FLP_Shapes.Controls.Add(this.PB_Right_Triangle);
+            this.FLP_Shapes.Controls.Add(this.PB_Bottom_Triangle);
+            this.FLP_Shapes.Controls.Add(this.PB_Cube);
+            this.FLP_Shapes.Controls.Add(this.PB_Triangle_Pyramid);
+            this.FLP_Shapes.Controls.Add(this.PB_Plus);
+            this.FLP_Shapes.Controls.Add(this.PB_Note);
+            this.FLP_Shapes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FLP_Shapes.Location = new System.Drawing.Point(3, 3);
+            this.FLP_Shapes.Name = "FLP_Shapes";
+            this.FLP_Shapes.Size = new System.Drawing.Size(186, 57);
+            this.FLP_Shapes.TabIndex = 0;
             // 
             // PB_Triangle
             // 
@@ -2056,62 +2115,17 @@ namespace MDBEditor
             this.Continuous_Checker.Interval = 250;
             this.Continuous_Checker.Tick += new System.EventHandler(this.Continuous_Checker_Tick);
             // 
-            // TC_Shape
+            // PB_Note
             // 
-            this.TC_Shape.Controls.Add(this.TC_Shape_Page_1);
-            this.TC_Shape.Controls.Add(this.TC_Shape_Page_2);
-            this.TC_Shape.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TC_Shape.ItemSize = new System.Drawing.Size(26, 20);
-            this.TC_Shape.Location = new System.Drawing.Point(4, 19);
-            this.TC_Shape.Name = "TC_Shape";
-            this.TC_Shape.SelectedIndex = 0;
-            this.TC_Shape.Size = new System.Drawing.Size(200, 91);
-            this.TC_Shape.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.TC_Shape.TabIndex = 0;
-            // 
-            // TC_Shape_Page_1
-            // 
-            this.TC_Shape_Page_1.BackColor = System.Drawing.SystemColors.Control;
-            this.TC_Shape_Page_1.Controls.Add(this.FLP_Shape_Page_1);
-            this.TC_Shape_Page_1.Location = new System.Drawing.Point(4, 24);
-            this.TC_Shape_Page_1.Name = "TC_Shape_Page_1";
-            this.TC_Shape_Page_1.Padding = new System.Windows.Forms.Padding(3);
-            this.TC_Shape_Page_1.Size = new System.Drawing.Size(192, 63);
-            this.TC_Shape_Page_1.TabIndex = 0;
-            this.TC_Shape_Page_1.Text = "1";
-            // 
-            // TC_Shape_Page_2
-            // 
-            this.TC_Shape_Page_2.BackColor = System.Drawing.SystemColors.Control;
-            this.TC_Shape_Page_2.Controls.Add(this.FLP_Shapes);
-            this.TC_Shape_Page_2.Location = new System.Drawing.Point(4, 24);
-            this.TC_Shape_Page_2.Name = "TC_Shape_Page_2";
-            this.TC_Shape_Page_2.Padding = new System.Windows.Forms.Padding(3);
-            this.TC_Shape_Page_2.Size = new System.Drawing.Size(192, 63);
-            this.TC_Shape_Page_2.TabIndex = 1;
-            this.TC_Shape_Page_2.Text = "2";
-            // 
-            // FLP_Shape_Page_1
-            // 
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Circle);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Square);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Rounded_Rectangle);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Rectangle);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Parallelogram);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Trapezoid);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Diamond);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Right_Arrow);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Left_Arrow);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Six_Pointed_Star);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Star);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Four_Pointed_Star);
-            this.FLP_Shape_Page_1.Controls.Add(this.PB_Hexagon);
-            this.FLP_Shape_Page_1.Controls.Add(this.O);
-            this.FLP_Shape_Page_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FLP_Shape_Page_1.Location = new System.Drawing.Point(3, 3);
-            this.FLP_Shape_Page_1.Name = "FLP_Shape_Page_1";
-            this.FLP_Shape_Page_1.Size = new System.Drawing.Size(186, 57);
-            this.FLP_Shape_Page_1.TabIndex = 0;
+            this.PB_Note.Image = global::MDBEditor.Properties.Resources.shape_note;
+            this.PB_Note.Location = new System.Drawing.Point(3, 29);
+            this.PB_Note.Name = "PB_Note";
+            this.PB_Note.Size = new System.Drawing.Size(20, 20);
+            this.PB_Note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Note.TabIndex = 21;
+            this.PB_Note.TabStop = false;
+            this.PB_Note.Tag = "Note";
+            this.PB_Note.Click += new System.EventHandler(this.Select_Shape);
             // 
             // MasterForm
             // 
@@ -2153,21 +2167,25 @@ namespace MDBEditor
             this.GB_Tools.ResumeLayout(false);
             this.TLP_Tools.ResumeLayout(false);
             this.GB_Shapes.ResumeLayout(false);
-            this.FLP_Shapes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Rounded_Rectangle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Diamond)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.O)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Four_Pointed_Star)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Six_Pointed_Star)).EndInit();
+            this.TC_Shape.ResumeLayout(false);
+            this.TC_Shape_Page_1.ResumeLayout(false);
+            this.FLP_Shape_Page_1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Circle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Square)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rounded_Rectangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Rectangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Parallelogram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Trapezoid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Diamond)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Arrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Arrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Six_Pointed_Star)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Star)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Four_Pointed_Star)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Hexagon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.O)).EndInit();
+            this.TC_Shape_Page_2.ResumeLayout(false);
+            this.FLP_Shapes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Left_Triangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Right_Triangle)).EndInit();
@@ -2205,10 +2223,7 @@ namespace MDBEditor
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.TC_Shape.ResumeLayout(false);
-            this.TC_Shape_Page_1.ResumeLayout(false);
-            this.TC_Shape_Page_2.ResumeLayout(false);
-            this.FLP_Shape_Page_1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2355,6 +2370,7 @@ namespace MDBEditor
         private System.Windows.Forms.TabPage TC_Shape_Page_1;
         private System.Windows.Forms.FlowLayoutPanel FLP_Shape_Page_1;
         private System.Windows.Forms.TabPage TC_Shape_Page_2;
+        private System.Windows.Forms.PictureBox PB_Note;
     }
 }
 

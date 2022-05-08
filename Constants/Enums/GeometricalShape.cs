@@ -23,5 +23,6 @@
         Square              = 19,
         TrianglePyramid     = 20,
         Plus                = 21,
+        Note                = 22,
     }
 }

@@ -101,6 +101,7 @@
             this.PB_Cube = new System.Windows.Forms.PictureBox();
             this.PB_Triangle_Pyramid = new System.Windows.Forms.PictureBox();
             this.PB_Plus = new System.Windows.Forms.PictureBox();
+            this.PB_Note = new System.Windows.Forms.PictureBox();
             this.GB_Colors = new System.Windows.Forms.GroupBox();
             this.FLP_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -170,7 +171,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Font_Dialog = new System.Windows.Forms.FontDialog();
             this.Continuous_Checker = new System.Windows.Forms.Timer(this.components);
-            this.PB_Note = new System.Windows.Forms.PictureBox();
             this.TC_Menu.SuspendLayout();
             this.TP_General.SuspendLayout();
             this.FLP_File.SuspendLayout();
@@ -220,6 +220,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Cube)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle_Pyramid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Plus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).BeginInit();
             this.GB_Colors.SuspendLayout();
             this.TP_View.SuspendLayout();
             this.FLP_View.SuspendLayout();
@@ -245,7 +246,6 @@
             this.groupBox5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).BeginInit();
             this.SuspendLayout();
             // 
             // TC_Menu
@@ -771,7 +771,7 @@
             this.GB_Tools.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Tools.Name = "GB_Tools";
             this.GB_Tools.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GB_Tools.Size = new System.Drawing.Size(167, 113);
+            this.GB_Tools.Size = new System.Drawing.Size(148, 113);
             this.GB_Tools.TabIndex = 3;
             this.GB_Tools.TabStop = false;
             this.GB_Tools.Text = "Tools";
@@ -795,7 +795,7 @@
             this.TLP_Tools.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLP_Tools.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLP_Tools.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.TLP_Tools.Size = new System.Drawing.Size(153, 92);
+            this.TLP_Tools.Size = new System.Drawing.Size(133, 92);
             this.TLP_Tools.TabIndex = 1;
             // 
             // Btn_Erase
@@ -807,7 +807,7 @@
             this.Btn_Erase.Location = new System.Drawing.Point(6, 52);
             this.Btn_Erase.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Erase.Name = "Btn_Erase";
-            this.Btn_Erase.Size = new System.Drawing.Size(38, 34);
+            this.Btn_Erase.Size = new System.Drawing.Size(32, 34);
             this.Btn_Erase.TabIndex = 7;
             this.Btn_Erase.Tag = "Eraser";
             this.Btn_Erase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -820,10 +820,10 @@
             this.Btn_Color_Picker.FlatAppearance.BorderSize = 0;
             this.Btn_Color_Picker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Color_Picker.Image = global::MDBEditor.Properties.Resources.color_picker;
-            this.Btn_Color_Picker.Location = new System.Drawing.Point(56, 52);
+            this.Btn_Color_Picker.Location = new System.Drawing.Point(50, 52);
             this.Btn_Color_Picker.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Color_Picker.Name = "Btn_Color_Picker";
-            this.Btn_Color_Picker.Size = new System.Drawing.Size(38, 34);
+            this.Btn_Color_Picker.Size = new System.Drawing.Size(32, 34);
             this.Btn_Color_Picker.TabIndex = 6;
             this.Btn_Color_Picker.Tag = "Color_Picker";
             this.Btn_Color_Picker.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -839,7 +839,7 @@
             this.Btn_Pen.Location = new System.Drawing.Point(6, 6);
             this.Btn_Pen.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Pen.Name = "Btn_Pen";
-            this.Btn_Pen.Size = new System.Drawing.Size(38, 34);
+            this.Btn_Pen.Size = new System.Drawing.Size(32, 34);
             this.Btn_Pen.TabIndex = 2;
             this.Btn_Pen.Tag = "Pen";
             this.Btn_Pen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -852,10 +852,10 @@
             this.Btn_Zoom.FlatAppearance.BorderSize = 0;
             this.Btn_Zoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Zoom.Image = global::MDBEditor.Properties.Resources.zoom_general;
-            this.Btn_Zoom.Location = new System.Drawing.Point(105, 49);
+            this.Btn_Zoom.Location = new System.Drawing.Point(92, 49);
             this.Btn_Zoom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Zoom.Name = "Btn_Zoom";
-            this.Btn_Zoom.Size = new System.Drawing.Size(43, 37);
+            this.Btn_Zoom.Size = new System.Drawing.Size(37, 37);
             this.Btn_Zoom.TabIndex = 3;
             this.Btn_Zoom.Tag = "Zoom";
             this.Btn_Zoom.UseVisualStyleBackColor = true;
@@ -869,10 +869,10 @@
             this.Btn_Paint_All.FlatAppearance.BorderSize = 0;
             this.Btn_Paint_All.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Paint_All.Image = global::MDBEditor.Properties.Resources.paint_image;
-            this.Btn_Paint_All.Location = new System.Drawing.Point(56, 6);
+            this.Btn_Paint_All.Location = new System.Drawing.Point(50, 6);
             this.Btn_Paint_All.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Paint_All.Name = "Btn_Paint_All";
-            this.Btn_Paint_All.Size = new System.Drawing.Size(38, 34);
+            this.Btn_Paint_All.Size = new System.Drawing.Size(32, 34);
             this.Btn_Paint_All.TabIndex = 4;
             this.Btn_Paint_All.Tag = "Filler";
             this.Btn_Paint_All.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -885,10 +885,10 @@
             this.Btn_Add_Text.FlatAppearance.BorderSize = 0;
             this.Btn_Add_Text.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Add_Text.Image = global::MDBEditor.Properties.Resources.text;
-            this.Btn_Add_Text.Location = new System.Drawing.Point(107, 6);
+            this.Btn_Add_Text.Location = new System.Drawing.Point(94, 6);
             this.Btn_Add_Text.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_Add_Text.Name = "Btn_Add_Text";
-            this.Btn_Add_Text.Size = new System.Drawing.Size(38, 34);
+            this.Btn_Add_Text.Size = new System.Drawing.Size(33, 34);
             this.Btn_Add_Text.TabIndex = 5;
             this.Btn_Add_Text.Tag = "Text";
             this.Btn_Add_Text.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -898,7 +898,7 @@
             // GB_Shapes
             // 
             this.GB_Shapes.Controls.Add(this.TC_Shape);
-            this.GB_Shapes.Location = new System.Drawing.Point(489, 3);
+            this.GB_Shapes.Location = new System.Drawing.Point(470, 3);
             this.GB_Shapes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Shapes.Name = "GB_Shapes";
             this.GB_Shapes.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1233,6 +1233,18 @@
             this.PB_Plus.Tag = "Plus";
             this.PB_Plus.Click += new System.EventHandler(this.Select_Shape);
             // 
+            // PB_Note
+            // 
+            this.PB_Note.Image = global::MDBEditor.Properties.Resources.shape_note;
+            this.PB_Note.Location = new System.Drawing.Point(3, 29);
+            this.PB_Note.Name = "PB_Note";
+            this.PB_Note.Size = new System.Drawing.Size(20, 20);
+            this.PB_Note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Note.TabIndex = 21;
+            this.PB_Note.TabStop = false;
+            this.PB_Note.Tag = "Note";
+            this.PB_Note.Click += new System.EventHandler(this.Select_Shape);
+            // 
             // GB_Colors
             // 
             this.GB_Colors.Controls.Add(this.FLP_Colors);
@@ -1240,11 +1252,11 @@
             this.GB_Colors.Controls.Add(this.label1);
             this.GB_Colors.Controls.Add(this.Btn_Secondary_Color);
             this.GB_Colors.Controls.Add(this.Btn_Primary_Color);
-            this.GB_Colors.Location = new System.Drawing.Point(705, 3);
+            this.GB_Colors.Location = new System.Drawing.Point(686, 3);
             this.GB_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Colors.Name = "GB_Colors";
             this.GB_Colors.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GB_Colors.Size = new System.Drawing.Size(366, 113);
+            this.GB_Colors.Size = new System.Drawing.Size(367, 113);
             this.GB_Colors.TabIndex = 2;
             this.GB_Colors.TabStop = false;
             this.GB_Colors.Text = "Colors";
@@ -1252,10 +1264,11 @@
             // FLP_Colors
             // 
             this.FLP_Colors.AutoScroll = true;
-            this.FLP_Colors.Location = new System.Drawing.Point(118, 14);
+            this.FLP_Colors.Dock = System.Windows.Forms.DockStyle.Right;
+            this.FLP_Colors.Location = new System.Drawing.Point(122, 19);
             this.FLP_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FLP_Colors.Name = "FLP_Colors";
-            this.FLP_Colors.Size = new System.Drawing.Size(240, 92);
+            this.FLP_Colors.Size = new System.Drawing.Size(241, 91);
             this.FLP_Colors.TabIndex = 4;
             // 
             // label2
@@ -1679,7 +1692,7 @@
             this.GB_Text_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Text_Colors.Name = "GB_Text_Colors";
             this.GB_Text_Colors.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GB_Text_Colors.Size = new System.Drawing.Size(367, 113);
+            this.GB_Text_Colors.Size = new System.Drawing.Size(450, 113);
             this.GB_Text_Colors.TabIndex = 4;
             this.GB_Text_Colors.TabStop = false;
             this.GB_Text_Colors.Text = "Colors";
@@ -1687,10 +1700,11 @@
             // FLP_Text_Colors
             // 
             this.FLP_Text_Colors.AutoScroll = true;
-            this.FLP_Text_Colors.Location = new System.Drawing.Point(119, 14);
+            this.FLP_Text_Colors.Dock = System.Windows.Forms.DockStyle.Right;
+            this.FLP_Text_Colors.Location = new System.Drawing.Point(123, 19);
             this.FLP_Text_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FLP_Text_Colors.Name = "FLP_Text_Colors";
-            this.FLP_Text_Colors.Size = new System.Drawing.Size(240, 92);
+            this.FLP_Text_Colors.Size = new System.Drawing.Size(323, 91);
             this.FLP_Text_Colors.TabIndex = 4;
             // 
             // label11
@@ -2115,18 +2129,6 @@
             this.Continuous_Checker.Interval = 250;
             this.Continuous_Checker.Tick += new System.EventHandler(this.Continuous_Checker_Tick);
             // 
-            // PB_Note
-            // 
-            this.PB_Note.Image = global::MDBEditor.Properties.Resources.shape_note;
-            this.PB_Note.Location = new System.Drawing.Point(3, 29);
-            this.PB_Note.Name = "PB_Note";
-            this.PB_Note.Size = new System.Drawing.Size(20, 20);
-            this.PB_Note.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PB_Note.TabIndex = 21;
-            this.PB_Note.TabStop = false;
-            this.PB_Note.Tag = "Note";
-            this.PB_Note.Click += new System.EventHandler(this.Select_Shape);
-            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2193,6 +2195,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Cube)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle_Pyramid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Plus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).EndInit();
             this.GB_Colors.ResumeLayout(false);
             this.GB_Colors.PerformLayout();
             this.TP_View.ResumeLayout(false);
@@ -2223,7 +2226,6 @@
             this.groupBox5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

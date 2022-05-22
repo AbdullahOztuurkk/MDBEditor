@@ -66,6 +66,12 @@
             this.Btn_Resize_Image = new System.Windows.Forms.Button();
             this.Btn_Rotate_Image = new System.Windows.Forms.Button();
             this.Btn_Select_Area = new System.Windows.Forms.Button();
+            this.GB_Shape_Features = new System.Windows.Forms.GroupBox();
+            this.TBL_Shape_Features = new System.Windows.Forms.TableLayoutPanel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.CB_Shape_Border = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.CB_Shape_Fill = new System.Windows.Forms.ComboBox();
             this.GB_Tools = new System.Windows.Forms.GroupBox();
             this.TLP_Tools = new System.Windows.Forms.TableLayoutPanel();
             this.Btn_Erase = new System.Windows.Forms.Button();
@@ -102,6 +108,7 @@
             this.PB_Triangle_Pyramid = new System.Windows.Forms.PictureBox();
             this.PB_Plus = new System.Windows.Forms.PictureBox();
             this.PB_Note = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GB_Colors = new System.Windows.Forms.GroupBox();
             this.FLP_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -191,6 +198,8 @@
             this.GB_Paste_Box.SuspendLayout();
             this.GB_Image_Area.SuspendLayout();
             this.TLP_Image.SuspendLayout();
+            this.GB_Shape_Features.SuspendLayout();
+            this.TBL_Shape_Features.SuspendLayout();
             this.GB_Tools.SuspendLayout();
             this.TLP_Tools.SuspendLayout();
             this.GB_Shapes.SuspendLayout();
@@ -221,6 +230,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle_Pyramid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Plus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GB_Colors.SuspendLayout();
             this.TP_View.SuspendLayout();
             this.FLP_View.SuspendLayout();
@@ -619,6 +629,7 @@
             // 
             this.FLP_Prologue.Controls.Add(this.GB_Paste_Box);
             this.FLP_Prologue.Controls.Add(this.GB_Image_Area);
+            this.FLP_Prologue.Controls.Add(this.GB_Shape_Features);
             this.FLP_Prologue.Controls.Add(this.GB_Tools);
             this.FLP_Prologue.Controls.Add(this.GB_Shapes);
             this.FLP_Prologue.Controls.Add(this.GB_Colors);
@@ -628,6 +639,7 @@
             this.FLP_Prologue.Name = "FLP_Prologue";
             this.FLP_Prologue.Size = new System.Drawing.Size(1081, 117);
             this.FLP_Prologue.TabIndex = 0;
+            this.FLP_Prologue.WrapContents = false;
             // 
             // GB_Paste_Box
             // 
@@ -676,7 +688,7 @@
             this.GB_Image_Area.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Image_Area.Name = "GB_Image_Area";
             this.GB_Image_Area.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GB_Image_Area.Size = new System.Drawing.Size(188, 113);
+            this.GB_Image_Area.Size = new System.Drawing.Size(140, 113);
             this.GB_Image_Area.TabIndex = 2;
             this.GB_Image_Area.TabStop = false;
             this.GB_Image_Area.Text = "Image";
@@ -688,14 +700,14 @@
             this.TLP_Image.Controls.Add(this.Btn_Crop_Image, 0, 0);
             this.TLP_Image.Controls.Add(this.Btn_Resize_Image, 0, 1);
             this.TLP_Image.Controls.Add(this.Btn_Rotate_Image, 0, 2);
-            this.TLP_Image.Location = new System.Drawing.Point(51, 10);
+            this.TLP_Image.Location = new System.Drawing.Point(51, 14);
             this.TLP_Image.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TLP_Image.Name = "TLP_Image";
             this.TLP_Image.RowCount = 3;
             this.TLP_Image.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.TLP_Image.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
             this.TLP_Image.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.TLP_Image.Size = new System.Drawing.Size(130, 96);
+            this.TLP_Image.Size = new System.Drawing.Size(82, 92);
             this.TLP_Image.TabIndex = 1;
             // 
             // Btn_Crop_Image
@@ -709,10 +721,10 @@
             this.Btn_Crop_Image.Location = new System.Drawing.Point(4, 3);
             this.Btn_Crop_Image.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Crop_Image.Name = "Btn_Crop_Image";
-            this.Btn_Crop_Image.Size = new System.Drawing.Size(122, 25);
+            this.Btn_Crop_Image.Size = new System.Drawing.Size(74, 24);
             this.Btn_Crop_Image.TabIndex = 2;
             this.Btn_Crop_Image.Text = "Crop";
-            this.Btn_Crop_Image.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_Crop_Image.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Crop_Image.UseVisualStyleBackColor = true;
             // 
             // Btn_Resize_Image
@@ -723,12 +735,13 @@
             this.Btn_Resize_Image.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Resize_Image.Image = global::MDBEditor.Properties.Resources.resize_image;
             this.Btn_Resize_Image.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Resize_Image.Location = new System.Drawing.Point(4, 34);
+            this.Btn_Resize_Image.Location = new System.Drawing.Point(4, 33);
             this.Btn_Resize_Image.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Resize_Image.Name = "Btn_Resize_Image";
-            this.Btn_Resize_Image.Size = new System.Drawing.Size(122, 26);
+            this.Btn_Resize_Image.Size = new System.Drawing.Size(74, 24);
             this.Btn_Resize_Image.TabIndex = 3;
             this.Btn_Resize_Image.Text = "Resize";
+            this.Btn_Resize_Image.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Resize_Image.UseVisualStyleBackColor = true;
             this.Btn_Resize_Image.Click += new System.EventHandler(this.Resize_Modal_Show);
             // 
@@ -740,12 +753,13 @@
             this.Btn_Rotate_Image.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Rotate_Image.Image = global::MDBEditor.Properties.Resources.rotate_image;
             this.Btn_Rotate_Image.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Rotate_Image.Location = new System.Drawing.Point(4, 66);
+            this.Btn_Rotate_Image.Location = new System.Drawing.Point(4, 63);
             this.Btn_Rotate_Image.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Btn_Rotate_Image.Name = "Btn_Rotate_Image";
-            this.Btn_Rotate_Image.Size = new System.Drawing.Size(122, 27);
+            this.Btn_Rotate_Image.Size = new System.Drawing.Size(74, 26);
             this.Btn_Rotate_Image.TabIndex = 4;
             this.Btn_Rotate_Image.Text = "Rotate";
+            this.Btn_Rotate_Image.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Rotate_Image.UseVisualStyleBackColor = true;
             this.Btn_Rotate_Image.Click += new System.EventHandler(this.Btn_Rotate_Image_Click);
             // 
@@ -764,10 +778,95 @@
             this.Btn_Select_Area.UseVisualStyleBackColor = true;
             this.Btn_Select_Area.Click += new System.EventHandler(this.Select_Tool);
             // 
+            // GB_Shape_Features
+            // 
+            this.GB_Shape_Features.Controls.Add(this.TBL_Shape_Features);
+            this.GB_Shape_Features.Location = new System.Drawing.Point(266, 3);
+            this.GB_Shape_Features.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GB_Shape_Features.Name = "GB_Shape_Features";
+            this.GB_Shape_Features.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GB_Shape_Features.Size = new System.Drawing.Size(193, 113);
+            this.GB_Shape_Features.TabIndex = 3;
+            this.GB_Shape_Features.TabStop = false;
+            this.GB_Shape_Features.Text = "Shape Features";
+            // 
+            // TBL_Shape_Features
+            // 
+            this.TBL_Shape_Features.ColumnCount = 2;
+            this.TBL_Shape_Features.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.TBL_Shape_Features.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TBL_Shape_Features.Controls.Add(this.label14, 0, 0);
+            this.TBL_Shape_Features.Controls.Add(this.CB_Shape_Border, 1, 0);
+            this.TBL_Shape_Features.Controls.Add(this.label16, 0, 1);
+            this.TBL_Shape_Features.Controls.Add(this.CB_Shape_Fill, 1, 1);
+            this.TBL_Shape_Features.Location = new System.Drawing.Point(8, 27);
+            this.TBL_Shape_Features.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.TBL_Shape_Features.Name = "TBL_Shape_Features";
+            this.TBL_Shape_Features.RowCount = 2;
+            this.TBL_Shape_Features.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.TBL_Shape_Features.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.TBL_Shape_Features.Size = new System.Drawing.Size(177, 63);
+            this.TBL_Shape_Features.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label14.Location = new System.Drawing.Point(3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(48, 31);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Size";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CB_Shape_Border
+            // 
+            this.CB_Shape_Border.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CB_Shape_Border.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CB_Shape_Border.FormattingEnabled = true;
+            this.CB_Shape_Border.Items.AddRange(new object[] {
+            "Very Little",
+            "Smaller",
+            "Small",
+            "Normal",
+            "Big",
+            "Bigger",
+            "Huge"});
+            this.CB_Shape_Border.Location = new System.Drawing.Point(57, 3);
+            this.CB_Shape_Border.Name = "CB_Shape_Border";
+            this.CB_Shape_Border.Size = new System.Drawing.Size(117, 23);
+            this.CB_Shape_Border.TabIndex = 8;
+            this.CB_Shape_Border.SelectedIndexChanged += new System.EventHandler(this.CB_Shape_Corner_SelectedIndexChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.Location = new System.Drawing.Point(3, 31);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(48, 32);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "Fill";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CB_Shape_Fill
+            // 
+            this.CB_Shape_Fill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CB_Shape_Fill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CB_Shape_Fill.FormattingEnabled = true;
+            this.CB_Shape_Fill.Items.AddRange(new object[] {
+            "No Fill",
+            "Solid Color"});
+            this.CB_Shape_Fill.Location = new System.Drawing.Point(57, 34);
+            this.CB_Shape_Fill.Name = "CB_Shape_Fill";
+            this.CB_Shape_Fill.Size = new System.Drawing.Size(117, 23);
+            this.CB_Shape_Fill.TabIndex = 10;
+            this.CB_Shape_Fill.SelectedIndexChanged += new System.EventHandler(this.CB_Shape_Fill_SelectedIndexChanged);
+            // 
             // GB_Tools
             // 
             this.GB_Tools.Controls.Add(this.TLP_Tools);
-            this.GB_Tools.Location = new System.Drawing.Point(314, 3);
+            this.GB_Tools.Location = new System.Drawing.Point(467, 3);
             this.GB_Tools.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Tools.Name = "GB_Tools";
             this.GB_Tools.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -898,7 +997,7 @@
             // GB_Shapes
             // 
             this.GB_Shapes.Controls.Add(this.TC_Shape);
-            this.GB_Shapes.Location = new System.Drawing.Point(470, 3);
+            this.GB_Shapes.Location = new System.Drawing.Point(623, 3);
             this.GB_Shapes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Shapes.Name = "GB_Shapes";
             this.GB_Shapes.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -1143,6 +1242,7 @@
             this.FLP_Shapes.Controls.Add(this.PB_Triangle_Pyramid);
             this.FLP_Shapes.Controls.Add(this.PB_Plus);
             this.FLP_Shapes.Controls.Add(this.PB_Note);
+            this.FLP_Shapes.Controls.Add(this.pictureBox1);
             this.FLP_Shapes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FLP_Shapes.Location = new System.Drawing.Point(3, 3);
             this.FLP_Shapes.Name = "FLP_Shapes";
@@ -1245,6 +1345,17 @@
             this.PB_Note.Tag = "Note";
             this.PB_Note.Click += new System.EventHandler(this.Select_Shape);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MDBEditor.Properties.Resources.shape_note;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "Note";
+            // 
             // GB_Colors
             // 
             this.GB_Colors.Controls.Add(this.FLP_Colors);
@@ -1252,7 +1363,7 @@
             this.GB_Colors.Controls.Add(this.label1);
             this.GB_Colors.Controls.Add(this.Btn_Secondary_Color);
             this.GB_Colors.Controls.Add(this.Btn_Primary_Color);
-            this.GB_Colors.Location = new System.Drawing.Point(686, 3);
+            this.GB_Colors.Location = new System.Drawing.Point(839, 3);
             this.GB_Colors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GB_Colors.Name = "GB_Colors";
             this.GB_Colors.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -2145,6 +2256,7 @@
             this.Name = "MasterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDBEditor";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Detect_Key);
             this.TC_Menu.ResumeLayout(false);
             this.TP_General.ResumeLayout(false);
@@ -2166,6 +2278,9 @@
             this.GB_Paste_Box.ResumeLayout(false);
             this.GB_Image_Area.ResumeLayout(false);
             this.TLP_Image.ResumeLayout(false);
+            this.GB_Shape_Features.ResumeLayout(false);
+            this.TBL_Shape_Features.ResumeLayout(false);
+            this.TBL_Shape_Features.PerformLayout();
             this.GB_Tools.ResumeLayout(false);
             this.TLP_Tools.ResumeLayout(false);
             this.GB_Shapes.ResumeLayout(false);
@@ -2196,6 +2311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle_Pyramid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Plus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GB_Colors.ResumeLayout(false);
             this.GB_Colors.PerformLayout();
             this.TP_View.ResumeLayout(false);
@@ -2373,6 +2489,13 @@
         private System.Windows.Forms.FlowLayoutPanel FLP_Shape_Page_1;
         private System.Windows.Forms.TabPage TC_Shape_Page_2;
         private System.Windows.Forms.PictureBox PB_Note;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox GB_Shape_Features;
+        private System.Windows.Forms.TableLayoutPanel TBL_Shape_Features;
+        private System.Windows.Forms.ComboBox CB_Shape_Fill;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox CB_Shape_Border;
     }
 }
 

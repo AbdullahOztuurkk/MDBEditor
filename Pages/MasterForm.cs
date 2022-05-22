@@ -52,6 +52,8 @@ namespace MDBEditor
             FLP_Text_Colors.Get_Colors();
             Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
             TC_Menu.TabPages.Remove(TP_Text);
+            CB_Shape_Border.SelectedIndex = 3; //Normal Size
+            CB_Shape_Fill.SelectedIndex = 0; //No Fill
 
             //Add grid control to drawing board
             BoxWithGrid = new PictureBoxWithGrid(PB_Drawing_Board.Size);
@@ -74,7 +76,7 @@ namespace MDBEditor
             zoomTool = new ZoomTool(PB_Drawing_Board);
             selectAreaTool = new SelectAreaTool();
         }
-
+        
         public void Select_Color_From_Button(object sender, EventArgs e)
         {
             Button selectedButton = sender as Button;
@@ -186,7 +188,7 @@ namespace MDBEditor
                                             .Fill(g, selectAreaTool.SelectedRect, new SolidBrush(primaryColor));
                                     else
                                         ShapeFactory.Create((GeometricalShape)currentShape)
-                                            .Draw(g, selectAreaTool.SelectedRect, new Pen(primaryColor, penTool.Size));
+                                            .Draw(g, selectAreaTool.SelectedRect, new Pen(primaryColor, ShapeOptions.BorderSize));
                                 }
                             }
                         }
@@ -241,16 +243,13 @@ namespace MDBEditor
                 if (currentShape != null && selectAreaTool.SelectedRect.Width > 1)
                 {
                     undoRedoStack.Save(PB_Drawing_Board.TakeSnapshot());
-                    if (ShapeOptions.IsFilled == true) {
+                    if (ShapeOptions.IsFilled == true)
                         ShapeFactory.Create((GeometricalShape)currentShape)
                             .Fill(BoardGraphics, selectAreaTool.SelectedRect, new SolidBrush(primaryColor));
-                        selectAreaTool.Clear();
-                    }
-                    else {
+                    else 
                         ShapeFactory.Create((GeometricalShape)currentShape)
-                            .Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(primaryColor, penTool.Size));
-                        selectAreaTool.Clear();
-                    }
+                            .Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(primaryColor, ShapeOptions.BorderSize));
+                    selectAreaTool.Clear();
                 }
             }
             lastPoint = e.Location;
@@ -466,6 +465,16 @@ namespace MDBEditor
             PictureBox pb = sender as PictureBox;
             currentShape = (GeometricalShape)Enum.Parse(typeof(GeometricalShape), pb.Tag.ToString());
             currentTool = DrawingTool.Select_Area;
+        }
+
+        private void CB_Shape_Fill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShapeOptions.IsFilled = CB_Shape_Fill.SelectedIndex == 1;
+        }
+
+        private void CB_Shape_Corner_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShapeOptions.BorderStatus = (ShapeBorderStatus)CB_Shape_Border.SelectedIndex;
         }
     }
 }

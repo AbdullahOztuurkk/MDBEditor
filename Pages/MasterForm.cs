@@ -181,8 +181,12 @@ namespace MDBEditor
                                 g.DrawRectangle(Pens.Red, selectAreaTool.SelectedRect);
                                 if (currentShape != null && selectAreaTool.SelectedRect.Width > 1)
                                 {
-                                    ShapeFactory.Create((GeometricalShape)currentShape)
-                                        .Draw(g, selectAreaTool.SelectedRect, new Pen(primaryColor, penTool.Size));
+                                    if(ShapeOptions.IsFilled == true)
+                                        ShapeFactory.Create((GeometricalShape)currentShape)
+                                            .Fill(g, selectAreaTool.SelectedRect, new SolidBrush(primaryColor));
+                                    else
+                                        ShapeFactory.Create((GeometricalShape)currentShape)
+                                            .Draw(g, selectAreaTool.SelectedRect, new Pen(primaryColor, penTool.Size));
                                 }
                             }
                         }
@@ -237,9 +241,16 @@ namespace MDBEditor
                 if (currentShape != null && selectAreaTool.SelectedRect.Width > 1)
                 {
                     undoRedoStack.Save(PB_Drawing_Board.TakeSnapshot());
-                    ShapeFactory.Create((GeometricalShape)currentShape)
-                        .Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(primaryColor, penTool.Size));
-                    selectAreaTool.Clear();
+                    if (ShapeOptions.IsFilled == true) {
+                        ShapeFactory.Create((GeometricalShape)currentShape)
+                            .Fill(BoardGraphics, selectAreaTool.SelectedRect, new SolidBrush(primaryColor));
+                        selectAreaTool.Clear();
+                    }
+                    else {
+                        ShapeFactory.Create((GeometricalShape)currentShape)
+                            .Draw(BoardGraphics, selectAreaTool.SelectedRect, new Pen(primaryColor, penTool.Size));
+                        selectAreaTool.Clear();
+                    }
                 }
             }
             lastPoint = e.Location;

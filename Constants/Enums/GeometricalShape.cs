@@ -25,5 +25,6 @@
         Plus                = 21,
         Note                = 22,
         Envelope            = 23,
+        EightPointedStar    = 24,
     }
 }

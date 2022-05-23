@@ -109,6 +109,7 @@
             this.PB_Plus = new System.Windows.Forms.PictureBox();
             this.PB_Note = new System.Windows.Forms.PictureBox();
             this.PB_Envelope = new System.Windows.Forms.PictureBox();
+            this.PB_Eight_Pointed_Star = new System.Windows.Forms.PictureBox();
             this.GB_Colors = new System.Windows.Forms.GroupBox();
             this.FLP_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -231,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Plus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Envelope)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Eight_Pointed_Star)).BeginInit();
             this.GB_Colors.SuspendLayout();
             this.TP_View.SuspendLayout();
             this.FLP_View.SuspendLayout();
@@ -1243,6 +1245,7 @@
             this.FLP_Shapes.Controls.Add(this.PB_Plus);
             this.FLP_Shapes.Controls.Add(this.PB_Note);
             this.FLP_Shapes.Controls.Add(this.PB_Envelope);
+            this.FLP_Shapes.Controls.Add(this.PB_Eight_Pointed_Star);
             this.FLP_Shapes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FLP_Shapes.Location = new System.Drawing.Point(3, 3);
             this.FLP_Shapes.Name = "FLP_Shapes";
@@ -1356,6 +1359,18 @@
             this.PB_Envelope.TabStop = false;
             this.PB_Envelope.Tag = "Envelope";
             this.PB_Envelope.Click += new System.EventHandler(this.Select_Shape);
+            // 
+            // PB_Eight_Pointed_Star
+            // 
+            this.PB_Eight_Pointed_Star.Image = global::MDBEditor.Properties.Resources.shape_eight_pointed_star;
+            this.PB_Eight_Pointed_Star.Location = new System.Drawing.Point(55, 29);
+            this.PB_Eight_Pointed_Star.Name = "PB_Eight_Pointed_Star";
+            this.PB_Eight_Pointed_Star.Size = new System.Drawing.Size(20, 20);
+            this.PB_Eight_Pointed_Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Eight_Pointed_Star.TabIndex = 23;
+            this.PB_Eight_Pointed_Star.TabStop = false;
+            this.PB_Eight_Pointed_Star.Tag = "EightPointedStar";
+            this.PB_Eight_Pointed_Star.Click += new System.EventHandler(this.Select_Shape);
             // 
             // GB_Colors
             // 
@@ -2313,6 +2328,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Plus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Envelope)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Eight_Pointed_Star)).EndInit();
             this.GB_Colors.ResumeLayout(false);
             this.GB_Colors.PerformLayout();
             this.TP_View.ResumeLayout(false);
@@ -2497,6 +2513,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox CB_Shape_Border;
+        private System.Windows.Forms.PictureBox PB_Eight_Pointed_Star;
     }
 }
 

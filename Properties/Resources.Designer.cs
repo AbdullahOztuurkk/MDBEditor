@@ -433,6 +433,26 @@ namespace MDBEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shape_eight_pointed_star {
+            get {
+                object obj = ResourceManager.GetObject("shape_eight_pointed_star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shape_envelope {
+            get {
+                object obj = ResourceManager.GetObject("shape_envelope", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shape_four_pointed_star {
             get {
                 object obj = ResourceManager.GetObject("shape_four_pointed_star", resourceCulture);

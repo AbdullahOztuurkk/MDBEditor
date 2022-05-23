@@ -24,5 +24,6 @@
         TrianglePyramid     = 20,
         Plus                = 21,
         Note                = 22,
+        Envelope            = 23,
     }
 }

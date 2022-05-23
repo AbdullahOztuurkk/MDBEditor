@@ -108,7 +108,7 @@
             this.PB_Triangle_Pyramid = new System.Windows.Forms.PictureBox();
             this.PB_Plus = new System.Windows.Forms.PictureBox();
             this.PB_Note = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PB_Envelope = new System.Windows.Forms.PictureBox();
             this.GB_Colors = new System.Windows.Forms.GroupBox();
             this.FLP_Colors = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -230,7 +230,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle_Pyramid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Plus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Envelope)).BeginInit();
             this.GB_Colors.SuspendLayout();
             this.TP_View.SuspendLayout();
             this.FLP_View.SuspendLayout();
@@ -1242,7 +1242,7 @@
             this.FLP_Shapes.Controls.Add(this.PB_Triangle_Pyramid);
             this.FLP_Shapes.Controls.Add(this.PB_Plus);
             this.FLP_Shapes.Controls.Add(this.PB_Note);
-            this.FLP_Shapes.Controls.Add(this.pictureBox1);
+            this.FLP_Shapes.Controls.Add(this.PB_Envelope);
             this.FLP_Shapes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FLP_Shapes.Location = new System.Drawing.Point(3, 3);
             this.FLP_Shapes.Name = "FLP_Shapes";
@@ -1345,16 +1345,17 @@
             this.PB_Note.Tag = "Note";
             this.PB_Note.Click += new System.EventHandler(this.Select_Shape);
             // 
-            // pictureBox1
+            // PB_Envelope
             // 
-            this.pictureBox1.Image = global::MDBEditor.Properties.Resources.shape_note;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "Note";
+            this.PB_Envelope.Image = global::MDBEditor.Properties.Resources.shape_envelope;
+            this.PB_Envelope.Location = new System.Drawing.Point(29, 29);
+            this.PB_Envelope.Name = "PB_Envelope";
+            this.PB_Envelope.Size = new System.Drawing.Size(20, 20);
+            this.PB_Envelope.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Envelope.TabIndex = 22;
+            this.PB_Envelope.TabStop = false;
+            this.PB_Envelope.Tag = "Envelope";
+            this.PB_Envelope.Click += new System.EventHandler(this.Select_Shape);
             // 
             // GB_Colors
             // 
@@ -2311,7 +2312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Triangle_Pyramid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Plus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Note)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Envelope)).EndInit();
             this.GB_Colors.ResumeLayout(false);
             this.GB_Colors.PerformLayout();
             this.TP_View.ResumeLayout(false);
@@ -2489,7 +2490,7 @@
         private System.Windows.Forms.FlowLayoutPanel FLP_Shape_Page_1;
         private System.Windows.Forms.TabPage TC_Shape_Page_2;
         private System.Windows.Forms.PictureBox PB_Note;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PB_Envelope;
         private System.Windows.Forms.GroupBox GB_Shape_Features;
         private System.Windows.Forms.TableLayoutPanel TBL_Shape_Features;
         private System.Windows.Forms.ComboBox CB_Shape_Fill;

@@ -22,7 +22,7 @@ was developed based on MSPaint and continues to be published as open source for 
 
 Contributions are always welcome!
 
-See [CONTRIBUTING.md][/CONTRIBUTING.md] for ways to get started.
+See [CONTRIBUTING.md](/CONTRIBUTING.md) for ways to get started.
 
 ### Tech Stack
 

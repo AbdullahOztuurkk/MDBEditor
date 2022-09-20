@@ -22,12 +22,16 @@ was developed based on MSPaint and continues to be published as open source for 
 
 Contributions are always welcome!
 
-See CONTRIBUTING.md for ways to get started.
+See [CONTRIBUTING.md][/CONTRIBUTING.md] for ways to get started.
 
-## Feedback
+### Tech Stack
 
-Feedback is appreciated! Reach out on [Twitter](https://twitter.com/AbdullahOztuurkk) or submit a new issue!
+This project has been developed with .NET 6 as WinForms Application.
 
-## License
+### Feedback
+
+Feedback is appreciated! Reach out on [Twitter](https://twitter.com/AbdullahOztuurk) or submit a new issue!
+
+### License
 
 [MIT](/LICENSE)

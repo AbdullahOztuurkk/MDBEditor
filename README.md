@@ -3,7 +3,7 @@
 MDBEditor, an application with embedded tools that allows users to create images from scratch, 
 was developed based on MSPaint and continues to be published as open source for all users to benefit from.
 
-### Features
+## Features
 
 - :white_check_mark: User can open image, create new image or save as image
 - :white_check_mark: Image has been saveable as PNG, BMP, JPG, TIFF, GIF, ICO or WMF
@@ -17,21 +17,53 @@ was developed based on MSPaint and continues to be published as open source for 
 - :white_check_mark: User can crop as whatever he/she want
 - :wrench: User can use pen, eraser, zoom etc tools except filler tool.
 - :wrench: Drawing board cannot be resized with mouse due of image despution
+- :x: Application doesnt have beatiful icon yet. 
 
-### Contributing
+## Screenshots
+
+Home Page            |  Home Page With Ruler and Grid Lines
+:-------------------------:|:-------------------------:
+![](./Screenshots/home-page.png)  |  ![](./Screenshots/home-page-with-ruler-and-gridlines.png)
+
+## Installation
+
+Clone the project
+
+```bash
+  git clone git@github.com:AbdullahOztuurkk/MDBEditor.git
+```
+
+Go to project folder
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  dotnet restore
+```
+Run the application
+
+```bash
+  dotnet run
+```
+
+## 🎉 Contributing
 
 Contributions are always welcome!
 
 See [CONTRIBUTING.md](/CONTRIBUTING.md) for ways to get started.
 
-### Tech Stack
+## Tech Stack
 
 This project has been developed with .NET 6 as WinForms Application.
 
-### Feedback
+## Feedback
 
 Feedback is appreciated! Reach out on [Twitter](https://twitter.com/AbdullahOztuurk) or submit a new issue!
 
-### License
+## License
 
 [MIT](/LICENSE)

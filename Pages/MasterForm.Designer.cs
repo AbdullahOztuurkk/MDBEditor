@@ -1,4 +1,6 @@
-﻿namespace MDBEditor
+﻿using MDBEditor.Controls;
+
+namespace MDBEditor
 {
     partial class MasterForm
     {
@@ -164,7 +166,7 @@
             this.Panel_Drawing_Board = new System.Windows.Forms.Panel();
             this.PB_Ruler_Top = new System.Windows.Forms.PictureBox();
             this.PB_Ruler_Left = new System.Windows.Forms.PictureBox();
-            this.PB_Drawing_Board = new System.Windows.Forms.PictureBox();
+            this.PB_Drawing_Board = new ResizablePictureBox();
             this.Status_Bar = new System.Windows.Forms.StatusStrip();
             this.Lbl_Mouse_Coordinates = new System.Windows.Forms.ToolStripStatusLabel();
             this.Lbl_Page_Size = new System.Windows.Forms.ToolStripStatusLabel();
@@ -2463,7 +2465,7 @@
         private System.Windows.Forms.FontDialog Font_Dialog;
         private System.Windows.Forms.Button Btn_Copy_To_Clipboard;
         private System.Windows.Forms.ToolStripStatusLabel Lbl_Page_Size;
-        private System.Windows.Forms.PictureBox PB_Drawing_Board;
+        private ResizablePictureBox PB_Drawing_Board;
         private System.Windows.Forms.GroupBox GB_Text_Type;
         private System.Windows.Forms.Button PB_Font_Dialog;
         private System.Windows.Forms.PictureBox PB_Ruler_Top;

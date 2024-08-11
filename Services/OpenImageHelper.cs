@@ -8,8 +8,8 @@ public static class OpenImageHelper
     {
         string fileName = string.Empty;
         using OpenFileDialog openFileDialog = new OpenFileDialog();
-        openFileDialog.Title = SettingProvider.OpenFileTitle;
-        openFileDialog.Filter = SettingProvider.OpenFileFilter;
+        openFileDialog.Title = MessageProvider.OpenFileTitle;
+        openFileDialog.Filter = FileSettings.OpenFileFilter;
         openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
         if (DialogResult.OK == openFileDialog.ShowDialog())
@@ -21,7 +21,7 @@ public static class OpenImageHelper
             }
             else
             {
-                if (DialogResult.Yes ==  MessageBox.Show(MessageProvider.OpenFileWhileUnsavedChanges, SettingProvider.OpenFileDialogTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                if (DialogResult.Yes == MessageBox.Show(MessageProvider.OpenFileWhileUnsavedChanges, MessageProvider.OpenFileDialogTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                 {
                     pictureBox.Image = new Bitmap(openFileDialog.FileName);
                 }
@@ -30,7 +30,7 @@ public static class OpenImageHelper
 
         if (string.IsNullOrEmpty(fileName))
         {
-            form.Text = string.Format(format: "{0} - {1}", SettingProvider.ApplicationName, fileName);
+            form.Text = string.Format(format: "{0} - {1}", ApplicationName, fileName);
         }
     }
 
@@ -44,7 +44,7 @@ public static class OpenImageHelper
         }
         else
         {
-            if (DialogResult.Yes == MessageBox.Show(MessageProvider.OpenFileWhileUnsavedChanges,SettingProvider.OpenFileDialogTitle,MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            if (DialogResult.Yes == MessageBox.Show(MessageProvider.OpenFileWhileUnsavedChanges, MessageProvider.OpenFileDialogTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
                 pictureBox.Image = new Bitmap(pictureBox.Width, pictureBox.Height); ;
                 isNewImage = true;
@@ -53,7 +53,7 @@ public static class OpenImageHelper
 
         if (isNewImage)
         {
-            form.Text = string.Format(format: "{0} - {1}", SettingProvider.ApplicationName, SettingProvider.Untitled);
+            form.Text = string.Format(format: "{0} - {1}", ApplicationName, MessageProvider.Untitled);
         }
     }
 }

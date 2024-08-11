@@ -164,7 +164,7 @@ public partial class MasterForm : Form
                     }
                     break;
                 case DrawingTool.Filler:
-                    fillerTool.BackColor = Color.Blue;
+                    fillerTool.Color = Color.Blue;
                     fillerTool.Location = e.Location;
                     fillerTool.Handle();
                     //TODO:Needs Flood Fill Algorithm

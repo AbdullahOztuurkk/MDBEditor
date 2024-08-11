@@ -16,7 +16,7 @@ public static class FormHelper
             Color color = Color.FromKnownColor(knowColor);
             PictureBox pb = new PictureBox()
             {
-                Size = new Size(MenuSettings.BOX_SIZE, MenuSettings.BOX_SIZE),
+                Size = new Size(MenuSettings.BoxSize, MenuSettings.BoxSize),
                 BackColor = color,
                 BorderStyle = BorderStyle.FixedSingle,
             };

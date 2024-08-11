@@ -1,8 +1,7 @@
-﻿using MDBEditor.Tools.Interfaces.General;
-using System;
+﻿using System;
 using System.Drawing;
 
-namespace MDBEditor.Tools.Interfaces;
+namespace MDBEditor.Tools.Common;
 
 public interface ITextTool : ITool
 {

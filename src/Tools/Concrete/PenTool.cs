@@ -1,8 +1,4 @@
-﻿using MDBEditor.Tools.Interfaces;
-using System.Drawing;
-using static MDBEditor.Constants.Global;
-
-namespace MDBEditor.Tools.Concrete;
+﻿namespace MDBEditor.Tools.Concrete;
 
 public class PenTool : IPenTool
 {

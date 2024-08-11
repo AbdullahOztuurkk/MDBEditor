@@ -1,8 +1,4 @@
-﻿using MDBEditor.Tools.Interfaces;
-using System.Drawing;
-using System.Windows.Forms;
-
-namespace MDBEditor.Tools.Concrete;
+﻿namespace MDBEditor.Tools.Concrete;
 
 public class ColorPickerTool : IColorPickerTool
 {

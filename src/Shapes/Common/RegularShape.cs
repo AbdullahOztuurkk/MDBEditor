@@ -1,5 +1,4 @@
-﻿using MDBEditor.Shapes.Interfaces;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace MDBEditor.Shapes.Common;
 

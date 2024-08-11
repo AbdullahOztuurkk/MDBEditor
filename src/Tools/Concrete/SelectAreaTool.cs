@@ -1,6 +1,5 @@
-﻿using MDBEditor.Tools.Interfaces;
-using System.Drawing;
-using System.Drawing.Drawing2D;
+﻿using System.Drawing.Drawing2D;
+using Rectangle = System.Drawing.Rectangle;
 
 namespace MDBEditor.Tools.Concrete;
 

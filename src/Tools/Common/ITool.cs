@@ -1,4 +1,4 @@
-﻿namespace MDBEditor.Tools.Interfaces.General;
+﻿namespace MDBEditor.Tools.Common;
 
 public interface ITool
 {

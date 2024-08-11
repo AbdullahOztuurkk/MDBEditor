@@ -1,7 +1,6 @@
-﻿using MDBEditor.Tools.Interfaces.General;
-using System.Drawing;
+﻿using System.Drawing;
 
-namespace MDBEditor.Tools.Interfaces;
+namespace MDBEditor.Tools.Common;
 
 public interface IEraserTool : ITool
 {

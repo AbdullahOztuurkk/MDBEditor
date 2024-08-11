@@ -1,5 +1,5 @@
 ﻿using MDBEditor.Constants;
-using MDBEditor.Tools.Interfaces;
+using MDBEditor.Tools.Common;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using static MDBEditor.Constants.Global;

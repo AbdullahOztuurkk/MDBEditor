@@ -1,6 +1,6 @@
-﻿using System.Drawing;
+﻿using Rectangle = System.Drawing.Rectangle;
 
-namespace MDBEditor.Tools.Interfaces;
+namespace MDBEditor.Tools.Common;
 
 public interface ISelectAreaTool
 {

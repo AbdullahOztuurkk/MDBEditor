@@ -1,9 +1,4 @@
-﻿using MDBEditor.Tools.Interfaces;
-using System;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Windows.Forms;
-using static MDBEditor.Constants.Global;
+﻿using System.Drawing.Drawing2D;
 
 namespace MDBEditor.Tools.Concrete;
 

@@ -1,6 +1,4 @@
-﻿using MDBEditor.Tools.Interfaces.General;
-
-namespace MDBEditor.Tools.Interfaces;
+﻿namespace MDBEditor.Tools.Common;
 
 public interface IZoomTool : ITool
 {

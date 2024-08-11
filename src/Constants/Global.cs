@@ -14,7 +14,7 @@ public static class Global
 
     public static class MenuSettings
     {
-        public const short BOX_SIZE = 20;
+        public const short BoxSize = 20;
         public static readonly Color DefaultToolColor = SystemColors.Control;
         public static readonly Color CurrentToolColor = SystemColors.ControlLight;
     }

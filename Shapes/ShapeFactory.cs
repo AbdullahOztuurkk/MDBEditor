@@ -1,23 +1,14 @@
-﻿using MDBEditor.Constants.Enums;
-using MDBEditor.Shapes.Concrete;
-using MDBEditor.Shapes.Interfaces;
-using System;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection;
+﻿namespace MDBEditor.Shapes;
 
-namespace MDBEditor.Shapes
+public static class ShapeFactory
 {
-    public static class ShapeFactory
+    public static IShape Create(GeometricalShape shape)
     {
-        public static IShape Create(GeometricalShape shape)
-        {
-            var assembly = Assembly.GetExecutingAssembly();
+        var assembly = Assembly.GetExecutingAssembly();
 
-            var type = assembly.GetTypes()
-                .First(t => t.Name == shape.ToString());
+        var type = assembly.GetTypes()
+            .FirstOrDefault(x => x.GetCustomAttribute<ShapeAttribute>()?.Shape == shape);
 
-            return (IShape)Activator.CreateInstance(type);
-        }
+        return (IShape?)Activator.CreateInstance(type);
     }
 }

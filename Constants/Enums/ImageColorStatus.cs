@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MDBEditor.Constants.Enums;
 
-namespace MDBEditor.Constants.Enums
+public enum ImageColorStatus
 {
-    public enum ImageColorStatus
-    {
-        Colored,
-        Grayscale
-    }
+    Colored,
+    Grayscale
 }

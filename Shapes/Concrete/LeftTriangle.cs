@@ -1,18 +1,17 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 
-namespace MDBEditor.Shapes.Concrete
+namespace MDBEditor.Shapes.Concrete;
+
+[Shape(GeometricalShape.LeftTriangle)]
+public class LeftTriangle : RegularShape
 {
-    public class LeftTriangle : RegularShapeBase
+    public override Point[] GetCoordinates(System.Drawing.Rectangle rect)
     {
-        public override Point[] GetCoordinates(System.Drawing.Rectangle rect)
+        return new Point[]
         {
-            return new Point[]
-            {
-                new Point(rect.Right, rect.Top),
-                new Point(rect.Right, rect.Bottom),
-                new Point(rect.Left, rect.Top + (rect.Height / 2)),
-            };
-        }
+            new Point(rect.Right, rect.Top),
+            new Point(rect.Right, rect.Bottom),
+            new Point(rect.Left, rect.Top + (rect.Height / 2)),
+        };
     }
 }

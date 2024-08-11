@@ -1,17 +1,17 @@
 ﻿using System.Drawing;
 
-namespace MDBEditor.Shapes.Concrete
+namespace MDBEditor.Shapes.Concrete;
+
+[Shape(GeometricalShape.BottomTriangle)]
+public class BottomTriangle : RegularShape
 {
-    public class BottomTriangle : RegularShapeBase
+    public override Point[] GetCoordinates(System.Drawing.Rectangle rect)
     {
-        public override Point[] GetCoordinates(System.Drawing.Rectangle rect)
+        return new Point[]
         {
-            return new Point[]
-            {
-                new Point(rect.Left, rect.Top),
-                new Point(rect.Right, rect.Top),
-                new Point(rect.Left + (rect.Width /2 ), rect.Bottom),
-            };
-        }
+            new Point(rect.Left, rect.Top),
+            new Point(rect.Right, rect.Top),
+            new Point(rect.Left + (rect.Width /2 ), rect.Bottom),
+        };
     }
 }

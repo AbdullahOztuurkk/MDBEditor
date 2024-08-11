@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Screenshots\" />
+    <Folder Include="assets\" />
   </ItemGroup>
 
 </Project>

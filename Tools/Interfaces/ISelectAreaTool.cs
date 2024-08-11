@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
-namespace MDBEditor.Tools.Interfaces
+namespace MDBEditor.Tools.Interfaces;
+
+public interface ISelectAreaTool
 {
-    public interface ISelectAreaTool
-    {
-        public Rectangle SelectedRect { get; set; }
-        public Pen Pen { get; }
-    }
+    public Rectangle SelectedArea { get; set; }
+    public Pen Pen { get; }
 }

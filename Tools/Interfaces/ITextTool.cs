@@ -2,16 +2,15 @@
 using System;
 using System.Drawing;
 
-namespace MDBEditor.Tools.Interfaces
+namespace MDBEditor.Tools.Interfaces;
+
+public interface ITextTool : ITool
 {
-    public interface ITextTool:ITool
-    {
-        public Point Loc { get; set; }
-        public Font Font { get; set; }
-        public String Text { get; set; }
-        public float Size { get; }
-        public FontStyle FontStyle { get; }
-        public Color ForeColor { get; set; }
-        public Color SideColor { get; set; }
-    }
+    public Point Location { get; set; }
+    public Font Font { get; set; }
+    public string Text { get; set; }
+    public float FontSize { get; }
+    public FontStyle FontStyle { get; }
+    public Color ForeColor { get; set; }
+    public Color SideColor { get; set; }
 }

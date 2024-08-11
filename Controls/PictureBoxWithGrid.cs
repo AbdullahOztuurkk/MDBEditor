@@ -1,44 +1,36 @@
-﻿using MDBEditor.Constants;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static MDBEditor.Constants.Global;
 
-namespace MDBEditor.Controls
+namespace MDBEditor.Controls;
+
+public class PictureBoxWithGrid : PictureBox
 {
-    public class PictureBoxWithGrid : PictureBox
+    public PictureBoxWithGrid(Size size)
     {
-        int numOfCells, cellSize;
-        public PictureBoxWithGrid(Size size)
-        {
-            this.Size = size;
-            this.BackColor = Color.Transparent;
-            this.Enabled = false;
-            this.Dock = DockStyle.Fill;
-            this.Visible = false;
-            numOfCells = AppSettings.NUM_OF_CELLS;
-            cellSize = AppSettings.CELL_OF_SIZE;
-        }
-        /// <summary>
-        /// Draw grid lines on picture box
-        /// </summary>
-        protected override void OnPaint(PaintEventArgs pe)
-        {
-            Graphics g = pe.Graphics;
-            Pen p = new Pen(AppSettings.PEN_FORECOLOR);
+        this.Size = size;
+        this.BackColor = Color.Transparent;
+        this.Enabled = false;
+        this.Dock = DockStyle.Fill;
+        this.Visible = false;
+    }
+    /// <summary>
+    /// Draw grid lines on picture box
+    /// </summary>
+    protected override void OnPaint(PaintEventArgs pe)
+    {
+        Graphics g = pe.Graphics;
+        Pen p = new Pen(GridSettings.PenForeColor);
 
-            for (int y = 0; y < numOfCells; ++y)
-            {
-                g.DrawLine(p, 0, y * cellSize, numOfCells * cellSize, y * cellSize);
-            }
+        Parallel.For(0, GridSettings.CellLimit, cell =>
+        {
+            g.DrawLine(p, 0, cell * GridSettings.CellSize, GridSettings.CellLimit * GridSettings.CellSize, cell * GridSettings.CellSize);
+        });
 
-            for (int x = 0; x < numOfCells; ++x)
-            {
-                g.DrawLine(p, x * cellSize, 0, x * cellSize, numOfCells * cellSize);
-            }
-        }
+        Parallel.For(0, GridSettings.CellLimit, cell =>
+        {
+            g.DrawLine(p, cell * GridSettings.CellSize, 0, cell * GridSettings.CellSize, GridSettings.CellLimit * GridSettings.CellSize);
+        });
     }
 }

@@ -1,13 +1,12 @@
-﻿namespace MDBEditor.Constants.Enums
+﻿namespace MDBEditor.Constants.Enums;
+
+public enum ShapeBorderStatus
 {
-    public enum ShapeBorderStatus
-    {
-        VerySmall,
-        Smaller  ,
-        Small    ,
-        Normal   ,
-        Big      ,
-        Bigger   ,
-        VeryBig  ,
-    }
+    VerySmall,
+    Smaller,
+    Small,
+    Normal,
+    Big,
+    Bigger,
+    VeryBig,
 }

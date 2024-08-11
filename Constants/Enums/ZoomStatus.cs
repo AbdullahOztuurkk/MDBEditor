@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MDBEditor.Constants.Enums;
 
-namespace MDBEditor.Constants.Enums
+public enum ZoomStatus
 {
-    public enum ZoomStatus
-    {
-        ZoomIn,
-        ZoomOut,
-        ZoomToNormal
-    }
+    ZoomIn,
+    ZoomOut,
+    ZoomToNormal
 }

@@ -562,34 +562,6 @@ namespace MDBEditor
             this.TLP_Features.Size = new System.Drawing.Size(140, 91);
             this.TLP_Features.TabIndex = 0;
             // 
-            // label9
-            // 
-            this.TLP_Features.SetColumnSpan(this.label9, 2);
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(0, 67);
-            this.label9.Margin = new System.Windows.Forms.Padding(0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 24);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "About";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Click += new System.EventHandler(this.Show_About_Box);
-            // 
-            // button25
-            // 
-            this.button25.BackgroundImage = global::MDBEditor.Properties.Resources.info;
-            this.button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button25.FlatAppearance.BorderSize = 0;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Location = new System.Drawing.Point(18, 26);
-            this.button25.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(36, 38);
-            this.button25.TabIndex = 1;
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.Show_About_Box);
-            // 
             // Btn_Features
             // 
             this.Btn_Features.BackgroundImage = global::MDBEditor.Properties.Resources.features;
@@ -792,7 +764,7 @@ namespace MDBEditor
             this.GB_Shape_Features.Size = new System.Drawing.Size(193, 113);
             this.GB_Shape_Features.TabIndex = 3;
             this.GB_Shape_Features.TabStop = false;
-            this.GB_Shape_Features.Text = "Shape Features";
+            this.GB_Shape_Features.Text = "RegularShape Features";
             // 
             // TBL_Shape_Features
             // 
@@ -820,7 +792,7 @@ namespace MDBEditor
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(48, 31);
             this.label14.TabIndex = 5;
-            this.label14.Text = "Size";
+            this.label14.Text = "FontSize";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CB_Shape_Border

@@ -1,0 +1,15 @@
+﻿global using MDBEditor.Constants;
+global using MDBEditor.Constants.Attributes;
+global using MDBEditor.Constants.Enums;
+global using MDBEditor.Constants.Models;
+global using MDBEditor.Helpers;
+global using MDBEditor.Shapes.Common;
+global using MDBEditor.Shapes.Interfaces;
+global using System;
+global using System.Drawing;
+global using System.Drawing.Printing;
+global using System.IO;
+global using System.Linq;
+global using System.Reflection;
+global using System.Windows.Forms;
+global using static MDBEditor.Constants.Global;

@@ -23,7 +23,7 @@ was developed based on MSPaint and continues to be published as open source for 
 
 Home Page            |  Home Page With Ruler and Grid Lines
 :-------------------------:|:-------------------------:
-![](./Screenshots/home-page.png)  |  ![](./Screenshots/home-page-with-ruler-and-gridlines.png)
+![](./assets/home-page.png)  |  ![](./assets/home-page-with-ruler-and-gridlines.png)
 
 ## Installation
 

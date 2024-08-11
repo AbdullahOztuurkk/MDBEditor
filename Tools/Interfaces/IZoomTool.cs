@@ -1,13 +1,10 @@
-﻿using MDBEditor.Constants;
-using MDBEditor.Tools.Interfaces.General;
-using System.Drawing;
+﻿using MDBEditor.Tools.Interfaces.General;
 
-namespace MDBEditor.Tools.Interfaces
+namespace MDBEditor.Tools.Interfaces;
+
+public interface IZoomTool : ITool
 {
-    public interface IZoomTool:ITool
-    {
-        public void ZoomToNormal();
-        public void ZoomIn();
-        public void ZoomOut();
-    }
+    public void ZoomToNormal();
+    public void ZoomIn();
+    public void ZoomOut();
 }

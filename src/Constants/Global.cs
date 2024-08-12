@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Drawing;
 using System.Drawing.Imaging;
 
 namespace MDBEditor.Constants;
@@ -36,7 +35,7 @@ public static class Global
     public static class BuiltInCoordinates
     {
         public static readonly Point OldDrawingBoardCoordinate = new Point(12, 9);
-        public static readonly Point NewDrawingBoardCoordinate = new Point(32, 28);
+        public static readonly Point NewDrawingBoardCoordinate = new Point(32, 30);
         public static readonly Size RulerClosedCoordinate = new Size(1098, 772);
         public static readonly Size RulerOpenedCoordinate = new Size(1116, 791);
     }

@@ -24,6 +24,7 @@ public partial class MasterForm : Form
 
     //Mouse event properties
     bool IsMouseDown = false;
+    bool IsRulerOpen = false;
     private Point lastPoint;
     private Point StartPoint;
 
@@ -50,7 +51,7 @@ public partial class MasterForm : Form
         undoRedoStack = new UndoRedoStack(PB_Drawing_Board);
         FLP_Colors.GetColors();
         FLP_Text_Colors.GetColors();
-        Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
+        Lbl_Page_Size.Text = string.Format(format: "{0} {1}", PB_Drawing_Board.Width, PB_Drawing_Board.Height);
         TC_Menu.TabPages.Remove(TP_Text);
         CB_Shape_Border.SelectedIndex = 3; //Normal FontSize
         CB_Shape_Fill.SelectedIndex = 0; //No Fill
@@ -60,7 +61,7 @@ public partial class MasterForm : Form
         PB_Drawing_Board.Controls.Add(BoxWithGrid);
 
         //Set location of drawing board before checked ruler checkbox
-        PB_Drawing_Board.Location = new Point(12, 9);
+        PB_Drawing_Board.Location = BuiltInCoordinates.OldDrawingBoardCoordinate;
 
         //Add rulers to pictureboxes
         PB_Ruler_Left.Controls.Add(new RulerPictureBox(BoxAlignment.Vertical));
@@ -98,7 +99,7 @@ public partial class MasterForm : Form
     /// </summary>
     private void PB_Drawing_Board_SizeChanged(object sender, EventArgs e)
     {
-        Lbl_Page_Size.Text = PB_Drawing_Board.Width + " " + PB_Drawing_Board.Height;
+        Lbl_Page_Size.Text = string.Format(format: "{0} {1}", PB_Drawing_Board.Width, PB_Drawing_Board.Height);
         PB_Ruler_Left.Height = PB_Drawing_Board.Height;
         PB_Ruler_Top.Width = PB_Drawing_Board.Width;
         BoxWithGrid.Size = PB_Drawing_Board.Size;
@@ -115,21 +116,17 @@ public partial class MasterForm : Form
     /// </summary>
     private void ToggleRuler()
     {
-        //Drawing board location is 12,9 -> new location is 32,28
-        if (PB_Ruler_Left.Visible == false || PB_Ruler_Top.Visible == false)
-        {
-            PB_Ruler_Left.Visible = true;
-            PB_Ruler_Top.Visible = true;
-            PB_Drawing_Board.Location = BuiltInCoordinates.NewDrawingBoardCoordinate;
-            this.Size = BuiltInCoordinates.RulerOpenedCoordinate;
-        }
-        else
-        {
-            PB_Ruler_Left.Visible = false;
-            PB_Ruler_Top.Visible = false;
-            PB_Drawing_Board.Location = BuiltInCoordinates.OldDrawingBoardCoordinate;
-            this.Size = BuiltInCoordinates.RulerClosedCoordinate;
-        }
+        IsRulerOpen = !IsRulerOpen;
+        PB_Ruler_Left.Visible = IsRulerOpen;
+        PB_Ruler_Top.Visible = IsRulerOpen;
+
+        PB_Drawing_Board.Location = IsRulerOpen
+            ? BuiltInCoordinates.NewDrawingBoardCoordinate
+            : BuiltInCoordinates.OldDrawingBoardCoordinate;
+
+        this.Size = IsRulerOpen
+            ? BuiltInCoordinates.RulerOpenedCoordinate
+            : BuiltInCoordinates.RulerClosedCoordinate;
     }
 
     #region Mouse Events
@@ -139,7 +136,7 @@ public partial class MasterForm : Form
     /// </summary>
     private void PB_Drawing_Board_MouseMove(object sender, MouseEventArgs e)
     {
-        Lbl_Mouse_Coordinates.Text = e.X + "," + e.Y + " px";
+        Lbl_Mouse_Coordinates.Text = string.Format("{0} , {1} px", e.X, e.Y);
         if (IsMouseDown == true)
         {
             switch (currentTool)
@@ -163,14 +160,8 @@ public partial class MasterForm : Form
                         lastPoint = e.Location;
                     }
                     break;
-                case DrawingTool.Filler:
-                    fillerTool.Color = Color.Blue;
-                    fillerTool.Location = e.Location;
-                    fillerTool.Handle();
-                    //TODO:Needs Flood Fill Algorithm
-                    break;
                 case DrawingTool.Select_Area:
-                    if (e.Button == MouseButtons.Left)
+                    if (e.Button != MouseButtons.Left)
                     {
                         break;
                     }
@@ -194,7 +185,6 @@ public partial class MasterForm : Form
                                         .Draw(g, selectAreaTool.SelectedArea, new Pen(primaryColor, ShapeOptions.BorderSize));
                             }
                         }
-                    }
                     break;
             }
             PB_Drawing_Board.Refresh();
@@ -279,12 +269,12 @@ public partial class MasterForm : Form
             Btn_Paint_All,
             Btn_Select_Area
         };
-        buttonArr.ForEach(p => p.BackColor = Global.MenuSettings.DefaultToolColor);
+        buttonArr.ForEach(p => p.BackColor = MenuSettings.DefaultToolColor);
         Button? btn = sender as Button;
 
         //Select drawing tool by sender's tag
         currentTool = (DrawingTool)Enum.Parse(typeof(DrawingTool), btn!.Tag.ToString());
-        btn.BackColor = Global.MenuSettings.CurrentToolColor;
+        btn.BackColor = MenuSettings.CurrentToolColor;
 
         //Toggle Text Tab
         if (currentTool == DrawingTool.Text)

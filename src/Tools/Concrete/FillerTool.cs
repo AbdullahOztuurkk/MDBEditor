@@ -33,8 +33,6 @@ public class FillerTool : IFillerTool
             if (a.X < bitmap.Width && a.X > 0 && a.Y < bitmap.Height && a.Y > 0) //make sure we stay within bounds
             {
                 var pixelColor = bitmap.GetPixel(a.X, a.Y);
-                var pixelColorArgb = bitmap.GetPixel(a.X, a.Y).ToArgb();
-                var targetColorArgb = TargetColor.ToArgb();
                 if (pixelColor == TargetColor || pixelColor.A == 0)
                 {
                     bitmap.SetPixel(a.X, a.Y, ReplacementColor);

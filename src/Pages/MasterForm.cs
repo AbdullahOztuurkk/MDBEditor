@@ -66,7 +66,7 @@ public partial class MasterForm : Form
         //Add rulers to pictureboxes
         PB_Ruler_Left.Controls.Add(new RulerPictureBox(BoxAlignment.Vertical));
         PB_Ruler_Top.Controls.Add(new RulerPictureBox());
-        this.Size = Global.BuiltInCoordinates.RulerClosedCoordinate;
+        this.Size = BuiltInCoordinates.RulerClosedCoordinate;
 
         //Tools
         penTool = new PenTool(BoardGraphics);
@@ -235,13 +235,15 @@ public partial class MasterForm : Form
         {
             if (currentShape != null && selectAreaTool.SelectedArea.Width > 1)
             {
-                undoRedoStack.Save(PB_Drawing_Board.TakeSnapshot());
+                var shape = ShapeFactory.Create(currentShape.Value);
                 if (ShapeOptions.IsFilled == true)
-                    ShapeFactory.Create((GeometricalShape)currentShape)
-                        .Fill(BoardGraphics, selectAreaTool.SelectedArea, new SolidBrush(primaryColor));
+                {
+                    shape.Fill(BoardGraphics, selectAreaTool.SelectedArea, new SolidBrush(primaryColor));
+                }
                 else
-                    ShapeFactory.Create((GeometricalShape)currentShape)
-                        .Draw(BoardGraphics, selectAreaTool.SelectedArea, new Pen(primaryColor, ShapeOptions.BorderSize));
+                {
+                    shape.Draw(BoardGraphics, selectAreaTool.SelectedArea, new Pen(primaryColor, ShapeOptions.BorderSize));
+                }
                 selectAreaTool.Clear();
             }
         }
@@ -304,11 +306,14 @@ public partial class MasterForm : Form
                 case nameof(PB_Save_As_BMP):
                     PB_Drawing_Board.SaveImage(ImageFormat.Bmp); break;
                 case nameof(PB_Save_As_GIF):
-                    PB_Drawing_Board.SaveImage(ImageFormat.Gif); break;
+                    PB_Drawing_Board.SaveImage(ImageFormat.Gif); 
+                    break;
                 case nameof(PB_Save_As_JPG):
-                    PB_Drawing_Board.SaveImage(ImageFormat.Jpeg); break;
+                    PB_Drawing_Board.SaveImage(ImageFormat.Jpeg);
+                    break;
                 case nameof(PB_Save_As_PNG):
-                    PB_Drawing_Board.SaveImage(ImageFormat.Png); break;
+                    PB_Drawing_Board.SaveImage(ImageFormat.Png); 
+                    break;
                 default: PB_Drawing_Board.SaveImage(); break;
             }
         });
@@ -388,7 +393,8 @@ public partial class MasterForm : Form
         switch (btn.Name)
         {
             case nameof(Btn_Copy_To_Clipboard):
-                Clipboard.SetText(Txt_Text.Text); break;
+                Clipboard.SetText(Txt_Text.Text);
+                break;
             case nameof(Btn_Cut_To_Clipboard):
                 Clipboard.SetText(Txt_Text.Text);
                 Txt_Text.Clear();
@@ -408,19 +414,51 @@ public partial class MasterForm : Form
         UpdateGraphics();
 
     }
-    #region Methods with lambda expression
 
-    private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e) => Status_Bar.Visible = CB_Status_Bar.Checked == true;
-    private void CB_Guidelines_CheckedChanged(object sender, EventArgs e) => BoxWithGrid.Visible = !BoxWithGrid.Visible;
-    private void PB_Font_Dialog_Click(object sender, EventArgs e) => Font_Dialog.ShowDialog();
-    private void CB_Ruler_CheckedChanged(object sender, EventArgs e) => ToggleRuler();
-    private void Btn_Print_Image_Click(object sender, EventArgs e) => PB_Drawing_Board.PrintImage();
-    private void Btn_New_Image_Click(object sender, EventArgs e) => PB_Drawing_Board.NewImage(this);
-    private void Btn_Zoom_In_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomIn);
-    private void Btn_Zoom_Out_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomOut);
-    private void Btn_Zoom_Normal_Click(object sender, EventArgs e) => ZoomToImage(ZoomStatus.ZoomToNormal);
+    private void CB_Status_Bar_CheckedChanged(object sender, EventArgs e)
+    {
+        Status_Bar.Visible = CB_Status_Bar.Checked;
+    }
 
-    #endregion
+    private void CB_Guidelines_CheckedChanged(object sender, EventArgs e)
+    {
+        BoxWithGrid.Visible = !BoxWithGrid.Visible;
+    }
+
+    private void PB_Font_Dialog_Click(object sender, EventArgs e)
+    {
+        Font_Dialog.ShowDialog();
+    }
+
+    private void CB_Ruler_CheckedChanged(object sender, EventArgs e)
+    {
+        ToggleRuler();
+    }
+
+    private void Btn_Print_Image_Click(object sender, EventArgs e)
+    {
+        PB_Drawing_Board.PrintImage();
+    }
+
+    private void Btn_New_Image_Click(object sender, EventArgs e)
+    {
+        PB_Drawing_Board.NewImage(this);
+    }
+
+    private void Btn_Zoom_In_Click(object sender, EventArgs e)
+    {
+        ZoomToImage(ZoomStatus.ZoomIn);
+    }
+
+    private void Btn_Zoom_Out_Click(object sender, EventArgs e)
+    {
+        ZoomToImage(ZoomStatus.ZoomOut);
+    }
+
+    private void Btn_Zoom_Normal_Click(object sender, EventArgs e)
+    {
+        ZoomToImage(ZoomStatus.ZoomToNormal);
+    }
 
     private void ZoomToImage(ZoomStatus status)
     {

@@ -45,7 +45,7 @@ public static class FormHelper
     /// <summary>
     /// Set image of specified picturebox
     /// </summary>
-    /// <param name="pictureBox">Any PictureBox Control</param>
+    /// <param name="pictureBox">Any _pictureBox Control</param>
     /// <param name="img">Any Image Object</param>
     public static void SetImage(this PictureBox pictureBox, Image img)
     {

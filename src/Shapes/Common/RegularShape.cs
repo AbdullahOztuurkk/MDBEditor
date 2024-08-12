@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace MDBEditor.Shapes.Common;
+﻿namespace MDBEditor.Shapes.Common;
 
 public abstract class RegularShape : IShape
 {

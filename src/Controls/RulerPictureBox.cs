@@ -45,7 +45,7 @@ public class RulerPictureBox : PictureBox
     private void DrawRuler(Graphics g, int formWidth, int formHeight)
     {
         // Ticks
-        Parallel.For(0, formWidth, i =>
+        for (int i = 0; i < formWidth; i++)
         {
             if (i % 2 == 0)
             {
@@ -66,7 +66,7 @@ public class RulerPictureBox : PictureBox
 
                 DrawTick(g, i, formHeight, tickHeight);
             }
-        });
+        }
     }
 
     private void DrawTick(Graphics g, int xPos, int formHeight, int tickHeight)

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Drawing;
-
-namespace MDBEditor.Shapes.Common;
+﻿namespace MDBEditor.Shapes.Common;
 
 public interface IShape
 {

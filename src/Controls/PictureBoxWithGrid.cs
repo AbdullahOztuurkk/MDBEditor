@@ -23,14 +23,14 @@ public class PictureBoxWithGrid : PictureBox
         Graphics g = pe.Graphics;
         Pen p = new Pen(GridSettings.PenForeColor);
 
-        Parallel.For(0, GridSettings.CellLimit, cell =>
+        for(int cell = 0; cell < GridSettings.CellLimit; cell++)
         {
             g.DrawLine(p, 0, cell * GridSettings.CellSize, GridSettings.CellLimit * GridSettings.CellSize, cell * GridSettings.CellSize);
-        });
+        }
 
-        Parallel.For(0, GridSettings.CellLimit, cell =>
+        for(int cell = 0; cell < GridSettings.CellLimit; cell++)
         {
             g.DrawLine(p, cell * GridSettings.CellSize, 0, cell * GridSettings.CellSize, GridSettings.CellLimit * GridSettings.CellSize);
-        });
+        }
     }
 }

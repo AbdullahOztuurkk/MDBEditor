@@ -9,7 +9,6 @@ global using MDBEditor.Shapes;
 global using MDBEditor.Shapes.Common;
 global using MDBEditor.Tools.Common;
 global using MDBEditor.Tools.Concrete;
-global using MDBEditor.Utils;
 global using System;
 global using System.Drawing;
 global using System.Drawing.Printing;

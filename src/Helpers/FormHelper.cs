@@ -49,7 +49,7 @@ public static class FormHelper
     /// <param name="img">Any Image Object</param>
     public static void SetImage(this PictureBox pictureBox, Image img)
     {
-        //pictureBox.Image.Dispose();
+        //_pictureBox.Image.Dispose();
         pictureBox.Image = img;
         pictureBox.Invalidate();
     }

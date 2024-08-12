@@ -1,25 +1,12 @@
-﻿using MDBEditor.Constants;
-using MDBEditor.Constants.Enums;
-using MDBEditor.Constants.Models;
-using MDBEditor.Controls;
-using MDBEditor.Helpers;
-using MDBEditor.Pages;
-using MDBEditor.Pages.Modals;
-using MDBEditor.Shapes;
-using MDBEditor.Tools.Concrete;
-using MDBEditor.Utils;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Collections.Generic;
 using System.Drawing.Imaging;
-using System.Windows.Forms;
 
 namespace MDBEditor;
 
 public partial class MasterForm : Form
 {
     private readonly PictureBoxWithGrid BoxWithGrid;
-    private UndoRedoStack undoRedoStack;
+    //private UndoRedoManager _undoRedoManager;
     private Graphics BoardGraphics;
 
     //Mouse event properties
@@ -48,13 +35,11 @@ public partial class MasterForm : Form
         InitializeComponent();
         PB_Drawing_Board.Image = new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height);
         BoardGraphics = Graphics.FromImage(PB_Drawing_Board.Image);
-        undoRedoStack = new UndoRedoStack(PB_Drawing_Board);
+        //_undoRedoManager = new UndoRedoManager(PB_Drawing_Board);
         FLP_Colors.GetColors();
         FLP_Text_Colors.GetColors();
         Lbl_Page_Size.Text = string.Format(format: "{0} {1}", PB_Drawing_Board.Width, PB_Drawing_Board.Height);
         TC_Menu.TabPages.Remove(TP_Text);
-        CB_Shape_Border.SelectedIndex = 3; //Normal FontSize
-        CB_Shape_Fill.SelectedIndex = 0; //No Fill
 
         //Add grid control to drawing board
         BoxWithGrid = new PictureBoxWithGrid(PB_Drawing_Board.Size);
@@ -71,7 +56,7 @@ public partial class MasterForm : Form
         //Tools
         penTool = new PenTool(BoardGraphics);
         eraserTool = new EraserTool(BoardGraphics);
-        fillerTool = new FillerTool(new Bitmap(PB_Drawing_Board.Width, PB_Drawing_Board.Height));
+        fillerTool = new FillerTool(PB_Drawing_Board);
         colorPickerTool = new ColorPickerTool(PB_Drawing_Board);
         textTool = new TextTool(BoardGraphics);
         zoomTool = new ZoomTool(PB_Drawing_Board);
@@ -129,8 +114,6 @@ public partial class MasterForm : Form
             : BuiltInCoordinates.RulerClosedCoordinate;
     }
 
-    #region Mouse Events
-
     /// <summary>
     /// Get mouse positions for status bar
     /// </summary>
@@ -165,37 +148,41 @@ public partial class MasterForm : Form
                     {
                         break;
                     }
-                    
-                        selectAreaTool.SelectedArea = new Rectangle(
-                            Math.Min(StartPoint.X, e.Location.X),
-                            Math.Min(StartPoint.Y, e.Location.Y),
-                            Math.Abs(StartPoint.X - e.Location.X),
-                            Math.Abs(StartPoint.Y - e.Location.Y));
-                        //Preview _shape and rubber band box
-                        using (Graphics g = PB_Drawing_Board.CreateGraphics())
+
+                    selectAreaTool.SelectedArea = new Rectangle(
+                        Math.Min(StartPoint.X, e.Location.X),
+                        Math.Min(StartPoint.Y, e.Location.Y),
+                        Math.Abs(StartPoint.X - e.Location.X),
+                        Math.Abs(StartPoint.Y - e.Location.Y));
+                    //Preview _shape and rubber band box
+                    using (Graphics g = PB_Drawing_Board.CreateGraphics())
+                    {
+                        g.DrawRectangle(Pens.Red, selectAreaTool.SelectedArea);
+                        var shape = ShapeFactory.Create(currentShape.Value);
+                        if (currentShape != null && selectAreaTool.SelectedArea.Width > 1)
                         {
-                            g.DrawRectangle(Pens.Red, selectAreaTool.SelectedArea);
-                            if (currentShape != null && selectAreaTool.SelectedArea.Width > 1)
+                            if (ShapeOptions.IsFilled == true)
+                            { 
+                                shape.Fill(g, selectAreaTool.SelectedArea, new SolidBrush(primaryColor));
+                            }
+                            else
                             {
-                                if (ShapeOptions.IsFilled == true)
-                                    ShapeFactory.Create((GeometricalShape)currentShape)
-                                        .Fill(g, selectAreaTool.SelectedArea, new SolidBrush(primaryColor));
-                                else
-                                    ShapeFactory.Create((GeometricalShape)currentShape)
-                                        .Draw(g, selectAreaTool.SelectedArea, new Pen(primaryColor, ShapeOptions.BorderSize));
+                                shape.Draw(g, selectAreaTool.SelectedArea, new Pen(primaryColor, ShapeOptions.BorderSize));
                             }
                         }
+                    }
                     break;
             }
             PB_Drawing_Board.Refresh();
         }
+        //_undoRedoManager.Execute((Image)PB_Drawing_Board.Image.Clone());
     }
 
     private void PB_Drawing_Board_MouseDown(object sender, MouseEventArgs e)
     {
         IsMouseDown = true;
         lastPoint = e.Location;
-        undoRedoStack.Save(PB_Drawing_Board.TakeSnapshot());
+        //_undoRedoManager.Execute((Image)PB_Drawing_Board.Image.Clone());
         switch (currentTool)
         {
             case DrawingTool.Color_Picker:
@@ -236,6 +223,7 @@ public partial class MasterForm : Form
             if (currentShape != null && selectAreaTool.SelectedArea.Width > 1)
             {
                 var shape = ShapeFactory.Create(currentShape.Value);
+                //_undoRedoManager.Execute((Image)PB_Drawing_Board.Image.Clone());
                 if (ShapeOptions.IsFilled == true)
                 {
                     shape.Fill(BoardGraphics, selectAreaTool.SelectedArea, new SolidBrush(primaryColor));
@@ -251,8 +239,6 @@ public partial class MasterForm : Form
         IsMouseDown = false;
         PB_Drawing_Board.Refresh();
     }
-
-    #endregion
 
     /// <summary>
     /// Get tool name with sender func
@@ -303,8 +289,6 @@ public partial class MasterForm : Form
             PictureBox? pictureBox = sender as PictureBox;
             switch (pictureBox.Name)
             {
-                case nameof(PB_Save_As_BMP):
-                    PB_Drawing_Board.SaveImage(ImageFormat.Bmp); break;
                 case nameof(PB_Save_As_GIF):
                     PB_Drawing_Board.SaveImage(ImageFormat.Gif); 
                     break;
@@ -324,16 +308,15 @@ public partial class MasterForm : Form
     /// </summary>
     private void Continuous_Checker_Tick(object sender, EventArgs e)
     {
-        #region Color Buttons
         Btn_Text_Primary_Color.BackColor = primaryColor;
         Btn_Primary_Color.BackColor = primaryColor;
         Btn_Text_Secondary_Color.BackColor = secondaryColor;
         Btn_Secondary_Color.BackColor = secondaryColor;
-        #endregion
     }
 
     private void UpdateGraphics()
     {
+        PB_Drawing_Board.Refresh();
         BoardGraphics = Graphics.FromImage((Bitmap)PB_Drawing_Board.Image);
         penTool = new PenTool(BoardGraphics);
         eraserTool = new EraserTool(BoardGraphics);
@@ -358,20 +341,14 @@ public partial class MasterForm : Form
                 case Keys.N:
                     PB_Drawing_Board.OpenImage(this);
                     zoomTool = new ZoomTool(PB_Drawing_Board); break;
-                case Keys.Z:
-                    if (undoRedoStack.CanUndo)
-                    {
-                        undoRedoStack.Undo();
-                        UpdateGraphics();
-                    }
-                    break;
-                case Keys.Y:
-                    if (undoRedoStack.CanRedo)
-                    {
-                        undoRedoStack.Redo();
-                        UpdateGraphics();
-                    }
-                    break;
+                //case Keys.Z:
+                //    _undoRedoManager.Undo();
+                //    UpdateGraphics();
+                //    break;
+                //case Keys.Y:
+                //    _undoRedoManager.Redo();
+                //    UpdateGraphics();
+                //    break;
                 case Keys.P:
                     PB_Drawing_Board.PrintImage();
                     break;

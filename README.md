@@ -6,7 +6,7 @@ was developed based on MSPaint and continues to be published as open source for 
 ## Features
 
 - :white_check_mark: User can open image, create new image or save as image
-- :white_check_mark: Image has been saveable as PNG, BMP, JPG, TIFF, GIF, ICO or WMF
+- :white_check_mark: Image has been saveable as PNG, JPG, TIFF, GIF, ICO or WMF
 - :white_check_mark: Image has been printable as colored or grayscaled
 - :white_check_mark: User can draw any shape like square, rectangle, triangle, hexagon, left arrow, plus, trapezoid or circle etc.
 - :white_check_mark: User can resize the image as pixel or percentage
@@ -15,7 +15,7 @@ was developed based on MSPaint and continues to be published as open source for 
 - :white_check_mark: Image can be zoomable as 4x
 - :white_check_mark: User can use gridlines
 - :white_check_mark: User can crop as whatever he/she want
-- :wrench: User can use pen, eraser, zoom etc tools except filler tool.
+- :white_check_mark: User can use tools such as pen, eraser, zoom, filler.
 - :wrench: Drawing board cannot be resized with mouse due of image despution
 - :x: Application doesnt have beatiful icon yet. 
 

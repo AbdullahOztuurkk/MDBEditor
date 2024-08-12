@@ -334,21 +334,16 @@ public partial class MasterForm : Form
                     Check_Gridlines_Before_Save(() => { PB_Drawing_Board.SaveImage(); });
                     break;
                 case Keys.R:
-                    ToggleRuler(); break;
+                    ToggleRuler();
+                    break;
                 case Keys.G:
-                    BoxWithGrid.Visible = !BoxWithGrid.Visible; break;
+                    BoxWithGrid.Visible = !BoxWithGrid.Visible;
+                    break;
                 case Keys.O:
                 case Keys.N:
                     PB_Drawing_Board.OpenImage(this);
-                    zoomTool = new ZoomTool(PB_Drawing_Board); break;
-                //case Keys.Z:
-                //    _undoRedoManager.Undo();
-                //    UpdateGraphics();
-                //    break;
-                //case Keys.Y:
-                //    _undoRedoManager.Redo();
-                //    UpdateGraphics();
-                //    break;
+                    zoomTool = new ZoomTool(PB_Drawing_Board);
+                    break;
                 case Keys.P:
                     PB_Drawing_Board.PrintImage();
                     break;

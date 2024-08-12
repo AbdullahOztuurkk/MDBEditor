@@ -120,15 +120,15 @@ public partial class MasterForm : Form
         {
             PB_Ruler_Left.Visible = true;
             PB_Ruler_Top.Visible = true;
-            PB_Drawing_Board.Location = Global.BuiltInCoordinates.NewDrawingBoardCoordinate;
-            this.Size = Global.BuiltInCoordinates.RulerOpenedCoordinate;
+            PB_Drawing_Board.Location = BuiltInCoordinates.NewDrawingBoardCoordinate;
+            this.Size = BuiltInCoordinates.RulerOpenedCoordinate;
         }
         else
         {
             PB_Ruler_Left.Visible = false;
             PB_Ruler_Top.Visible = false;
-            PB_Drawing_Board.Location = Global.BuiltInCoordinates.OldDrawingBoardCoordinate;
-            this.Size = Global.BuiltInCoordinates.RulerClosedCoordinate;
+            PB_Drawing_Board.Location = BuiltInCoordinates.OldDrawingBoardCoordinate;
+            this.Size = BuiltInCoordinates.RulerClosedCoordinate;
         }
     }
 
@@ -172,6 +172,9 @@ public partial class MasterForm : Form
                 case DrawingTool.Select_Area:
                     if (e.Button == MouseButtons.Left)
                     {
+                        break;
+                    }
+                    
                         selectAreaTool.SelectedArea = new Rectangle(
                             Math.Min(StartPoint.X, e.Location.X),
                             Math.Min(StartPoint.Y, e.Location.Y),
@@ -476,5 +479,18 @@ public partial class MasterForm : Form
     private void CB_Shape_Corner_SelectedIndexChanged(object sender, EventArgs e)
     {
         ShapeOptions.BorderStatus = (ShapeBorderStatus)CB_Shape_Border.SelectedIndex;
+    }
+
+    private void PB_Drawing_Board_MouseClick(object sender, MouseEventArgs e)
+    {
+        switch (currentTool)
+        {
+            case DrawingTool.Filler:
+                fillerTool.TargetColor = primaryColor;
+                fillerTool.ReplacementColor = secondaryColor;
+                fillerTool.Location = e.Location;
+                fillerTool.Handle();
+                break;
+        }
     }
 }
